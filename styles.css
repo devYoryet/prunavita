@@ -636,8 +636,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-xl);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .service-card {
@@ -1649,109 +1657,186 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ===================================
-   ARTISTIC PRUNE CONTAINER
+   MINIMALIST PRUNE SHOWCASE
    =================================== */
 
-.artistic-prune-container {
+.minimalist-prune-showcase {
     position: relative;
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
-}
-
-.artistic-prune-svg {
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(0 10px 30px rgba(74, 37, 69, 0.15));
-}
-
-.main-artistic-prune {
-    animation: gentle-float 6s ease-in-out infinite;
-    transform-origin: center;
-}
-
-@keyframes gentle-float {
-    0%, 100% {
-        transform: translateY(0) scale(1);
-    }
-    50% {
-        transform: translateY(-15px) scale(1.02);
-    }
-}
-
-.artistic-leaf {
-    transform-origin: 250px 140px;
-}
-
-/* Quality Badges Below SVG */
-.quality-badges {
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: var(--spacing-lg);
-    margin-top: var(--spacing-xl);
-    flex-wrap: wrap;
 }
 
-.quality-badge {
+/* Carrusel vertical de ciruelas */
+.prune-carousel {
+    position: absolute;
+    left: -80px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 400px;
+    overflow: hidden;
+    opacity: 0.6;
+}
+
+.carousel-track {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    animation: scroll-vertical 20s linear infinite;
+}
+
+.carousel-prune {
+    flex-shrink: 0;
+}
+
+@keyframes scroll-vertical {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+/* Ciruela principal minimalista */
+.main-prune-minimal {
+    position: relative;
+    z-index: 2;
+}
+
+.main-prune-minimal svg {
+    filter: drop-shadow(0 8px 20px rgba(74, 37, 69, 0.12));
+}
+
+/* Badges minimalistas */
+.quality-badges-minimal {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: var(--spacing-md);
+    z-index: 3;
+}
+
+.quality-badge-minimal {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-    padding: var(--spacing-md);
+    gap: 0.375rem;
+    padding: var(--spacing-sm);
     background: var(--white);
-    border: 2px solid var(--gray-200);
-    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
     transition: all var(--transition-base);
-    min-width: 100px;
+    min-width: 70px;
 }
 
-.quality-badge:hover {
-    border-color: var(--primary-light);
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+.quality-badge-minimal:hover {
+    border-color: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
 }
 
-.badge-icon {
-    font-size: 1.75rem;
+.badge-icon-minimal {
+    font-size: 1.25rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--cream) 0%, var(--gray-100) 100%);
 }
 
-.badge-text {
-    font-size: 0.875rem;
+.badge-text-minimal {
+    font-size: 0.6875rem;
     font-weight: 600;
-    color: var(--gray-700);
+    color: var(--gray-600);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .prune-carousel {
+        left: -60px;
+        height: 300px;
+    }
+
+    .carousel-track {
+        gap: 30px;
+    }
+
+    .carousel-prune svg {
+        width: 50px;
+        height: 60px;
+    }
+
+    .main-prune-minimal svg {
+        width: 250px;
+        height: 290px;
+    }
 }
 
 @media (max-width: 768px) {
-    .artistic-prune-container {
-        max-width: 400px;
+    .minimalist-prune-showcase {
+        max-width: 350px;
     }
 
-    .quality-badges {
-        gap: var(--spacing-md);
+    .prune-carousel {
+        left: -40px;
+        height: 250px;
+        opacity: 0.4;
     }
 
-    .quality-badge {
-        min-width: 80px;
-        padding: var(--spacing-sm);
+    .carousel-track {
+        gap: 25px;
     }
 
-    .badge-icon {
+    .carousel-prune svg {
         width: 40px;
-        height: 40px;
-        font-size: 1.5rem;
+        height: 48px;
     }
 
-    .badge-text {
-        font-size: 0.75rem;
+    .main-prune-minimal svg {
+        width: 220px;
+        height: 260px;
+    }
+
+    .quality-badges-minimal {
+        bottom: -50px;
+        gap: var(--spacing-sm);
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .quality-badge-minimal {
+        min-width: 60px;
+        padding: 0.5rem;
+    }
+
+    .badge-icon-minimal {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    .badge-text-minimal {
+        font-size: 0.625rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .prune-carousel {
+        display: none;
+    }
+
+    .minimalist-prune-showcase {
+        padding-bottom: 60px;
     }
 }
 
