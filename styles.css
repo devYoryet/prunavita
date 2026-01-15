@@ -704,6 +704,255 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ===================================
+   SERVICES CAROUSEL IN HERO
+   =================================== */
+
+.hero-services-carousel-wrapper {
+    position: relative;
+    max-width: 1000px;
+    margin: var(--spacing-3xl) auto 0;
+    padding: var(--spacing-lg) 0;
+}
+
+.hero-services-carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
+    backdrop-filter: blur(20px);
+    box-shadow:
+        0 8px 32px rgba(74, 37, 69, 0.12),
+        0 2px 8px rgba(74, 37, 69, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    min-height: 240px;
+}
+
+/* Individual Slides in Hero */
+.hero-services-carousel .service-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: var(--spacing-2xl) var(--spacing-xl);
+}
+
+.hero-services-carousel .service-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    position: relative;
+}
+
+.hero-services-carousel .service-slide.prev {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.hero-services-carousel .service-slide-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-lg);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-services-carousel .service-slide-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: float-icon 4s ease-in-out infinite;
+}
+
+.hero-services-carousel .service-slide-slogan {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+.hero-services-carousel .service-slide-description {
+    font-size: 1rem;
+    color: var(--gray-600);
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* Carousel Indicators in Hero */
+.hero-services-carousel-wrapper .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+}
+
+.hero-services-carousel-wrapper .indicator-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--gray-300);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    padding: 0;
+}
+
+.hero-services-carousel-wrapper .indicator-dot:hover {
+    background: var(--gray-400);
+    transform: scale(1.2);
+}
+
+.hero-services-carousel-wrapper .indicator-dot.active {
+    background: var(--primary);
+    width: 28px;
+    border-radius: 5px;
+}
+
+/* Carousel Navigation in Hero */
+.hero-services-carousel-wrapper .carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid var(--gray-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    z-index: 10;
+    color: var(--gray-700);
+}
+
+.hero-services-carousel-wrapper .carousel-nav:hover {
+    background: var(--white);
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 12px rgba(74, 37, 69, 0.2);
+}
+
+.hero-services-carousel-wrapper .carousel-prev {
+    left: -22px;
+}
+
+.hero-services-carousel-wrapper .carousel-next {
+    right: -22px;
+}
+
+/* Responsive for Carousel in Hero */
+@media (max-width: 968px) {
+    .hero-services-carousel-wrapper {
+        max-width: 700px;
+        padding: var(--spacing-md) var(--spacing-sm);
+        margin-top: var(--spacing-2xl);
+    }
+
+    .hero-services-carousel {
+        min-height: 220px;
+    }
+
+    .hero-services-carousel .service-slide {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+
+    .hero-services-carousel .service-slide-icon svg {
+        width: 60px;
+        height: 60px;
+    }
+
+    .hero-services-carousel .service-slide-slogan {
+        font-size: clamp(1.25rem, 4vw, 1.75rem);
+    }
+
+    .hero-services-carousel .service-slide-description {
+        font-size: 0.9375rem;
+    }
+
+    .hero-services-carousel-wrapper .carousel-nav {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero-services-carousel-wrapper .carousel-prev {
+        left: -20px;
+    }
+
+    .hero-services-carousel-wrapper .carousel-next {
+        right: -20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-services-carousel-wrapper {
+        max-width: 100%;
+        padding: var(--spacing-md) 0;
+        margin-top: var(--spacing-xl);
+    }
+
+    .hero-services-carousel {
+        min-height: 240px;
+    }
+
+    .hero-services-carousel .service-slide {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    .hero-services-carousel .service-slide-icon svg {
+        width: 56px;
+        height: 56px;
+    }
+
+    .hero-services-carousel .service-slide-slogan {
+        font-size: clamp(1.125rem, 5vw, 1.5rem);
+    }
+
+    .hero-services-carousel .service-slide-description {
+        font-size: 0.875rem;
+    }
+
+    .hero-services-carousel-wrapper .carousel-nav {
+        width: 36px;
+        height: 36px;
+        background: rgba(255, 255, 255, 0.95);
+    }
+
+    .hero-services-carousel-wrapper .carousel-prev {
+        left: 8px;
+    }
+
+    .hero-services-carousel-wrapper .carousel-next {
+        right: 8px;
+    }
+
+    .hero-services-carousel-wrapper .carousel-indicators {
+        margin-top: var(--spacing-md);
+    }
+
+    .hero-services-carousel-wrapper .indicator-dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .hero-services-carousel-wrapper .indicator-dot.active {
+        width: 20px;
+    }
+}
+
+/* ===================================
    SERVICES CAROUSEL SECTION
    =================================== */
 

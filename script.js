@@ -494,10 +494,13 @@ const Utils = {
 class ServicesCarousel {
     constructor() {
         this.carousel = document.getElementById('servicesCarousel');
-        if (!this.carousel) return;
+        if (!this.carousel) {
+            console.warn('Services carousel not found');
+            return;
+        }
 
         this.slides = this.carousel.querySelectorAll('.service-slide');
-        this.indicators = document.querySelectorAll('.indicator-dot');
+        this.indicators = document.querySelectorAll('.hero-services-carousel-wrapper .indicator-dot');
         this.prevBtn = document.getElementById('prevSlide');
         this.nextBtn = document.getElementById('nextSlide');
 
@@ -505,6 +508,7 @@ class ServicesCarousel {
         this.autoplayInterval = null;
         this.autoplayDelay = 5000; // 5 segundos
 
+        console.log(`Services carousel initialized with ${this.slides.length} slides`);
         this.init();
     }
 
