@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prunavita - Servicios integrales en exportación y gestión agroindustrial. Exportación de fruta deshidratada, asesorías técnicas y servicios especializados.">
+    <meta name="keywords" content="exportación fruta deshidratada, frutas secas, agroindustria, HACCP, certificación calidad, exportación Chile">
+    <title>Prunavita | Exportación de Fruta Deshidratada</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <div class="logo-placeholder">
+                    <svg viewBox="0 0 50 50" width="50" height="50">
+                        <circle cx="25" cy="25" r="20" fill="url(#logoGradient)"/>
+                        <text x="25" y="32" font-size="20" font-weight="bold" text-anchor="middle" fill="white">P</text>
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#6B46C1;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#9333EA;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span>Prunavita</span>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto" class="btn-primary-nav">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-background">
+            <div class="gradient-blob blob-1"></div>
+            <div class="gradient-blob blob-2"></div>
+            <div class="gradient-blob blob-3"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Servicios Integrales en<br>
+                    <span class="highlight">Exportación y Gestión Agroindustrial</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Expertos en exportación de fruta deshidratada y frutos secos con los más altos estándares de calidad internacional.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contacto" class="btn btn-primary">Solicitar Cotización</a>
+                    <a href="#servicios" class="btn btn-secondary">Conocer Servicios</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Años de Experiencia</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">30+</div>
+                        <div class="stat-label">Países de Destino</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Calidad Certificada</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="visual-card">
+                    <svg viewBox="0 0 400 400" class="fruit-illustration">
+                        <!-- Plum illustration -->
+                        <defs>
+                            <linearGradient id="plumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#6B46C1;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#4C1D95;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="leafGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <!-- Main plum -->
+                        <ellipse cx="200" cy="220" rx="80" ry="90" fill="url(#plumGradient)" opacity="0.9"/>
+                        <ellipse cx="180" cy="210" rx="25" ry="30" fill="rgba(255,255,255,0.2)"/>
+                        <!-- Leaf -->
+                        <path d="M 200 130 Q 220 140 230 120 Q 225 100 200 110 Q 175 100 170 120 Q 180 140 200 130"
+                              fill="url(#leafGradient)" opacity="0.8"/>
+                        <!-- Stem -->
+                        <line x1="200" y1="130" x2="200" y2="160" stroke="#8B4513" stroke-width="4"/>
+                        <!-- Decorative elements -->
+                        <circle cx="120" cy="150" r="30" fill="#F59E0B" opacity="0.3"/>
+                        <circle cx="280" cy="180" r="25" fill="#EC4899" opacity="0.3"/>
+                        <circle cx="150" cy="300" r="35" fill="#8B5CF6" opacity="0.2"/>
+                        <circle cx="260" cy="280" r="28" fill="#10B981" opacity="0.25"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nuestros Servicios</span>
+                <h2 class="section-title">Soluciones Integrales para su Negocio</h2>
+                <p class="section-subtitle">Ofrecemos servicios especializados en exportación y gestión agroindustrial con los más altos estándares de calidad</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1: Export Management -->
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" width="48" height="48">
+                            <defs>
+                                <linearGradient id="iconGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#6B46C1"/>
+                                    <stop offset="100%" style="stop-color:#9333EA"/>
+                                </linearGradient>
+                            </defs>
+                            <rect x="12" y="20" width="40" height="32" rx="2" fill="none" stroke="url(#iconGrad1)" stroke-width="3"/>
+                            <path d="M 22 20 L 22 28 L 42 28 L 42 20" fill="none" stroke="url(#iconGrad1)" stroke-width="3"/>
+                            <circle cx="32" cy="40" r="6" fill="url(#iconGrad1)"/>
+                            <line x1="12" y1="12" x2="52" y2="12" stroke="url(#iconGrad1)" stroke-width="3"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Gestión de Exportación</h3>
+                    <p class="service-description">Exportación especializada de fruta fresca y deshidratada con gestión completa de materia prima, procesos y logística internacional.</p>
+                    <ul class="service-features">
+                        <li>Exportación de fruta fresca y deshidratada</li>
+                        <li>Gestión integral de materia prima</li>
+                        <li>Recepción, proceso y logística</li>
+                        <li>Gestión de calidad y certificación</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2: Trade & Services -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" width="48" height="48">
+                            <defs>
+                                <linearGradient id="iconGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#EC4899"/>
+                                    <stop offset="100%" style="stop-color:#BE185D"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="32" cy="32" r="20" fill="none" stroke="url(#iconGrad2)" stroke-width="3"/>
+                            <path d="M 32 12 L 38 20 L 32 28 L 26 20 Z" fill="url(#iconGrad2)"/>
+                            <path d="M 52 32 L 44 38 L 36 32 L 44 26 Z" fill="url(#iconGrad2)" opacity="0.7"/>
+                            <path d="M 32 52 L 26 44 L 32 36 L 38 44 Z" fill="url(#iconGrad2)" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Comercio y Servicios</h3>
+                    <p class="service-description">Servicios comerciales especializados en compra-venta de productos agroindustriales con verificación de calidad.</p>
+                    <ul class="service-features">
+                        <li>Compra y venta de fruta deshidratada</li>
+                        <li>Comercialización de descartes</li>
+                        <li>Inspección de calidad</li>
+                        <li>Verificación de estándares</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3: Technical Advisory -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" width="48" height="48">
+                            <defs>
+                                <linearGradient id="iconGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#10B981"/>
+                                    <stop offset="100%" style="stop-color:#059669"/>
+                                </linearGradient>
+                            </defs>
+                            <rect x="16" y="12" width="32" height="40" rx="2" fill="none" stroke="url(#iconGrad3)" stroke-width="3"/>
+                            <line x1="24" y1="22" x2="40" y2="22" stroke="url(#iconGrad3)" stroke-width="2.5"/>
+                            <line x1="24" y1="30" x2="40" y2="30" stroke="url(#iconGrad3)" stroke-width="2.5"/>
+                            <line x1="24" y1="38" x2="35" y2="38" stroke="url(#iconGrad3)" stroke-width="2.5"/>
+                            <circle cx="42" cy="45" r="8" fill="url(#iconGrad3)"/>
+                            <path d="M 39 45 L 41 47 L 45 43" stroke="white" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Asesorías Técnicas</h3>
+                    <p class="service-description">Implementación de sistemas de gestión en inocuidad y calidad con estándares internacionales.</p>
+                    <ul class="service-features">
+                        <li>Sistemas HACCP, FSSC, BRC</li>
+                        <li>Resoluciones Sanitarias</li>
+                        <li>Códigos GACC para China</li>
+                        <li>Auditorías y certificaciones</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4: Extended Services -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" width="48" height="48">
+                            <defs>
+                                <linearGradient id="iconGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#F59E0B"/>
+                                    <stop offset="100%" style="stop-color:#D97706"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="32" cy="32" r="18" fill="none" stroke="url(#iconGrad4)" stroke-width="3"/>
+                            <circle cx="32" cy="32" r="4" fill="url(#iconGrad4)"/>
+                            <line x1="32" y1="14" x2="32" y2="22" stroke="url(#iconGrad4)" stroke-width="3"/>
+                            <line x1="32" y1="42" x2="32" y2="50" stroke="url(#iconGrad4)" stroke-width="3"/>
+                            <line x1="14" y1="32" x2="22" y2="32" stroke="url(#iconGrad4)" stroke-width="3"/>
+                            <line x1="42" y1="32" x2="50" y2="32" stroke="url(#iconGrad4)" stroke-width="3"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Servicios Ampliados</h3>
+                    <p class="service-description">Soluciones complementarias para fortalecer su operación agroindustrial y comercial.</p>
+                    <ul class="service-features">
+                        <li>Compra-venta de maquinaria</li>
+                        <li>Representación comercial</li>
+                        <li>Gestión para clientes extranjeros</li>
+                        <li>Consultoría integral</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us">
+        <div class="container">
+            <div class="why-us-content">
+                <div class="why-us-text" data-aos="fade-right">
+                    <span class="section-tag">¿Por Qué Elegirnos?</span>
+                    <h2 class="section-title">Excelencia en Cada Proceso</h2>
+                    <p class="large-text">
+                        En Prunavita nos especializamos en la exportación de fruta deshidratada y frutos secos, garantizando calidad, trazabilidad y cumplimiento de estándares internacionales.
+                    </p>
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">✓</div>
+                            <div class="benefit-content">
+                                <h4>Certificaciones Internacionales</h4>
+                                <p>Cumplimiento total con HACCP, FSSC, BRC y otros estándares globales</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">✓</div>
+                            <div class="benefit-content">
+                                <h4>Trazabilidad Completa</h4>
+                                <p>Control y seguimiento en cada etapa del proceso de exportación</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">✓</div>
+                            <div class="benefit-content">
+                                <h4>Experiencia Global</h4>
+                                <p>Conocimiento profundo de mercados internacionales y regulaciones</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">✓</div>
+                            <div class="benefit-content">
+                                <h4>Soluciones Personalizadas</h4>
+                                <p>Servicios adaptados a las necesidades específicas de cada cliente</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="why-us-visual" data-aos="fade-left">
+                    <div class="visual-grid">
+                        <div class="visual-item vi-1">
+                            <svg viewBox="0 0 200 200">
+                                <defs>
+                                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#6B46C1"/>
+                                        <stop offset="100%" style="stop-color:#9333EA"/>
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="100" cy="100" r="80" fill="url(#grad1)" opacity="0.8"/>
+                                <text x="100" y="115" font-size="60" font-weight="bold" text-anchor="middle" fill="white">🌍</text>
+                            </svg>
+                        </div>
+                        <div class="visual-item vi-2">
+                            <svg viewBox="0 0 200 200">
+                                <defs>
+                                    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#EC4899"/>
+                                        <stop offset="100%" style="stop-color:#BE185D"/>
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="100" cy="100" r="80" fill="url(#grad2)" opacity="0.8"/>
+                                <text x="100" y="115" font-size="60" font-weight="bold" text-anchor="middle" fill="white">✓</text>
+                            </svg>
+                        </div>
+                        <div class="visual-item vi-3">
+                            <svg viewBox="0 0 200 200">
+                                <defs>
+                                    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#10B981"/>
+                                        <stop offset="100%" style="stop-color:#059669"/>
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="100" cy="100" r="80" fill="url(#grad3)" opacity="0.8"/>
+                                <text x="100" y="115" font-size="60" font-weight="bold" text-anchor="middle" fill="white">📦</text>
+                            </svg>
+                        </div>
+                        <div class="visual-item vi-4">
+                            <svg viewBox="0 0 200 200">
+                                <defs>
+                                    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#F59E0B"/>
+                                        <stop offset="100%" style="stop-color:#D97706"/>
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="100" cy="100" r="80" fill="url(#grad4)" opacity="0.8"/>
+                                <text x="100" y="115" font-size="60" font-weight="bold" text-anchor="middle" fill="white">🏆</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="productos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nuestros Productos</span>
+                <h2 class="section-title">Fruta Deshidratada Premium</h2>
+                <p class="section-subtitle">Selección de productos de la más alta calidad para mercados internacionales</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card" data-aos="zoom-in">
+                    <div class="product-visual">
+                        <svg viewBox="0 0 200 200">
+                            <defs>
+                                <linearGradient id="plumProd" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#6B46C1"/>
+                                    <stop offset="100%" style="stop-color:#4C1D95"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="100" cy="100" r="70" fill="url(#plumProd)"/>
+                            <ellipse cx="75" cy="85" rx="20" ry="25" fill="rgba(255,255,255,0.2)"/>
+                        </svg>
+                    </div>
+                    <h3>Ciruelas Deshidratadas</h3>
+                    <p>Producto estrella con calidad premium para exportación</p>
+                </div>
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="product-visual">
+                        <svg viewBox="0 0 200 200">
+                            <defs>
+                                <linearGradient id="nutsProd" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#D97706"/>
+                                    <stop offset="100%" style="stop-color:#92400E"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="100" cy="100" r="70" fill="url(#nutsProd)"/>
+                            <ellipse cx="80" cy="90" rx="18" ry="22" fill="rgba(255,255,255,0.15)"/>
+                        </svg>
+                    </div>
+                    <h3>Frutos Secos</h3>
+                    <p>Variedad seleccionada con estándares internacionales</p>
+                </div>
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="product-visual">
+                        <svg viewBox="0 0 200 200">
+                            <defs>
+                                <linearGradient id="fruitsProd" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#EC4899"/>
+                                    <stop offset="100%" style="stop-color:#BE185D"/>
+                                </linearGradient>
+                            </defs>
+                            <circle cx="100" cy="100" r="70" fill="url(#fruitsProd)"/>
+                            <ellipse cx="78" cy="88" rx="22" ry="26" fill="rgba(255,255,255,0.18)"/>
+                        </svg>
+                    </div>
+                    <h3>Otras Frutas</h3>
+                    <p>Portafolio diverso de frutas deshidratadas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <span class="section-tag">Contacto</span>
+                    <h2 class="section-title">Trabajemos Juntos</h2>
+                    <p class="large-text">
+                        Estamos listos para ayudarle a expandir su negocio en mercados internacionales. Contáctenos para una cotización personalizada.
+                    </p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>contacto@prunavita.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p>+56 9 XXXX XXXX</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Ubicación</h4>
+                                <p>Chile</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container" data-aos="fade-left">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nombre Completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Empresa</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="service">Servicio de Interés</label>
+                            <select id="service" name="service" required>
+                                <option value="">Seleccione un servicio</option>
+                                <option value="export">Gestión de Exportación</option>
+                                <option value="trade">Comercio y Servicios</option>
+                                <option value="advisory">Asesorías Técnicas</option>
+                                <option value="extended">Servicios Ampliados</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 50 50" width="40" height="40">
+                            <circle cx="25" cy="25" r="20" fill="url(#logoGradient2)"/>
+                            <text x="25" y="32" font-size="20" font-weight="bold" text-anchor="middle" fill="white">P</text>
+                            <defs>
+                                <linearGradient id="logoGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#6B46C1;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#9333EA;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>Prunavita</span>
+                    </div>
+                    <p>Servicios integrales en exportación y gestión agroindustrial con los más altos estándares de calidad.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Gestión de Exportación</a></li>
+                        <li><a href="#servicios">Comercio y Servicios</a></li>
+                        <li><a href="#servicios">Asesorías Técnicas</a></li>
+                        <li><a href="#servicios">Servicios Ampliados</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#nosotros">Sobre Nosotros</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Certificaciones</h4>
+                    <ul>
+                        <li>HACCP</li>
+                        <li>FSSC 22000</li>
+                        <li>BRC</li>
+                        <li>Código GACC</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Prunavita. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos de Servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
