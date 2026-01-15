@@ -22,6 +22,7 @@ const translations = {
         "hero.stat1": "Años de Experiencia",
         "hero.stat2": "Países de Destino",
         "hero.stat3": "Calidad Certificada",
+        "hero.cert4": "Exportación Global",
 
         // Showcase
         "showcase.premium": "Premium Dried Prunes",
@@ -155,6 +156,7 @@ const translations = {
         "hero.stat1": "Years of Experience",
         "hero.stat2": "Destination Countries",
         "hero.stat3": "Certified Quality",
+        "hero.cert4": "Global Export",
 
         // Showcase
         "showcase.premium": "Premium Dried Prunes",

@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Prunavita - Servicios integrales en exportación y gestión agroindustrial. Exportación de fruta deshidratada, asesorías técnicas y servicios especializados.">
-    <meta name="keywords" content="exportación fruta deshidratada, ciruelas disecadas, frutas secas, dried prunes, agroindustria, HACCP, certificación calidad, exportación Chile">
-    <title>Prunavita | Exportación de Fruta Deshidratada Premium</title>
+    <meta name="description" content="Prunavita - Exportación de ciruelas deshidratadas premium desde Chile. Certificaciones HACCP, FSSC y BRC.">
+    <meta name="keywords" content="exportación ciruelas deshidratadas, dried prunes Chile, frutas secas, agroindustria, HACCP, exportación premium">
+    <title>Prunavita | Exportación Premium de Ciruelas Deshidratadas</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
     <!-- EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
-            emailjs.init("YOUR_PUBLIC_KEY"); // Reemplazar con tu clave pública de EmailJS
+            emailjs.init("YOUR_PUBLIC_KEY");
         })();
     </script>
 </head>
@@ -37,144 +37,81 @@
                 <li><a href="#servicios" data-i18n="nav.services">Servicios</a></li>
                 <li><a href="#contacto" class="btn-primary-nav" data-i18n="nav.contact">Contacto</a></li>
                 <li class="lang-switcher">
-                    <button class="lang-btn active" data-lang="es">🇪🇸 ES</button>
-                    <span class="lang-divider">|</span>
-                    <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
+                    <button class="lang-btn active" data-lang="es">
+                        <span class="flag">🇪🇸</span>
+                        <span class="lang-text">ES</span>
+                    </button>
+                    <button class="lang-btn" data-lang="en">
+                        <span class="flag">🇬🇧</span>
+                        <span class="lang-text">EN</span>
+                    </button>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section with Product Showcase -->
-    <section class="hero" id="inicio">
-        <div class="hero-background">
-            <div class="gradient-blob blob-1"></div>
-            <div class="gradient-blob blob-2"></div>
-            <div class="gradient-blob blob-3"></div>
-        </div>
-        <div class="container hero-container">
-            <div class="hero-content">
-                <div class="hero-badge" data-i18n="hero.badge">
-                    🏆 Exportadores de Ciruelas Deshidratadas Premium
+    <!-- Hero Section Professional -->
+    <section class="hero-professional" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="hero-image-bg"></div>
+        <div class="container hero-content-professional">
+            <div class="hero-text-content">
+                <div class="hero-badge-pro" data-i18n="hero.badge">
+                    Exportadores de Ciruelas Deshidratadas Premium
                 </div>
-                <h1 class="hero-title">
-                    <span data-i18n="hero.title1">Ciruelas Deshidratadas</span><br>
-                    <span class="highlight" data-i18n="hero.title2">De Chile para el Mundo</span>
+                <h1 class="hero-title-pro">
+                    <span class="title-line-1" data-i18n="hero.title1">Ciruelas Deshidratadas</span>
+                    <span class="title-line-2" data-i18n="hero.title2">De Chile para el Mundo</span>
                 </h1>
-                <p class="hero-subtitle" data-i18n="hero.subtitle">
+                <p class="hero-subtitle-pro" data-i18n="hero.subtitle">
                     Expertos en exportación de fruta deshidratada premium con los más altos estándares de calidad internacional. Certificaciones HACCP, FSSC y BRC.
                 </p>
-                <div class="hero-cta">
-                    <a href="#contacto" class="btn btn-primary" data-i18n="hero.cta1">Solicitar Cotización</a>
-                    <a href="#productos" class="btn btn-secondary" data-i18n="hero.cta2">Ver Productos</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="minimalist-prune-showcase">
-                    <!-- Carrusel vertical de ciruelas -->
-                    <div class="prune-carousel">
-                        <div class="carousel-track">
-                            <!-- Ciruelas que se repiten en loop -->
-                            <div class="carousel-prune">
-                                <svg viewBox="0 0 100 120" width="60" height="72">
-                                    <ellipse cx="50" cy="60" rx="35" ry="42" fill="#4A2545" opacity="0.9"/>
-                                    <ellipse cx="40" cy="50" rx="12" ry="15" fill="rgba(139,115,85,0.3)"/>
-                                </svg>
-                            </div>
-                            <div class="carousel-prune">
-                                <svg viewBox="0 0 100 120" width="60" height="72">
-                                    <ellipse cx="50" cy="60" rx="35" ry="42" fill="#2D1B2E" opacity="0.8"/>
-                                    <ellipse cx="42" cy="52" rx="10" ry="13" fill="rgba(139,115,85,0.25)"/>
-                                </svg>
-                            </div>
-                            <div class="carousel-prune">
-                                <svg viewBox="0 0 100 120" width="60" height="72">
-                                    <ellipse cx="50" cy="60" rx="35" ry="42" fill="#3D2540" opacity="0.85"/>
-                                    <ellipse cx="38" cy="48" rx="11" ry="14" fill="rgba(139,115,85,0.28)"/>
-                                </svg>
-                            </div>
-                            <div class="carousel-prune">
-                                <svg viewBox="0 0 100 120" width="60" height="72">
-                                    <ellipse cx="50" cy="60" rx="35" ry="42" fill="#4A2545" opacity="0.9"/>
-                                    <ellipse cx="40" cy="50" rx="12" ry="15" fill="rgba(139,115,85,0.3)"/>
-                                </svg>
-                            </div>
-                            <div class="carousel-prune">
-                                <svg viewBox="0 0 100 120" width="60" height="72">
-                                    <ellipse cx="50" cy="60" rx="35" ry="42" fill="#2D1B2E" opacity="0.8"/>
-                                    <ellipse cx="42" cy="52" rx="10" ry="13" fill="rgba(139,115,85,0.25)"/>
-                                </svg>
-                            </div>
-                            <div class="carousel-prune">
-                                <svg viewBox="0 0 100 120" width="60" height="72">
-                                    <ellipse cx="50" cy="60" rx="35" ry="42" fill="#3D2540" opacity="0.85"/>
-                                    <ellipse cx="38" cy="48" rx="11" ry="14" fill="rgba(139,115,85,0.28)"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Ciruela principal minimalista -->
-                    <div class="main-prune-minimal">
-                        <svg viewBox="0 0 300 350" width="300" height="350">
-                            <defs>
-                                <linearGradient id="pruneMinimal" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#2D1B2E"/>
-                                    <stop offset="100%" style="stop-color:#4A2545"/>
-                                </linearGradient>
-                                <linearGradient id="leafMinimal" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#7B9B5E"/>
-                                    <stop offset="100%" style="stop-color:#5A7247"/>
-                                </linearGradient>
-                            </defs>
-
-                            <!-- Círculo decorativo de fondo -->
-                            <circle cx="150" cy="175" r="120" fill="none" stroke="#F5F1E8" stroke-width="1" opacity="0.4"/>
-
-                            <!-- Ciruela principal -->
-                            <ellipse cx="150" cy="190" rx="70" ry="85" fill="url(#pruneMinimal)"/>
-
-                            <!-- Brillo sutil -->
-                            <ellipse cx="130" cy="165" rx="25" ry="32" fill="rgba(139,115,85,0.25)"/>
-
-                            <!-- Línea característica -->
-                            <path d="M 150 110 Q 155 150 150 260" stroke="#2D1B2E" stroke-width="2" fill="none" opacity="0.4"/>
-
-                            <!-- Hoja simple -->
-                            <ellipse cx="150" cy="100" rx="18" ry="28" fill="url(#leafMinimal)" opacity="0.9" transform="rotate(-15 150 100)"/>
-                            <path d="M 150 90 Q 150 110 150 120" stroke="#4A5F3A" stroke-width="0.8" fill="none" opacity="0.6"/>
-
-                            <!-- Tallo -->
-                            <line x1="150" y1="105" x2="150" y2="130" stroke="#6B5548" stroke-width="3" stroke-linecap="round"/>
-
-                            <!-- Texto minimalista -->
-                            <text x="150" y="320" font-family="'Playfair Display', serif" font-size="16" text-anchor="middle" fill="#4A2545" opacity="0.5">
-                                Chilean Prunes
-                            </text>
+                <div class="hero-cta-pro">
+                    <a href="#contacto" class="btn-pro btn-primary-pro" data-i18n="hero.cta1">
+                        <span>Solicitar Cotización</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                         </svg>
+                    </a>
+                    <a href="#productos" class="btn-pro btn-secondary-pro" data-i18n="hero.cta2">
+                        Ver Productos
+                    </a>
+                </div>
+                <div class="hero-certifications">
+                    <div class="cert-item">
+                        <div class="cert-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <span>HACCP</span>
                     </div>
-
-                    <!-- Badges de calidad -->
-                    <div class="quality-badges-minimal">
-                        <div class="quality-badge-minimal">
-                            <span class="badge-icon-minimal">✓</span>
-                            <span class="badge-text-minimal" data-i18n="badges.certified">Certificado</span>
+                    <div class="cert-item">
+                        <div class="cert-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
                         </div>
-                        <div class="quality-badge-minimal">
-                            <span class="badge-icon-minimal">★</span>
-                            <span class="badge-text-minimal" data-i18n="badges.premium">Premium</span>
+                        <span>FSSC 22000</span>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
                         </div>
-                        <div class="quality-badge-minimal">
-                            <span class="badge-icon-minimal">🌍</span>
-                            <span class="badge-text-minimal" data-i18n="badges.global">Global</span>
+                        <span>BRC</span>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
                         </div>
+                        <span data-i18n="hero.cert4">Exportación Global</span>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <span data-i18n="scroll">Scroll</span>
-            <div class="scroll-line"></div>
         </div>
     </section>
 
@@ -208,13 +145,6 @@
                             <div>
                                 <h4 data-i18n="about.feature3.title">Control de Calidad Total</h4>
                                 <p data-i18n="about.feature3.desc">Rigurosos protocolos de inspección y certificación en cada etapa del proceso.</p>
-                            </div>
-                        </div>
-                        <div class="about-feature">
-                            <div class="feature-icon">🌏</div>
-                            <div>
-                                <h4 data-i18n="about.feature4.title">Alcance Global</h4>
-                                <p data-i18n="about.feature4.desc">Presencia en más de 30 países con logística optimizada y documentación completa.</p>
                             </div>
                         </div>
                     </div>
@@ -354,7 +284,7 @@
             </div>
 
             <div class="services-grid">
-                <!-- Service 1: Gestión de Exportación + Servicios Ampliados -->
+                <!-- Service 1 -->
                 <div class="service-card" data-aos="fade-up">
                     <div class="service-icon">
                         <svg viewBox="0 0 64 64" width="48" height="48">
@@ -382,7 +312,7 @@
                     </ul>
                 </div>
 
-                <!-- Service 2: Comercio y Servicios -->
+                <!-- Service 2 -->
                 <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-icon">
                         <svg viewBox="0 0 64 64" width="48" height="48">
@@ -408,7 +338,7 @@
                     </ul>
                 </div>
 
-                <!-- Service 3: Asesorías Técnicas -->
+                <!-- Service 3 -->
                 <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-icon">
                         <svg viewBox="0 0 64 64" width="48" height="48">
@@ -511,7 +441,6 @@
                                 <option value="export" data-i18n="form.opt1">Gestión de Exportación</option>
                                 <option value="trade" data-i18n="form.opt2">Comercio y Servicios</option>
                                 <option value="advisory" data-i18n="form.opt3">Asesorías Técnicas</option>
-                                <option value="extended" data-i18n="form.opt4">Servicios Ampliados</option>
                             </select>
                         </div>
                         <div class="form-group full-width">
@@ -545,7 +474,6 @@
                         <li><a href="#servicios" data-i18n="services.export.title">Gestión de Exportación</a></li>
                         <li><a href="#servicios" data-i18n="services.trade.title">Comercio y Servicios</a></li>
                         <li><a href="#servicios" data-i18n="services.advisory.title">Asesorías Técnicas</a></li>
-                        <li><a href="#servicios" data-i18n="services.extended.title">Servicios Ampliados</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
