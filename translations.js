@@ -70,7 +70,17 @@ const translations = {
         // Services
         "services.tag": "Nuestros Servicios",
         "services.title": "Soluciones Integrales para su Negocio",
-        "services.subtitle": "Ofrecemos servicios especializados en exportación y gestión agroindustrial con los más altos estándares de calidad",
+        "services.subtitle": "Servicios especializados que impulsan su éxito comercial",
+
+        // Services Carousel Slides
+        "services.slide1.slogan": "Equipamiento de Excelencia",
+        "services.slide1.desc": "Compra y venta de maquinaria agroindustrial",
+        "services.slide2.slogan": "Su Socio Comercial en Chile",
+        "services.slide2.desc": "Representación comercial y gestión de compra para clientes extranjeros",
+        "services.slide3.slogan": "Del Campo al Mundo",
+        "services.slide3.desc": "Gestión integral de exportaciones agroindustriales",
+        "services.slide4.slogan": "Certificación y Calidad",
+        "services.slide4.desc": "Asesorías técnicas, calidad e inocuidad alimentaria",
         "services.export.title": "Gestión de Exportación",
         "services.export.desc": "Exportación especializada de fruta fresca y deshidratada con gestión completa de materia prima, procesos y logística internacional.",
         "services.export.feat1": "Exportación de fruta fresca y deshidratada",
@@ -204,7 +214,17 @@ const translations = {
         // Services
         "services.tag": "Our Services",
         "services.title": "Comprehensive Solutions for Your Business",
-        "services.subtitle": "We offer specialized services in export and agroindustrial management with the highest quality standards",
+        "services.subtitle": "Specialized services that drive your commercial success",
+
+        // Services Carousel Slides
+        "services.slide1.slogan": "Excellence in Equipment",
+        "services.slide1.desc": "Purchase and sale of agroindustrial machinery",
+        "services.slide2.slogan": "Your Commercial Partner in Chile",
+        "services.slide2.desc": "Commercial representation and procurement management for foreign clients",
+        "services.slide3.slogan": "From Farm to World",
+        "services.slide3.desc": "Comprehensive agroindustrial export management",
+        "services.slide4.slogan": "Certification and Quality",
+        "services.slide4.desc": "Technical advisory, quality and food safety",
         "services.export.title": "Export Management",
         "services.export.desc": "Specialized export of fresh and dried fruit with complete management of raw materials, processes and international logistics.",
         "services.export.feat1": "Export of fresh and dried fruit",

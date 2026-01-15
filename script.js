@@ -488,6 +488,102 @@ const Utils = {
 };
 
 // ==========================================
+// SERVICES CAROUSEL
+// ==========================================
+
+class ServicesCarousel {
+    constructor() {
+        this.carousel = document.getElementById('servicesCarousel');
+        if (!this.carousel) return;
+
+        this.slides = this.carousel.querySelectorAll('.service-slide');
+        this.indicators = document.querySelectorAll('.indicator-dot');
+        this.prevBtn = document.getElementById('prevSlide');
+        this.nextBtn = document.getElementById('nextSlide');
+
+        this.currentSlide = 0;
+        this.autoplayInterval = null;
+        this.autoplayDelay = 5000; // 5 segundos
+
+        this.init();
+    }
+
+    init() {
+        // Set up navigation buttons
+        if (this.prevBtn) {
+            this.prevBtn.addEventListener('click', () => this.prev());
+        }
+        if (this.nextBtn) {
+            this.nextBtn.addEventListener('click', () => this.next());
+        }
+
+        // Set up indicators
+        this.indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => this.goToSlide(index));
+        });
+
+        // Start autoplay
+        this.startAutoplay();
+
+        // Pause on hover
+        this.carousel.addEventListener('mouseenter', () => this.stopAutoplay());
+        this.carousel.addEventListener('mouseleave', () => this.startAutoplay());
+
+        // Pause on focus (accessibility)
+        this.carousel.addEventListener('focusin', () => this.stopAutoplay());
+        this.carousel.addEventListener('focusout', () => this.startAutoplay());
+
+        // Handle visibility change (pause when tab is not visible)
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                this.stopAutoplay();
+            } else {
+                this.startAutoplay();
+            }
+        });
+    }
+
+    goToSlide(index) {
+        // Remove active class from current slide
+        this.slides[this.currentSlide].classList.remove('active');
+        this.slides[this.currentSlide].classList.add('prev');
+        this.indicators[this.currentSlide].classList.remove('active');
+
+        // Update current slide
+        this.currentSlide = index;
+
+        // Add active class to new slide
+        setTimeout(() => {
+            this.slides.forEach(slide => slide.classList.remove('prev'));
+            this.slides[this.currentSlide].classList.add('active');
+            this.indicators[this.currentSlide].classList.add('active');
+        }, 50);
+    }
+
+    next() {
+        const nextIndex = (this.currentSlide + 1) % this.slides.length;
+        this.goToSlide(nextIndex);
+    }
+
+    prev() {
+        const prevIndex = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+        this.goToSlide(prevIndex);
+    }
+
+    startAutoplay() {
+        this.stopAutoplay(); // Clear any existing interval
+        this.autoplayInterval = setInterval(() => this.next(), this.autoplayDelay);
+    }
+
+    stopAutoplay() {
+        if (this.autoplayInterval) {
+            clearInterval(this.autoplayInterval);
+            this.autoplayInterval = null;
+        }
+    }
+}
+
+// ==========================================
 // INITIALIZE ALL MODULES
 // ==========================================
 
@@ -505,6 +601,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new PerformanceOptimizer();
     new StatsCounter();
     new ScrollProgress();
+    new ServicesCarousel(); // Initialize carousel
 
     // Log initialization
     console.log('%c🍇 Prunavita Website Loaded', 'color: #4A2545; font-size: 16px; font-weight: bold;');
