@@ -1623,6 +1623,152 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ===================================
+   LOGO STYLES
+   =================================== */
+
+.logo-image {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+.footer-logo-img {
+    height: 80px;
+    width: auto;
+    margin-bottom: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+    .logo-image {
+        height: 50px;
+    }
+
+    .footer-logo-img {
+        height: 60px;
+    }
+}
+
+/* ===================================
+   ARTISTIC PRUNE CONTAINER
+   =================================== */
+
+.artistic-prune-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.artistic-prune-svg {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 10px 30px rgba(74, 37, 69, 0.15));
+}
+
+.main-artistic-prune {
+    animation: gentle-float 6s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes gentle-float {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-15px) scale(1.02);
+    }
+}
+
+.artistic-leaf {
+    transform-origin: 250px 140px;
+}
+
+/* Quality Badges Below SVG */
+.quality-badges {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+    flex-wrap: wrap;
+}
+
+.quality-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: var(--spacing-md);
+    background: var(--white);
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+    min-width: 100px;
+}
+
+.quality-badge:hover {
+    border-color: var(--primary-light);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.badge-icon {
+    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--gray-100) 100%);
+}
+
+.badge-text {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--gray-700);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+    .artistic-prune-container {
+        max-width: 400px;
+    }
+
+    .quality-badges {
+        gap: var(--spacing-md);
+    }
+
+    .quality-badge {
+        min-width: 80px;
+        padding: var(--spacing-sm);
+    }
+
+    .badge-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    .badge-text {
+        font-size: 0.75rem;
+    }
+}
+
+/* ===================================
+   REMOVE OLD SHOWCASE STYLES
+   =================================== */
+
+/* Override old product showcase styles */
+.product-showcase,
+.showcase-card,
+.prune-container,
+.prune-svg,
+.floating-badge {
+    display: none !important;
+}
+
+/* ===================================
    PRINT STYLES
    =================================== */
 
@@ -1631,7 +1777,8 @@ h1, h2, h3, h4, h5, h6 {
     .scroll-indicator,
     .floating-badge,
     .hero-background,
-    .gradient-blob {
+    .gradient-blob,
+    .quality-badges {
         display: none !important;
     }
 
@@ -1642,5 +1789,10 @@ h1, h2, h3, h4, h5, h6 {
 
     body {
         font-size: 12pt;
+    }
+
+    .logo-image,
+    .footer-logo-img {
+        max-height: 40px;
     }
 }
