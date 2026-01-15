@@ -27,6 +27,7 @@ const translations = {
         "showcase.premium": "Premium Dried Prunes",
         "showcase.quality": "Calidad de Exportación",
         "badges.certified": "Certificado",
+        "badges.premium": "Premium",
         "badges.global": "Global",
         "scroll": "Scroll",
 
@@ -47,7 +48,7 @@ const translations = {
         "products.tag": "Nuestros Productos",
         "products.title": "Fruta Deshidratada Premium",
         "products.subtitle": "Selección de productos de la más alta calidad para mercados internacionales",
-        "products.bestseller": "Producto Estrella",
+        "products.bestseller": "Best Product",
         "products.prunes.title": "Ciruelas Deshidratadas",
         "products.prunes.desc": "Ciruelas premium deshidratadas con proceso controlado. Ideal para exportación a mercados asiáticos, europeos y norteamericanos.",
         "products.prunes.spec1": "Calibre seleccionado",
@@ -156,6 +157,7 @@ const translations = {
         "showcase.premium": "Premium Dried Prunes",
         "showcase.quality": "Export Quality",
         "badges.certified": "Certified",
+        "badges.premium": "Premium",
         "badges.global": "Global",
         "scroll": "Scroll",
 
@@ -176,7 +178,7 @@ const translations = {
         "products.tag": "Our Products",
         "products.title": "Premium Dried Fruit",
         "products.subtitle": "Selection of the highest quality products for international markets",
-        "products.bestseller": "Best Seller",
+        "products.bestseller": "Best Product",
         "products.prunes.title": "Dried Prunes",
         "products.prunes.desc": "Premium dried prunes with controlled process. Ideal for export to Asian, European and North American markets.",
         "products.prunes.spec1": "Selected caliber",
