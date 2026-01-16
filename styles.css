@@ -148,13 +148,13 @@ button {
 }
 
 .logo-image {
-    height: 65px;
+    height: 98px; /* Increased from 65px (1.5x larger) */
     width: auto;
     transition: var(--transition-base);
 }
 
 .navbar.scrolled .logo-image {
-    height: 55px;
+    height: 83px; /* Increased from 55px (1.5x larger) */
 }
 
 .nav-menu {
@@ -793,9 +793,9 @@ section {
 }
 
 .footer-logo-img {
-    height: 60px;
+    height: 90px; /* Increased from 60px (1.5x larger) */
     width: auto;
-    filter: brightness(0) invert(1);
+    /* No filter needed - logo is transparent */
 }
 
 .footer-section p {
@@ -1007,7 +1007,7 @@ section {
 /* Very Small Mobile */
 @media (max-width: 480px) {
     .logo-image {
-        height: 50px;
+        height: 75px; /* Increased from 50px (1.5x larger) */
     }
 
     .service-slide-content {
