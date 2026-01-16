@@ -60,11 +60,11 @@ const translations = {
         "products.nuts.spec1": "Selección premium",
         "products.nuts.spec2": "Tostado opcional",
         "products.nuts.spec3": "Empaque sellado",
-        "products.fruits.title": "Otras Frutas Deshidratadas",
-        "products.fruits.desc": "Portafolio diverso de frutas deshidratadas para diferentes mercados y aplicaciones industriales.",
-        "products.fruits.spec1": "Múltiples variedades",
-        "products.fruits.spec2": "Certificaciones vigentes",
-        "products.fruits.spec3": "Pedidos personalizados",
+        "products.fruits.title": "Servicios Agroindustriales",
+        "products.fruits.desc": "Soluciones integrales para el sector agroindustrial, desde maquinaria hasta asesorías técnicas especializadas.",
+        "products.fruits.spec1": "Gestión de exportaciones",
+        "products.fruits.spec2": "Representación comercial",
+        "products.fruits.spec3": "Asesorías técnicas",
 
         // Services
         "services.tag": "Nuestros Servicios",
@@ -206,11 +206,11 @@ const translations = {
         "products.nuts.spec1": "Premium selection",
         "products.nuts.spec2": "Optional roasting",
         "products.nuts.spec3": "Sealed packaging",
-        "products.fruits.title": "Other Dried Fruits",
-        "products.fruits.desc": "Diverse portfolio of dried fruits for different markets and industrial applications.",
-        "products.fruits.spec1": "Multiple varieties",
-        "products.fruits.spec2": "Current certifications",
-        "products.fruits.spec3": "Custom orders",
+        "products.fruits.title": "Agroindustrial Services",
+        "products.fruits.desc": "Comprehensive solutions for the agroindustrial sector, from machinery to specialized technical advisory services.",
+        "products.fruits.spec1": "Export management",
+        "products.fruits.spec2": "Commercial representation",
+        "products.fruits.spec3": "Technical advisory",
 
         // Services
         "services.tag": "Our Services",
