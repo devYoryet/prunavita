@@ -33,10 +33,10 @@ const translations = {
 
         // About
         "about.tag": "Sobre Nosotros",
-        "about.title": "Experiencia y Confianza en Exportación",
-        "about.intro": "Somos una empresa chilena con amplia trayectoria en el rubro de la exportación de fruta deshidratada. Nos especializamos en ciruelas deshidratadas de la más alta calidad, cumpliendo con los estándares internacionales más exigentes.",
-        "about.feature1.title": "Experiencia Comprobada",
-        "about.feature1.desc": "Más de 15 años exportando fruta deshidratada a mercados internacionales exigentes.",
+        "about.title": "Servicios Integrales Agroindustriales",
+        "about.intro": "Somos una empresa chilena dedicada a brindar soluciones integrales para el sector agroindustrial. Ofrecemos desde la compra y venta de maquinaria, representación comercial, gestión de exportaciones hasta asesorías técnicas en calidad e inocuidad alimentaria, cumpliendo con los estándares internacionales más exigentes.",
+        "about.feature1.title": "Compromiso con la Excelencia",
+        "about.feature1.desc": "Iniciamos nuestro camino con un equipo experto dedicado a brindar servicios agroindustriales de primer nivel.",
         "about.feature2.title": "Socios Confiables",
         "about.feature2.desc": "Relaciones de largo plazo con productores y clientes basadas en confianza y calidad.",
         "about.feature3.title": "Control de Calidad Total",
@@ -145,8 +145,6 @@ const translations = {
         "footer.desc": "Servicios integrales en exportación y gestión agroindustrial con los más altos estándares de calidad.",
         "footer.services": "Servicios",
         "footer.company": "Empresa",
-        "footer.certifications": "Certificaciones",
-        "footer.gacc": "Código GACC",
         "footer.copyright": "© 2026 Prunavita. Todos los derechos reservados.",
         "footer.privacy": "Política de Privacidad",
         "footer.terms": "Términos de Servicio"
@@ -181,10 +179,10 @@ const translations = {
 
         // About
         "about.tag": "About Us",
-        "about.title": "Experience and Trust in Exports",
-        "about.intro": "We are a Chilean company with extensive experience in the dried fruit export industry. We specialize in the highest quality dried prunes, meeting the most demanding international standards.",
-        "about.feature1.title": "Proven Experience",
-        "about.feature1.desc": "Over 15 years exporting dried fruit to demanding international markets.",
+        "about.title": "Comprehensive Agroindustrial Services",
+        "about.intro": "We are a Chilean company dedicated to providing comprehensive solutions for the agroindustrial sector. We offer everything from machinery sales, commercial representation, export management to technical advisory services in quality and food safety, meeting the most demanding international standards.",
+        "about.feature1.title": "Commitment to Excellence",
+        "about.feature1.desc": "We begin our journey with an expert team dedicated to providing world-class agroindustrial services.",
         "about.feature2.title": "Reliable Partners",
         "about.feature2.desc": "Long-term relationships with producers and clients based on trust and quality.",
         "about.feature3.title": "Total Quality Control",
@@ -293,8 +291,6 @@ const translations = {
         "footer.desc": "Comprehensive services in export and agroindustrial management with the highest quality standards.",
         "footer.services": "Services",
         "footer.company": "Company",
-        "footer.certifications": "Certifications",
-        "footer.gacc": "GACC Code",
         "footer.copyright": "© 2026 Prunavita. All rights reserved.",
         "footer.privacy": "Privacy Policy",
         "footer.terms": "Terms of Service"
