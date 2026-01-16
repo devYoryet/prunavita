@@ -411,6 +411,8 @@ button {
     position: relative;
     margin-top: var(--spacing-4xl);
     padding-bottom: var(--spacing-3xl);
+    /* Extra spacing for better separation */
+    padding-top: var(--spacing-2xl);
 }
 
 .carousel-header {
@@ -438,7 +440,12 @@ button {
     border-radius: var(--radius-xl);
     overflow: hidden;
     background: var(--white);
-    box-shadow: var(--shadow-xl);
+    /* Thick white border for clear separation from hero background */
+    border: 10px solid var(--white);
+    /* Enhanced shadow for better depth and visual separation */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15),
+                0 10px 30px rgba(0, 0, 0, 0.1),
+                0 0 0 1px rgba(0, 0, 0, 0.05);
 }
 
 /* Individual Service Slides */
