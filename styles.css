@@ -413,13 +413,6 @@ button {
     padding-bottom: var(--spacing-3xl);
     /* Extra spacing for better separation */
     padding-top: var(--spacing-2xl);
-    /* Break out of container for wider carousel */
-    width: 100vw;
-    max-width: 1800px;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    padding-left: var(--spacing-xl);
-    padding-right: var(--spacing-xl);
 }
 
 .carousel-header {
