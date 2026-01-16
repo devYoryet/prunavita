@@ -253,6 +253,12 @@ button {
     position: relative;
     margin-top: 0;
     padding-bottom: 0;
+    /* Wider than standard container for prominent carousel */
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-xl);
+    padding-right: var(--spacing-xl);
 }
 
 .hero-services-carousel {
