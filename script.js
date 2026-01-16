@@ -159,63 +159,33 @@ class ContactForm {
         submitBtn.textContent = sendingText;
         submitBtn.disabled = true;
 
-        // Send to Prunavita email using EmailJS or fetch to server
-        // Option 1: EmailJS (requires setup)
-        if (typeof emailjs !== 'undefined' && emailjs.send) {
-            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-                from_name: data.name,
-                from_email: data.email,
-                company: data.company || 'No especificada',
-                phone: data.phone || 'No especificado',
-                service: data.service,
-                message: data.message,
-                to_email: 'prunavita@prunavita.cl'
-            })
-            .then(() => {
-                const successMsg = window.langManager ? window.langManager.translate('form.success') : '¡Gracias por contactarnos!';
+        // Send to PHP backend
+        fetch('send-email.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(result => {
+            if (result.success) {
+                const successMsg = window.langManager ? window.langManager.translate('form.success') : '¡Mensaje enviado! Nos contactaremos pronto.';
                 this.showMessage(successMsg, 'success');
                 this.form.reset();
-            })
-            .catch((error) => {
-                console.error('EmailJS error:', error);
-                const errorMsg = window.langManager ? window.langManager.translate('form.error') : 'Error al enviar';
-                this.showMessage(errorMsg, 'error');
-            })
-            .finally(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            });
-        } else {
-            // Option 2: Fallback - show success and open email client
-            const subject = `Contacto desde Prunavita - ${data.service}`;
-            const body = `
-Nombre: ${data.name}
-Email: ${data.email}
-Empresa: ${data.company || 'No especificada'}
-Teléfono: ${data.phone || 'No especificado'}
-Servicio: ${data.service}
-
-Mensaje:
-${data.message}
-            `;
-
-            // Create mailto link
-            const mailtoLink = `mailto:prunavita@prunavita.cl?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-            // Open email client
-            window.location.href = mailtoLink;
-
-            // Show message
-            const successMsg = 'Se abrirá su cliente de correo. Si no se abre automáticamente, envíe un email a prunavita@prunavita.cl';
-            this.showMessage(successMsg, 'success');
-
-            // Reset form
-            setTimeout(() => {
-                this.form.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            }, 1000);
-        }
+            } else {
+                throw new Error(result.message);
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            const errorMsg = window.langManager ? window.langManager.translate('form.error') : 'Error al enviar el mensaje. Por favor intente nuevamente.';
+            this.showMessage(errorMsg, 'error');
+        })
+        .finally(() => {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        });
     }
 
     validateForm(data) {
