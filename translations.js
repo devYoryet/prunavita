@@ -372,6 +372,9 @@ class LanguageManager {
     }
 }
 
+// Make translations available globally
+window.translations = translations;
+
 // Initialize language manager when DOM is ready
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { translations, LanguageManager };

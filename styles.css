@@ -234,51 +234,16 @@ button {
 }
 
 /* ===================================
-   HERO SECTION - MINIMAL DESIGN
+   HERO SECTION - CAROUSEL ONLY
    =================================== */
 .hero-professional {
     position: relative;
     min-height: 100vh;
-    padding-top: 90px;
-    padding-bottom: var(--spacing-4xl);
+    display: flex;
+    align-items: center;
+    padding-top: 100px; /* Space for fixed nav */
+    padding-bottom: var(--spacing-3xl);
     background: var(--white);
-}
-
-/* Minimal header with simple badge and title */
-.hero-minimal-header {
-    text-align: center;
-    padding: var(--spacing-3xl) 0 var(--spacing-xl) 0;
-}
-
-.hero-badge-minimal {
-    display: inline-block;
-    padding: 0.625rem 1.25rem;
-    background: var(--gray-50);
-    border: 1.5px solid var(--primary);
-    border-radius: var(--radius-full);
-    font-size: 0.813rem;
-    font-weight: 600;
-    color: var(--primary);
-    margin-bottom: var(--spacing-lg);
-}
-
-.hero-title-minimal {
-    font-family: var(--font-display);
-    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-    font-weight: 700;
-    line-height: 1.2;
-    color: var(--gray-900);
-    margin-bottom: 0;
-}
-
-.hero-title-minimal .title-line-1 {
-    display: block;
-    color: var(--gray-800);
-}
-
-.hero-title-minimal .title-line-2 {
-    display: block;
-    color: var(--primary);
 }
 
 /* ===================================
@@ -286,8 +251,8 @@ button {
    =================================== */
 .hero-services-carousel-wrapper {
     position: relative;
-    margin-top: var(--spacing-2xl);
-    padding-bottom: var(--spacing-2xl);
+    margin-top: 0;
+    padding-bottom: 0;
 }
 
 .hero-services-carousel {
