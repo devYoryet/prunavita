@@ -13,16 +13,15 @@ const translations = {
         "nav.contact": "Contacto",
 
         // Hero
-        "hero.badge": "🏆 Exportadores de Ciruelas Deshidratadas Premium",
-        "hero.title1": "Ciruelas Deshidratadas",
+        "hero.badge": "🏆 Servicios Integrales de Exportación Agroindustrial",
+        "hero.title1": "Soluciones Profesionales",
         "hero.title2": "De Chile para el Mundo",
-        "hero.subtitle": "Expertos en exportación de fruta deshidratada premium con los más altos estándares de calidad internacional. Certificaciones HACCP, FSSC y BRC.",
+        "hero.subtitle": "Expertos en gestión integral de exportaciones, representación comercial y asesorías técnicas. Comprometidos con la excelencia y calidad internacional.",
         "hero.cta1": "Solicitar Cotización",
-        "hero.cta2": "Ver Productos",
-        "hero.stat1": "Años de Experiencia",
-        "hero.stat2": "Países de Destino",
-        "hero.stat3": "Calidad Certificada",
-        "hero.cert4": "Exportación Global",
+        "hero.cta2": "Ver Servicios",
+        "hero.trust1": "Calidad Garantizada",
+        "hero.trust2": "Alcance Global",
+        "hero.trust3": "Equipo Experto",
 
         // Showcase
         "showcase.premium": "Premium Dried Prunes",
@@ -72,6 +71,10 @@ const translations = {
         "services.title": "Soluciones Integrales para su Negocio",
         "services.subtitle": "Servicios especializados que impulsan su éxito comercial",
 
+        // Services Carousel
+        "services.carousel.title": "Nuestros Servicios",
+        "services.carousel.subtitle": "Soluciones integrales para su éxito",
+
         // Services Carousel Slides
         "services.slide1.slogan": "Equipamiento de Excelencia",
         "services.slide1.desc": "Compra y venta de maquinaria agroindustrial",
@@ -81,6 +84,7 @@ const translations = {
         "services.slide3.desc": "Gestión integral de exportaciones agroindustriales",
         "services.slide4.slogan": "Certificación y Calidad",
         "services.slide4.desc": "Asesorías técnicas, calidad e inocuidad alimentaria",
+        "services.slide.cta": "Más información →",
         "services.export.title": "Gestión de Exportación",
         "services.export.desc": "Exportación especializada de fruta fresca y deshidratada con gestión completa de materia prima, procesos y logística internacional.",
         "services.export.feat1": "Exportación de fruta fresca y deshidratada",
@@ -157,16 +161,15 @@ const translations = {
         "nav.contact": "Contact",
 
         // Hero
-        "hero.badge": "🏆 Premium Dried Prunes Exporters",
-        "hero.title1": "Dried Prunes",
+        "hero.badge": "🏆 Comprehensive Agroindustrial Export Services",
+        "hero.title1": "Professional Solutions",
         "hero.title2": "From Chile to the World",
-        "hero.subtitle": "Experts in exporting premium dried fruit with the highest international quality standards. HACCP, FSSC and BRC certifications.",
+        "hero.subtitle": "Experts in comprehensive export management, commercial representation, and technical advisory. Committed to international excellence and quality.",
         "hero.cta1": "Request Quote",
-        "hero.cta2": "View Products",
-        "hero.stat1": "Years of Experience",
-        "hero.stat2": "Destination Countries",
-        "hero.stat3": "Certified Quality",
-        "hero.cert4": "Global Export",
+        "hero.cta2": "View Services",
+        "hero.trust1": "Guaranteed Quality",
+        "hero.trust2": "Global Reach",
+        "hero.trust3": "Expert Team",
 
         // Showcase
         "showcase.premium": "Premium Dried Prunes",
@@ -216,6 +219,10 @@ const translations = {
         "services.title": "Comprehensive Solutions for Your Business",
         "services.subtitle": "Specialized services that drive your commercial success",
 
+        // Services Carousel
+        "services.carousel.title": "Our Services",
+        "services.carousel.subtitle": "Comprehensive solutions for your success",
+
         // Services Carousel Slides
         "services.slide1.slogan": "Excellence in Equipment",
         "services.slide1.desc": "Purchase and sale of agroindustrial machinery",
@@ -225,6 +232,7 @@ const translations = {
         "services.slide3.desc": "Comprehensive agroindustrial export management",
         "services.slide4.slogan": "Certification and Quality",
         "services.slide4.desc": "Technical advisory, quality and food safety",
+        "services.slide.cta": "More information →",
         "services.export.title": "Export Management",
         "services.export.desc": "Specialized export of fresh and dried fruit with complete management of raw materials, processes and international logistics.",
         "services.export.feat1": "Export of fresh and dried fruit",
