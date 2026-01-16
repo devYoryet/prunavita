@@ -893,12 +893,34 @@ section {
 
 /* Tablet */
 @media (max-width: 968px) {
+    .logo-image {
+        height: 80px; /* Slightly smaller for tablet */
+    }
+
+    .navbar.scrolled .logo-image {
+        height: 70px;
+    }
+
+    .hero-services-carousel-wrapper {
+        max-width: 100%; /* Full width on tablet */
+        padding-left: var(--spacing-lg);
+        padding-right: var(--spacing-lg);
+    }
+
     .hero-services-carousel {
-        height: 650px; /* Increased from 550px for tablet */
+        height: 600px; /* Reduced for tablet */
     }
 
     .service-slide-content {
         padding: var(--spacing-2xl);
+    }
+
+    .service-slide-number {
+        font-size: 5rem;
+    }
+
+    .service-slide-slogan {
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
     }
 
     .about-content,
@@ -949,27 +971,23 @@ section {
         padding-top: 100px;
     }
 
-    .hero-content-professional {
-        padding: var(--spacing-2xl) 0;
+    .logo-image {
+        height: 70px; /* Smaller for mobile */
     }
 
-    .hero-cta-pro {
-        flex-direction: column;
-        gap: var(--spacing-md);
+    .navbar.scrolled .logo-image {
+        height: 60px;
     }
 
-    .btn-pro {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .hero-trust-badges {
-        flex-direction: column;
-        gap: var(--spacing-md);
+    .hero-services-carousel-wrapper {
+        max-width: 100%;
+        padding-left: var(--spacing-md);
+        padding-right: var(--spacing-md);
     }
 
     .hero-services-carousel {
-        height: 650px; /* Increased from 600px for mobile */
+        height: 500px; /* Smaller for mobile screens */
+        border-radius: var(--radius-lg); /* Smaller radius for mobile */
     }
 
     .service-slide-content {
@@ -978,6 +996,14 @@ section {
 
     .service-slide-number {
         font-size: 4rem;
+    }
+
+    .service-slide-slogan {
+        font-size: clamp(1.25rem, 5vw, 1.75rem);
+    }
+
+    .service-slide-description {
+        font-size: 1rem;
     }
 
     .carousel-controls {
@@ -998,6 +1024,10 @@ section {
         grid-template-columns: 1fr;
     }
 
+    .footer-logo-img {
+        height: 70px; /* Smaller footer logo on mobile */
+    }
+
     .footer-bottom {
         flex-direction: column;
         gap: var(--spacing-lg);
@@ -1013,7 +1043,25 @@ section {
 /* Very Small Mobile */
 @media (max-width: 480px) {
     .logo-image {
-        height: 75px; /* Increased from 50px (1.5x larger) */
+        height: 60px; /* Compact for very small screens */
+    }
+
+    .navbar.scrolled .logo-image {
+        height: 55px;
+    }
+
+    .hero-professional {
+        padding-top: 85px;
+    }
+
+    .hero-services-carousel-wrapper {
+        padding-left: var(--spacing-sm);
+        padding-right: var(--spacing-sm);
+    }
+
+    .hero-services-carousel {
+        height: 450px; /* Even smaller for very small screens */
+        border-radius: var(--radius-md);
     }
 
     .service-slide-content {
@@ -1022,5 +1070,22 @@ section {
 
     .service-slide-number {
         font-size: 3rem;
+    }
+
+    .service-slide-slogan {
+        font-size: clamp(1.125rem, 5vw, 1.5rem);
+    }
+
+    .service-slide-description {
+        font-size: 0.9rem;
+    }
+
+    .slide-cta {
+        font-size: 0.875rem;
+        padding: 0.625rem 1.125rem;
+    }
+
+    .footer-logo-img {
+        height: 60px;
     }
 }
