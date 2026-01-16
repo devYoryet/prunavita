@@ -434,7 +434,7 @@ button {
 .hero-services-carousel {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 650px;
     border-radius: var(--radius-xl);
     overflow: hidden;
     background: var(--white);
@@ -516,29 +516,29 @@ button {
 
 .service-slide-number {
     font-family: var(--font-display);
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 800;
     color: var(--primary);
     opacity: 0.15;
     line-height: 1;
-    margin-bottom: -1rem;
+    margin-bottom: -1.5rem;
 }
 
 .service-slide-slogan {
     font-family: var(--font-display);
-    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-size: clamp(2rem, 4.5vw, 3.25rem);
     font-weight: 700;
     color: var(--gray-900);
     line-height: 1.2;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
 }
 
 .service-slide-description {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     line-height: 1.7;
     color: var(--gray-700);
     margin-bottom: var(--spacing-xl);
-    max-width: 500px;
+    max-width: 550px;
 }
 
 .slide-cta {
@@ -1079,7 +1079,7 @@ section {
     }
 
     .hero-services-carousel {
-        height: 450px;
+        height: 550px;
     }
 
     .service-slide-content {
@@ -1154,7 +1154,7 @@ section {
     }
 
     .hero-services-carousel {
-        height: 550px;
+        height: 600px;
     }
 
     .service-slide-content {

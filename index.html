@@ -23,7 +23,7 @@
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <div class="logo">
-                <img src="assets/images/Logo_prunavite.png" alt="Prunavita - Dried Prunes" class="logo-image">
+                <img src="assets/images/logo_prunavita.png" alt="Prunavita - Agroindustrial Services" class="logo-image">
             </div>
             <button class="menu-toggle" id="menuToggle" aria-label="Menu">
                 <span></span>
@@ -106,7 +106,7 @@
         </div>
 
         <!-- Services Carousel in Hero -->
-        <div class="container">
+        <div class="container" id="servicios">
             <div class="hero-services-carousel-wrapper" data-aos="fade-up" data-aos-delay="500">
                 <div class="carousel-header">
                     <h2 class="carousel-title" data-i18n="services.carousel.title">Nuestros Servicios</h2>
@@ -114,6 +114,7 @@
                 </div>
                 <div class="hero-services-carousel" id="servicesCarousel">
                     <!-- Slide 1: Maquinaria -->
+                    <!-- NOTE: Upload machinery.jpg to assets/images/ -->
                     <div class="service-slide active">
                         <div class="service-slide-background">
                             <img src="assets/images/machinery.jpg" alt="Maquinaria Agroindustrial" class="slide-bg-image">
@@ -352,143 +353,6 @@
         </div>
     </section>
 
-    <!-- Services Carousel Section -->
-    <section class="services" id="servicios">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag" data-i18n="services.tag">Nuestros Servicios</span>
-                <h2 class="section-title" data-i18n="services.title">Soluciones Integrales para su Negocio</h2>
-                <p class="section-subtitle" data-i18n="services.subtitle">Servicios especializados que impulsan su éxito comercial</p>
-            </div>
-
-            <div class="services-carousel-wrapper">
-                <div class="services-carousel" id="servicesCarousel">
-                    <!-- Slide 1: Maquinaria -->
-                    <div class="service-slide active">
-                        <div class="service-slide-content">
-                            <div class="service-slide-icon">
-                                <svg viewBox="0 0 80 80" width="80" height="80">
-                                    <defs>
-                                        <linearGradient id="machineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                            <stop offset="0%" style="stop-color:#4A2545"/>
-                                            <stop offset="100%" style="stop-color:#6B46C1"/>
-                                        </linearGradient>
-                                    </defs>
-                                    <rect x="20" y="25" width="40" height="35" rx="3" fill="none" stroke="url(#machineGrad)" stroke-width="3"/>
-                                    <circle cx="30" cy="50" r="8" fill="none" stroke="url(#machineGrad)" stroke-width="2.5"/>
-                                    <circle cx="50" cy="50" r="8" fill="none" stroke="url(#machineGrad)" stroke-width="2.5"/>
-                                    <rect x="25" y="15" width="30" height="10" fill="url(#machineGrad)" opacity="0.7"/>
-                                    <path d="M 35 35 L 45 35 L 45 45 L 35 45 Z" fill="url(#machineGrad)" opacity="0.5"/>
-                                </svg>
-                            </div>
-                            <div class="service-slide-text">
-                                <h3 class="service-slide-slogan" data-i18n="services.slide1.slogan">Equipamiento de Excelencia</h3>
-                                <p class="service-slide-description" data-i18n="services.slide1.desc">Compra y venta de maquinaria agroindustrial</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 2: Representación Comercial -->
-                    <div class="service-slide">
-                        <div class="service-slide-content">
-                            <div class="service-slide-icon">
-                                <svg viewBox="0 0 80 80" width="80" height="80">
-                                    <defs>
-                                        <linearGradient id="commerceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                            <stop offset="0%" style="stop-color:#5A7247"/>
-                                            <stop offset="100%" style="stop-color:#10B981"/>
-                                        </linearGradient>
-                                    </defs>
-                                    <circle cx="40" cy="40" r="25" fill="none" stroke="url(#commerceGrad)" stroke-width="3"/>
-                                    <path d="M 40 15 L 46 26 L 40 37 L 34 26 Z" fill="url(#commerceGrad)"/>
-                                    <path d="M 65 40 L 54 46 L 43 40 L 54 34 Z" fill="url(#commerceGrad)" opacity="0.7"/>
-                                    <path d="M 40 65 L 34 54 L 40 43 L 46 54 Z" fill="url(#commerceGrad)" opacity="0.5"/>
-                                    <path d="M 15 40 L 26 34 L 37 40 L 26 46 Z" fill="url(#commerceGrad)" opacity="0.6"/>
-                                </svg>
-                            </div>
-                            <div class="service-slide-text">
-                                <h3 class="service-slide-slogan" data-i18n="services.slide2.slogan">Su Socio Comercial en Chile</h3>
-                                <p class="service-slide-description" data-i18n="services.slide2.desc">Representación comercial y gestión de compra para clientes extranjeros</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3: Exportaciones -->
-                    <div class="service-slide">
-                        <div class="service-slide-content">
-                            <div class="service-slide-icon">
-                                <svg viewBox="0 0 80 80" width="80" height="80">
-                                    <defs>
-                                        <linearGradient id="exportGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                            <stop offset="0%" style="stop-color:#8B7355"/>
-                                            <stop offset="100%" style="stop-color:#B8956A"/>
-                                        </linearGradient>
-                                    </defs>
-                                    <circle cx="40" cy="40" r="24" fill="none" stroke="url(#exportGrad)" stroke-width="3"/>
-                                    <path d="M 20 40 Q 30 25 40 40 T 60 40" fill="none" stroke="url(#exportGrad)" stroke-width="2" opacity="0.7"/>
-                                    <circle cx="25" cy="35" r="4" fill="url(#exportGrad)"/>
-                                    <circle cx="55" cy="35" r="4" fill="url(#exportGrad)"/>
-                                    <path d="M 35 50 L 40 55 L 45 50" stroke="url(#exportGrad)" stroke-width="2.5" fill="none"/>
-                                    <line x1="40" y1="30" x2="40" y2="55" stroke="url(#exportGrad)" stroke-width="2.5"/>
-                                </svg>
-                            </div>
-                            <div class="service-slide-text">
-                                <h3 class="service-slide-slogan" data-i18n="services.slide3.slogan">Del Campo al Mundo</h3>
-                                <p class="service-slide-description" data-i18n="services.slide3.desc">Gestión integral de exportaciones agroindustriales</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 4: Asesorías -->
-                    <div class="service-slide">
-                        <div class="service-slide-content">
-                            <div class="service-slide-icon">
-                                <svg viewBox="0 0 80 80" width="80" height="80">
-                                    <defs>
-                                        <linearGradient id="advisoryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                            <stop offset="0%" style="stop-color:#4A2545"/>
-                                            <stop offset="100%" style="stop-color:#8B7355"/>
-                                        </linearGradient>
-                                    </defs>
-                                    <rect x="22" y="15" width="36" height="48" rx="3" fill="none" stroke="url(#advisoryGrad)" stroke-width="3"/>
-                                    <line x1="30" y1="25" x2="50" y2="25" stroke="url(#advisoryGrad)" stroke-width="2.5"/>
-                                    <line x1="30" y1="35" x2="50" y2="35" stroke="url(#advisoryGrad)" stroke-width="2.5"/>
-                                    <line x1="30" y1="45" x2="45" y2="45" stroke="url(#advisoryGrad)" stroke-width="2.5"/>
-                                    <circle cx="52" cy="52" r="10" fill="url(#advisoryGrad)"/>
-                                    <path d="M 48 52 L 50 54 L 56 48" stroke="white" stroke-width="2.5" fill="none"/>
-                                </svg>
-                            </div>
-                            <div class="service-slide-text">
-                                <h3 class="service-slide-slogan" data-i18n="services.slide4.slogan">Certificación y Calidad</h3>
-                                <p class="service-slide-description" data-i18n="services.slide4.desc">Asesorías técnicas, calidad e inocuidad alimentaria</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Carousel Indicators -->
-                <div class="carousel-indicators">
-                    <button class="indicator-dot active" data-slide="0"></button>
-                    <button class="indicator-dot" data-slide="1"></button>
-                    <button class="indicator-dot" data-slide="2"></button>
-                    <button class="indicator-dot" data-slide="3"></button>
-                </div>
-
-                <!-- Carousel Navigation -->
-                <button class="carousel-nav carousel-prev" id="prevSlide">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </button>
-                <button class="carousel-nav carousel-next" id="nextSlide">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
     <section class="contact" id="contacto">
         <div class="container">
@@ -579,7 +443,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="assets/images/Logo_prunavite.png" alt="Prunavita" class="footer-logo-img">
+                        <img src="assets/images/logo_prunavita.png" alt="Prunavita" class="footer-logo-img">
                     </div>
                     <p data-i18n="footer.desc">Servicios integrales en exportación y gestión agroindustrial con los más altos estándares de calidad.</p>
                     <div class="footer-contact">
