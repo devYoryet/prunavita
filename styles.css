@@ -234,174 +234,51 @@ button {
 }
 
 /* ===================================
-   HERO SECTION - PROFESSIONAL
+   HERO SECTION - MINIMAL DESIGN
    =================================== */
 .hero-professional {
     position: relative;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
     padding-top: 90px;
+    padding-bottom: var(--spacing-4xl);
     background: var(--white);
 }
 
-.hero-image-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
+/* Minimal header with simple badge and title */
+.hero-minimal-header {
+    text-align: center;
+    padding: var(--spacing-3xl) 0 var(--spacing-xl) 0;
 }
 
-.hero-background-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Soft fade mask for edges */
-    mask-image: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.95) 0%,
-        rgba(0,0,0,1) 20%,
-        rgba(0,0,0,1) 80%,
-        rgba(0,0,0,0.7) 100%
-    );
-    -webkit-mask-image: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.95) 0%,
-        rgba(0,0,0,1) 20%,
-        rgba(0,0,0,1) 80%,
-        rgba(0,0,0,0.7) 100%
-    );
-}
-
-.hero-image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.92) 0%,
-        rgba(255, 255, 255, 0.88) 40%,
-        rgba(255, 255, 255, 0.85) 100%
-    );
-}
-
-.hero-content-professional {
-    position: relative;
-    z-index: 10;
-    max-width: 700px;
-    padding: var(--spacing-4xl) 0;
-}
-
-.hero-badge-pro {
+.hero-badge-minimal {
     display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background: var(--white);
-    border: 2px solid var(--primary);
-    border-radius: var(--radius-lg);
-    font-size: 0.875rem;
-    font-weight: 700;
+    padding: 0.625rem 1.25rem;
+    background: var(--gray-50);
+    border: 1.5px solid var(--primary);
+    border-radius: var(--radius-full);
+    font-size: 0.813rem;
+    font-weight: 600;
     color: var(--primary);
-    margin-bottom: var(--spacing-xl);
-    box-shadow: var(--shadow-sm);
-}
-
-.hero-title-pro {
-    font-family: var(--font-display);
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 800;
-    line-height: 1.1;
-    color: var(--gray-900);
     margin-bottom: var(--spacing-lg);
 }
 
-.hero-title-pro .title-line-1 {
+.hero-title-minimal {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--gray-900);
+    margin-bottom: 0;
+}
+
+.hero-title-minimal .title-line-1 {
     display: block;
     color: var(--gray-800);
 }
 
-.hero-title-pro .title-line-2 {
+.hero-title-minimal .title-line-2 {
     display: block;
     color: var(--primary);
-}
-
-.hero-subtitle-pro {
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    line-height: 1.7;
-    color: var(--gray-600);
-    margin-bottom: var(--spacing-2xl);
-    max-width: 600px;
-}
-
-.hero-cta-pro {
-    display: flex;
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-2xl);
-    flex-wrap: wrap;
-}
-
-.btn-pro {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: var(--radius-md);
-    transition: all var(--transition-base);
-}
-
-.btn-primary-pro {
-    background: var(--primary);
-    color: var(--white);
-    box-shadow: var(--shadow-md);
-}
-
-.btn-primary-pro:hover {
-    background: var(--primary-dark);
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
-}
-
-.btn-secondary-pro {
-    background: var(--white);
-    color: var(--primary);
-    border: 2px solid var(--primary);
-}
-
-.btn-secondary-pro:hover {
-    background: var(--primary);
-    color: var(--white);
-}
-
-.hero-trust-badges {
-    display: flex;
-    gap: var(--spacing-xl);
-    flex-wrap: wrap;
-}
-
-.trust-badge {
-    display: flex;
-    align-items: center;
-    gap: 0.625rem;
-    padding: 0.75rem 1.25rem;
-    background: var(--white);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
-}
-
-.trust-badge svg {
-    color: var(--primary);
-    flex-shrink: 0;
-}
-
-.trust-badge span {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--gray-700);
 }
 
 /* ===================================
@@ -409,38 +286,18 @@ button {
    =================================== */
 .hero-services-carousel-wrapper {
     position: relative;
-    margin-top: var(--spacing-4xl);
-    padding-bottom: var(--spacing-3xl);
-    /* Extra spacing for better separation */
-    padding-top: var(--spacing-2xl);
-}
-
-.carousel-header {
-    text-align: center;
-    margin-bottom: var(--spacing-2xl);
-}
-
-.carousel-title {
-    font-family: var(--font-display);
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
-    font-weight: 700;
-    color: var(--gray-900);
-    margin-bottom: var(--spacing-sm);
-}
-
-.carousel-subtitle {
-    font-size: 1.125rem;
-    color: var(--gray-600);
+    margin-top: var(--spacing-2xl);
+    padding-bottom: var(--spacing-2xl);
 }
 
 .hero-services-carousel {
     position: relative;
     width: 100%;
-    height: 650px;
+    height: 750px; /* Increased from 650px - carousel is now the main hero element */
     border-radius: var(--radius-xl);
     overflow: hidden;
     background: var(--white);
-    /* Thick white border for clear separation from hero background */
+    /* Thick white border for clear separation */
     border: 10px solid var(--white);
     /* Enhanced shadow for better depth and visual separation */
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15),
@@ -1081,12 +938,8 @@ section {
 
 /* Tablet */
 @media (max-width: 968px) {
-    .hero-content-professional {
-        max-width: 100%;
-    }
-
     .hero-services-carousel {
-        height: 550px;
+        height: 650px; /* Increased from 550px for tablet */
     }
 
     .service-slide-content {
@@ -1161,7 +1014,7 @@ section {
     }
 
     .hero-services-carousel {
-        height: 600px;
+        height: 650px; /* Increased from 600px for mobile */
     }
 
     .service-slide-content {
