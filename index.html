@@ -6,12 +6,48 @@
     <meta name="description" content="Prunavita - Servicios integrales en exportación y comercialización de productos agroindustriales desde Chile. Calidad premium internacional.">
     <meta name="keywords" content="exportación agroindustrial Chile, maquinaria agroindustrial, representación comercial, gestión exportaciones, asesorías técnicas">
     <title>Prunavita | Servicios Integrales de Exportación Agroindustrial</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="loading.js" as="script">
+    <link rel="preload" href="translations.js" as="script">
+    <link rel="preload" href="script.js" as="script">
+    
+    <!-- DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    
+    <!-- Critical CSS inline to prevent FOUC -->
+    <style>
+        /* Critical CSS - Prevents FOUC */
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden}
+        body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:1rem;line-height:1.6;color:#262626;background-color:#FFFFFF;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden;width:100%;max-width:100vw;opacity:0;transition:opacity 0.3s ease}
+        body.loaded{opacity:1}
+        .loading-screen{position:fixed;top:0;left:0;width:100%;height:100%;background:#FFFFFF;z-index:9999;display:flex;align-items:center;justify-content:center;transition:opacity 0.3s ease}
+        .loading-screen.hidden{opacity:0;pointer-events:none}
+        .loading-spinner{width:50px;height:50px;border:4px solid #E8E8E8;border-top-color:#2C5F2D;border-radius:50%;animation:spin 0.8s linear infinite}
+        @keyframes spin{to{transform:rotate(360deg)}}
+        img{max-width:100%;height:auto;display:block}
+        a{text-decoration:none;color:inherit}
+        .container{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+        .navbar{position:fixed;top:0;left:0;width:100%;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);z-index:1000;padding:1rem 0;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
+    </style>
+    
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet"></noscript>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner"></div>
+    </div>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
@@ -380,6 +416,123 @@
         </div>
     </section>
 
+    <!-- LinkedIn Feed Section -->
+    <section class="linkedin-feed" id="linkedin">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="linkedin.tag">Síguenos en LinkedIn</span>
+                <h2 class="section-title" data-i18n="linkedin.title">Últimas Publicaciones</h2>
+                <p class="section-subtitle" data-i18n="linkedin.subtitle">Mantente al día con nuestras noticias y actualizaciones</p>
+            </div>
+            <div class="linkedin-widget-container" data-aos="fade-up">
+                <div class="linkedin-feed-wrapper">
+                    <!-- LinkedIn Company Page Embed -->
+                    <!-- INSTRUCCIONES: 
+                         1. Ve a tu página de empresa en LinkedIn
+                         2. Haz clic en "Más" > "Insertar página"
+                         3. Copia el código del iframe y reemplaza el iframe de abajo
+                         O simplemente reemplaza 'TU_COMPANY_PAGE_URL' con la URL de tu página de LinkedIn
+                    -->
+                    <!-- Simulación de Publicación de LinkedIn -->
+                    <div class="linkedin-post-simulation">
+                        <!-- Header de la publicación -->
+                        <div class="linkedin-post-header">
+                            <div class="linkedin-post-author">
+                                <div class="linkedin-post-avatar">
+                                    <img src="assets/images/Logo_prunavite.png" alt="Pruna Vita" class="linkedin-avatar-img">
+                                </div>
+                                <div class="linkedin-post-author-info">
+                                    <div class="linkedin-post-company-name">Pruna Vita</div>
+                                    <div class="linkedin-post-meta">
+                                        <span class="linkedin-followers">49 seguidores</span>
+                                        <span class="linkedin-separator">•</span>
+                                        <span class="linkedin-time">1 día</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="linkedin-post-menu" aria-label="Opciones">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <circle cx="12" cy="5" r="2"/>
+                                    <circle cx="12" cy="12" r="2"/>
+                                    <circle cx="12" cy="19" r="2"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Contenido de la publicación -->
+                        <div class="linkedin-post-content">
+                            <p class="linkedin-post-text">
+                                Como socios clave, creemos que también es fundamental acoger a nuestros clientes y brindarles una experiencia integral. En esta visita a Viña Santa Rita, tuvimos la oportunidad de compartir la riqueza y tradición del mundo del vino chileno, fortaleciendo así nuestros lazos más allá de lo comercial.
+                            </p>
+                            <p class="linkedin-post-link">
+                                <a href="https://www.zixinbio.com" target="_blank" rel="noopener">www.zixinbio.com</a>
+                            </p>
+                        </div>
+
+                        <!-- Imágenes de la publicación -->
+                        <div class="linkedin-post-images">
+                            <div class="linkedin-image-grid">
+                                <div class="linkedin-image-main">
+                                    <!-- Imagen principal: Grupo en bodega de vino -->
+                                    <img src="assets/images/linkedin-vina-1.jpg" 
+                                         alt="Visita a Viña Santa Rita - Grupo en bodega" 
+                                         class="linkedin-post-img">
+                                </div>
+                                <div class="linkedin-image-side">
+                                    <!-- Imagen secundaria: Degustación de vino -->
+                                    <img src="assets/images/linkedin-vina-2.jpg" 
+                                         alt="Visita a Viña Santa Rita - Degustación" 
+                                         class="linkedin-post-img">
+                                    <!-- Imagen terciaria: Botella de vino -->
+                                    <img src="assets/images/linkedin-vina-3.jpg" 
+                                         alt="Visita a Viña Santa Rita - Botella Winemaker" 
+                                         class="linkedin-post-img">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Footer de la publicación -->
+                        <div class="linkedin-post-footer">
+                            <div class="linkedin-post-actions">
+                                <button class="linkedin-action-btn linkedin-like-btn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                    </svg>
+                                    <span>5</span>
+                                </button>
+                                <button class="linkedin-action-btn linkedin-comment-btn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                    </svg>
+                                </button>
+                                <button class="linkedin-action-btn linkedin-share-btn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+                                        <polyline points="16 6 12 2 8 6"/>
+                                        <line x1="12" y1="2" x2="12" y2="15"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Botón "Ver más" que redirige a LinkedIn -->
+                        <div class="linkedin-view-more-container">
+                            <a href="https://www.linkedin.com/company/pruna-vita/posts/?feedView=all&viewAsMember=true" 
+                               target="_blank" 
+                               rel="noopener" 
+                               class="linkedin-view-more-btn">
+                                <span data-i18n="linkedin.viewMore">Ver más publicaciones</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -447,7 +600,10 @@
         </div>
     </footer>
 
-    <script src="translations.js"></script>
-    <script src="script.js"></script>
+    <!-- Scripts with defer for faster loading -->
+    <!-- Loading script loads first (no defer) to handle loading screen immediately -->
+    <script src="loading.js"></script>
+    <script src="translations.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

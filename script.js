@@ -562,8 +562,9 @@ class ServicesCarousel {
 // ==========================================
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Add loading class to body
-    document.body.classList.add('loading');
+    // Loading is now handled by inline script in HTML
+    // Remove any existing loading class
+    document.body.classList.remove('loading');
 
     // Initialize language manager first
     window.langManager = new LanguageManager();

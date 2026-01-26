@@ -141,6 +141,14 @@ const translations = {
         "form.validation": "Por favor complete todos los campos requeridos.",
         "form.email.invalid": "Por favor ingrese un email válido.",
 
+        // LinkedIn
+        "linkedin.tag": "Síguenos en LinkedIn",
+        "linkedin.title": "Últimas Publicaciones",
+        "linkedin.subtitle": "Mantente al día con nuestras noticias y actualizaciones",
+        "linkedin.viewMore": "Ver más publicaciones",
+        "linkedin.fallback": "Si no puedes ver las publicaciones,",
+        "linkedin.fallback.link": "visita nuestra página de LinkedIn",
+
         // Footer
         "footer.desc": "Servicios integrales en exportación y gestión agroindustrial con los más altos estándares de calidad.",
         "footer.services": "Servicios",
@@ -286,6 +294,14 @@ const translations = {
         "form.error": "There was an error sending the message. Please try again.",
         "form.validation": "Please complete all required fields.",
         "form.email.invalid": "Please enter a valid email.",
+
+        // LinkedIn
+        "linkedin.tag": "Follow us on LinkedIn",
+        "linkedin.title": "Latest Posts",
+        "linkedin.subtitle": "Stay up to date with our news and updates",
+        "linkedin.viewMore": "View more posts",
+        "linkedin.fallback": "If you can't see the posts,",
+        "linkedin.fallback.link": "visit our LinkedIn page",
 
         // Footer
         "footer.desc": "Comprehensive services in export and agroindustrial management with the highest quality standards.",
