@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizaci贸n - Prunavita | Pulsando Tech</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a365d;
+            --primary-light: #2c5282;
+            --accent: #c9a227;
+            --accent-light: #d4af37;
+            --text: #2d3748;
+            --text-light: #4a5568;
+            --bg-light: #f7fafc;
+            --border: #e2e8f0;
+            --success: #38a169;
+            --white: #ffffff;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: var(--white);
+            font-size: 11pt;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 15mm 20mm;
+            margin: 0 auto;
+            background: var(--white);
+            page-break-after: always;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .page {
+                margin: 0;
+                padding: 12mm 15mm;
+                page-break-after: always;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 20px;
+            border-bottom: 3px solid var(--primary);
+            margin-bottom: 25px;
+        }
+
+        .logo-section h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28pt;
+            color: var(--primary);
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-section p {
+            color: var(--accent);
+            font-weight: 500;
+            font-size: 10pt;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .document-info {
+            text-align: right;
+            font-size: 9pt;
+            color: var(--text-light);
+        }
+
+        .document-info .doc-type {
+            font-size: 14pt;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        /* Client Info */
+        .client-box {
+            background: linear-gradient(135deg, var(--bg-light) 0%, #edf2f7 100%);
+            border-left: 4px solid var(--accent);
+            padding: 15px 20px;
+            margin-bottom: 25px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .client-box h3 {
+            color: var(--primary);
+            font-size: 9pt;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .client-box .company {
+            font-size: 14pt;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .client-box .rut {
+            font-size: 10pt;
+            color: var(--text-light);
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 16pt;
+            color: var(--primary);
+            margin: 25px 0 15px 0;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+        }
+
+        .section-subtitle {
+            font-size: 12pt;
+            font-weight: 600;
+            color: var(--primary-light);
+            margin: 18px 0 10px 0;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0 20px 0;
+            font-size: 10pt;
+        }
+
+        th {
+            background: var(--primary);
+            color: var(--white);
+            padding: 10px 12px;
+            text-align: left;
+            font-weight: 500;
+            font-size: 9pt;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        tr:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        .price {
+            font-weight: 600;
+            color: var(--primary);
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .total-row {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%) !important;
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .total-row td {
+            border: none;
+            padding: 12px;
+        }
+
+        /* Feature List */
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin: 12px 0;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 9.5pt;
+            color: var(--text);
+        }
+
+        .feature::before {
+            content: "鉁�";
+            color: var(--success);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .highlight-box h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 14pt;
+            margin-bottom: 10px;
+            color: var(--accent-light);
+        }
+
+        .highlight-box .price-big {
+            font-size: 28pt;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .highlight-box .price-note {
+            font-size: 9pt;
+            opacity: 0.9;
+        }
+
+        /* Recommended Badge */
+        .recommended {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 8pt;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-left: 10px;
+        }
+
+        /* Options Cards */
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .option-card {
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            padding: 15px;
+            transition: all 0.3s;
+        }
+
+        .option-card.featured {
+            border-color: var(--accent);
+            background: linear-gradient(135deg, #fffef5 0%, #fefcf3 100%);
+        }
+
+        .option-card h4 {
+            color: var(--primary);
+            font-size: 11pt;
+            margin-bottom: 8px;
+        }
+
+        .option-card .option-price {
+            font-size: 18pt;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .option-card ul {
+            list-style: none;
+            margin-top: 10px;
+            font-size: 9pt;
+            color: var(--text-light);
+        }
+
+        .option-card ul li {
+            padding: 3px 0;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .option-card ul li::before {
+            content: "鈥�";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 2px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 9pt;
+            color: var(--text-light);
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 14pt;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Notes */
+        .notes {
+            background: var(--bg-light);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-size: 9pt;
+        }
+
+        .notes h4 {
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-size: 10pt;
+        }
+
+        .notes ul {
+            margin-left: 15px;
+            color: var(--text-light);
+        }
+
+        .notes ul li {
+            margin: 4px 0;
+        }
+
+        /* International SEO section */
+        .international-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .country-card {
+            background: var(--bg-light);
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .country-card .flag {
+            font-size: 24pt;
+            margin-bottom: 5px;
+        }
+
+        .country-card .country-name {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 10pt;
+        }
+
+        .country-card .search-engine {
+            font-size: 8pt;
+            color: var(--text-light);
+        }
+
+        /* Print button */
+        .print-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(26, 54, 93, 0.3);
+            transition: all 0.3s;
+        }
+
+        .print-btn:hover {
+            background: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        @media print {
+            .print-btn {
+                display: none;
+            }
+        }
+
+        .intro-text {
+            font-size: 10.5pt;
+            color: var(--text);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn no-print" onclick="window.print()">馃柤锔� Guardar como PDF</button>
+
+    <!-- P脕GINA 1 -->
+    <div class="page">
+        <header class="header">
+            <div class="logo-section">
+                <h1>Pulsando Tech</h1>
+                <p>Desarrollo Web & Marketing Digital</p>
+            </div>
+            <div class="document-info">
+                <div class="doc-type">COTIZACI脫N</div>
+                <div>N潞 2026-001</div>
+                <div>Fecha: 29 de enero de 2026</div>
+                <div>V谩lida hasta: 28 de febrero de 2026</div>
+            </div>
+        </header>
+
+        <div class="client-box">
+            <h3>Cliente</h3>
+            <div class="company">COMERCIALIZADORA CAMIGO SPA</div>
+            <div class="rut">RUT: 78.238.063-K</div>
+            <div class="rut">Proyecto: www.prunavita.cl</div>
+        </div>
+
+        <p class="intro-text">
+            Estimados se帽ores de <strong>Prunavita</strong>, a continuaci贸n presentamos nuestra propuesta de servicios digitales
+            para potenciar su presencia online y posicionamiento en buscadores a nivel nacional e internacional.
+        </p>
+
+        <h2 class="section-title">1. Optimizaci贸n SEO Nacional</h2>
+
+        <p style="margin-bottom: 15px; font-size: 10pt;">
+            Servicios de posicionamiento para aparecer en los primeros resultados de Google Chile al buscar
+            <strong>"Prunavita"</strong> y t茅rminos relacionados con sus servicios.
+        </p>
+
+        <h3 class="section-subtitle">1.1 Setup SEO Inicial</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 70%">Concepto</th>
+                    <th style="width: 30%">Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Implementaci贸n Schema.org (Organization, LocalBusiness, Product)</td>
+                    <td class="price">Incluido</td>
+                </tr>
+                <tr>
+                    <td>Open Graph + Twitter Cards (optimizaci贸n redes sociales)</td>
+                    <td class="price">Incluido</td>
+                </tr>
+                <tr>
+                    <td>Registro y configuraci贸n Google Search Console</td>
+                    <td class="price">Incluido</td>
+                </tr>
+                <tr>
+                    <td>Registro y configuraci贸n Google Analytics 4</td>
+                    <td class="price">Incluido</td>
+                </tr>
+                <tr>
+                    <td>Creaci贸n sitemap.xml + robots.txt optimizado</td>
+                    <td class="price">Incluido</td>
+                </tr>
+                <tr>
+                    <td>Canonical URLs + Meta tags optimizados por secci贸n</td>
+                    <td class="price">Incluido</td>
+                </tr>
+                <tr>
+                    <td>Hreflang tags para SEO biling眉e (ES/EN)</td>
+                    <td class="price">Incluido</td>
+                </tr>
+                <tr class="total-row">
+                    <td><strong>TOTAL SETUP SEO INICIAL</strong></td>
+                    <td class="price" style="color: white;">$120.000 CLP</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 class="section-subtitle">1.2 P谩ginas de Servicios para Indexaci贸n</h3>
+
+        <p style="margin-bottom: 12px; font-size: 10pt;">
+            Crear p谩ginas dedicadas para cada servicio permite aparecer en b煤squedas espec铆ficas:
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>P谩gina</th>
+                    <th>Palabras Clave Objetivo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>/servicios/exportacion</strong></td>
+                    <td>exportaci贸n fruta Chile, exportar ciruelas deshidratadas</td>
+                </tr>
+                <tr>
+                    <td><strong>/servicios/maquinaria</strong></td>
+                    <td>maquinaria agroindustrial Chile, equipos agr铆colas</td>
+                </tr>
+                <tr>
+                    <td><strong>/servicios/asesorias</strong></td>
+                    <td>certificaci贸n HACCP Chile, auditor铆as alimentarias, FSSC</td>
+                </tr>
+                <tr>
+                    <td><strong>/servicios/comercializacion</strong></td>
+                    <td>comercializaci贸n fruta deshidratada, ciruelas secas</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 70%">Opci贸n</th>
+                    <th style="width: 30%">Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>P谩gina individual (SEO optimizada, biling眉e)</td>
+                    <td class="price">$50.000 c/u</td>
+                </tr>
+                <tr class="total-row">
+                    <td><strong>PAQUETE 4 P脕GINAS DE SERVICIOS</strong></td>
+                    <td class="price" style="color: white;">$180.000 CLP</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="section-title">2. SEO Internacional</h2>
+
+        <p style="margin-bottom: 15px; font-size: 10pt;">
+            Posicionamiento en buscadores de <strong>China, Europa y otros mercados</strong> para captar clientes internacionales.
+        </p>
+
+        <div class="international-grid">
+            <div class="country-card">
+                <div class="flag">馃嚚馃嚦</div>
+                <div class="country-name">China</div>
+                <div class="search-engine">Baidu + Google.cn</div>
+            </div>
+            <div class="country-card">
+                <div class="flag">馃嚛馃嚜</div>
+                <div class="country-name">Alemania</div>
+                <div class="search-engine">Google.de</div>
+            </div>
+            <div class="country-card">
+                <div class="flag">馃嚜馃嚫</div>
+                <div class="country-name">Espa帽a</div>
+                <div class="search-engine">Google.es</div>
+            </div>
+            <div class="country-card">
+                <div class="flag">馃嚠馃嚬</div>
+                <div class="country-name">Italia</div>
+                <div class="search-engine">Google.it</div>
+            </div>
+            <div class="country-card">
+                <div class="flag">馃嚞馃嚙</div>
+                <div class="country-name">Reino Unido</div>
+                <div class="search-engine">Google.co.uk</div>
+            </div>
+            <div class="country-card">
+                <div class="flag">馃嚭馃嚫</div>
+                <div class="country-name">Estados Unidos</div>
+                <div class="search-engine">Google.com</div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 70%">Concepto</th>
+                    <th style="width: 30%">Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Registro Google Search Console por pa铆s (6 pa铆ses)</td>
+                    <td class="price">Incluido</td>
+                </tr>
+                <tr>
+                    <td>Configuraci贸n Baidu Webmaster Tools (China)</td>
+                    <td class="price">Incluido</td>
+                </tr>
+                <tr>
+                    <td>Hreflang tags internacionales (es-CL, en-US, en-GB, de-DE, etc.)</td>
+                    <td class="price">Incluido</td>
+                </tr>
+                <tr>
+                    <td>Optimizaci贸n meta tags en ingl茅s para mercados internacionales</td>
+                    <td class="price">Incluido</td>
+                </tr>
+                <tr>
+                    <td>Schema.org con datos de exportaci贸n internacional</td>
+                    <td class="price">Incluido</td>
+                </tr>
+                <tr>
+                    <td>Creaci贸n de perfil en directorios B2B internacionales</td>
+                    <td class="price">Incluido</td>
+                </tr>
+                <tr class="total-row">
+                    <td><strong>TOTAL SEO INTERNACIONAL</strong></td>
+                    <td class="price" style="color: white;">$150.000 CLP</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="footer">
+            <div class="footer-logo">Pulsando Tech</div>
+            <div>P谩gina 1 de 3</div>
+        </div>
+    </div>
+
+    <!-- P脕GINA 2 -->
+    <div class="page">
+        <header class="header">
+            <div class="logo-section">
+                <h1>Pulsando Tech</h1>
+                <p>Desarrollo Web & Marketing Digital</p>
+            </div>
+            <div class="document-info">
+                <div class="doc-type">COTIZACI脫N</div>
+                <div>Prunavita - Servicios Digitales</div>
+            </div>
+        </header>
+
+        <h2 class="section-title">3. Sistema de Blog Manual</h2>
+
+        <p style="margin-bottom: 15px; font-size: 10pt;">
+            Sistema que permite al cliente administrar sus propias noticias de forma independiente,
+            con panel de administraci贸n seguro y f谩cil de usar.
+        </p>
+
+        <h3 class="section-subtitle">Caracter铆sticas Incluidas</h3>
+
+        <div class="features">
+            <div class="feature">Login seguro con credenciales propias</div>
+            <div class="feature">Dashboard administrativo intuitivo</div>
+            <div class="feature">Editor de noticias completo</div>
+            <div class="feature">Subida de im谩genes destacadas</div>
+            <div class="feature">Campo para t铆tulo y subt铆tulo</div>
+            <div class="feature">Editor de texto para cuerpo</div>
+            <div class="feature">Control de estado (borrador/publicado)</div>
+            <div class="feature">Fecha de publicaci贸n programable</div>
+            <div class="feature">Secci贸n /blog con listado paginado</div>
+            <div class="feature">Dise帽o responsive (m贸vil/tablet/desktop)</div>
+            <div class="feature">URL propia para cada noticia</div>
+            <div class="feature">SEO autom谩tico por art铆culo</div>
+            <div class="feature">Visor de noticias en p谩gina principal</div>
+            <div class="feature">Capacitaci贸n de uso (1 hora)</div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 70%">Concepto</th>
+                    <th style="width: 30%">Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Desarrollo completo del sistema de blog</td>
+                    <td class="price">$240.000</td>
+                </tr>
+                <tr>
+                    <td>Descuento cliente recurrente (10%)</td>
+                    <td class="price" style="color: var(--success);">-$24.000</td>
+                </tr>
+                <tr class="total-row">
+                    <td><strong>TOTAL BLOG MANUAL</strong></td>
+                    <td class="price" style="color: white;">$216.000 CLP</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="section-title">4. Sistema de Blog con IA</h2>
+        <span style="background: var(--accent); color: var(--primary); padding: 2px 8px; border-radius: 4px; font-size: 8pt; font-weight: 600;">OPCI脫N ALTERNATIVA</span>
+
+        <p style="margin: 15px 0; font-size: 10pt;">
+            Sistema automatizado que genera contenido de noticias del rubro agroindustrial utilizando
+            Inteligencia Artificial. Ideal para mantener el blog activo sin inversi贸n de tiempo.
+        </p>
+
+        <h3 class="section-subtitle">驴C贸mo Funciona?</h3>
+
+        <div class="features">
+            <div class="feature">Agente de IA busca noticias reales del rubro</div>
+            <div class="feature">Procesa y reescribe con enfoque Prunavita</div>
+            <div class="feature">Publica autom谩ticamente en la secci贸n de noticias</div>
+            <div class="feature">El cliente puede revisar y aprobar antes de publicar</div>
+            <div class="feature">Fuentes: portales de agricultura y agroindustria</div>
+            <div class="feature">Noticias de exportaci贸n y mercados internacionales</div>
+        </div>
+
+        <h3 class="section-subtitle">Modos de Operaci贸n</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Modo</th>
+                    <th>Descripci贸n</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Autom谩tico</strong></td>
+                    <td>Publica directamente (con revisi贸n humana opcional)</td>
+                </tr>
+                <tr>
+                    <td><strong>Semi-autom谩tico</strong></td>
+                    <td>Genera borradores, cliente aprueba antes de publicar</td>
+                </tr>
+                <tr>
+                    <td><strong>Programado</strong></td>
+                    <td>Publica X noticias por semana/mes seg煤n configuraci贸n</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 70%">Concepto</th>
+                    <th style="width: 30%">Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Desarrollo del sistema con IA</td>
+                    <td class="price">$280.000</td>
+                </tr>
+                <tr>
+                    <td>Integraci贸n API OpenAI</td>
+                    <td class="price">Incluido</td>
+                </tr>
+                <tr>
+                    <td>Panel de configuraci贸n y ajustes</td>
+                    <td class="price">Incluido</td>
+                </tr>
+                <tr>
+                    <td>Editor para ajustes manuales</td>
+                    <td class="price">Incluido</td>
+                </tr>
+                <tr class="total-row">
+                    <td><strong>TOTAL BLOG CON IA</strong></td>
+                    <td class="price" style="color: white;">$280.000 CLP</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="notes">
+            <h4>馃挕 Costos Operativos Mensuales (API OpenAI)</h4>
+            <ul>
+                <li><strong>10 art铆culos/mes:</strong> ~$3.000 - $5.000 CLP</li>
+                <li><strong>20 art铆culos/mes:</strong> ~$6.000 - $10.000 CLP</li>
+                <li><strong>30 art铆culos/mes:</strong> ~$10.000 - $15.000 CLP</li>
+            </ul>
+            <p style="margin-top: 8px;"><strong>Opci贸n:</strong> Si prefieren que nosotros gestionemos la API y el sistema: <strong>$50.000 CLP/mes</strong> (incluye hasta 20 art铆culos)</p>
+        </div>
+
+        <div class="footer">
+            <div class="footer-logo">Pulsando Tech</div>
+            <div>P谩gina 2 de 3</div>
+        </div>
+    </div>
+
+    <!-- P脕GINA 3 -->
+    <div class="page">
+        <header class="header">
+            <div class="logo-section">
+                <h1>Pulsando Tech</h1>
+                <p>Desarrollo Web & Marketing Digital</p>
+            </div>
+            <div class="document-info">
+                <div class="doc-type">COTIZACI脫N</div>
+                <div>Prunavita - Resumen Final</div>
+            </div>
+        </header>
+
+        <h2 class="section-title">Resumen de Opciones</h2>
+
+        <div class="options-grid">
+            <div class="option-card">
+                <h4>OPCI脫N A</h4>
+                <p style="font-size: 9pt; color: var(--text-light); margin-bottom: 10px;">SEO Nacional B谩sico</p>
+                <div class="option-price">$120.000</div>
+                <ul>
+                    <li>Setup SEO inicial completo</li>
+                    <li>Google Search Console</li>
+                    <li>Google Analytics 4</li>
+                    <li>Schema.org + Open Graph</li>
+                </ul>
+            </div>
+
+            <div class="option-card">
+                <h4>OPCI脫N B</h4>
+                <p style="font-size: 9pt; color: var(--text-light); margin-bottom: 10px;">SEO Nacional Completo</p>
+                <div class="option-price">$300.000</div>
+                <ul>
+                    <li>Todo lo de Opci贸n A</li>
+                    <li>4 p谩ginas de servicios</li>
+                    <li>Keywords espec铆ficos</li>
+                    <li>Mayor visibilidad</li>
+                </ul>
+            </div>
+
+            <div class="option-card featured">
+                <h4>OPCI脫N C <span class="recommended">Recomendada</span></h4>
+                <p style="font-size: 9pt; color: var(--text-light); margin-bottom: 10px;">SEO Nacional + Internacional</p>
+                <div class="option-price">$420.000</div>
+                <ul>
+                    <li>Todo lo de Opci贸n B</li>
+                    <li>SEO para China</li>
+                    <li>SEO para Europa</li>
+                    <li>Baidu + Google internacional</li>
+                </ul>
+            </div>
+
+            <div class="option-card">
+                <h4>OPCI脫N D</h4>
+                <p style="font-size: 9pt; color: var(--text-light); margin-bottom: 10px;">SEO Completo + Blog Manual</p>
+                <div class="option-price">$600.000</div>
+                <ul>
+                    <li>Todo lo de Opci贸n C</li>
+                    <li>Sistema de blog completo</li>
+                    <li>Panel administrativo</li>
+                    <li>Capacitaci贸n incluida</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <h3>OPCI脫N E - PAQUETE COMPLETO</h3>
+            <p style="margin-bottom: 10px;">SEO Nacional + Internacional + Blog Manual + Blog IA</p>
+            <div class="price-big">$750.000 CLP</div>
+            <div class="price-note">Precio regular: $886.000 CLP | Ahorro: $136.000 CLP</div>
+        </div>
+
+        <h2 class="section-title">Mantenimiento SEO Mensual</h2>
+        <p style="font-size: 9pt; color: var(--text-light); margin-bottom: 12px;">(Opcional - para mantener y mejorar posicionamiento)</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Plan</th>
+                    <th>Incluye</th>
+                    <th style="width: 20%;">Valor/Mes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>B谩sico</strong></td>
+                    <td>Monitoreo Search Console, reportes mensuales, correcciones t茅cnicas</td>
+                    <td class="price">$80.000</td>
+                </tr>
+                <tr>
+                    <td><strong>Intermedio</strong></td>
+                    <td>B谩sico + 2 art铆culos blog optimizados, an谩lisis keywords</td>
+                    <td class="price">$150.000</td>
+                </tr>
+                <tr>
+                    <td><strong>Avanzado</strong></td>
+                    <td>Intermedio + link building, an谩lisis competencia, estrategia contenido</td>
+                    <td class="price">$250.000</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="section-title">Condiciones</h2>
+
+        <div class="notes">
+            <h4>馃搯 Tiempos de Entrega</h4>
+            <ul>
+                <li>SEO Setup Inicial: 3-5 d铆as h谩biles</li>
+                <li>P谩ginas de servicios: 5-7 d铆as h谩biles</li>
+                <li>SEO Internacional: 7-10 d铆as h谩biles</li>
+                <li>Blog Manual: 10-14 d铆as h谩biles</li>
+                <li>Blog con IA: 14-21 d铆as h谩biles</li>
+            </ul>
+        </div>
+
+        <div class="notes">
+            <h4>馃挵 Formas de Pago</h4>
+            <ul>
+                <li>50% al confirmar el proyecto</li>
+                <li>50% al entregar y aprobar</li>
+                <li>Transferencia bancaria</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 25px; padding: 15px; border: 2px solid var(--primary); border-radius: 10px;">
+            <p style="font-size: 10pt; text-align: center; margin-bottom: 10px;">
+                Para confirmar o resolver dudas, responda a este correo o cont谩ctenos directamente.
+            </p>
+            <p style="font-size: 11pt; text-align: center; font-weight: 600; color: var(--primary);">
+                隆Gracias por confiar en Pulsando Tech!
+            </p>
+        </div>
+
+        <div class="footer">
+            <div>
+                <div class="footer-logo">Pulsando Tech</div>
+                <div style="font-size: 8pt;">Desarrollo Web & Marketing Digital</div>
+            </div>
+            <div style="text-align: right;">
+                <div>P谩gina 3 de 3</div>
+                <div style="font-size: 8pt; margin-top: 5px;">Cotizaci贸n v谩lida hasta 28/02/2026</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
