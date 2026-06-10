@@ -1,0 +1,346 @@
+/**
+ * PRUNAVITA - Estilos para páginas internas (servicios y noticias)
+ * Complementa styles.css reutilizando las variables de diseño del sitio
+ */
+
+/* ===================================
+   PAGE HERO
+   =================================== */
+.page-hero {
+    padding: 10rem 0 4rem;
+    background: linear-gradient(180deg, var(--gray-50) 0%, var(--white) 100%);
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.page-hero .container {
+    max-width: 860px;
+}
+
+.breadcrumbs {
+    font-size: 0.875rem;
+    color: var(--gray-500);
+    margin-bottom: var(--spacing-lg);
+}
+
+.breadcrumbs a {
+    color: var(--primary);
+    transition: color var(--transition-fast);
+}
+
+.breadcrumbs a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.page-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.15;
+    color: var(--gray-900);
+    margin-bottom: var(--spacing-lg);
+}
+
+.page-hero .hero-lead {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-xl);
+}
+
+.page-hero .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.btn-secondary-outline {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    border: 2px solid var(--primary);
+    border-radius: var(--radius-sm);
+    color: var(--primary);
+    font-weight: 600;
+    transition: all var(--transition-base);
+}
+
+.btn-secondary-outline:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* ===================================
+   ARTICLE / SERVICE CONTENT
+   =================================== */
+.page-content {
+    padding: var(--spacing-4xl) 0;
+}
+
+.page-content .container {
+    max-width: 860px;
+}
+
+.page-content h2 {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    color: var(--gray-900);
+    margin: var(--spacing-2xl) 0 var(--spacing-md);
+}
+
+.page-content h2:first-child {
+    margin-top: 0;
+}
+
+.page-content h3 {
+    font-size: 1.2rem;
+    color: var(--primary-dark);
+    margin: var(--spacing-xl) 0 var(--spacing-sm);
+}
+
+.page-content p {
+    color: var(--gray-700);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+}
+
+.page-content ul,
+.page-content ol {
+    margin: 0 0 var(--spacing-lg) 1.25rem;
+    color: var(--gray-700);
+    line-height: 1.8;
+}
+
+.page-content li {
+    margin-bottom: var(--spacing-xs);
+}
+
+.page-content a {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.page-content a:hover {
+    text-decoration: underline;
+}
+
+/* Tarjetas de beneficios */
+.benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+}
+
+.benefit-card {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-xl);
+}
+
+.benefit-card .benefit-icon {
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.benefit-card h3 {
+    margin-top: 0;
+    font-size: 1.05rem;
+}
+
+.benefit-card p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* FAQ */
+.faq-item {
+    border-bottom: 1px solid var(--gray-200);
+    padding: var(--spacing-lg) 0;
+}
+
+.faq-item h3 {
+    margin: 0 0 var(--spacing-sm);
+    font-size: 1.1rem;
+    color: var(--gray-900);
+}
+
+.faq-item p {
+    margin-bottom: 0;
+}
+
+/* Servicios relacionados */
+.related-services {
+    background: var(--gray-50);
+    padding: var(--spacing-3xl) 0;
+    border-top: 1px solid var(--gray-200);
+}
+
+.related-services .container {
+    max-width: 1100px;
+}
+
+.related-services h2 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    color: var(--gray-900);
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.related-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-xl);
+    transition: all var(--transition-base);
+    display: block;
+}
+
+.related-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-light);
+}
+
+.related-card h3 {
+    font-size: 1.05rem;
+    color: var(--primary-dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+.related-card p {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    margin: 0;
+}
+
+/* CTA banner */
+.cta-banner {
+    background: var(--primary-dark);
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+}
+
+.cta-banner h2 {
+    font-family: var(--font-display);
+    color: var(--white);
+    font-size: 1.9rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.cta-banner p {
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 560px;
+    margin: 0 auto var(--spacing-xl);
+}
+
+.cta-banner .btn-primary {
+    background: var(--white);
+    color: var(--primary-dark);
+}
+
+.cta-banner .btn-primary:hover {
+    background: var(--gray-100);
+}
+
+/* ===================================
+   NOTICIAS
+   =================================== */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.news-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.news-card-body {
+    padding: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.news-meta {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray-500);
+    margin-bottom: var(--spacing-sm);
+}
+
+.news-meta .news-category {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.news-card h2,
+.news-card h3 {
+    font-size: 1.15rem;
+    line-height: 1.4;
+    color: var(--gray-900);
+    margin: 0 0 var(--spacing-sm);
+    font-family: var(--font-body);
+}
+
+.news-card p {
+    font-size: 0.95rem;
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-md);
+    flex: 1;
+}
+
+.news-card .news-link {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Artículo de noticia */
+.article-header time {
+    display: block;
+    color: var(--gray-500);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.article-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-lg);
+}
+
+.article-tags span {
+    background: var(--gray-100);
+    color: var(--gray-600);
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 8rem 0 3rem;
+    }
+}

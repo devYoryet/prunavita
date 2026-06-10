@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /send-email.php
+Disallow: /noticias/plantilla-noticia.html
+Disallow: /COTIZACION_PRUNAVITA_2026.html
+Disallow: /seo-system/
+
+# Baidu spider (mercado chino)
+User-agent: Baiduspider
+Allow: /
+
+Sitemap: https://prunavita.cl/sitemap.xml
