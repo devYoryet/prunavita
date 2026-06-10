@@ -18,6 +18,14 @@
     <meta property="og:site_name" content="Prunavita">
     <meta name="twitter:card" content="summary_large_image">
 
+    <!-- Título traducible (usado por translations.js al cambiar idioma) -->
+    <script>
+        window.pageTitles = {
+            es: 'Gestión de Exportaciones Agroindustriales desde Chile | Prunavita',
+            en: 'Agro-Industrial Export Management from Chile | Prunavita'
+        };
+    </script>
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -93,12 +101,22 @@
                 <span></span><span></span><span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../index.html#nosotros">Nosotros</a></li>
-                <li><a href="../index.html#productos">Productos</a></li>
-                <li><a href="../index.html#servicios">Servicios</a></li>
-                <li><a href="../noticias/">Noticias</a></li>
-                <li><a href="../index.html#contacto" class="btn-primary-nav">Contacto</a></li>
+                <li><a href="../index.html" data-i18n="nav.home">Inicio</a></li>
+                <li><a href="../index.html#nosotros" data-i18n="nav.about">Nosotros</a></li>
+                <li><a href="../index.html#productos" data-i18n="nav.products">Productos</a></li>
+                <li><a href="../index.html#servicios" data-i18n="nav.services">Servicios</a></li>
+                <li><a href="../noticias/" data-i18n="nav.news">Noticias</a></li>
+                <li><a href="../index.html#contacto" class="btn-primary-nav" data-i18n="nav.contact">Contacto</a></li>
+                <li class="lang-switcher">
+                    <button class="lang-btn active" data-lang="es">
+                        <span class="flag">🇪🇸</span>
+                        <span class="lang-text">ES</span>
+                    </button>
+                    <button class="lang-btn" data-lang="en">
+                        <span class="flag">🇬🇧</span>
+                        <span class="lang-text">EN</span>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -107,16 +125,16 @@
     <header class="page-hero">
         <div class="container">
             <nav class="breadcrumbs" aria-label="breadcrumb">
-                <a href="../index.html">Inicio</a> / <a href="../index.html#servicios">Servicios</a> / Gestión de Exportaciones
+                <a href="../index.html" data-i18n="sub.breadcrumb.home">Inicio</a> / <a href="../index.html#servicios" data-i18n="sub.breadcrumb.services">Servicios</a> / <span data-i18n="sub.rel.export.title">Gestión de Exportaciones</span>
             </nav>
-            <h1>Gestión Integral de Exportaciones Agroindustriales desde Chile</h1>
-            <p class="hero-lead">
+            <h1 data-i18n="exp.h1">Gestión Integral de Exportaciones Agroindustriales desde Chile</h1>
+            <p class="hero-lead" data-i18n="exp.lead">
                 Del campo al mundo: nos hacemos cargo de toda la operación de exportación —documentación, certificación,
                 logística y cumplimiento normativo— para que sus productos agroindustriales lleguen a cualquier mercado.
             </p>
             <div class="hero-actions">
-                <a href="../index.html#contacto" class="btn btn-primary">Solicitar Cotización</a>
-                <a href="#proceso" class="btn-secondary-outline">Ver Proceso</a>
+                <a href="../index.html#contacto" class="btn btn-primary" data-i18n="sub.quote">Solicitar Cotización</a>
+                <a href="#proceso" class="btn-secondary-outline" data-i18n="exp.btn2">Ver Proceso</a>
             </div>
         </div>
     </header>
@@ -124,82 +142,82 @@
     <!-- Content -->
     <main class="page-content">
         <div class="container">
-            <h2>Exportar desde Chile sin fricciones</h2>
-            <p>
+            <h2 data-i18n="exp.s1.title">Exportar desde Chile sin fricciones</h2>
+            <p data-i18n="exp.s1.p1">
                 Exportar productos agroindustriales exige coordinar productores, plantas, agencias de aduana, navieras y
                 organismos certificadores, además de cumplir la normativa específica de cada país de destino. En
                 <strong>Prunavita</strong> integramos toda esa cadena en un solo servicio: usted define el producto y el
                 mercado, nosotros ejecutamos la operación completa.
             </p>
-            <p>
+            <p data-i18n="exp.s1.p2">
                 Nuestra especialidad es la <a href="ciruelas-deshidratadas.html">exportación de ciruelas deshidratadas</a> y
                 frutos secos chilenos, pero gestionamos embarques de distintos productos agroindustriales hacia Asia,
                 Europa y América.
             </p>
 
-            <h2 id="proceso">Nuestro proceso de exportación paso a paso</h2>
-            <h3>1. Evaluación comercial y normativa</h3>
-            <p>
+            <h2 id="proceso" data-i18n="exp.s2.title">Nuestro proceso de exportación paso a paso</h2>
+            <h3 data-i18n="exp.s2.h1">1. Evaluación comercial y normativa</h3>
+            <p data-i18n="exp.s2.p1">
                 Analizamos la viabilidad del producto en el mercado de destino: aranceles, acuerdos comerciales vigentes
                 (Chile cuenta con una red de más de 30 acuerdos), requisitos sanitarios y etiquetado.
             </p>
-            <h3>2. Origen y control de calidad</h3>
-            <p>
+            <h3 data-i18n="exp.s2.h2">2. Origen y control de calidad</h3>
+            <p data-i18n="exp.s2.p2">
                 Coordinamos con productores y plantas certificadas, aplicando protocolos de inspección en cada etapa.
                 Si su operación necesita reforzar estándares, ofrecemos <a href="asesorias-tecnicas-inocuidad.html">asesorías técnicas en calidad e inocuidad</a>.
             </p>
-            <h3>3. Documentación y certificación</h3>
-            <p>
+            <h3 data-i18n="exp.s2.h3">3. Documentación y certificación</h3>
+            <p data-i18n="exp.s2.p3">
                 Tramitamos certificados fitosanitarios SAG, certificados de origen, facturas de exportación, packing list,
                 BL y toda la documentación aduanera (DUS).
             </p>
-            <h3>4. Logística internacional</h3>
-            <p>
+            <h3 data-i18n="exp.s2.h4">4. Logística internacional</h3>
+            <p data-i18n="exp.s2.p4">
                 Reservamos contenedores, coordinamos transporte terrestre a puerto, consolidación, seguros de carga y
                 seguimiento del embarque hasta la entrega según el Incoterm acordado (FOB, CFR, CIF, DAP).
             </p>
-            <h3>5. Postventa y continuidad</h3>
-            <p>
+            <h3 data-i18n="exp.s2.h5">5. Postventa y continuidad</h3>
+            <p data-i18n="exp.s2.p5">
                 Hacemos seguimiento de la recepción en destino y planificamos embarques recurrentes con programas anuales
                 de abastecimiento.
             </p>
 
-            <h2>¿Por qué exportar con Prunavita?</h2>
+            <h2 data-i18n="exp.s3.title">¿Por qué exportar con Prunavita?</h2>
             <div class="benefit-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">🌎</div>
-                    <h3>Alcance global</h3>
-                    <p>Operaciones hacia más de 30 países con logística optimizada y documentación completa.</p>
+                    <h3 data-i18n="exp.b1.title">Alcance global</h3>
+                    <p data-i18n="exp.b1.desc">Operaciones hacia más de 30 países con logística optimizada y documentación completa.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">🇨🇳</div>
-                    <h3>Experiencia en Asia</h3>
-                    <p>Conocimiento de los requisitos del mercado chino: registro GACC, etiquetado en chino y protocolo bilateral.</p>
+                    <h3 data-i18n="exp.b2.title">Experiencia en Asia</h3>
+                    <p data-i18n="exp.b2.desc">Conocimiento de los requisitos del mercado chino: registro GACC, etiquetado en chino y protocolo bilateral.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">📋</div>
-                    <h3>Cumplimiento total</h3>
-                    <p>Documentación aduanera y certificaciones gestionadas por especialistas, sin retrasos ni rechazos.</p>
+                    <h3 data-i18n="exp.b3.title">Cumplimiento total</h3>
+                    <p data-i18n="exp.b3.desc">Documentación aduanera y certificaciones gestionadas por especialistas, sin retrasos ni rechazos.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">🤝</div>
-                    <h3>Un solo interlocutor</h3>
-                    <p>Coordinamos productores, plantas, aduanas y navieras. Usted trata con un único equipo responsable.</p>
+                    <h3 data-i18n="exp.b4.title">Un solo interlocutor</h3>
+                    <p data-i18n="exp.b4.desc">Coordinamos productores, plantas, aduanas y navieras. Usted trata con un único equipo responsable.</p>
                 </div>
             </div>
 
-            <h2>Preguntas frecuentes</h2>
+            <h2 data-i18n="sub.faq.title">Preguntas frecuentes</h2>
             <div class="faq-item">
-                <h3>¿Qué incluye el servicio de gestión de exportaciones?</h3>
-                <p>Planificación comercial del embarque, documentación aduanera, certificados fitosanitarios y de origen, coordinación logística terrestre y marítima, seguros y seguimiento hasta destino.</p>
+                <h3 data-i18n="exp.faq.q1">¿Qué incluye el servicio de gestión de exportaciones?</h3>
+                <p data-i18n="exp.faq.a1">Planificación comercial del embarque, documentación aduanera, certificados fitosanitarios y de origen, coordinación logística terrestre y marítima, seguros y seguimiento hasta destino.</p>
             </div>
             <div class="faq-item">
-                <h3>¿Qué productos exportan?</h3>
-                <p>Fruta deshidratada —especialmente ciruelas— y frutos secos chilenos, además de otros productos agroindustriales según requerimiento.</p>
+                <h3 data-i18n="exp.faq.q2">¿Qué productos exportan?</h3>
+                <p data-i18n="exp.faq.a2">Fruta deshidratada —especialmente ciruelas— y frutos secos chilenos, además de otros productos agroindustriales según requerimiento.</p>
             </div>
             <div class="faq-item">
-                <h3>¿Gestionan exportaciones hacia China?</h3>
-                <p>Sí, incluyendo registro GACC, etiquetado en chino y la documentación del acuerdo comercial Chile-China.</p>
+                <h3 data-i18n="exp.faq.q3">¿Gestionan exportaciones hacia China?</h3>
+                <p data-i18n="exp.faq.a3">Sí, incluyendo registro GACC, etiquetado en chino y la documentación del acuerdo comercial Chile-China.</p>
             </div>
         </div>
     </main>
@@ -207,23 +225,23 @@
     <!-- Related services -->
     <section class="related-services">
         <div class="container">
-            <h2>Servicios relacionados</h2>
+            <h2 data-i18n="sub.related.title">Servicios relacionados</h2>
             <div class="related-grid">
                 <a class="related-card" href="ciruelas-deshidratadas.html">
-                    <h3>Ciruelas Deshidratadas</h3>
-                    <p>Producto premium chileno con calibre seleccionado y humedad controlada.</p>
+                    <h3 data-i18n="sub.rel.ciruelas.title">Ciruelas Deshidratadas</h3>
+                    <p data-i18n="sub.rel.ciruelas.desc">Producto premium chileno con calibre seleccionado y humedad controlada.</p>
                 </a>
                 <a class="related-card" href="representacion-comercial.html">
-                    <h3>Representación Comercial</h3>
-                    <p>Su socio en Chile para compras, sourcing y supervisión de embarques.</p>
+                    <h3 data-i18n="sub.rel.repcom.title">Representación Comercial</h3>
+                    <p data-i18n="sub.rel.repcom.desc">Su socio en Chile para compras, sourcing y supervisión de embarques.</p>
                 </a>
                 <a class="related-card" href="asesorias-tecnicas-inocuidad.html">
-                    <h3>Asesorías Técnicas</h3>
-                    <p>Calidad, inocuidad alimentaria y certificaciones para exportar.</p>
+                    <h3 data-i18n="sub.rel.asesorias.title">Asesorías Técnicas</h3>
+                    <p data-i18n="sub.rel.asesorias.desc">Calidad, inocuidad alimentaria y certificaciones para exportar.</p>
                 </a>
                 <a class="related-card" href="maquinaria-agroindustrial.html">
-                    <h3>Maquinaria Agroindustrial</h3>
-                    <p>Compra y venta de equipamiento para procesamiento de fruta.</p>
+                    <h3 data-i18n="sub.rel.maq.title">Maquinaria Agroindustrial</h3>
+                    <p data-i18n="sub.rel.maq.desc">Compra y venta de equipamiento para procesamiento de fruta.</p>
                 </a>
             </div>
         </div>
@@ -232,9 +250,9 @@
     <!-- CTA -->
     <section class="cta-banner">
         <div class="container">
-            <h2>¿Listo para exportar desde Chile?</h2>
-            <p>Cuéntenos qué producto y a qué mercado quiere llegar. Diseñamos la operación completa por usted.</p>
-            <a href="../index.html#contacto" class="btn btn-primary">Contactar a Prunavita</a>
+            <h2 data-i18n="exp.cta.title">¿Listo para exportar desde Chile?</h2>
+            <p data-i18n="exp.cta.text">Cuéntenos qué producto y a qué mercado quiere llegar. Diseñamos la operación completa por usted.</p>
+            <a href="../index.html#contacto" class="btn btn-primary" data-i18n="sub.cta.contact">Contactar a Prunavita</a>
         </div>
     </section>
 
@@ -246,26 +264,26 @@
                     <div class="footer-logo">
                         <img src="../assets/images/logoblanco.png" alt="Prunavita" class="footer-logo-img">
                     </div>
-                    <p class="footer-tagline">Servicios integrales en exportación y gestión agroindustrial con los más altos estándares de calidad.</p>
+                    <p class="footer-tagline" data-i18n="footer.desc">Servicios integrales en exportación y gestión agroindustrial con los más altos estándares de calidad.</p>
                 </div>
                 <div class="footer-columns">
                     <div class="footer-column">
-                        <h4>Servicios</h4>
+                        <h4 data-i18n="footer.services">Servicios</h4>
                         <ul>
-                            <li><a href="ciruelas-deshidratadas.html">Ciruelas Deshidratadas</a></li>
-                            <li><a href="exportacion-agroindustrial.html">Gestión de Exportaciones</a></li>
-                            <li><a href="maquinaria-agroindustrial.html">Maquinaria Agroindustrial</a></li>
-                            <li><a href="representacion-comercial.html">Representación Comercial</a></li>
-                            <li><a href="asesorias-tecnicas-inocuidad.html">Asesorías Técnicas</a></li>
+                            <li><a href="ciruelas-deshidratadas.html" data-i18n="footer.svc.ciruelas">Ciruelas Deshidratadas</a></li>
+                            <li><a href="exportacion-agroindustrial.html" data-i18n="footer.svc.export">Gestión de Exportaciones</a></li>
+                            <li><a href="maquinaria-agroindustrial.html" data-i18n="footer.svc.maq">Maquinaria Agroindustrial</a></li>
+                            <li><a href="representacion-comercial.html" data-i18n="footer.svc.repcom">Representación Comercial</a></li>
+                            <li><a href="asesorias-tecnicas-inocuidad.html" data-i18n="footer.svc.asesorias">Asesorías Técnicas</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <h4>Empresa</h4>
+                        <h4 data-i18n="footer.company">Empresa</h4>
                         <ul>
-                            <li><a href="../index.html#nosotros">Sobre Nosotros</a></li>
-                            <li><a href="../index.html#productos">Productos</a></li>
-                            <li><a href="../noticias/">Noticias</a></li>
-                            <li><a href="../index.html#contacto">Contacto</a></li>
+                            <li><a href="../index.html#nosotros" data-i18n="nav.about">Sobre Nosotros</a></li>
+                            <li><a href="../index.html#productos" data-i18n="nav.products">Productos</a></li>
+                            <li><a href="../noticias/" data-i18n="nav.news">Noticias</a></li>
+                            <li><a href="../index.html#contacto" data-i18n="nav.contact">Contacto</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
@@ -280,7 +298,7 @@
             <div class="footer-divider"></div>
             <div class="footer-bottom">
                 <div class="footer-copyright">
-                    <p>&copy; 2026 Prunavita. Todos los derechos reservados.</p>
+                    <p data-i18n="footer.copyright">&copy; 2026 Prunavita. Todos los derechos reservados.</p>
                 </div>
                 <div class="footer-credit">
                     <p>Creado por <a href="https://pulsandotech.com" target="_blank" rel="noopener">Pulsando Tech</a></p>
@@ -290,6 +308,8 @@
     </footer>
 
     <script src="../loading.js"></script>
+    <script src="../translations.js" defer></script>
+    <script src="../page-translations.js" defer></script>
     <script src="../script.js" defer></script>
 </body>
 </html>

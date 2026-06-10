@@ -249,6 +249,16 @@
     background: var(--gray-100);
 }
 
+/* Grilla de servicios en la landing */
+.services-links {
+    padding: var(--spacing-4xl) 0;
+    background: var(--white);
+}
+
+.services-links .related-grid {
+    margin-top: var(--spacing-xl);
+}
+
 /* ===================================
    NOTICIAS
    =================================== */

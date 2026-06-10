@@ -375,10 +375,12 @@ class LanguageManager {
             localStorage.setItem('prunavita_lang', lang);
         }
 
-        // Update page title
-        document.title = lang === 'es'
-            ? 'Prunavita | Exportación de Fruta Deshidratada Premium'
-            : 'Prunavita | Premium Dried Fruit Export';
+        // Update page title only if the page defines its own translated titles
+        // (window.pageTitles = { es: '...', en: '...' }). This protects the
+        // SEO title of internal pages from being overwritten.
+        if (window.pageTitles && window.pageTitles[lang]) {
+            document.title = window.pageTitles[lang];
+        }
     }
 
     getCurrentLang() {

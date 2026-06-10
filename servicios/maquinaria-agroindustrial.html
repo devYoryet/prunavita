@@ -18,6 +18,14 @@
     <meta property="og:site_name" content="Prunavita">
     <meta name="twitter:card" content="summary_large_image">
 
+    <!-- Título traducible (usado por translations.js al cambiar idioma) -->
+    <script>
+        window.pageTitles = {
+            es: 'Compra y Venta de Maquinaria Agroindustrial en Chile | Prunavita',
+            en: 'Agro-Industrial Machinery for Sale in Chile | Prunavita'
+        };
+    </script>
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -93,12 +101,22 @@
                 <span></span><span></span><span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../index.html#nosotros">Nosotros</a></li>
-                <li><a href="../index.html#productos">Productos</a></li>
-                <li><a href="../index.html#servicios">Servicios</a></li>
-                <li><a href="../noticias/">Noticias</a></li>
-                <li><a href="../index.html#contacto" class="btn-primary-nav">Contacto</a></li>
+                <li><a href="../index.html" data-i18n="nav.home">Inicio</a></li>
+                <li><a href="../index.html#nosotros" data-i18n="nav.about">Nosotros</a></li>
+                <li><a href="../index.html#productos" data-i18n="nav.products">Productos</a></li>
+                <li><a href="../index.html#servicios" data-i18n="nav.services">Servicios</a></li>
+                <li><a href="../noticias/" data-i18n="nav.news">Noticias</a></li>
+                <li><a href="../index.html#contacto" class="btn-primary-nav" data-i18n="nav.contact">Contacto</a></li>
+                <li class="lang-switcher">
+                    <button class="lang-btn active" data-lang="es">
+                        <span class="flag">🇪🇸</span>
+                        <span class="lang-text">ES</span>
+                    </button>
+                    <button class="lang-btn" data-lang="en">
+                        <span class="flag">🇬🇧</span>
+                        <span class="lang-text">EN</span>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -107,16 +125,16 @@
     <header class="page-hero">
         <div class="container">
             <nav class="breadcrumbs" aria-label="breadcrumb">
-                <a href="../index.html">Inicio</a> / <a href="../index.html#servicios">Servicios</a> / Maquinaria Agroindustrial
+                <a href="../index.html" data-i18n="sub.breadcrumb.home">Inicio</a> / <a href="../index.html#servicios" data-i18n="sub.breadcrumb.services">Servicios</a> / <span data-i18n="sub.rel.maq.title">Maquinaria Agroindustrial</span>
             </nav>
-            <h1>Compra y Venta de Maquinaria Agroindustrial en Chile</h1>
-            <p class="hero-lead">
+            <h1 data-i18n="maq.h1">Compra y Venta de Maquinaria Agroindustrial en Chile</h1>
+            <p class="hero-lead" data-i18n="maq.lead">
                 Equipamiento de excelencia para su planta: sourcing, evaluación técnica, importación y comercialización de
                 maquinaria para procesamiento, deshidratado, selección y embalaje de fruta.
             </p>
             <div class="hero-actions">
-                <a href="../index.html#contacto" class="btn btn-primary">Cotizar Equipamiento</a>
-                <a href="#equipos" class="btn-secondary-outline">Tipos de Equipos</a>
+                <a href="../index.html#contacto" class="btn btn-primary" data-i18n="maq.btn1">Cotizar Equipamiento</a>
+                <a href="#equipos" class="btn-secondary-outline" data-i18n="maq.btn2">Tipos de Equipos</a>
             </div>
         </div>
     </header>
@@ -124,8 +142,8 @@
     <!-- Content -->
     <main class="page-content">
         <div class="container">
-            <h2>El equipo correcto cambia la rentabilidad de su planta</h2>
-            <p>
+            <h2 data-i18n="maq.s1.title">El equipo correcto cambia la rentabilidad de su planta</h2>
+            <p data-i18n="maq.s1.p1">
                 En la agroindustria, la diferencia entre una operación rentable y una marginal suele estar en el
                 equipamiento: capacidad de proceso, eficiencia energética, mermas y calidad final del producto.
                 En <strong>Prunavita</strong> conocemos los procesos productivos —especialmente los del
@@ -133,67 +151,67 @@
                 recomendar, buscar y comercializar la maquinaria que realmente se ajusta a su operación.
             </p>
 
-            <h2 id="equipos">Tipos de maquinaria que comercializamos</h2>
+            <h2 id="equipos" data-i18n="maq.s2.title">Tipos de maquinaria que comercializamos</h2>
             <div class="benefit-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">🔥</div>
-                    <h3>Deshidratado</h3>
-                    <p>Túneles y hornos de deshidratado, equipos de tiernizado y control de humedad para fruta.</p>
+                    <h3 data-i18n="maq.b1.title">Deshidratado</h3>
+                    <p data-i18n="maq.b1.desc">Túneles y hornos de deshidratado, equipos de tiernizado y control de humedad para fruta.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">⚙️</div>
-                    <h3>Selección y calibrado</h3>
-                    <p>Calibradoras, seleccionadoras ópticas, despezonadoras y mesas de selección.</p>
+                    <h3 data-i18n="maq.b2.title">Selección y calibrado</h3>
+                    <p data-i18n="maq.b2.desc">Calibradoras, seleccionadoras ópticas, despezonadoras y mesas de selección.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">🧼</div>
-                    <h3>Lavado y proceso</h3>
-                    <p>Líneas de lavado, descarozadoras y equipos de proceso para fruta fresca y deshidratada.</p>
+                    <h3 data-i18n="maq.b3.title">Lavado y proceso</h3>
+                    <p data-i18n="maq.b3.desc">Líneas de lavado, descarozadoras y equipos de proceso para fruta fresca y deshidratada.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">📦</div>
-                    <h3>Embalaje</h3>
-                    <p>Envasadoras, selladoras al vacío, detectores de metales y equipos de fin de línea.</p>
+                    <h3 data-i18n="maq.b4.title">Embalaje</h3>
+                    <p data-i18n="maq.b4.desc">Envasadoras, selladoras al vacío, detectores de metales y equipos de fin de línea.</p>
                 </div>
             </div>
 
-            <h2>Cómo trabajamos la compra o venta de su equipo</h2>
-            <h3>1. Diagnóstico de la necesidad</h3>
-            <p>Levantamos los requerimientos de su planta: producto, capacidad, espacio disponible y presupuesto.</p>
-            <h3>2. Sourcing nacional e internacional</h3>
-            <p>Buscamos alternativas nuevas y usadas en Chile y el extranjero, comparando fichas técnicas, plazos y costos totales.</p>
-            <h3>3. Evaluación técnica</h3>
-            <p>
+            <h2 data-i18n="maq.s3.title">Cómo trabajamos la compra o venta de su equipo</h2>
+            <h3 data-i18n="maq.s3.h1">1. Diagnóstico de la necesidad</h3>
+            <p data-i18n="maq.s3.p1">Levantamos los requerimientos de su planta: producto, capacidad, espacio disponible y presupuesto.</p>
+            <h3 data-i18n="maq.s3.h2">2. Sourcing nacional e internacional</h3>
+            <p data-i18n="maq.s3.p2">Buscamos alternativas nuevas y usadas en Chile y el extranjero, comparando fichas técnicas, plazos y costos totales.</p>
+            <h3 data-i18n="maq.s3.h3">3. Evaluación técnica</h3>
+            <p data-i18n="maq.s3.p3">
                 Verificamos el estado real del equipo y su compatibilidad con los estándares de inocuidad que su proceso
                 requiere. Complementamos con nuestras <a href="asesorias-tecnicas-inocuidad.html">asesorías técnicas en calidad e inocuidad</a>.
             </p>
-            <h3>4. Importación y logística</h3>
-            <p>
+            <h3 data-i18n="maq.s3.h4">4. Importación y logística</h3>
+            <p data-i18n="maq.s3.p4">
                 Gestionamos la internación, transporte y documentación con la misma experiencia de nuestra
                 <a href="exportacion-agroindustrial.html">gestión de operaciones de comercio exterior</a>.
             </p>
-            <h3>5. Entrega y puesta en marcha</h3>
-            <p>Coordinamos la instalación y acompañamos la puesta en marcha junto al proveedor técnico.</p>
+            <h3 data-i18n="maq.s3.h5">5. Entrega y puesta en marcha</h3>
+            <p data-i18n="maq.s3.p5">Coordinamos la instalación y acompañamos la puesta en marcha junto al proveedor técnico.</p>
 
-            <h2>¿Vende equipamiento? También le ayudamos</h2>
-            <p>
+            <h2 data-i18n="maq.s4.title">¿Vende equipamiento? También le ayudamos</h2>
+            <p data-i18n="maq.s4.p1">
                 Si su planta renueva tecnología, comercializamos sus equipos usados en buen estado conectándolos con
                 productores que buscan equipamiento a menor inversión. Gestionamos la difusión, negociación y logística
                 de entrega.
             </p>
 
-            <h2>Preguntas frecuentes</h2>
+            <h2 data-i18n="sub.faq.title">Preguntas frecuentes</h2>
             <div class="faq-item">
-                <h3>¿Qué tipo de maquinaria comercializan?</h3>
-                <p>Equipos para procesamiento de fruta fresca y deshidratada: túneles de deshidratado, calibradoras, seleccionadoras ópticas, líneas de lavado, tiernizado y embalaje, nuevos y usados.</p>
+                <h3 data-i18n="maq.faq.q1">¿Qué tipo de maquinaria comercializan?</h3>
+                <p data-i18n="maq.faq.a1">Equipos para procesamiento de fruta fresca y deshidratada: túneles de deshidratado, calibradoras, seleccionadoras ópticas, líneas de lavado, tiernizado y embalaje, nuevos y usados.</p>
             </div>
             <div class="faq-item">
-                <h3>¿Pueden importar maquinaria específica para mi planta?</h3>
-                <p>Sí. Hacemos sourcing internacional, evaluamos alternativas técnicas y gestionamos importación, internación y puesta en marcha en Chile.</p>
+                <h3 data-i18n="maq.faq.q2">¿Pueden importar maquinaria específica para mi planta?</h3>
+                <p data-i18n="maq.faq.a2">Sí. Hacemos sourcing internacional, evaluamos alternativas técnicas y gestionamos importación, internación y puesta en marcha en Chile.</p>
             </div>
             <div class="faq-item">
-                <h3>¿Compran maquinaria usada?</h3>
-                <p>Evaluamos y comercializamos equipos usados en buen estado, conectando a quienes renuevan tecnología con quienes buscan invertir menos.</p>
+                <h3 data-i18n="maq.faq.q3">¿Compran maquinaria usada?</h3>
+                <p data-i18n="maq.faq.a3">Evaluamos y comercializamos equipos usados en buen estado, conectando a quienes renuevan tecnología con quienes buscan invertir menos.</p>
             </div>
         </div>
     </main>
@@ -201,23 +219,23 @@
     <!-- Related services -->
     <section class="related-services">
         <div class="container">
-            <h2>Servicios relacionados</h2>
+            <h2 data-i18n="sub.related.title">Servicios relacionados</h2>
             <div class="related-grid">
                 <a class="related-card" href="ciruelas-deshidratadas.html">
-                    <h3>Ciruelas Deshidratadas</h3>
-                    <p>Producto premium chileno con calibre seleccionado y humedad controlada.</p>
+                    <h3 data-i18n="sub.rel.ciruelas.title">Ciruelas Deshidratadas</h3>
+                    <p data-i18n="sub.rel.ciruelas.desc">Producto premium chileno con calibre seleccionado y humedad controlada.</p>
                 </a>
                 <a class="related-card" href="exportacion-agroindustrial.html">
-                    <h3>Gestión de Exportaciones</h3>
-                    <p>Operación integral de exportación agroindustrial desde Chile al mundo.</p>
+                    <h3 data-i18n="sub.rel.export.title">Gestión de Exportaciones</h3>
+                    <p data-i18n="sub.rel.export.desc">Operación integral de exportación agroindustrial desde Chile al mundo.</p>
                 </a>
                 <a class="related-card" href="representacion-comercial.html">
-                    <h3>Representación Comercial</h3>
-                    <p>Su socio en Chile para compras, sourcing y supervisión de embarques.</p>
+                    <h3 data-i18n="sub.rel.repcom.title">Representación Comercial</h3>
+                    <p data-i18n="sub.rel.repcom.desc">Su socio en Chile para compras, sourcing y supervisión de embarques.</p>
                 </a>
                 <a class="related-card" href="asesorias-tecnicas-inocuidad.html">
-                    <h3>Asesorías Técnicas</h3>
-                    <p>Calidad, inocuidad alimentaria y certificaciones para exportar.</p>
+                    <h3 data-i18n="sub.rel.asesorias.title">Asesorías Técnicas</h3>
+                    <p data-i18n="sub.rel.asesorias.desc">Calidad, inocuidad alimentaria y certificaciones para exportar.</p>
                 </a>
             </div>
         </div>
@@ -226,9 +244,9 @@
     <!-- CTA -->
     <section class="cta-banner">
         <div class="container">
-            <h2>¿Busca o vende maquinaria agroindustrial?</h2>
-            <p>Cuéntenos qué equipo necesita o qué equipo quiere vender, y le presentaremos las mejores alternativas.</p>
-            <a href="../index.html#contacto" class="btn btn-primary">Contactar a Prunavita</a>
+            <h2 data-i18n="maq.cta.title">¿Busca o vende maquinaria agroindustrial?</h2>
+            <p data-i18n="maq.cta.text">Cuéntenos qué equipo necesita o qué equipo quiere vender, y le presentaremos las mejores alternativas.</p>
+            <a href="../index.html#contacto" class="btn btn-primary" data-i18n="sub.cta.contact">Contactar a Prunavita</a>
         </div>
     </section>
 
@@ -240,26 +258,26 @@
                     <div class="footer-logo">
                         <img src="../assets/images/logoblanco.png" alt="Prunavita" class="footer-logo-img">
                     </div>
-                    <p class="footer-tagline">Servicios integrales en exportación y gestión agroindustrial con los más altos estándares de calidad.</p>
+                    <p class="footer-tagline" data-i18n="footer.desc">Servicios integrales en exportación y gestión agroindustrial con los más altos estándares de calidad.</p>
                 </div>
                 <div class="footer-columns">
                     <div class="footer-column">
-                        <h4>Servicios</h4>
+                        <h4 data-i18n="footer.services">Servicios</h4>
                         <ul>
-                            <li><a href="ciruelas-deshidratadas.html">Ciruelas Deshidratadas</a></li>
-                            <li><a href="exportacion-agroindustrial.html">Gestión de Exportaciones</a></li>
-                            <li><a href="maquinaria-agroindustrial.html">Maquinaria Agroindustrial</a></li>
-                            <li><a href="representacion-comercial.html">Representación Comercial</a></li>
-                            <li><a href="asesorias-tecnicas-inocuidad.html">Asesorías Técnicas</a></li>
+                            <li><a href="ciruelas-deshidratadas.html" data-i18n="footer.svc.ciruelas">Ciruelas Deshidratadas</a></li>
+                            <li><a href="exportacion-agroindustrial.html" data-i18n="footer.svc.export">Gestión de Exportaciones</a></li>
+                            <li><a href="maquinaria-agroindustrial.html" data-i18n="footer.svc.maq">Maquinaria Agroindustrial</a></li>
+                            <li><a href="representacion-comercial.html" data-i18n="footer.svc.repcom">Representación Comercial</a></li>
+                            <li><a href="asesorias-tecnicas-inocuidad.html" data-i18n="footer.svc.asesorias">Asesorías Técnicas</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <h4>Empresa</h4>
+                        <h4 data-i18n="footer.company">Empresa</h4>
                         <ul>
-                            <li><a href="../index.html#nosotros">Sobre Nosotros</a></li>
-                            <li><a href="../index.html#productos">Productos</a></li>
-                            <li><a href="../noticias/">Noticias</a></li>
-                            <li><a href="../index.html#contacto">Contacto</a></li>
+                            <li><a href="../index.html#nosotros" data-i18n="nav.about">Sobre Nosotros</a></li>
+                            <li><a href="../index.html#productos" data-i18n="nav.products">Productos</a></li>
+                            <li><a href="../noticias/" data-i18n="nav.news">Noticias</a></li>
+                            <li><a href="../index.html#contacto" data-i18n="nav.contact">Contacto</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
@@ -274,7 +292,7 @@
             <div class="footer-divider"></div>
             <div class="footer-bottom">
                 <div class="footer-copyright">
-                    <p>&copy; 2026 Prunavita. Todos los derechos reservados.</p>
+                    <p data-i18n="footer.copyright">&copy; 2026 Prunavita. Todos los derechos reservados.</p>
                 </div>
                 <div class="footer-credit">
                     <p>Creado por <a href="https://pulsandotech.com" target="_blank" rel="noopener">Pulsando Tech</a></p>
@@ -284,6 +302,8 @@
     </footer>
 
     <script src="../loading.js"></script>
+    <script src="../translations.js" defer></script>
+    <script src="../page-translations.js" defer></script>
     <script src="../script.js" defer></script>
 </body>
 </html>

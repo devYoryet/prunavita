@@ -65,6 +65,15 @@
     
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="page-styles.css">
+
+    <!-- Título traducible (usado por translations.js al cambiar idioma) -->
+    <script>
+        window.pageTitles = {
+            es: 'Prunavita | Servicios Integrales de Exportación Agroindustrial',
+            en: 'Prunavita | Comprehensive Agro-Industrial Export Services'
+        };
+    </script>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -192,6 +201,43 @@
                     </button>
                 </div>
             </div>
+    </section>
+
+    <!-- Services Access Grid -->
+    <section class="services-links" id="servicios-detalle">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="svcgrid.tag">Nuestros Servicios</span>
+                <h2 class="section-title" data-i18n="svcgrid.title">Soluciones Integrales para la Agroindustria</h2>
+                <p class="section-subtitle" data-i18n="svcgrid.subtitle">Conozca en detalle cada una de nuestras líneas de servicio</p>
+            </div>
+            <div class="related-grid">
+                <a class="related-card" href="servicios/ciruelas-deshidratadas.html">
+                    <h3 data-i18n="sub.rel.ciruelas.title">Ciruelas Deshidratadas</h3>
+                    <p data-i18n="sub.rel.ciruelas.desc">Producto premium chileno con calibre seleccionado y humedad controlada.</p>
+                </a>
+                <a class="related-card" href="servicios/exportacion-agroindustrial.html">
+                    <h3 data-i18n="sub.rel.export.title">Gestión de Exportaciones</h3>
+                    <p data-i18n="sub.rel.export.desc">Operación integral de exportación agroindustrial desde Chile al mundo.</p>
+                </a>
+                <a class="related-card" href="servicios/representacion-comercial.html">
+                    <h3 data-i18n="sub.rel.repcom.title">Representación Comercial</h3>
+                    <p data-i18n="sub.rel.repcom.desc">Su socio en Chile para compras, sourcing y supervisión de embarques.</p>
+                </a>
+                <a class="related-card" href="servicios/maquinaria-agroindustrial.html">
+                    <h3 data-i18n="sub.rel.maq.title">Maquinaria Agroindustrial</h3>
+                    <p data-i18n="sub.rel.maq.desc">Compra y venta de equipamiento para procesamiento de fruta.</p>
+                </a>
+                <a class="related-card" href="servicios/asesorias-tecnicas-inocuidad.html">
+                    <h3 data-i18n="sub.rel.asesorias.title">Asesorías Técnicas</h3>
+                    <p data-i18n="sub.rel.asesorias.desc">Calidad, inocuidad alimentaria y certificaciones para exportar.</p>
+                </a>
+                <a class="related-card" href="noticias/">
+                    <h3 data-i18n="svcgrid.news.title">Noticias y Actualidad</h3>
+                    <p data-i18n="svcgrid.news.desc">Novedades de Prunavita y análisis del sector agroindustrial.</p>
+                </a>
+            </div>
+        </div>
     </section>
 
     <!-- About Us Section -->
@@ -636,6 +682,7 @@
     <!-- Loading script loads first (no defer) to handle loading screen immediately -->
     <script src="loading.js"></script>
     <script src="translations.js" defer></script>
+    <script src="page-translations.js" defer></script>
     <script src="script.js" defer></script>
 </body>
 </html>
