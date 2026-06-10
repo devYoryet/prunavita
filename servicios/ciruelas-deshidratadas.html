@@ -18,6 +18,14 @@
     <meta property="og:site_name" content="Prunavita">
     <meta name="twitter:card" content="summary_large_image">
 
+    <!-- Título traducible (usado por translations.js al cambiar idioma) -->
+    <script>
+        window.pageTitles = {
+            es: 'Ciruelas Deshidratadas Chilenas para Exportación | Prunavita',
+            en: 'Premium Chilean Prunes for Export | Prunavita'
+        };
+    </script>
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -104,12 +112,22 @@
                 <span></span><span></span><span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../index.html#nosotros">Nosotros</a></li>
-                <li><a href="../index.html#productos">Productos</a></li>
-                <li><a href="../index.html#servicios">Servicios</a></li>
-                <li><a href="../noticias/">Noticias</a></li>
-                <li><a href="../index.html#contacto" class="btn-primary-nav">Contacto</a></li>
+                <li><a href="../index.html" data-i18n="nav.home">Inicio</a></li>
+                <li><a href="../index.html#nosotros" data-i18n="nav.about">Nosotros</a></li>
+                <li><a href="../index.html#productos" data-i18n="nav.products">Productos</a></li>
+                <li><a href="../index.html#servicios" data-i18n="nav.services">Servicios</a></li>
+                <li><a href="../noticias/" data-i18n="nav.news">Noticias</a></li>
+                <li><a href="../index.html#contacto" class="btn-primary-nav" data-i18n="nav.contact">Contacto</a></li>
+                <li class="lang-switcher">
+                    <button class="lang-btn active" data-lang="es">
+                        <span class="flag">🇪🇸</span>
+                        <span class="lang-text">ES</span>
+                    </button>
+                    <button class="lang-btn" data-lang="en">
+                        <span class="flag">🇬🇧</span>
+                        <span class="lang-text">EN</span>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -118,16 +136,16 @@
     <header class="page-hero">
         <div class="container">
             <nav class="breadcrumbs" aria-label="breadcrumb">
-                <a href="../index.html">Inicio</a> / <a href="../index.html#servicios">Servicios</a> / Ciruelas Deshidratadas
+                <a href="../index.html" data-i18n="sub.breadcrumb.home">Inicio</a> / <a href="../index.html#servicios" data-i18n="sub.breadcrumb.services">Servicios</a> / <span data-i18n="sub.rel.ciruelas.title">Ciruelas Deshidratadas</span>
             </nav>
-            <h1>Ciruelas Deshidratadas Premium de Chile para Exportación</h1>
-            <p class="hero-lead">
+            <h1 data-i18n="cir.h1">Ciruelas Deshidratadas Premium de Chile para Exportación</h1>
+            <p class="hero-lead" data-i18n="cir.lead">
                 Somos su proveedor confiable de ciruelas deshidratadas chilenas: calibre seleccionado, humedad controlada,
                 sin aditivos y con embalaje certificado para los mercados más exigentes de Asia, Europa y América.
             </p>
             <div class="hero-actions">
-                <a href="../index.html#contacto" class="btn btn-primary">Solicitar Cotización</a>
-                <a href="#especificaciones" class="btn-secondary-outline">Ver Especificaciones</a>
+                <a href="../index.html#contacto" class="btn btn-primary" data-i18n="sub.quote">Solicitar Cotización</a>
+                <a href="#especificaciones" class="btn-secondary-outline" data-i18n="cir.btn2">Ver Especificaciones</a>
             </div>
         </div>
     </header>
@@ -135,88 +153,88 @@
     <!-- Content -->
     <main class="page-content">
         <div class="container">
-            <h2>Chile: el principal exportador de ciruelas deshidratadas del mundo</h2>
-            <p>
+            <h2 data-i18n="cir.s1.title">Chile: el principal exportador de ciruelas deshidratadas del mundo</h2>
+            <p data-i18n="cir.s1.p1">
                 Chile lidera la exportación mundial de ciruelas deshidratadas gracias a sus condiciones agroclimáticas únicas
                 en los valles de la zona central, donde la variedad <strong>D'Agen</strong> alcanza niveles de azúcar y textura
                 ideales para el proceso de deshidratado. En Prunavita trabajamos directamente con productores y plantas
                 procesadoras chilenas para llevar este producto premium a compradores internacionales.
             </p>
-            <p>
+            <p data-i18n="cir.s1.p2">
                 Los mercados asiáticos —y en especial <strong>China</strong>, donde la ciruela deshidratada chilena (智利西梅)
                 es altamente valorada como snack saludable— concentran una parte creciente de la demanda. Nuestro equipo
                 gestiona todo el proceso comercial y logístico para que su empresa reciba producto consistente, trazable y
                 en plazo.
             </p>
 
-            <h2 id="especificaciones">Especificaciones de nuestras ciruelas deshidratadas</h2>
+            <h2 id="especificaciones" data-i18n="cir.s2.title">Especificaciones de nuestras ciruelas deshidratadas</h2>
             <div class="benefit-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">📏</div>
-                    <h3>Calibre seleccionado</h3>
-                    <p>Calibres desde 20/30 hasta 110/120 unidades por libra, con y sin carozo (pitted / whole), clasificados según el mercado de destino.</p>
+                    <h3 data-i18n="cir.b1.title">Calibre seleccionado</h3>
+                    <p data-i18n="cir.b1.desc">Calibres desde 20/30 hasta 110/120 unidades por libra, con y sin carozo (pitted / whole), clasificados según el mercado de destino.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">💧</div>
-                    <h3>Humedad controlada</h3>
-                    <p>Procesos de tiernizado con humedad ajustada a especificación del cliente, garantizando textura y vida útil.</p>
+                    <h3 data-i18n="cir.b2.title">Humedad controlada</h3>
+                    <p data-i18n="cir.b2.desc">Procesos de tiernizado con humedad ajustada a especificación del cliente, garantizando textura y vida útil.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">🌱</div>
-                    <h3>Sin aditivos</h3>
-                    <p>Opciones naturales sin conservantes o con sorbato de potasio según requerimiento normativo del país comprador.</p>
+                    <h3 data-i18n="cir.b3.title">Sin aditivos</h3>
+                    <p data-i18n="cir.b3.desc">Opciones naturales sin conservantes o con sorbato de potasio según requerimiento normativo del país comprador.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">📦</div>
-                    <h3>Embalaje certificado</h3>
-                    <p>Cajas de 10 kg, bolsas al vacío o formatos retail, con rotulación conforme a la regulación del mercado de destino.</p>
+                    <h3 data-i18n="cir.b4.title">Embalaje certificado</h3>
+                    <p data-i18n="cir.b4.desc">Cajas de 10 kg, bolsas al vacío o formatos retail, con rotulación conforme a la regulación del mercado de destino.</p>
                 </div>
             </div>
 
-            <h2>Proceso de exportación con trazabilidad completa</h2>
-            <h3>1. Selección de origen y cosecha</h3>
-            <p>
+            <h2 data-i18n="cir.s3.title">Proceso de exportación con trazabilidad completa</h2>
+            <h3 data-i18n="cir.s3.h1">1. Selección de origen y cosecha</h3>
+            <p data-i18n="cir.s3.p1">
                 Identificamos los huertos y plantas procesadoras que mejor se ajustan a su especificación de calibre,
                 humedad y volumen, asegurando trazabilidad desde el campo.
             </p>
-            <h3>2. Control de calidad e inocuidad</h3>
-            <p>
+            <h3 data-i18n="cir.s3.h2">2. Control de calidad e inocuidad</h3>
+            <p data-i18n="cir.s3.p2">
                 Cada lote pasa por inspección de calibre, humedad, defectos y parámetros microbiológicos bajo protocolos
                 HACCP. Conozca también nuestras <a href="asesorias-tecnicas-inocuidad.html">asesorías técnicas en calidad e inocuidad alimentaria</a>.
             </p>
-            <h3>3. Documentación y logística internacional</h3>
-            <p>
+            <h3 data-i18n="cir.s3.h3">3. Documentación y logística internacional</h3>
+            <p data-i18n="cir.s3.p3">
                 Gestionamos certificados fitosanitarios SAG, certificados de origen, documentación aduanera y reserva de
                 contenedores. Vea el detalle de nuestra <a href="exportacion-agroindustrial.html">gestión integral de exportaciones agroindustriales</a>.
             </p>
 
-            <h2>Mercados de destino</h2>
-            <ul>
+            <h2 data-i18n="cir.s4.title">Mercados de destino</h2>
+            <ul data-i18n="cir.s4.list">
                 <li><strong>China y Asia:</strong> snack saludable de alta demanda; gestionamos etiquetado en chino y cumplimiento GACC.</li>
                 <li><strong>Europa:</strong> ingrediente para industria alimentaria y retail, con estándares BRC e IFS.</li>
                 <li><strong>América del Norte y Latinoamérica:</strong> formatos industriales y retail con entregas programadas.</li>
             </ul>
-            <p>
+            <p data-i18n="cir.s4.p">
                 Si su empresa está fuera de Chile y necesita un socio local que gestione compras y supervise embarques,
                 conozca nuestro servicio de <a href="representacion-comercial.html">representación comercial en Chile para empresas extranjeras</a>.
             </p>
 
-            <h2>Preguntas frecuentes</h2>
+            <h2 data-i18n="sub.faq.title">Preguntas frecuentes</h2>
             <div class="faq-item">
-                <h3>¿Qué calibres de ciruelas deshidratadas ofrecen?</h3>
-                <p>Trabajamos calibres desde 20/30 hasta 110/120 unidades por libra, con y sin carozo, según el requerimiento del mercado de destino.</p>
+                <h3 data-i18n="cir.faq.q1">¿Qué calibres de ciruelas deshidratadas ofrecen?</h3>
+                <p data-i18n="cir.faq.a1">Trabajamos calibres desde 20/30 hasta 110/120 unidades por libra, con y sin carozo, según el requerimiento del mercado de destino.</p>
             </div>
             <div class="faq-item">
-                <h3>¿Exportan a China y otros mercados asiáticos?</h3>
-                <p>Sí. China y Asia son destinos prioritarios. Gestionamos documentación, certificados fitosanitarios, etiquetado en chino y la logística completa del embarque.</p>
+                <h3 data-i18n="cir.faq.q2">¿Exportan a China y otros mercados asiáticos?</h3>
+                <p data-i18n="cir.faq.a2">Sí. China y Asia son destinos prioritarios. Gestionamos documentación, certificados fitosanitarios, etiquetado en chino y la logística completa del embarque.</p>
             </div>
             <div class="faq-item">
-                <h3>¿Qué certificaciones respaldan el producto?</h3>
-                <p>Plantas procesadoras bajo HACCP y normativas del mercado de destino, además de certificados fitosanitarios del SAG para cada embarque.</p>
+                <h3 data-i18n="cir.faq.q3">¿Qué certificaciones respaldan el producto?</h3>
+                <p data-i18n="cir.faq.a3">Plantas procesadoras bajo HACCP y normativas del mercado de destino, además de certificados fitosanitarios del SAG para cada embarque.</p>
             </div>
             <div class="faq-item">
-                <h3>¿Cuál es el volumen mínimo de compra?</h3>
-                <p>Desde pallets consolidados hasta contenedores completos de 20 o 40 pies. Evaluamos la mejor alternativa logística para su pedido.</p>
+                <h3 data-i18n="cir.faq.q4">¿Cuál es el volumen mínimo de compra?</h3>
+                <p data-i18n="cir.faq.a4">Desde pallets consolidados hasta contenedores completos de 20 o 40 pies. Evaluamos la mejor alternativa logística para su pedido.</p>
             </div>
         </div>
     </main>
@@ -224,23 +242,23 @@
     <!-- Related services -->
     <section class="related-services">
         <div class="container">
-            <h2>Servicios relacionados</h2>
+            <h2 data-i18n="sub.related.title">Servicios relacionados</h2>
             <div class="related-grid">
                 <a class="related-card" href="exportacion-agroindustrial.html">
-                    <h3>Gestión de Exportaciones</h3>
-                    <p>Operación integral de exportación agroindustrial desde Chile al mundo.</p>
+                    <h3 data-i18n="sub.rel.export.title">Gestión de Exportaciones</h3>
+                    <p data-i18n="sub.rel.export.desc">Operación integral de exportación agroindustrial desde Chile al mundo.</p>
                 </a>
                 <a class="related-card" href="representacion-comercial.html">
-                    <h3>Representación Comercial</h3>
-                    <p>Su socio en Chile para compras, sourcing y supervisión de embarques.</p>
+                    <h3 data-i18n="sub.rel.repcom.title">Representación Comercial</h3>
+                    <p data-i18n="sub.rel.repcom.desc">Su socio en Chile para compras, sourcing y supervisión de embarques.</p>
                 </a>
                 <a class="related-card" href="asesorias-tecnicas-inocuidad.html">
-                    <h3>Asesorías Técnicas</h3>
-                    <p>Calidad, inocuidad alimentaria y certificaciones para exportar.</p>
+                    <h3 data-i18n="sub.rel.asesorias.title">Asesorías Técnicas</h3>
+                    <p data-i18n="sub.rel.asesorias.desc">Calidad, inocuidad alimentaria y certificaciones para exportar.</p>
                 </a>
                 <a class="related-card" href="maquinaria-agroindustrial.html">
-                    <h3>Maquinaria Agroindustrial</h3>
-                    <p>Compra y venta de equipamiento para procesamiento de fruta.</p>
+                    <h3 data-i18n="sub.rel.maq.title">Maquinaria Agroindustrial</h3>
+                    <p data-i18n="sub.rel.maq.desc">Compra y venta de equipamiento para procesamiento de fruta.</p>
                 </a>
             </div>
         </div>
@@ -249,9 +267,9 @@
     <!-- CTA -->
     <section class="cta-banner">
         <div class="container">
-            <h2>¿Busca un proveedor de ciruelas deshidratadas chilenas?</h2>
-            <p>Cuéntenos su especificación de calibre, volumen y mercado de destino y le enviaremos una cotización personalizada.</p>
-            <a href="../index.html#contacto" class="btn btn-primary">Contactar a Prunavita</a>
+            <h2 data-i18n="cir.cta.title">¿Busca un proveedor de ciruelas deshidratadas chilenas?</h2>
+            <p data-i18n="cir.cta.text">Cuéntenos su especificación de calibre, volumen y mercado de destino y le enviaremos una cotización personalizada.</p>
+            <a href="../index.html#contacto" class="btn btn-primary" data-i18n="sub.cta.contact">Contactar a Prunavita</a>
         </div>
     </section>
 
@@ -263,26 +281,26 @@
                     <div class="footer-logo">
                         <img src="../assets/images/logoblanco.png" alt="Prunavita" class="footer-logo-img">
                     </div>
-                    <p class="footer-tagline">Servicios integrales en exportación y gestión agroindustrial con los más altos estándares de calidad.</p>
+                    <p class="footer-tagline" data-i18n="footer.desc">Servicios integrales en exportación y gestión agroindustrial con los más altos estándares de calidad.</p>
                 </div>
                 <div class="footer-columns">
                     <div class="footer-column">
-                        <h4>Servicios</h4>
+                        <h4 data-i18n="footer.services">Servicios</h4>
                         <ul>
-                            <li><a href="ciruelas-deshidratadas.html">Ciruelas Deshidratadas</a></li>
-                            <li><a href="exportacion-agroindustrial.html">Gestión de Exportaciones</a></li>
-                            <li><a href="maquinaria-agroindustrial.html">Maquinaria Agroindustrial</a></li>
-                            <li><a href="representacion-comercial.html">Representación Comercial</a></li>
-                            <li><a href="asesorias-tecnicas-inocuidad.html">Asesorías Técnicas</a></li>
+                            <li><a href="ciruelas-deshidratadas.html" data-i18n="footer.svc.ciruelas">Ciruelas Deshidratadas</a></li>
+                            <li><a href="exportacion-agroindustrial.html" data-i18n="footer.svc.export">Gestión de Exportaciones</a></li>
+                            <li><a href="maquinaria-agroindustrial.html" data-i18n="footer.svc.maq">Maquinaria Agroindustrial</a></li>
+                            <li><a href="representacion-comercial.html" data-i18n="footer.svc.repcom">Representación Comercial</a></li>
+                            <li><a href="asesorias-tecnicas-inocuidad.html" data-i18n="footer.svc.asesorias">Asesorías Técnicas</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <h4>Empresa</h4>
+                        <h4 data-i18n="footer.company">Empresa</h4>
                         <ul>
-                            <li><a href="../index.html#nosotros">Sobre Nosotros</a></li>
-                            <li><a href="../index.html#productos">Productos</a></li>
-                            <li><a href="../noticias/">Noticias</a></li>
-                            <li><a href="../index.html#contacto">Contacto</a></li>
+                            <li><a href="../index.html#nosotros" data-i18n="nav.about">Sobre Nosotros</a></li>
+                            <li><a href="../index.html#productos" data-i18n="nav.products">Productos</a></li>
+                            <li><a href="../noticias/" data-i18n="nav.news">Noticias</a></li>
+                            <li><a href="../index.html#contacto" data-i18n="nav.contact">Contacto</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
@@ -297,7 +315,7 @@
             <div class="footer-divider"></div>
             <div class="footer-bottom">
                 <div class="footer-copyright">
-                    <p>&copy; 2026 Prunavita. Todos los derechos reservados.</p>
+                    <p data-i18n="footer.copyright">&copy; 2026 Prunavita. Todos los derechos reservados.</p>
                 </div>
                 <div class="footer-credit">
                     <p>Creado por <a href="https://pulsandotech.com" target="_blank" rel="noopener">Pulsando Tech</a></p>
@@ -307,6 +325,8 @@
     </footer>
 
     <script src="../loading.js"></script>
+    <script src="../translations.js" defer></script>
+    <script src="../page-translations.js" defer></script>
     <script src="../script.js" defer></script>
 </body>
 </html>

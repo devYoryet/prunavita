@@ -18,6 +18,14 @@
     <meta property="og:site_name" content="Prunavita">
     <meta name="twitter:card" content="summary_large_image">
 
+    <!-- Título traducible (usado por translations.js al cambiar idioma) -->
+    <script>
+        window.pageTitles = {
+            es: 'Asesorías Técnicas en Calidad e Inocuidad Alimentaria | Prunavita',
+            en: 'Technical Advisory in Quality and Food Safety | Prunavita'
+        };
+    </script>
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -93,12 +101,22 @@
                 <span></span><span></span><span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../index.html#nosotros">Nosotros</a></li>
-                <li><a href="../index.html#productos">Productos</a></li>
-                <li><a href="../index.html#servicios">Servicios</a></li>
-                <li><a href="../noticias/">Noticias</a></li>
-                <li><a href="../index.html#contacto" class="btn-primary-nav">Contacto</a></li>
+                <li><a href="../index.html" data-i18n="nav.home">Inicio</a></li>
+                <li><a href="../index.html#nosotros" data-i18n="nav.about">Nosotros</a></li>
+                <li><a href="../index.html#productos" data-i18n="nav.products">Productos</a></li>
+                <li><a href="../index.html#servicios" data-i18n="nav.services">Servicios</a></li>
+                <li><a href="../noticias/" data-i18n="nav.news">Noticias</a></li>
+                <li><a href="../index.html#contacto" class="btn-primary-nav" data-i18n="nav.contact">Contacto</a></li>
+                <li class="lang-switcher">
+                    <button class="lang-btn active" data-lang="es">
+                        <span class="flag">🇪🇸</span>
+                        <span class="lang-text">ES</span>
+                    </button>
+                    <button class="lang-btn" data-lang="en">
+                        <span class="flag">🇬🇧</span>
+                        <span class="lang-text">EN</span>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -107,16 +125,16 @@
     <header class="page-hero">
         <div class="container">
             <nav class="breadcrumbs" aria-label="breadcrumb">
-                <a href="../index.html">Inicio</a> / <a href="../index.html#servicios">Servicios</a> / Asesorías Técnicas
+                <a href="../index.html" data-i18n="sub.breadcrumb.home">Inicio</a> / <a href="../index.html#servicios" data-i18n="sub.breadcrumb.services">Servicios</a> / <span data-i18n="sub.rel.asesorias.title">Asesorías Técnicas</span>
             </nav>
-            <h1>Asesorías Técnicas en Calidad e Inocuidad Alimentaria</h1>
-            <p class="hero-lead">
+            <h1 data-i18n="ase.h1">Asesorías Técnicas en Calidad e Inocuidad Alimentaria</h1>
+            <p class="hero-lead" data-i18n="ase.lead">
                 Certificación y calidad para la agroindustria: implementamos sistemas HACCP, preparamos su planta para
                 certificaciones internacionales y aseguramos que su producto cumpla la normativa de cada mercado de destino.
             </p>
             <div class="hero-actions">
-                <a href="../index.html#contacto" class="btn btn-primary">Solicitar Asesoría</a>
-                <a href="#areas" class="btn-secondary-outline">Áreas de Asesoría</a>
+                <a href="../index.html#contacto" class="btn btn-primary" data-i18n="ase.btn1">Solicitar Asesoría</a>
+                <a href="#areas" class="btn-secondary-outline" data-i18n="ase.btn2">Áreas de Asesoría</a>
             </div>
         </div>
     </header>
@@ -124,8 +142,8 @@
     <!-- Content -->
     <main class="page-content">
         <div class="container">
-            <h2>La inocuidad es la llave de los mercados internacionales</h2>
-            <p>
+            <h2 data-i18n="ase.s1.title">La inocuidad es la llave de los mercados internacionales</h2>
+            <p data-i18n="ase.s1.p1">
                 Los compradores internacionales de alimentos —supermercados, importadores e industria— exigen sistemas
                 de inocuidad certificados como condición de compra. Una planta sin HACCP implementado o sin preparación
                 para una auditoría BRC o IFS queda fuera de los mercados de mayor valor. En <strong>Prunavita</strong>
@@ -133,42 +151,42 @@
                 práctica y orientada a resultados.
             </p>
 
-            <h2 id="areas">Áreas de asesoría</h2>
+            <h2 id="areas" data-i18n="ase.s2.title">Áreas de asesoría</h2>
             <div class="benefit-grid">
                 <div class="benefit-card">
                     <div class="benefit-icon">🛡️</div>
-                    <h3>Sistemas HACCP</h3>
-                    <p>Diseño, implementación y verificación de planes HACCP y prerrequisitos (BPM, POES) en plantas de alimentos.</p>
+                    <h3 data-i18n="ase.b1.title">Sistemas HACCP</h3>
+                    <p data-i18n="ase.b1.desc">Diseño, implementación y verificación de planes HACCP y prerrequisitos (BPM, POES) en plantas de alimentos.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">📜</div>
-                    <h3>Certificaciones internacionales</h3>
-                    <p>Preparación para auditorías BRC Global Standard, IFS y otros esquemas GFSI exigidos por compradores globales.</p>
+                    <h3 data-i18n="ase.b2.title">Certificaciones internacionales</h3>
+                    <p data-i18n="ase.b2.desc">Preparación para auditorías BRC Global Standard, IFS y otros esquemas GFSI exigidos por compradores globales.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">🔍</div>
-                    <h3>Auditorías y diagnósticos</h3>
-                    <p>Auditorías internas, auditorías a proveedores y diagnósticos de brechas con planes de acción concretos.</p>
+                    <h3 data-i18n="ase.b3.title">Auditorías y diagnósticos</h3>
+                    <p data-i18n="ase.b3.desc">Auditorías internas, auditorías a proveedores y diagnósticos de brechas con planes de acción concretos.</p>
                 </div>
                 <div class="benefit-card">
                     <div class="benefit-icon">🌏</div>
-                    <h3>Normativa de destino</h3>
-                    <p>Cumplimiento de requisitos de mercados específicos: GACC China, FDA Estados Unidos y reglamentación de la Unión Europea.</p>
+                    <h3 data-i18n="ase.b4.title">Normativa de destino</h3>
+                    <p data-i18n="ase.b4.desc">Cumplimiento de requisitos de mercados específicos: GACC China, FDA Estados Unidos y reglamentación de la Unión Europea.</p>
                 </div>
             </div>
 
-            <h2>Cómo trabajamos una asesoría</h2>
-            <h3>1. Diagnóstico inicial</h3>
-            <p>Visitamos su planta y evaluamos el estado actual de sus sistemas de calidad frente al estándar objetivo.</p>
-            <h3>2. Plan de cierre de brechas</h3>
-            <p>Entregamos un plan de acción priorizado, con responsables, plazos e inversión estimada.</p>
-            <h3>3. Implementación acompañada</h3>
-            <p>Trabajamos junto a su equipo en la documentación, capacitación y puesta en práctica de los procedimientos.</p>
-            <h3>4. Verificación y auditoría de ensayo</h3>
-            <p>Simulamos la auditoría de certificación para llegar preparados a la evaluación real.</p>
+            <h2 data-i18n="ase.s3.title">Cómo trabajamos una asesoría</h2>
+            <h3 data-i18n="ase.s3.h1">1. Diagnóstico inicial</h3>
+            <p data-i18n="ase.s3.p1">Visitamos su planta y evaluamos el estado actual de sus sistemas de calidad frente al estándar objetivo.</p>
+            <h3 data-i18n="ase.s3.h2">2. Plan de cierre de brechas</h3>
+            <p data-i18n="ase.s3.p2">Entregamos un plan de acción priorizado, con responsables, plazos e inversión estimada.</p>
+            <h3 data-i18n="ase.s3.h3">3. Implementación acompañada</h3>
+            <p data-i18n="ase.s3.p3">Trabajamos junto a su equipo en la documentación, capacitación y puesta en práctica de los procedimientos.</p>
+            <h3 data-i18n="ase.s3.h4">4. Verificación y auditoría de ensayo</h3>
+            <p data-i18n="ase.s3.p4">Simulamos la auditoría de certificación para llegar preparados a la evaluación real.</p>
 
-            <h2>Asesoría integrada con la exportación</h2>
-            <p>
+            <h2 data-i18n="ase.s4.title">Asesoría integrada con la exportación</h2>
+            <p data-i18n="ase.s4.p1">
                 Nuestra ventaja es que no asesoramos desde la teoría: operamos exportaciones reales de
                 <a href="ciruelas-deshidratadas.html">ciruelas deshidratadas</a> y otros productos, por lo que conocemos
                 exactamente qué exige cada mercado y cada comprador. Si su objetivo final es exportar, integramos la
@@ -177,18 +195,18 @@
                 <a href="maquinaria-agroindustrial.html">compra y venta de maquinaria agroindustrial</a>.
             </p>
 
-            <h2>Preguntas frecuentes</h2>
+            <h2 data-i18n="sub.faq.title">Preguntas frecuentes</h2>
             <div class="faq-item">
-                <h3>¿Qué normas ayudan a implementar?</h3>
-                <p>HACCP, BPM/GMP, POES y preparación para certificaciones BRC e IFS, además del cumplimiento de requisitos de mercados como China, la Unión Europea y Estados Unidos.</p>
+                <h3 data-i18n="ase.faq.q1">¿Qué normas ayudan a implementar?</h3>
+                <p data-i18n="ase.faq.a1">HACCP, BPM/GMP, POES y preparación para certificaciones BRC e IFS, además del cumplimiento de requisitos de mercados como China, la Unión Europea y Estados Unidos.</p>
             </div>
             <div class="faq-item">
-                <h3>¿Por qué necesito certificaciones de inocuidad para exportar?</h3>
-                <p>Porque los compradores internacionales las exigen como condición de compra. Sin certificaciones reconocidas, el acceso a mercados de mayor valor queda limitado.</p>
+                <h3 data-i18n="ase.faq.q2">¿Por qué necesito certificaciones de inocuidad para exportar?</h3>
+                <p data-i18n="ase.faq.a2">Porque los compradores internacionales las exigen como condición de compra. Sin certificaciones reconocidas, el acceso a mercados de mayor valor queda limitado.</p>
             </div>
             <div class="faq-item">
-                <h3>¿Realizan auditorías a plantas y proveedores?</h3>
-                <p>Sí: auditorías internas de preparación, auditorías a proveedores y diagnósticos de brechas con planes de acción.</p>
+                <h3 data-i18n="ase.faq.q3">¿Realizan auditorías a plantas y proveedores?</h3>
+                <p data-i18n="ase.faq.a3">Sí: auditorías internas de preparación, auditorías a proveedores y diagnósticos de brechas con planes de acción.</p>
             </div>
         </div>
     </main>
@@ -196,23 +214,23 @@
     <!-- Related services -->
     <section class="related-services">
         <div class="container">
-            <h2>Servicios relacionados</h2>
+            <h2 data-i18n="sub.related.title">Servicios relacionados</h2>
             <div class="related-grid">
                 <a class="related-card" href="ciruelas-deshidratadas.html">
-                    <h3>Ciruelas Deshidratadas</h3>
-                    <p>Producto premium chileno con calibre seleccionado y humedad controlada.</p>
+                    <h3 data-i18n="sub.rel.ciruelas.title">Ciruelas Deshidratadas</h3>
+                    <p data-i18n="sub.rel.ciruelas.desc">Producto premium chileno con calibre seleccionado y humedad controlada.</p>
                 </a>
                 <a class="related-card" href="exportacion-agroindustrial.html">
-                    <h3>Gestión de Exportaciones</h3>
-                    <p>Operación integral de exportación agroindustrial desde Chile al mundo.</p>
+                    <h3 data-i18n="sub.rel.export.title">Gestión de Exportaciones</h3>
+                    <p data-i18n="sub.rel.export.desc">Operación integral de exportación agroindustrial desde Chile al mundo.</p>
                 </a>
                 <a class="related-card" href="representacion-comercial.html">
-                    <h3>Representación Comercial</h3>
-                    <p>Su socio en Chile para compras, sourcing y supervisión de embarques.</p>
+                    <h3 data-i18n="sub.rel.repcom.title">Representación Comercial</h3>
+                    <p data-i18n="sub.rel.repcom.desc">Su socio en Chile para compras, sourcing y supervisión de embarques.</p>
                 </a>
                 <a class="related-card" href="maquinaria-agroindustrial.html">
-                    <h3>Maquinaria Agroindustrial</h3>
-                    <p>Compra y venta de equipamiento para procesamiento de fruta.</p>
+                    <h3 data-i18n="sub.rel.maq.title">Maquinaria Agroindustrial</h3>
+                    <p data-i18n="sub.rel.maq.desc">Compra y venta de equipamiento para procesamiento de fruta.</p>
                 </a>
             </div>
         </div>
@@ -221,9 +239,9 @@
     <!-- CTA -->
     <section class="cta-banner">
         <div class="container">
-            <h2>¿Su planta está lista para los mercados más exigentes?</h2>
-            <p>Agende un diagnóstico inicial y reciba un plan de acción claro para certificar su operación.</p>
-            <a href="../index.html#contacto" class="btn btn-primary">Contactar a Prunavita</a>
+            <h2 data-i18n="ase.cta.title">¿Su planta está lista para los mercados más exigentes?</h2>
+            <p data-i18n="ase.cta.text">Agende un diagnóstico inicial y reciba un plan de acción claro para certificar su operación.</p>
+            <a href="../index.html#contacto" class="btn btn-primary" data-i18n="sub.cta.contact">Contactar a Prunavita</a>
         </div>
     </section>
 
@@ -235,26 +253,26 @@
                     <div class="footer-logo">
                         <img src="../assets/images/logoblanco.png" alt="Prunavita" class="footer-logo-img">
                     </div>
-                    <p class="footer-tagline">Servicios integrales en exportación y gestión agroindustrial con los más altos estándares de calidad.</p>
+                    <p class="footer-tagline" data-i18n="footer.desc">Servicios integrales en exportación y gestión agroindustrial con los más altos estándares de calidad.</p>
                 </div>
                 <div class="footer-columns">
                     <div class="footer-column">
-                        <h4>Servicios</h4>
+                        <h4 data-i18n="footer.services">Servicios</h4>
                         <ul>
-                            <li><a href="ciruelas-deshidratadas.html">Ciruelas Deshidratadas</a></li>
-                            <li><a href="exportacion-agroindustrial.html">Gestión de Exportaciones</a></li>
-                            <li><a href="maquinaria-agroindustrial.html">Maquinaria Agroindustrial</a></li>
-                            <li><a href="representacion-comercial.html">Representación Comercial</a></li>
-                            <li><a href="asesorias-tecnicas-inocuidad.html">Asesorías Técnicas</a></li>
+                            <li><a href="ciruelas-deshidratadas.html" data-i18n="footer.svc.ciruelas">Ciruelas Deshidratadas</a></li>
+                            <li><a href="exportacion-agroindustrial.html" data-i18n="footer.svc.export">Gestión de Exportaciones</a></li>
+                            <li><a href="maquinaria-agroindustrial.html" data-i18n="footer.svc.maq">Maquinaria Agroindustrial</a></li>
+                            <li><a href="representacion-comercial.html" data-i18n="footer.svc.repcom">Representación Comercial</a></li>
+                            <li><a href="asesorias-tecnicas-inocuidad.html" data-i18n="footer.svc.asesorias">Asesorías Técnicas</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <h4>Empresa</h4>
+                        <h4 data-i18n="footer.company">Empresa</h4>
                         <ul>
-                            <li><a href="../index.html#nosotros">Sobre Nosotros</a></li>
-                            <li><a href="../index.html#productos">Productos</a></li>
-                            <li><a href="../noticias/">Noticias</a></li>
-                            <li><a href="../index.html#contacto">Contacto</a></li>
+                            <li><a href="../index.html#nosotros" data-i18n="nav.about">Sobre Nosotros</a></li>
+                            <li><a href="../index.html#productos" data-i18n="nav.products">Productos</a></li>
+                            <li><a href="../noticias/" data-i18n="nav.news">Noticias</a></li>
+                            <li><a href="../index.html#contacto" data-i18n="nav.contact">Contacto</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
@@ -269,7 +287,7 @@
             <div class="footer-divider"></div>
             <div class="footer-bottom">
                 <div class="footer-copyright">
-                    <p>&copy; 2026 Prunavita. Todos los derechos reservados.</p>
+                    <p data-i18n="footer.copyright">&copy; 2026 Prunavita. Todos los derechos reservados.</p>
                 </div>
                 <div class="footer-credit">
                     <p>Creado por <a href="https://pulsandotech.com" target="_blank" rel="noopener">Pulsando Tech</a></p>
@@ -279,6 +297,8 @@
     </footer>
 
     <script src="../loading.js"></script>
+    <script src="../translations.js" defer></script>
+    <script src="../page-translations.js" defer></script>
     <script src="../script.js" defer></script>
 </body>
 </html>
