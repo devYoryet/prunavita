@@ -12,7 +12,10 @@ class Navigation {
         this.navbar = document.getElementById('navbar');
         this.menuToggle = document.getElementById('menuToggle');
         this.navMenu = document.getElementById('navMenu');
-        this.navLinks = document.querySelectorAll('.nav-menu a');
+        // Regular links exclude the dropdown toggle (handled separately)
+        this.navLinks = document.querySelectorAll('.nav-menu a:not(.nav-dropdown-toggle)');
+        this.dropdownToggles = document.querySelectorAll('.nav-dropdown-toggle');
+        this.mobileBreakpoint = 860;
 
         this.init();
     }
@@ -24,14 +27,22 @@ class Navigation {
         // Mobile menu toggle
         this.menuToggle.addEventListener('click', () => this.toggleMenu());
 
-        // Close menu on link click
+        // Close menu on link click + smooth scroll for anchor links
         this.navLinks.forEach(link => {
-            link.addEventListener('click', () => this.closeMenu());
+            link.addEventListener('click', (e) => {
+                this.smoothScroll(e);
+                this.closeMenu();
+            });
         });
 
-        // Smooth scroll for anchor links
-        this.navLinks.forEach(link => {
-            link.addEventListener('click', (e) => this.smoothScroll(e));
+        // Services dropdown: on mobile, tap toggles the accordion instead of navigating
+        this.dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                if (window.innerWidth <= this.mobileBreakpoint) {
+                    e.preventDefault();
+                    toggle.closest('.nav-dropdown').classList.toggle('open');
+                }
+            });
         });
 
         // Close menu on outside click
@@ -55,6 +66,7 @@ class Navigation {
     closeMenu() {
         this.menuToggle.classList.remove('active');
         this.navMenu.classList.remove('active');
+        document.querySelectorAll('.nav-dropdown.open').forEach(d => d.classList.remove('open'));
         document.body.style.overflow = '';
     }
 
@@ -66,7 +78,8 @@ class Navigation {
             const target = document.querySelector(href);
 
             if (target) {
-                const offsetTop = target.offsetTop - 80;
+                const navHeight = this.navbar ? this.navbar.offsetHeight : 80;
+                const offsetTop = target.getBoundingClientRect().top + window.scrollY - navHeight - 16;
                 window.scrollTo({
                     top: offsetTop,
                     behavior: 'smooth'

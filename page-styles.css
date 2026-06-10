@@ -7,12 +7,28 @@
    PAGE HERO
    =================================== */
 .page-hero {
-    padding: 10rem 0 4rem;
-    background: linear-gradient(180deg, var(--gray-50) 0%, var(--white) 100%);
+    position: relative;
+    padding: calc(var(--nav-height) + 3.5rem) 0 4rem;
+    background:
+        radial-gradient(900px 400px at 85% -10%, rgba(44, 95, 45, 0.07), transparent 60%),
+        linear-gradient(180deg, var(--gray-50) 0%, var(--white) 100%);
     border-bottom: 1px solid var(--gray-200);
+    overflow: hidden;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--primary), var(--primary-light));
+    opacity: 0;
 }
 
 .page-hero .container {
+    position: relative;
     max-width: 860px;
 }
 
@@ -351,6 +367,6 @@
 
 @media (max-width: 768px) {
     .page-hero {
-        padding: 8rem 0 3rem;
+        padding: calc(var(--nav-height) + 2rem) 0 3rem;
     }
 }
