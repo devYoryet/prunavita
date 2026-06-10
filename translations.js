@@ -10,6 +10,7 @@ const translations = {
         "nav.about": "Nosotros",
         "nav.products": "Productos",
         "nav.services": "Servicios",
+        "nav.news": "Noticias",
         "nav.contact": "Contacto",
 
         // Hero
@@ -164,6 +165,7 @@ const translations = {
         "nav.about": "About Us",
         "nav.products": "Products",
         "nav.services": "Services",
+        "nav.news": "News",
         "nav.contact": "Contact",
 
         // Hero
