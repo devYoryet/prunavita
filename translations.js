@@ -23,6 +23,14 @@ const translations = {
         "hero.trust1": "Calidad Garantizada",
         "hero.trust2": "Alcance Global",
         "hero.trust3": "Equipo Experto",
+        "hero.eyebrow": "Agroindustria chilena · Exportación global",
+        "hero.title": "Del campo chileno a los <span class=\"accent\">mercados del mundo</span>",
+        "hero.sub": "Ciruelas deshidratadas premium, frutos secos y servicios integrales de exportación, representación comercial y calidad para compradores de Asia, Europa y América.",
+        "hero.stat1": "Países de destino",
+        "hero.stat2": "Trazabilidad y calidad",
+        "hero.stat3": "Líneas de servicio",
+        "hero.stat4": "Origen Chile",
+        "about.badge": "países con presencia comercial",
 
         // Showcase
         "showcase.premium": "Premium Dried Prunes",
@@ -178,6 +186,14 @@ const translations = {
         "hero.trust1": "Guaranteed Quality",
         "hero.trust2": "Global Reach",
         "hero.trust3": "Expert Team",
+        "hero.eyebrow": "Chilean agro-industry · Global export",
+        "hero.title": "From the Chilean fields to the <span class=\"accent\">world's markets</span>",
+        "hero.sub": "Premium dried plums, nuts and comprehensive export, commercial representation and quality services for buyers across Asia, Europe and the Americas.",
+        "hero.stat1": "Destination countries",
+        "hero.stat2": "Traceability & quality",
+        "hero.stat3": "Service lines",
+        "hero.stat4": "Origin Chile",
+        "about.badge": "countries with commercial presence",
 
         // Showcase
         "showcase.premium": "Premium Dried Prunes",
