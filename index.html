@@ -66,6 +66,7 @@
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="page-styles.css">
+    <link rel="stylesheet" href="landing.css">
 
     <!-- Título traducible (usado por translations.js al cambiar idioma) -->
     <script>
@@ -131,16 +132,48 @@
         </div>
     </nav>
 
-    <!-- Hero Section - Carousel Only -->
+    <!-- Hero Section -->
     <section class="hero-professional" id="inicio">
-        <!-- Services Carousel - Main Element -->
+        <!-- Hero Banner -->
+        <div class="hero-banner">
+            <div class="hero-banner-bg" aria-hidden="true"></div>
+            <div class="container hero-banner-inner">
+                <span class="hero-eyebrow" data-i18n="hero.eyebrow">Agroindustria chilena · Exportación global</span>
+                <h1 class="hero-title" data-i18n="hero.title">Del campo chileno a los <span class="accent">mercados del mundo</span></h1>
+                <p class="hero-sub" data-i18n="hero.sub">Ciruelas deshidratadas premium, frutos secos y servicios integrales de exportación, representación comercial y calidad para compradores de Asia, Europa y América.</p>
+                <div class="hero-actions">
+                    <a href="#contacto" class="btn-primary" data-i18n="hero.cta1">Solicitar cotización</a>
+                    <a href="#servicios-detalle" class="btn-ghost" data-i18n="hero.cta2">Ver servicios</a>
+                </div>
+                <ul class="hero-trust">
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                        <span data-i18n="hero.trust4">Origen Chile</span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                        <span data-i18n="hero.trust2">Alcance Global</span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                        <span data-i18n="hero.trust1">Calidad Garantizada</span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                        <span data-i18n="hero.trust3">Equipo Experto</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Services Carousel -->
         <div class="hero-services-carousel-wrapper" id="servicios" data-aos="fade-up">
             <div class="hero-services-carousel" id="servicesCarousel">
                     <!-- Slide 1: Maquinaria -->
                     <!-- NOTE: Upload machinery.jpg to assets/images/ -->
                     <div class="service-slide active">
                         <div class="service-slide-background">
-                            <img src="assets/images/maquinaria.png" alt="Maquinaria Agroindustrial" class="slide-bg-image">
+                            <img src="assets/images/maquinaria.jpg" alt="Maquinaria Agroindustrial" class="slide-bg-image">
                             <div class="slide-overlay"></div>
                         </div>
                         <div class="service-slide-content">
@@ -288,40 +321,14 @@
                     </div>
                 </div>
                 <div class="about-visual" data-aos="fade-left">
-                    <div class="about-image-grid">
-                        <div class="grid-item item-1">
-                            <svg viewBox="0 0 200 200">
-                                <rect width="200" height="200" fill="#F5F1E8" rx="12"/>
-                                <circle cx="100" cy="80" r="35" fill="#4A2545" opacity="0.8"/>
-                                <ellipse cx="90" cy="75" rx="10" ry="13" fill="rgba(139,115,85,0.4)"/>
-                                <text x="100" y="150" font-size="14" text-anchor="middle" fill="#4A2545" font-weight="600">Premium</text>
-                                <text x="100" y="170" font-size="12" text-anchor="middle" fill="#8B7355">Quality</text>
-                            </svg>
-                        </div>
-                        <div class="grid-item item-2">
-                            <svg viewBox="0 0 200 200">
-                                <rect width="200" height="200" fill="#4A2545" rx="12"/>
-                                <path d="M 100 60 L 120 100 L 100 140 L 80 100 Z" fill="#5A7247" opacity="0.9"/>
-                                <circle cx="100" cy="100" r="15" fill="#F5F1E8" opacity="0.3"/>
-                                <text x="100" y="180" font-size="14" text-anchor="middle" fill="#F5F1E8" font-weight="600">Certified</text>
-                            </svg>
-                        </div>
-                        <div class="grid-item item-3">
-                            <svg viewBox="0 0 200 200">
-                                <rect width="200" height="200" fill="#5A7247" rx="12"/>
-                                <circle cx="100" cy="90" r="40" fill="rgba(245,241,232,0.2)"/>
-                                <text x="100" y="105" font-size="48" text-anchor="middle" fill="#F5F1E8">✓</text>
-                                <text x="100" y="170" font-size="14" text-anchor="middle" fill="#F5F1E8" font-weight="600">Trusted</text>
-                            </svg>
-                        </div>
-                        <div class="grid-item item-4">
-                            <svg viewBox="0 0 200 200">
-                                <rect width="200" height="200" fill="#8B7355" rx="12"/>
-                                <circle cx="70" cy="70" r="25" fill="#2D1B2E" opacity="0.6"/>
-                                <circle cx="130" cy="100" r="30" fill="#2D1B2E" opacity="0.5"/>
-                                <circle cx="90" cy="130" r="20" fill="#2D1B2E" opacity="0.7"/>
-                                <text x="100" y="185" font-size="14" text-anchor="middle" fill="#F5F1E8" font-weight="600">Export</text>
-                            </svg>
+                    <div class="about-collage">
+                        <img src="assets/images/team-business.jpg" alt="Equipo comercial de Prunavita cerrando un acuerdo" class="about-collage-img main" loading="lazy">
+                        <img src="assets/images/quality-control.jpg" alt="Control de calidad e inocuidad alimentaria" class="about-collage-img small1" loading="lazy">
+                        <img src="assets/images/global-export.jpg" alt="Exportación agroindustrial a mercados globales" class="about-collage-img small2" loading="lazy">
+                        <div class="about-badge">
+                            <svg class="about-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8z"/></svg>
+                            <span class="about-badge-title" data-i18n="about.badgeTitle">Origen Chile</span>
+                            <span class="about-badge-label" data-i18n="about.badge">Calidad agroindustrial de exportación</span>
                         </div>
                     </div>
                 </div>
@@ -341,18 +348,7 @@
                 <div class="product-card featured" data-aos="zoom-in">
                     <div class="product-badge" data-i18n="products.bestseller">Best Product</div>
                     <div class="product-visual">
-                        <svg viewBox="0 0 250 250">
-                            <defs>
-                                <radialGradient id="pruneProd">
-                                    <stop offset="0%" style="stop-color:#3D2540"/>
-                                    <stop offset="100%" style="stop-color:#2D1B2E"/>
-                                </radialGradient>
-                            </defs>
-                            <ellipse cx="125" cy="125" rx="80" ry="95" fill="url(#pruneProd)"/>
-                            <ellipse cx="105" cy="105" rx="25" ry="32" fill="rgba(139,115,85,0.35)"/>
-                            <circle cx="140" cy="120" r="10" fill="rgba(90,114,71,0.4)"/>
-                            <path d="M 125 30 Q 140 50 125 70" stroke="#8B7355" stroke-width="3" fill="none"/>
-                        </svg>
+                        <img src="assets/images/hero-prunes.jpg" alt="Ciruelas deshidratadas premium chilenas" loading="lazy">
                     </div>
                     <h3 data-i18n="products.prunes.title">Ciruelas Deshidratadas</h3>
                     <p data-i18n="products.prunes.desc">Ciruelas premium deshidratadas con proceso controlado. Ideal para exportación a mercados asiáticos, europeos y norteamericanos.</p>
@@ -365,17 +361,7 @@
                 </div>
                 <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
                     <div class="product-visual">
-                        <svg viewBox="0 0 250 250">
-                            <defs>
-                                <radialGradient id="nutsProd">
-                                    <stop offset="0%" style="stop-color:#B8956A"/>
-                                    <stop offset="100%" style="stop-color:#8B7355"/>
-                                </radialGradient>
-                            </defs>
-                            <ellipse cx="125" cy="125" rx="75" ry="85" fill="url(#nutsProd)"/>
-                            <ellipse cx="110" cy="110" rx="22" ry="28" fill="rgba(139,115,85,0.3)"/>
-                            <ellipse cx="95" cy="145" rx="60" ry="68" fill="url(#nutsProd)" opacity="0.7"/>
-                        </svg>
+                        <img src="assets/images/prunes-close.jpg" alt="Frutos secos y fruta deshidratada seleccionada" loading="lazy">
                     </div>
                     <h3 data-i18n="products.nuts.title">Frutos Secos</h3>
                     <p data-i18n="products.nuts.desc">Variedad seleccionada de frutos secos con estándares internacionales de calidad y trazabilidad completa.</p>
@@ -387,27 +373,7 @@
                 </div>
                 <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
                     <div class="product-visual">
-                        <svg viewBox="0 0 250 250">
-                            <defs>
-                                <radialGradient id="servicesProd">
-                                    <stop offset="0%" style="stop-color:#3D7A3E"/>
-                                    <stop offset="100%" style="stop-color:#2C5F2D"/>
-                                </radialGradient>
-                            </defs>
-                            <!-- Industrial gear/cog icon -->
-                            <circle cx="125" cy="125" r="85" fill="url(#servicesProd)" opacity="0.15"/>
-                            <!-- Main gear -->
-                            <path d="M 125 55 L 135 75 L 155 75 L 145 90 L 155 110 L 135 110 L 125 130 L 115 110 L 95 110 L 105 90 L 95 75 L 115 75 Z"
-                                  fill="url(#servicesProd)" stroke="#2C5F2D" stroke-width="2"/>
-                            <circle cx="125" cy="92.5" r="15" fill="rgba(255,255,255,0.3)"/>
-                            <!-- Secondary gear -->
-                            <path d="M 155 135 L 162 145 L 175 145 L 168 155 L 175 165 L 162 165 L 155 175 L 148 165 L 135 165 L 142 155 L 135 145 L 148 145 Z"
-                                  fill="url(#servicesProd)" stroke="#2C5F2D" stroke-width="2" opacity="0.8"/>
-                            <circle cx="155" cy="155" r="10" fill="rgba(255,255,255,0.3)"/>
-                            <!-- Decorative elements -->
-                            <circle cx="85" cy="155" r="8" fill="#3D7A3E" opacity="0.4"/>
-                            <rect x="110" y="145" width="4" height="25" fill="#2C5F2D" opacity="0.3" rx="2"/>
-                        </svg>
+                        <img src="assets/images/maquinaria.jpg" alt="Línea de procesamiento agroindustrial" loading="lazy">
                     </div>
                     <h3 data-i18n="products.fruits.title">Servicios Agroindustriales</h3>
                     <p data-i18n="products.fruits.desc">Soluciones integrales para el sector agroindustrial, desde maquinaria hasta asesorías técnicas especializadas.</p>

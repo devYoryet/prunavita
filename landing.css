@@ -1,0 +1,459 @@
+/**
+ * PRUNAVITA - Capa de diseño premium para la landing
+ * Se carga DESPUÉS de styles.css y page-styles.css y refina/eleva el look:
+ * hero con titular, secciones con fotografía real, tarjetas premium.
+ */
+
+:root {
+    --plum-900: #241019;      /* fondo hero profundo */
+    --plum-800: #3A1B2E;
+    --plum-700: #4A2545;
+    --gold: #C9A96A;          /* acento cálido premium */
+    --gold-soft: #E3CDA2;
+    --cream: #F7F2E9;
+}
+
+/* ===================================
+   TIPOGRAFÍA / ENCABEZADOS DE SECCIÓN
+   =================================== */
+.section-tag {
+    background: rgba(44, 95, 45, 0.08);
+    color: var(--primary);
+    letter-spacing: 0.12em;
+    font-size: 0.78rem;
+    padding: 0.45rem 1.1rem;
+    border-radius: 999px;
+}
+
+.section-title {
+    letter-spacing: -0.01em;
+}
+
+/* línea decorativa bajo los títulos centrados */
+.section-header .section-title::after {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 3px;
+    margin: var(--spacing-lg) auto 0;
+    background: linear-gradient(90deg, var(--primary), var(--gold));
+    border-radius: 3px;
+}
+
+/* ===================================
+   HERO BANNER (nuevo)
+   =================================== */
+.hero-professional {
+    display: block;
+    min-height: 0;
+    padding-top: 0;
+    padding-bottom: var(--spacing-3xl);
+    background: var(--white);
+}
+
+.hero-banner {
+    position: relative;
+    overflow: hidden;
+    background: var(--plum-900);
+    color: var(--cream);
+    padding: 9.5rem 0 5rem;
+    isolation: isolate;
+}
+
+.hero-banner-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-image: url("assets/images/hero-prunes.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.28;
+    transform: scale(1.05);
+}
+
+.hero-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        radial-gradient(1200px 500px at 80% -10%, rgba(201, 169, 106, 0.22), transparent 60%),
+        linear-gradient(160deg, rgba(36, 16, 25, 0.92) 0%, rgba(36, 16, 25, 0.82) 45%, rgba(44, 95, 45, 0.55) 130%);
+}
+
+.hero-banner-inner {
+    max-width: 880px;
+}
+
+.hero-eyebrow {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(227, 205, 162, 0.35);
+    border-radius: 999px;
+    margin-bottom: var(--spacing-xl);
+}
+
+.hero-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2.4rem, 6vw, 4.3rem);
+    line-height: 1.07;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--spacing-lg);
+    color: #fff;
+}
+
+.hero-title .accent {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.hero-sub {
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
+    line-height: 1.7;
+    color: rgba(247, 242, 233, 0.85);
+    max-width: 640px;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-3xl);
+}
+
+.hero-actions .btn-primary {
+    background: var(--primary);
+    color: #fff;
+    padding: 1rem 2.2rem;
+    border-radius: 999px;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(44, 95, 45, 0.4);
+    transition: all var(--transition-base);
+}
+
+.hero-actions .btn-primary:hover {
+    background: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+.btn-ghost {
+    display: inline-block;
+    padding: 1rem 2.2rem;
+    border-radius: 999px;
+    font-weight: 600;
+    color: var(--cream);
+    border: 1.5px solid rgba(247, 242, 233, 0.4);
+    transition: all var(--transition-base);
+}
+
+.btn-ghost:hover {
+    background: rgba(247, 242, 233, 0.12);
+    border-color: var(--gold-soft);
+}
+
+/* Sellos de confianza del hero (sin cifras inventadas) */
+.hero-trust {
+    list-style: none;
+    margin: 0;
+    padding: var(--spacing-xl) 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 2.2rem;
+    border-top: 1px solid rgba(247, 242, 233, 0.18);
+}
+
+.hero-trust li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.98rem;
+    font-weight: 500;
+    color: rgba(247, 242, 233, 0.92);
+}
+
+.hero-trust svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    color: var(--gold);
+}
+
+/* Carrusel: separarlo del banner y darle aire */
+.hero-services-carousel-wrapper {
+    margin-top: -3.5rem;
+    position: relative;
+    z-index: 5;
+}
+
+.hero-services-carousel {
+    height: 600px;
+    border-radius: var(--radius-xl);
+    box-shadow: 0 30px 70px rgba(36, 16, 25, 0.28);
+}
+
+/* Mejor legibilidad del texto sobre las fotos del carrusel */
+.slide-overlay {
+    background: linear-gradient(
+        100deg,
+        rgba(36, 16, 25, 0.82) 0%,
+        rgba(36, 16, 25, 0.55) 45%,
+        rgba(36, 16, 25, 0.15) 100%
+    );
+}
+
+.service-slide-slogan {
+    color: #fff;
+    font-family: var(--font-display);
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
+}
+
+.service-slide-description {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.service-slide-number {
+    color: var(--gold);
+}
+
+.slide-cta {
+    color: #fff;
+    font-weight: 600;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 2px;
+    width: fit-content;
+}
+
+/* ===================================
+   SERVICIOS (grilla de acceso) - tarjetas premium
+   =================================== */
+.services-links {
+    background: var(--gray-50);
+}
+
+.services-links .related-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.services-links .related-card {
+    position: relative;
+    padding: var(--spacing-2xl);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    background: var(--white);
+    overflow: hidden;
+}
+
+.services-links .related-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--gold));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-base);
+}
+
+.services-links .related-card:hover::before {
+    transform: scaleX(1);
+}
+
+.services-links .related-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.services-links .related-card::after {
+    content: "→";
+    display: inline-block;
+    margin-top: var(--spacing-md);
+    color: var(--primary);
+    font-weight: 700;
+    transition: transform var(--transition-base);
+}
+
+.services-links .related-card:hover::after {
+    transform: translateX(6px);
+}
+
+/* ===================================
+   ABOUT - collage de fotografía real
+   =================================== */
+.about {
+    background: var(--white);
+}
+
+.about-collage {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.3fr 1fr;
+    gap: var(--spacing-md);
+    height: 480px;
+}
+
+.about-collage-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.about-collage-img.main {
+    grid-row: 1 / 3;
+    grid-column: 1;
+}
+
+.about-collage-img.small1 { grid-column: 2; grid-row: 1; }
+.about-collage-img.small2 { grid-column: 2; grid-row: 2; }
+
+.about-badge {
+    position: absolute;
+    left: -22px;
+    bottom: 28px;
+    background: var(--plum-900);
+    color: var(--cream);
+    padding: 1.2rem 1.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: 0 18px 40px rgba(36, 16, 25, 0.35);
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    max-width: 200px;
+}
+
+.about-badge-icon {
+    width: 26px;
+    height: 26px;
+    color: var(--gold);
+    margin-bottom: 0.25rem;
+}
+
+.about-badge-title {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.1;
+}
+
+.about-badge-label {
+    font-size: 0.82rem;
+    line-height: 1.35;
+    color: rgba(247, 242, 233, 0.85);
+}
+
+/* ===================================
+   PRODUCTS - tarjetas con foto real
+   =================================== */
+.products {
+    background: var(--gray-50);
+}
+
+.product-card {
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card.featured {
+    border: 1px solid var(--primary);
+    box-shadow: 0 20px 50px rgba(44, 95, 45, 0.16);
+}
+
+.product-visual {
+    margin-bottom: 0;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-visual img {
+    transform: scale(1.06);
+}
+
+.product-badge {
+    position: absolute;
+    top: var(--spacing-md);
+    left: var(--spacing-md);
+    z-index: 2;
+    margin-bottom: 0;
+    background: var(--gold);
+    color: var(--plum-900);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.product-card > h3,
+.product-card > p,
+.product-card > .product-specs {
+    padding-left: var(--spacing-2xl);
+    padding-right: var(--spacing-2xl);
+}
+
+.product-card > h3 {
+    padding-top: var(--spacing-xl);
+}
+
+.product-specs {
+    padding-bottom: var(--spacing-2xl);
+    margin-top: auto;
+}
+
+.product-specs li {
+    border-top: 1px solid var(--gray-100);
+}
+
+/* ===================================
+   RESPONSIVE
+   =================================== */
+@media (max-width: 900px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    .about-collage {
+        height: 380px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-banner {
+        padding: 7.5rem 0 3.5rem;
+    }
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-xl);
+    }
+    .hero-services-carousel {
+        height: 460px;
+    }
+    .about-badge {
+        left: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-lg);
+    }
+}

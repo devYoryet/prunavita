@@ -27,6 +27,28 @@
     opacity: 0;
 }
 
+/* Foto del servicio como fondo tenue */
+.page-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.20;
+}
+
+/* Velo claro para mantener el texto legible sobre la foto */
+.page-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(105deg,
+        rgba(255, 255, 255, 0.94) 0%,
+        rgba(255, 255, 255, 0.80) 42%,
+        rgba(255, 255, 255, 0.45) 100%);
+}
+
 .page-hero .container {
     position: relative;
     max-width: 860px;
@@ -54,6 +76,17 @@
     line-height: 1.15;
     color: var(--gray-900);
     margin-bottom: var(--spacing-lg);
+}
+
+/* Acento dorado-verde bajo el título (consistencia con la landing) */
+.page-hero h1::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 3px;
+    margin-top: var(--spacing-lg);
+    background: linear-gradient(90deg, var(--primary), #C9A96A);
+    border-radius: 3px;
 }
 
 .page-hero .hero-lead {

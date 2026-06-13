@@ -24,6 +24,16 @@ const translations = {
         "hero.trust1": "Calidad Garantizada",
         "hero.trust2": "Alcance Global",
         "hero.trust3": "Equipo Experto",
+        "hero.trust4": "Origen Chile",
+        "hero.eyebrow": "Agroindustria chilena · Exportación global",
+        "hero.title": "Del campo chileno a los <span class=\"accent\">mercados del mundo</span>",
+        "hero.sub": "Ciruelas deshidratadas premium, frutos secos y servicios integrales de exportación, representación comercial y calidad para compradores de Asia, Europa y América.",
+        "hero.stat1": "Países de destino",
+        "hero.stat2": "Trazabilidad y calidad",
+        "hero.stat3": "Líneas de servicio",
+        "hero.stat4": "Origen Chile",
+        "about.badgeTitle": "Origen Chile",
+        "about.badge": "Calidad agroindustrial de exportación",
 
         // Showcase
         "showcase.premium": "Premium Dried Prunes",
@@ -44,7 +54,7 @@ const translations = {
         "about.feature3.title": "Control de Calidad Total",
         "about.feature3.desc": "Rigurosos protocolos de inspección y certificación en cada etapa del proceso.",
         "about.feature4.title": "Alcance Global",
-        "about.feature4.desc": "Presencia en más de 30 países con logística optimizada y documentación completa.",
+        "about.feature4.desc": "Presencia comercial en mercados de Asia, Europa y América con logística optimizada y documentación completa.",
 
         // Products
         "products.tag": "Nuestros Productos",
@@ -180,6 +190,16 @@ const translations = {
         "hero.trust1": "Guaranteed Quality",
         "hero.trust2": "Global Reach",
         "hero.trust3": "Expert Team",
+        "hero.trust4": "Chilean Origin",
+        "hero.eyebrow": "Chilean agro-industry · Global export",
+        "hero.title": "From the Chilean fields to the <span class=\"accent\">world's markets</span>",
+        "hero.sub": "Premium dried plums, nuts and comprehensive export, commercial representation and quality services for buyers across Asia, Europe and the Americas.",
+        "hero.stat1": "Destination countries",
+        "hero.stat2": "Traceability & quality",
+        "hero.stat3": "Service lines",
+        "hero.stat4": "Origin Chile",
+        "about.badgeTitle": "Chilean Origin",
+        "about.badge": "Export-grade agro-industrial quality",
 
         // Showcase
         "showcase.premium": "Premium Dried Prunes",
@@ -200,7 +220,7 @@ const translations = {
         "about.feature3.title": "Total Quality Control",
         "about.feature3.desc": "Rigorous inspection and certification protocols at every stage of the process.",
         "about.feature4.title": "Global Reach",
-        "about.feature4.desc": "Presence in over 30 countries with optimized logistics and complete documentation.",
+        "about.feature4.desc": "Commercial presence in markets across Asia, Europe and the Americas with optimized logistics and complete documentation.",
 
         // Products
         "products.tag": "Our Products",
