@@ -1,0 +1,13 @@
+{
+    "name": "Prunavita",
+    "short_name": "Prunavita",
+    "description": "Servicios integrales de exportación agroindustrial desde Chile.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#2C5F2D",
+    "icons": [
+        { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+        { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+    ]
+}
