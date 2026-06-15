@@ -1,7 +1,13 @@
 # Flujo Editorial de Noticias — Prunavita.cl
 
-Ritmo mensual fijo: **2 noticias propias** (material del cliente) + **2 noticias investigadas**
-(1 cada 15 días). Todas se publican en `/noticias/` usando `plantilla-noticia.html`.
+> **DIRECTRIZ DEL CLIENTE (jun 2026):** TODAS las noticias deben ser **investigadas** —buscadas en
+> internet, leídas en profundidad, redactadas de forma original por la IA y **vinculadas a lo que es
+> Prunavita** (sus servicios y producto). Aunque exista material propio del cliente, debe enriquecerse
+> con investigación, datos de fuentes reales y enlaces internos a las páginas de servicio.
+
+Ritmo mensual fijo: **2 noticias investigadas al mes** como mínimo (1 cada 15 días). Si el cliente
+aporta material propio, se transforma en una noticia investigada (se contrasta y complementa con
+fuentes reales). Todas se publican en `/noticias/` usando `plantilla-noticia.html`.
 
 ---
 

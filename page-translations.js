@@ -477,4 +477,84 @@
         "newsh.cta.text": "Follow us on LinkedIn or write to us to stay up to date with the Chilean agro-industrial market.",
         "newsh.cta.btn": "Follow on LinkedIn"
     });
+
+    // ==========================================
+    // CONTENIDO AMPLIADO DE PÁGINAS DE SERVICIO (ES)
+    // ==========================================
+    Object.assign(window.translations.es, {
+        // Ciruelas
+        "cir.x1.title": "Variedades, calibres y formatos disponibles",
+        "cir.x1.p": "Trabajamos principalmente la variedad D'Agen, la más valorada para el deshidratado, en presentaciones con y sin carozo (whole / pitted). Ofrecemos un amplio rango de calibres —desde 20/30 hasta 110/120 unidades por libra— y formatos que se adaptan a su operación:",
+        "cir.x1.list": "<li><strong>Industrial / bulk:</strong> cajas de 10 kg y bins para procesadores e industria alimentaria.</li><li><strong>Retail:</strong> bolsas y doypacks con etiquetado según el mercado de destino.</li><li><strong>Food service:</strong> formatos intermedios para distribuidores y mayoristas.</li>",
+        "cir.x2.title": "Por qué la ciruela deshidratada chilena lidera el mundo",
+        "cir.x2.p": "Chile es el principal exportador mundial de ciruela deshidratada, con cerca del 38% del comercio global. Las condiciones de los valles de la zona central, una industria procesadora madura y una demanda creciente en Asia —especialmente China— sostienen ese liderazgo. Conozca el panorama actual en nuestro <a href=\"../noticias/2026-06-exportacion-ciruela-deshidratada-chile-2025.html\">análisis del mercado de exportación 2025</a>.",
+
+        // Exportación
+        "exp.x1.title": "Documentación y certificados que gestionamos",
+        "exp.x1.p": "Nos encargamos de toda la documentación de comercio exterior para que su embarque salga sin contratiempos:",
+        "exp.x1.list": "<li>Certificado fitosanitario (SAG)</li><li>Certificado de origen para aprovechar los acuerdos comerciales de Chile</li><li>Factura comercial y packing list</li><li>Documento Único de Salida (DUS) y trámites aduaneros</li><li>Bill of Lading (BL) y coordinación con la naviera</li><li>Certificados de calidad e inocuidad según el mercado de destino</li>",
+        "exp.x2.title": "Incoterms y modalidades de embarque",
+        "exp.x2.p": "Operamos bajo los principales Incoterms —FOB, CFR, CIF y DAP— y coordinamos embarques en contenedor completo (FCL) o consolidado (LCL) según el volumen. Definimos con usted la modalidad que optimiza costos y tiempos para su mercado de destino.",
+
+        // Representación
+        "rep.x1.title": "¿Para quién es este servicio?",
+        "rep.x1.p": "Diseñamos este servicio para empresas extranjeras que necesitan una presencia confiable en Chile:",
+        "rep.x1.list": "<li>Importadores y distribuidores de alimentos</li><li>Cadenas de retail y supermercados</li><li>Industria alimentaria que requiere materia prima chilena</li><li>Traders y compradores de Asia, Europa y América</li>",
+        "rep.x2.title": "Productos que gestionamos por usted",
+        "rep.x2.p": "Aunque nuestra especialidad son la ciruela deshidratada y los frutos secos, gestionamos el sourcing de un amplio rango de productos agroindustriales chilenos —fruta deshidratada y otros productos según su requerimiento—, siempre con verificación de calidad en origen.",
+
+        // Maquinaria
+        "maq.x1.title": "Equipos que más solicitan nuestros clientes",
+        "maq.x1.p": "Conectamos a su planta con el equipamiento que necesita, nuevo o usado en buen estado:",
+        "maq.x1.list": "<li>Túneles y hornos de deshidratado</li><li>Calibradoras y seleccionadoras ópticas</li><li>Descarozadoras y despezonadoras</li><li>Líneas de lavado y equipos de tiernizado</li><li>Envasadoras, selladoras al vacío y detectores de metales</li>",
+        "maq.x2.title": "Maquinaria usada y reacondicionada",
+        "maq.x2.p": "No siempre se necesita equipo nuevo. Evaluamos, verificamos y comercializamos maquinaria usada en buen estado: una alternativa de menor inversión para plantas que inician o amplían su capacidad. También le ayudamos a vender los equipos que su planta ya no utiliza.",
+
+        // Asesorías
+        "ase.x1.title": "Normas y certificaciones que cubrimos",
+        "ase.x1.p": "Preparamos y acompañamos a su planta en los principales estándares exigidos por el comercio internacional:",
+        "ase.x1.list": "<li>HACCP y Buenas Prácticas de Manufactura (BPM)</li><li>BRCGS e IFS Food (esquemas GFSI)</li><li>FSSC 22000</li><li>Registro GACC para exportar a China</li><li>Requisitos FDA / FSMA (Estados Unidos) y de la Unión Europea</li>",
+        "ase.x2.title": "Beneficios de certificar su planta",
+        "ase.x2.p": "Certificar no es solo cumplir: es abrir puertas. Una planta certificada accede a mercados de mayor valor, reduce rechazos y reclamos, negocia mejores precios y construye una reputación sólida ante compradores internacionales que exigen garantías de inocuidad."
+    });
+
+    // ==========================================
+    // EXPANDED SERVICE PAGE CONTENT (EN)
+    // ==========================================
+    Object.assign(window.translations.en, {
+        // Prunes
+        "cir.x1.title": "Available varieties, calibers and formats",
+        "cir.x1.p": "We mainly work with the D'Agen variety, the most valued for drying, in pitted and whole presentations. We offer a wide range of calibers —from 20/30 to 110/120 units per pound— and formats tailored to your operation:",
+        "cir.x1.list": "<li><strong>Industrial / bulk:</strong> 10 kg boxes and bins for processors and the food industry.</li><li><strong>Retail:</strong> bags and doypacks labeled according to the destination market.</li><li><strong>Food service:</strong> intermediate formats for distributors and wholesalers.</li>",
+        "cir.x2.title": "Why Chilean dried prunes lead the world",
+        "cir.x2.p": "Chile is the world's leading exporter of dried prunes, with around 38% of global trade. The conditions of the central valleys, a mature processing industry and growing demand in Asia —especially China— sustain this leadership. See the current outlook in our <a href=\"../noticias/2026-06-exportacion-ciruela-deshidratada-chile-2025.html\">2025 export market analysis</a>.",
+
+        // Export
+        "exp.x1.title": "Documentation and certificates we handle",
+        "exp.x1.p": "We take care of all the foreign-trade documentation so your shipment leaves without setbacks:",
+        "exp.x1.list": "<li>Phytosanitary certificate (SAG)</li><li>Certificate of origin to leverage Chile's trade agreements</li><li>Commercial invoice and packing list</li><li>Single Exit Document (DUS) and customs procedures</li><li>Bill of Lading (BL) and shipping line coordination</li><li>Quality and food safety certificates per destination market</li>",
+        "exp.x2.title": "Incoterms and shipping modalities",
+        "exp.x2.p": "We operate under the main Incoterms —FOB, CFR, CIF and DAP— and coordinate full-container (FCL) or consolidated (LCL) shipments depending on volume. We define with you the modality that optimizes cost and time for your destination market.",
+
+        // Representation
+        "rep.x1.title": "Who is this service for?",
+        "rep.x1.p": "We designed this service for foreign companies that need a reliable presence in Chile:",
+        "rep.x1.list": "<li>Food importers and distributors</li><li>Retail chains and supermarkets</li><li>Food industry that needs Chilean raw material</li><li>Traders and buyers from Asia, Europe and the Americas</li>",
+        "rep.x2.title": "Products we manage for you",
+        "rep.x2.p": "Although our specialty is dried prunes and nuts, we manage the sourcing of a wide range of Chilean agro-industrial products —dried fruit and other products as required— always with quality verification at origin.",
+
+        // Machinery
+        "maq.x1.title": "Equipment our clients request most",
+        "maq.x1.p": "We connect your plant with the equipment it needs, new or used in good condition:",
+        "maq.x1.list": "<li>Drying tunnels and ovens</li><li>Sizers and optical sorters</li><li>Pitters and destemmers</li><li>Washing lines and tenderizing equipment</li><li>Packing machines, vacuum sealers and metal detectors</li>",
+        "maq.x2.title": "Used and refurbished machinery",
+        "maq.x2.p": "New equipment isn't always necessary. We evaluate, verify and sell used machinery in good condition: a lower-investment alternative for plants starting up or expanding capacity. We also help you sell the equipment your plant no longer uses.",
+
+        // Advisory
+        "ase.x1.title": "Standards and certifications we cover",
+        "ase.x1.p": "We prepare and support your plant in the main standards required by international trade:",
+        "ase.x1.list": "<li>HACCP and Good Manufacturing Practices (GMP)</li><li>BRCGS and IFS Food (GFSI schemes)</li><li>FSSC 22000</li><li>GACC registration to export to China</li><li>FDA / FSMA (United States) and European Union requirements</li>",
+        "ase.x2.title": "Benefits of certifying your plant",
+        "ase.x2.p": "Certifying is not just compliance: it opens doors. A certified plant accesses higher-value markets, reduces rejections and claims, negotiates better prices and builds a solid reputation with international buyers that demand food safety guarantees."
+    });
 })();
