@@ -163,42 +163,34 @@ class ContactForm {
             return;
         }
 
-        // Show loading state
-        const submitBtn = this.form.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
         const lang = window.langManager ? window.langManager.getCurrentLang() : 'es';
-        const sendingText = lang === 'es' ? 'Enviando...' : 'Sending...';
 
-        submitBtn.textContent = sendingText;
-        submitBtn.disabled = true;
+        // Texto legible del servicio seleccionado
+        const serviceSelect = this.form.querySelector('#service');
+        const serviceText = (serviceSelect && serviceSelect.selectedIndex >= 0)
+            ? serviceSelect.options[serviceSelect.selectedIndex].text
+            : (data.service || '');
 
-        // Send to PHP backend
-        fetch('send-email.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(result => {
-            if (result.success) {
-                const successMsg = window.langManager ? window.langManager.translate('form.success') : '¡Mensaje enviado! Nos contactaremos pronto.';
-                this.showMessage(successMsg, 'success');
-                this.form.reset();
-            } else {
-                throw new Error(result.message);
-            }
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-            const errorMsg = window.langManager ? window.langManager.translate('form.error') : 'Error al enviar el mensaje. Por favor intente nuevamente.';
-            this.showMessage(errorMsg, 'error');
-        })
-        .finally(() => {
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        });
+        const L = lang === 'es'
+            ? { intro: 'Hola Prunavita, quisiera más información.', name: 'Nombre', email: 'Email',
+                company: 'Empresa', phone: 'Teléfono', service: 'Servicio de interés', message: 'Mensaje',
+                ok: 'Abriendo WhatsApp para enviar su mensaje. Si no se abre, escríbanos a prunavita@prunavita.cl' }
+            : { intro: 'Hello Prunavita, I would like more information.', name: 'Name', email: 'Email',
+                company: 'Company', phone: 'Phone', service: 'Service of interest', message: 'Message',
+                ok: 'Opening WhatsApp to send your message. If it does not open, email us at prunavita@prunavita.cl' };
+
+        // Construir mensaje de WhatsApp con los datos del formulario
+        const lines = [L.intro, '', `${L.name}: ${data.name}`, `${L.email}: ${data.email}`];
+        if (data.company) lines.push(`${L.company}: ${data.company}`);
+        if (data.phone) lines.push(`${L.phone}: ${data.phone}`);
+        lines.push(`${L.service}: ${serviceText}`);
+        lines.push(`${L.message}: ${data.message}`);
+
+        const waUrl = 'https://wa.me/56978792851?text=' + encodeURIComponent(lines.join('\n'));
+        window.open(waUrl, '_blank');
+
+        this.showMessage(L.ok, 'success');
+        this.form.reset();
     }
 
     validateForm(data) {
