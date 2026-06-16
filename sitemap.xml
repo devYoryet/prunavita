@@ -55,4 +55,16 @@
         <priority>0.6</priority>
     </url>
     <!-- Agregar aquí cada noticia nueva publicada en /noticias/ -->
+    <url>
+        <loc>https://prunavita.cl/privacidad.html</loc>
+        <lastmod>2026-06-16</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://prunavita.cl/terminos.html</loc>
+        <lastmod>2026-06-16</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
 </urlset>

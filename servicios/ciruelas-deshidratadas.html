@@ -38,19 +38,13 @@
         "@context": "https://schema.org",
         "@graph": [
             {
-                "@type": "Product",
-                "name": "Ciruelas Deshidratadas Chilenas Premium",
-                "description": "Ciruelas deshidratadas variedad D'Agen producidas en Chile, con calibre seleccionado, humedad controlada, sin aditivos y embalaje certificado para exportación.",
-                "brand": {"@type": "Brand", "name": "Prunavita"},
-                "image": "https://prunavita.cl/assets/images/global-export.jpg",
-                "url": "https://prunavita.cl/servicios/ciruelas-deshidratadas.html",
-                "offers": {
-                    "@type": "Offer",
-                    "availability": "https://schema.org/InStock",
-                    "priceCurrency": "USD",
-                    "price": "0",
-                    "description": "Precio según volumen, calibre e Incoterm. Solicite cotización."
-                }
+                "@type": "Service",
+                "name": "Provisión y exportación de ciruelas deshidratadas chilenas",
+                "serviceType": "Exportación de ciruela deshidratada",
+                "description": "Provisión de ciruelas deshidratadas variedad D'Agen producidas en Chile —calibre seleccionado, humedad controlada, sin aditivos y embalaje certificado— para exportación a Asia, Europa y América.",
+                "provider": {"@type": "Organization", "name": "Prunavita", "url": "https://prunavita.cl"},
+                "areaServed": ["Chile", "China", "Asia", "Europa", "América"],
+                "url": "https://prunavita.cl/servicios/ciruelas-deshidratadas.html"
             },
             {
                 "@type": "BreadcrumbList",
@@ -357,6 +351,11 @@
             <div class="footer-bottom">
                 <div class="footer-copyright">
                     <p data-i18n="footer.copyright">&copy; 2026 Prunavita. Todos los derechos reservados.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="../privacidad.html" data-i18n="footer.privacy">Política de Privacidad</a>
+                    <span class="separator">•</span>
+                    <a href="../terminos.html" data-i18n="footer.terms">Términos de Servicio</a>
                 </div>
                 <div class="footer-credit">
                     <p>Creado por <a href="https://pulsandotech.com" target="_blank" rel="noopener">Pulsando Tech</a></p>
