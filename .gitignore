@@ -1,0 +1,10 @@
+# Google OAuth — nunca subir al repositorio
+client_secret*.json
+.google-token.json
+credentials.json
+token.json
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
+*.log
