@@ -10,6 +10,7 @@
             id: 'cereza-iqf-prunavita',
             file: 'cereza-iqf-prunavita.pdf',
             category: 'cerezas',
+            image: 'assets/images/productos/cerezas-iqf.jpg',
             icon: '🍒',
             title: { es: 'Cereza IQF PrunaVita', en: 'PrunaVita IQF Cherries' },
             summary: {
@@ -58,6 +59,7 @@
             id: 'cerezas-frescas-camigo',
             file: 'cerezas-frescas-camigo.pdf',
             category: 'cerezas',
+            image: 'assets/images/productos/cerezas-frescas.jpg',
             icon: '🍒',
             title: { es: 'Cerezas Frescas CAMIGO', en: 'CAMIGO Fresh Cherries' },
             summary: {
@@ -142,6 +144,7 @@
             id: 'frutilla-iqf-prunavita',
             file: 'frutilla-iqf-prunavita.pdf',
             category: 'frutillas',
+            image: 'assets/images/productos/frutillas-iqf.jpg',
             icon: '🍓',
             title: { es: 'Frutilla IQF PrunaVita', en: 'PrunaVita IQF Strawberries' },
             summary: {
@@ -190,10 +193,10 @@
 
     var PDF_BASE = 'assets/fichas-tecnicas/';
     var CATEGORY_IMAGES = {
-        cerezas: 'assets/images/productos/cerezas-frescas.jpg',
-        ciruelas: 'assets/images/hero-prunes.jpg',
+        cerezas: 'assets/images/productos/cerezas-rojas.jpg',
+        ciruelas: 'assets/images/productos/ciruelas-deshidratadas.jpg',
         frutillas: 'assets/images/productos/frutillas-iqf.jpg',
-        pulpas: 'assets/images/prunes-close.jpg'
+        pulpas: 'assets/images/productos/pulpa-fruta.jpg'
     };
     var currentId = null;
     var speechUtterance = null;
