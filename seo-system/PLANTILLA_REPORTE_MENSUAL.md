@@ -11,7 +11,7 @@
 
 [3–5 líneas en lenguaje claro para el cliente: qué pasó este mes, si subió o bajó el tráfico orgánico, y el logro principal.]
 
-**Ejemplo:** *"En julio Prunavita pasó de X a Y páginas indexadas en Google. Las búsquedas con marca ('prunavita') mantienen posiciones 1–3. Publicamos 2 artículos sobre mercado de ciruelas que ya generan impresiones en keywords long-tail. Próximo mes: reforzar página de exportación."*
+**Ejemplo:** *"En julio registramos X páginas indexadas en Search Console. La búsqueda 'prunavita ciruelas deshidratadas' aún no muestra prunavita.cl en la primera página de Google. Publicamos 2 artículos del sector. Próximo mes: reforzar indexación y medir de nuevo."*
 
 ---
 

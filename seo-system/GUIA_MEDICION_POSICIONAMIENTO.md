@@ -8,17 +8,17 @@
 
 ## 1. Respuesta corta: ¿ya sale en Google?
 
-**Sí, pero con matices importantes.**
+**El sitio está publicado y configurado para SEO, pero el posicionamiento visible en Google aún está en fase inicial (mes 2).**
 
-| Tipo de búsqueda | ¿Aparece Prunavita? | Ejemplo |
+| Tipo de búsqueda | Ejemplo | Situación jul 2026 |
 |---|---|---|
-| **Marca** (`prunavita`) | Sí — home y páginas de servicio arriba | Buscar: `prunavita` |
-| **Marca + servicio** | Sí — posiciones 1–3 en varios motores | `prunavita ciruelas deshidratadas` |
-| **Genérica sin marca** | Aún no (normal en mes 2) | `ciruelas deshidratadas Chile exportador` compite con Chileprunes, Sunprunes, Good Valley, etc. |
+| **Marca** | `prunavita` | Por confirmar en Search Console |
+| **Marca + servicio** | `prunavita ciruelas deshidratadas` | **Sin posición visible en Google** (predominan otros sitios del sector) |
+| **Genérica sin marca** | `exportador ciruelas deshidratadas Chile` | No esperado en mes 2 |
 
-**Indexación detectada (jul 2026):** al menos **7 páginas** en buscadores (home, 5 servicios, 1 noticia). Faltan por confirmar en Google: hub noticias, fichas técnicas, noticias más recientes, páginas legales.
+**Indexación:** confirmar en Google Search Console cuántas de las 13 URLs del sitemap están indexadas. No asumir posiciones sin datos de GSC o búsqueda manual documentada.
 
-> El SEO orgánico genérico tarda **6–12 semanas** en mostrar movimiento real después de publicar páginas nuevas. Se hizo mucho en poco tiempo (jun–jul); Google aún está procesando el sitio.
+> El SEO orgánico tarda **6–12 semanas** en mostrar resultados después de publicar páginas nuevas. La medición formal comienza en la 2ª semana de julio.
 
 ---
 
@@ -64,37 +64,32 @@ Probar estas búsquedas y anotar en qué posición aparece `prunavita.cl`:
 
 ---
 
-## 3. Estado medido el 6 de julio de 2026
+## 3. Estado a documentar (baseline julio 2026)
 
-### Indexación (proxy vía DuckDuckGo/Bing — Google similar con retraso)
+Registrar en el primer reporte mensual — **solo con datos verificados** (GSC o búsqueda manual):
 
-| URL | Indexada |
+| URL | Indexada en Google (GSC) |
 |---|---|
-| `/` | ✓ |
-| `/servicios/ciruelas-deshidratadas.html` | ✓ |
-| `/servicios/exportacion-agroindustrial.html` | ✓ |
-| `/servicios/representacion-comercial.html` | ✓ |
-| `/servicios/maquinaria-agroindustrial.html` | ✓ |
-| `/servicios/asesorias-tecnicas-inocuidad.html` | ✓ |
-| `/noticias/2026-06-exportacion-ciruela-deshidratada-chile-2025.html` | ✓ |
-| `/noticias/` | Pendiente confirmar GSC |
-| `/fichas-tecnicas.html` | Pendiente confirmar GSC |
-| Noticias jul 2026 / Viña Santa Rita | Pendiente confirmar GSC |
+| `/` | [completar] |
+| `/servicios/ciruelas-deshidratadas.html` | [completar] |
+| `/servicios/exportacion-agroindustrial.html` | [completar] |
+| `/noticias/` | [completar] |
+| `/fichas-tecnicas.html` | [completar] |
 
-### Posicionamiento en búsquedas con marca (6 jul 2026)
+### Búsquedas a registrar (posición real en Google, modo incógnito)
 
-| Búsqueda | Resultado Prunavita |
+| Búsqueda | Posición prunavita.cl | Fecha |
+|---|---|---|
+| `prunavita` | [completar] | |
+| `prunavita ciruelas deshidratadas` | [completar] | |
+| `site:prunavita.cl` | [nº páginas indexadas] | |
+
+### Búsquedas genéricas — expectativa mes 2
+
+| Búsqueda | Estado esperado |
 |---|---|
-| `prunavita ciruelas deshidratadas` | **#1** noticia + **#2** página servicio ciruelas |
-| `prunavita exportacion agroindustrial chile` | **#1** home + **#2** página exportación |
-
-### Búsquedas genéricas (sin marca) — expectativa realista
-
-| Búsqueda | Estado mes 2 |
-|---|---|
-| `exportador ciruelas deshidratadas Chile` | No en primera página (competencia establecida) |
-| `gestión exportaciones agroindustrial Chile` | En construcción |
-| `representación comercial Chile extranjeros` | En construcción |
+| `exportador ciruelas deshidratadas Chile` | Sin posición en primera página |
+| `gestión exportaciones agroindustrial Chile` | Sin posición en primera página |
 
 **Objetivo mes 3–6:** entrar al top 50, luego top 20, luego top 10 en 2–3 keywords por página pilar.
 
@@ -170,12 +165,9 @@ Cada mes (día 1 o al cierre del informe) registrar en `memoria/YYYY-MM.md`:
 
 ## 6. Qué decirle al cliente (mensaje tipo)
 
-> "El sitio **ya está en Google** y posiciona bien cuando alguien busca **Prunavita** o **Prunavita + su servicio**. Eso confirma que la base técnica funciona.
->
-> Para aparecer en búsquedas **genéricas** ('exportador de ciruelas Chile', 'gestión de exportaciones'), el mercado tiene competidores con años de historial. Ese es el trabajo de los próximos meses de mantención: contenido, autoridad y tiempo.
->
-> La forma correcta de medirlo es **Google Search Console** (impresiones, clics, posición por palabra)
-> más el **informe mensual** que enviamos al cierre de cada mes con las 2 publicaciones.
+> El sitio tiene la **base técnica lista** para posicionar. Los resultados en Google se medirán mes a mes
+> con Search Console y se reportarán sin suposiciones. En mes 2 es normal no aparecer aún en búsquedas
+> competitivas como "prunavita ciruelas deshidratadas".
 
 ---
 
