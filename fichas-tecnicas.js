@@ -190,10 +190,10 @@
 
     var PDF_BASE = 'assets/fichas-tecnicas/';
     var CATEGORY_IMAGES = {
-        cerezas: 'assets/images/quality-control.jpg',
+        cerezas: 'assets/images/productos/cerezas-frescas.jpg',
         ciruelas: 'assets/images/hero-prunes.jpg',
-        frutillas: 'assets/images/prunes-close.jpg',
-        pulpas: 'assets/images/maquinaria.jpg'
+        frutillas: 'assets/images/productos/frutillas-iqf.jpg',
+        pulpas: 'assets/images/prunes-close.jpg'
     };
     var currentId = null;
     var speechUtterance = null;

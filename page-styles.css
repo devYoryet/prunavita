@@ -151,6 +151,15 @@
     margin-bottom: var(--spacing-md);
 }
 
+.page-content.article-page p {
+    text-align: justify;
+    hyphens: auto;
+}
+
+.page-content.article-page .hero-lead {
+    text-align: left;
+}
+
 .page-content ul,
 .page-content ol {
     margin: 0 0 var(--spacing-lg) 1.25rem;
