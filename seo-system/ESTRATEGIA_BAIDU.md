@@ -1,7 +1,7 @@
 # Estrategia Baidu y Mercado Chino — Prunavita.cl
 
 **Objetivo:** que compradores chinos de ciruelas deshidratadas y productos agroindustriales
-chilenos encuentren a Prunavita. Activación principal en **Mes 5** del plan, con preparación previa.
+chilenos encuentren a Prunavita. Activación en **meses 4–5** (septiembre–octubre 2026), con preparación en meses 2–3.
 
 ## Contexto clave (realidad del SEO en China)
 
@@ -14,7 +14,7 @@ chilenos encuentren a Prunavita. Activación principal en **Mes 5** del plan, co
    en Hong Kong/Singapur** para mejorar velocidad percibida desde China.
 4. Baidu da poco peso a JSON-LD; prioriza **meta tags clásicos, títulos y contenido textual en chino**.
 
-## Fase 0 — Preparación (Meses 1-4, sin costo)
+## Fase 0 — Preparación (Meses 1–3: jun–ago 2026)
 
 - [x] HTML estático y liviano (carga rápido, sin dependencias bloqueadas en China,
       OJO: Google Fonts puede cargar lento desde China → evaluar self-host de fuentes en fase 5).
@@ -23,7 +23,7 @@ chilenos encuentren a Prunavita. Activación principal en **Mes 5** del plan, co
 - [ ] Recopilar vocabulario comercial: 智利西梅干 (ciruelas pasas chilenas), 智利干果 (frutos secos
       chilenos), 智利供应商 (proveedor chileno), 农产品出口 (exportación agrícola).
 
-## Fase 1 — Activación (Mes 5)
+## Fase 1 — Activación (Meses 4–5: sep–oct 2026)
 
 1. **Página pilar en chino simplificado:** `/zh/ciruelas-deshidratadas.html` (o `/zh/xilimei.html`)
    - Title y description en chino, contenido original (no traducción literal del español).

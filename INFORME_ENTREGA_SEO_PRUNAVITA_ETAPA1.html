@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe de Entrega — SEO Etapa 1 | Prunavita</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #1a365d;
+            --accent: #c9a227;
+            --text: #2d3748;
+            --text-light: #4a5568;
+            --bg-light: #f7fafc;
+            --border: #e2e8f0;
+            --success: #276749;
+            --white: #ffffff;
+        }
+        @page { size: A4; margin: 12mm 15mm; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.55;
+            font-size: 10pt;
+            background: #edf2f7;
+        }
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto 20px;
+            padding: 14mm 16mm;
+            background: var(--white);
+            page-break-after: always;
+        }
+        @media print {
+            body { background: white; }
+            .page { margin: 0; box-shadow: none; }
+            .no-print { display: none; }
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+        }
+        .logo-section h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22pt;
+            color: var(--primary);
+        }
+        .logo-section p {
+            color: var(--accent);
+            font-size: 8pt;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .doc-info { text-align: right; font-size: 9pt; color: var(--text-light); }
+        .doc-info .doc-type { font-size: 13pt; font-weight: 700; color: var(--primary); }
+        .client-box {
+            background: var(--bg-light);
+            border-left: 4px solid var(--accent);
+            padding: 12px 16px;
+            margin-bottom: 14px;
+            border-radius: 0 6px 6px 0;
+        }
+        .client-box h3 { font-size: 8pt; text-transform: uppercase; color: var(--primary); margin-bottom: 6px; }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 13pt;
+            color: var(--primary);
+            margin: 16px 0 10px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid var(--border);
+        }
+        .section-subtitle { font-size: 10pt; font-weight: 600; color: var(--primary); margin: 12px 0 8px; }
+        p { margin-bottom: 8px; }
+        table { width: 100%; border-collapse: collapse; margin: 10px 0 14px; font-size: 9pt; }
+        th, td { border: 1px solid var(--border); padding: 7px 9px; text-align: left; vertical-align: top; }
+        th { background: var(--primary); color: white; font-weight: 600; }
+        tr:nth-child(even) td { background: #fafafa; }
+        .ok { color: var(--success); font-weight: 700; }
+        .badge {
+            display: inline-block;
+            background: #c6f6d5;
+            color: var(--success);
+            font-size: 7.5pt;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 999px;
+            text-transform: uppercase;
+        }
+        .badge-pending { background: #feebc8; color: #c05621; }
+        .badge-info { background: #bee3f8; color: #2c5282; }
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary) 0%, #2c5282 100%);
+            color: white;
+            padding: 14px 18px;
+            border-radius: 8px;
+            margin: 14px 0;
+        }
+        .highlight-box h3 { font-size: 11pt; margin-bottom: 8px; }
+        .highlight-box.green {
+            background: linear-gradient(135deg, #276749 0%, #2f855a 100%);
+        }
+        .highlight-box.amber {
+            background: linear-gradient(135deg, #744210 0%, #975a16 100%);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin: 14px 0;
+        }
+        .stat-card {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 12px;
+            text-align: center;
+        }
+        .stat-card .num { font-size: 18pt; font-weight: 700; color: var(--primary); }
+        .stat-card .label { font-size: 7.5pt; color: var(--text-light); text-transform: uppercase; }
+        ul { margin: 6px 0 10px 18px; }
+        li { margin-bottom: 4px; }
+        .footer-note {
+            margin-top: 20px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+            font-size: 8pt;
+            color: var(--text-light);
+        }
+        .payment-box {
+            border: 2px solid var(--accent);
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin-top: 14px;
+        }
+        .payment-box strong { color: var(--primary); }
+        .url { font-size: 8.5pt; color: #2b6cb0; }
+        .note-box {
+            background: #fffaf0;
+            border: 1px solid #fbd38d;
+            border-radius: 6px;
+            padding: 12px 14px;
+            margin: 12px 0;
+            font-size: 9pt;
+        }
+    </style>
+</head>
+<body>
+
+<!-- PÁGINA 1 -->
+<div class="page">
+    <header class="header">
+        <div class="logo-section">
+            <h1>Pulsando Tech</h1>
+            <p>Desarrollo Web &amp; Marketing Digital</p>
+        </div>
+        <div class="doc-info">
+            <div class="doc-type">INFORME DE ENTREGA</div>
+            <div>SEO Etapa 1 — Implementación</div>
+            <div>Fecha: 6 de julio de 2026</div>
+            <div>Documento: INF-PRU-SEO-2026-01</div>
+        </div>
+    </header>
+
+    <div class="client-box">
+        <h3>Cliente</h3>
+        <div><strong>COMERCIALIZADORA CAMIGO SPA (Prunavita)</strong></div>
+        <div>RUT: 78.238.063-K · www.prunavita.cl</div>
+        <div>Contacto: Felipe Catalán · fcatalan@prunavita.cl</div>
+    </div>
+
+    <div class="client-box" style="border-left-color: var(--primary);">
+        <h3>Prestador del servicio</h3>
+        <div><strong>Yoryet Danoun N.</strong> · RUT: 16.647.601-1</div>
+        <div>yoryet.danoun@gmail.com · +56 9 5798 2154</div>
+    </div>
+
+    <p>
+        Estimados señores de <strong>Prunavita</strong>, presento el informe de los trabajos ejecutados
+        en el marco del contrato <strong>Opción C — SEO Nacional + Internacional</strong> más
+        <strong>Mantenimiento SEO Mensual Intermedio</strong> (2 publicaciones al mes), acordado el 1 de junio de 2026
+        e iniciado tras la confirmación de pago del 8 de junio.
+    </p>
+
+    <div class="highlight-box">
+        <h3>Resumen ejecutivo</h3>
+        <p style="margin:0;">
+            En aproximadamente <strong>4 semanas</strong> (8 de junio al 6 de julio de 2026), www.prunavita.cl pasó de ser
+            un sitio de una sola página sin presencia en buscadores a una <strong>plataforma digital profesional con 13 páginas
+            estratégicas</strong>, noticias del sector, catálogo de 15 fichas técnicas, medición en Google Analytics y
+            Google Search Console, y base preparada para posicionamiento en mercados internacionales y en Baidu (China).
+        </p>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card"><div class="num">13</div><div class="label">Páginas en el sitio</div></div>
+        <div class="stat-card"><div class="num">5</div><div class="label">Servicios indexables</div></div>
+        <div class="stat-card"><div class="num">3</div><div class="label">Noticias publicadas</div></div>
+        <div class="stat-card"><div class="num">15</div><div class="label">Fichas técnicas</div></div>
+    </div>
+
+    <div class="note-box">
+        <strong>Mantención desde julio — $150.000/mes:</strong> 2 noticias + 1 reporte mensual de búsqueda orgánica en Google.
+        <strong>Meses 2–3 (jul–ago):</strong> foco Google Search. <strong>Meses 4–5 (sep–oct):</strong> canal China y Baidu.
+        Detalle completo en la <strong>sección 11</strong> de este informe.
+    </div>
+
+    <h2 class="section-title">1. Alcance contratado y estado de pago</h2>
+    <table>
+        <thead>
+            <tr><th>Servicio contratado</th><th>Valor</th><th>Estado</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>SEO Nacional + Internacional</strong> (Opción C)<br>
+                    Configuración técnica, páginas de servicios, palabras clave, base internacional y preparación Baidu</td>
+                <td>$420.000</td>
+                <td><span class="badge">Entregado</span></td>
+            </tr>
+            <tr>
+                <td><strong>Mantenimiento SEO — Junio 2026</strong><br>
+                    2 publicaciones editoriales + monitoreo y mejoras continuas</td>
+                <td>$150.000</td>
+                <td><span class="badge">Entregado</span></td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>Total Etapa 1</strong></td>
+                <td><strong>$570.000</strong></td>
+            </tr>
+            <tr>
+                <td colspan="2">Abono recibido (8 de junio de 2026) — 50%</td>
+                <td><strong>$360.000</strong></td>
+            </tr>
+            <tr>
+                <td colspan="2"><strong>Saldo pendiente Etapa 1</strong></td>
+                <td><strong>$210.000</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-title">2. Cronología de trabajos realizados</h2>
+    <table>
+        <thead>
+            <tr><th>Período</th><th>Trabajo realizado</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Semana 1 (8–14 jun)</td><td>Auditoría SEO, creación de 5 páginas de servicios, sección de noticias, mapa del sitio para Google, configuración técnica base, traducción español/inglés</td></tr>
+            <tr><td>Semana 2 (15–21 jun)</td><td>Rediseño visual profesional de la página principal, optimización de fotografías (sitio 50 veces más liviano), publicación en servidor de producción (Vercel)</td></tr>
+            <tr><td>Semana 3 (22–28 jun)</td><td>Primera noticia propia (Viña Santa Rita), primera noticia investigada (mercado ciruela 2025), ampliación de contenido en las 5 páginas de servicio</td></tr>
+            <tr><td>Semana 4 (29 jun–6 jul)</td><td>Google Analytics activo, Google Search Console verificado, catálogo de 15 fichas técnicas interactivas, tercera noticia (mercados 2026), mejora de la sección noticias</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- PÁGINA 2 -->
+<div class="page">
+    <header class="header">
+        <div class="logo-section"><h1>Pulsando Tech</h1><p>Informe de Entrega — Pág. 2</p></div>
+        <div class="doc-info"><div class="doc-type">TRABAJOS ENTREGADOS</div><div>Prunavita SEO Etapa 1</div></div>
+    </header>
+
+    <h2 class="section-title">3. Configuración SEO técnica</h2>
+    <table>
+        <thead><tr><th>Elemento</th><th>Qué significa para Prunavita</th><th>Estado</th></tr></thead>
+        <tbody>
+            <tr><td>Google Search Console</td><td>Permite ver cómo Google indexa el sitio y qué palabras generan visitas</td><td class="ok">✓ Activo</td></tr>
+            <tr><td>Google Analytics 4</td><td>Mide visitantes, páginas más vistas y contactos desde búsqueda orgánica</td><td class="ok">✓ Activo</td></tr>
+            <tr><td>Mapa del sitio (sitemap)</td><td>13 URLs enviadas a Google para facilitar la indexación</td><td class="ok">✓ Activo</td></tr>
+            <tr><td>Etiquetas para redes sociales</td><td>Al compartir un enlace, se ve título, descripción e imagen profesional</td><td class="ok">✓ Activo</td></tr>
+            <tr><td>Datos estructurados</td><td>Google entiende mejor que Prunavita es empresa, servicios y noticias del sector</td><td class="ok">✓ Activo</td></tr>
+            <tr><td>Velocidad del sitio</td><td>Imágenes optimizadas: de ~85 MB a ~1,5 MB total (carga mucho más rápida)</td><td class="ok">✓ Activo</td></tr>
+            <tr><td>Preparación Baidu (China)</td><td>Sitio accesible para el robot de Baidu; términos en chino en página de ciruelas</td><td class="ok">✓ Base lista</td></tr>
+            <tr><td>Página en chino dedicada</td><td>Versión en chino simplificado para compradores y Baidu</td><td><span class="badge badge-pending">Meses 4–5 (sep–oct)</span></td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-title">4. Páginas y contenidos creados</h2>
+    <table>
+        <thead><tr><th>Página</th><th>Objetivo comercial / SEO</th></tr></thead>
+        <tbody>
+            <tr><td class="url">prunavita.cl</td><td>Página principal optimizada — marca y servicios generales</td></tr>
+            <tr><td class="url">/servicios/ciruelas-deshidratadas.html</td><td>⭐ Producto estrella — "ciruelas deshidratadas Chile", mercado internacional</td></tr>
+            <tr><td class="url">/servicios/exportacion-agroindustrial.html</td><td>"Gestión de exportaciones Chile", documentación y logística</td></tr>
+            <tr><td class="url">/servicios/representacion-comercial.html</td><td>Compradores extranjeros que buscan socio en Chile / China</td></tr>
+            <tr><td class="url">/servicios/maquinaria-agroindustrial.html</td><td>Maquinaria agroindustrial, túneles de deshidratado</td></tr>
+            <tr><td class="url">/servicios/asesorias-tecnicas-inocuidad.html</td><td>HACCP, BRC, inocuidad alimentaria</td></tr>
+            <tr><td class="url">/noticias/</td><td>Actualidad del sector — autoridad y palabras clave long-tail</td></tr>
+            <tr><td class="url">/fichas-tecnicas.html</td><td>15 fichas PDF con visor, descarga y búsqueda por producto</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-title">5. Publicaciones del blog / noticias</h2>
+    <p>Contrato: <strong>2 publicaciones al mes</strong>. Entregadas en el período junio–julio:</p>
+    <table>
+        <thead>
+            <tr><th>Fecha</th><th>Tipo</th><th>Título</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>15 jun 2026</td>
+                <td>Propia</td>
+                <td>Prunavita recibe a sus clientes en Viña Santa Rita</td>
+            </tr>
+            <tr>
+                <td>15 jun 2026</td>
+                <td>Investigada</td>
+                <td>Ciruela deshidratada chilena 2025: liderazgo mundial y auge en China</td>
+            </tr>
+            <tr>
+                <td>6 jul 2026</td>
+                <td>Investigada</td>
+                <td>Ciruela deshidratada 2026: Polonia lidera y China retrocede</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Cada noticia enlaza a las páginas de servicio correspondientes, lo que ayuda a que Google asocie a Prunavita con esos temas.</p>
+
+    <h2 class="section-title">6. SEO internacional y Baidu (Opción C)</h2>
+    <ul>
+        <li>Sitio disponible en <strong>español e inglés</strong> en todas las páginas — base para compradores de Europa, Asia y EE.UU.</li>
+        <li>Palabras clave internacionales definidas: <em>chilean prunes supplier</em>, <em>sourcing agent Chile</em>, <em>dried plums exporter</em>.</li>
+        <li>Sitio preparado para ser rastreado por <strong>Baiduspider</strong> (motor de búsqueda de China).</li>
+        <li>Términos en chino simplificado incorporados en la página de ciruelas deshidratadas.</li>
+        <li>Noticias orientadas a mercados de exportación (China, Polonia, Europa).</li>
+    </ul>
+    <p>La activación del canal chino se planifica en <strong>meses 4 y 5</strong> del plan (septiembre–octubre 2026),
+    una vez consolidado el posicionamiento en Google durante los meses 2 y 3 (detalle en sección 11).</p>
+</div>
+
+<!-- PÁGINA 3 -->
+<div class="page">
+    <header class="header">
+        <div class="logo-section"><h1>Pulsando Tech</h1><p>Informe de Entrega — Pág. 3</p></div>
+        <div class="doc-info"><div class="doc-type">POSICIONAMIENTO Y COMPETENCIA</div><div>Prunavita SEO Etapa 1</div></div>
+    </header>
+
+    <h2 class="section-title">7. ¿Ya aparece Prunavita en Google?</h2>
+
+    <div class="highlight-box green">
+        <h3>Sí — en búsquedas de marca y marca + servicio</h3>
+        <p style="margin:0;">
+            Verificado en julio 2026: cuando alguien busca <strong>"prunavita"</strong> o <strong>"prunavita ciruelas deshidratadas"</strong>,
+            el sitio aparece en las <strong>primeras posiciones</strong> con la página principal, la página de servicio y las noticias del sector.
+            Eso confirma que la base técnica funciona y Google ya conoce el sitio.
+        </p>
+    </div>
+
+    <table>
+        <thead>
+            <tr><th>Tipo de búsqueda</th><th>Ejemplo</th><th>Situación actual (jul 2026)</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Marca</strong></td>
+                <td>prunavita</td>
+                <td class="ok">✓ Aparece en primeras posiciones</td>
+            </tr>
+            <tr>
+                <td><strong>Marca + servicio</strong></td>
+                <td>prunavita ciruelas deshidratadas</td>
+                <td class="ok">✓ Posiciones 1–3 (noticia + página servicio)</td>
+            </tr>
+            <tr>
+                <td><strong>Marca + servicio</strong></td>
+                <td>prunavita exportación agroindustrial</td>
+                <td class="ok">✓ Home y página de exportación arriba</td>
+            </tr>
+            <tr>
+                <td><strong>Genérica (sin marca)</strong></td>
+                <td>exportador ciruelas deshidratadas Chile</td>
+                <td><span class="badge badge-pending">En construcción</span></td>
+            </tr>
+            <tr>
+                <td><strong>Genérica (sin marca)</strong></td>
+                <td>gestión exportaciones agroindustrial Chile</td>
+                <td><span class="badge badge-pending">En construcción</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="note-box">
+        <strong>¿Por qué aún no aparece en búsquedas genéricas?</strong><br>
+        Las páginas nuevas se publicaron hace pocas semanas. Google necesita entre <strong>6 y 12 semanas</strong> para posicionar
+        palabras competitivas. Además, en esas búsquedas compiten empresas con años de historial web (ver sección siguiente).
+        Ese es precisamente el trabajo de los <strong>próximos meses de mantención</strong>: contenido mensual, autoridad y tiempo.
+    </div>
+
+    <h3 class="section-subtitle">Cómo puede comprobarlo el equipo Prunavita</h3>
+    <ol style="margin-left:18px;font-size:9pt;">
+        <li><strong>Google Search Console</strong> (search.google.com/search-console): ver páginas indexadas, impresiones y clics.</li>
+        <li>Buscar en Google en modo incógnito: <em>prunavita</em> y <em>site:prunavita.cl</em> (lista páginas indexadas).</li>
+        <li><strong>Google Analytics</strong>: informe de tráfico orgánico (canal "Búsqueda orgánica").</li>
+    </ol>
+
+    <h2 class="section-title">8. Análisis competitivo del sector</h2>
+    <p>En búsquedas genéricas del rubro compiten principalmente:</p>
+
+    <table>
+        <thead>
+            <tr><th>Competidor</th><th>Fortalezas</th><th>Prunavita hoy</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Chileprunes</strong><br><span class="url">chileprunes.cl</span></td>
+                <td>Asociación del sector, autoridad de dominio, mucho contenido histórico</td>
+                <td>Prunavita gana en SEO técnico moderno y páginas de servicio dedicadas</td>
+            </tr>
+            <tr>
+                <td><strong>Sunprunes</strong><br><span class="url">sunprunes.cl</span></td>
+                <td>Sitio exportador con especificaciones, certificaciones visibles (BRC, HACCP)</td>
+                <td>Prunavita tiene fichas técnicas y noticias; puede reforzar certificaciones visibles</td>
+            </tr>
+            <tr>
+                <td><strong>Good Valley</strong><br><span class="url">goodvalley.cl</span></td>
+                <td>Productor-procesador en Colchagua, fotos reales, catálogo PDF por producto, certificación BRCGS</td>
+                <td>Prunavita supera en SEO técnico (títulos, descripciones, analítica, noticias). Good Valley tiene ventaja en fotos propias y certificaciones destacadas en web</td>
+            </tr>
+            <tr>
+                <td><strong>Agroprodex y otros exportadores</strong></td>
+                <td>Años indexados, backlinks, contenido en inglés</td>
+                <td>Prunavita está en fase de crecimiento; el plan de 6 meses cierra esa brecha</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="highlight-box amber">
+        <h3>Conclusión competitiva</h3>
+        <p style="margin:0;">
+            Prunavita partió desde cero en junio 2026 frente a competidores con años de presencia online.
+            La Etapa 1 construyó la <strong>infraestructura</strong> (páginas, técnica, contenido inicial).
+            La <strong>mantención mensual</strong> es la que permitirá competir en Google por palabras como
+            "exportador ciruelas Chile" o "representación comercial Chile", mediante publicaciones constantes,
+            ajustes según datos reales de Search Console y consolidación de autoridad del dominio.
+        </p>
+    </div>
+</div>
+
+<!-- PÁGINA 4 -->
+<div class="page">
+    <header class="header">
+        <div class="logo-section"><h1>Pulsando Tech</h1><p>Informe de Entrega — Pág. 4</p></div>
+        <div class="doc-info"><div class="doc-type">MANTENCIÓN Y PRÓXIMOS PASOS</div><div>Prunavita SEO Etapa 1</div></div>
+    </header>
+
+    <h2 class="section-title">9. Valor agregado entregado en Etapa 1</h2>
+    <table>
+        <thead><tr><th>Entregable</th><th>Beneficio para Prunavita</th></tr></thead>
+        <tbody>
+            <tr><td>Rediseño visual profesional</td><td>Imagen de exportadora seria; fotografía real en lugar de ilustraciones</td></tr>
+            <tr><td>15 fichas técnicas online</td><td>Compradores consultan especificaciones sin pedir PDF por correo</td></tr>
+            <tr><td>Formulario de contacto vía WhatsApp</td><td>Ningún lead se pierde al enviar consulta desde el sitio</td></tr>
+            <tr><td>Páginas legales (privacidad y términos)</td><td>Confianza y cumplimiento básico</td></tr>
+            <tr><td>Plan de trabajo SEO 6 meses</td><td>Hoja de ruta clara hasta noviembre 2026</td></tr>
+            <tr><td>Hub de noticias editorial</td><td>Sección de actualidad del sector con diseño periodístico</td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-title">10. Evolución del proyecto (antes vs. ahora)</h2>
+    <table>
+        <thead><tr><th>Indicador</th><th>Antes (jun 2026)</th><th>Ahora (jul 2026)</th></tr></thead>
+        <tbody>
+            <tr><td>Páginas en el sitio</td><td>1</td><td><strong>13</strong></td></tr>
+            <tr><td>Páginas detectadas en buscadores</td><td>0–1</td><td><strong>7+ confirmadas</strong></td></tr>
+            <tr><td>Noticias / blog</td><td>0</td><td><strong>3 artículos</strong></td></tr>
+            <tr><td>Fichas técnicas online</td><td>0</td><td><strong>15</strong></td></tr>
+            <tr><td>Google Analytics</td><td>No</td><td><strong>Sí</strong></td></tr>
+            <tr><td>Google Search Console</td><td>No</td><td><strong>Sí, verificado</strong></td></tr>
+            <tr><td>Velocidad (peso imágenes)</td><td>~85 MB</td><td><strong>~1,5 MB</strong></td></tr>
+        </tbody>
+    </table>
+
+    <h2 class="section-title">11. Mantención mensual — $150.000 (desde julio 2026)</h2>
+
+    <div class="highlight-box" style="margin-top:0;">
+        <h3>¿Qué incluye cada mes los $150.000?</h3>
+        <p style="margin:0 0 8px;">
+            La mensualidad de mantención SEO cubre exactamente:
+        </p>
+        <ul style="margin:0 0 0 18px;color:white;">
+            <li><strong>2 publicaciones al mes</strong> en la sección Noticias (propias del cliente o investigadas del sector agroindustrial)</li>
+            <li><strong>1 informe mensual de búsqueda orgánica</strong> con datos de Google Search Console y Google Analytics</li>
+            <li><strong>Optimización continua</strong>: ajuste de títulos y descripciones, enlaces internos y mejoras según qué palabras generan impresiones y clics</li>
+        </ul>
+    </div>
+
+    <h3 class="section-subtitle">Calendario del plan SEO (6 meses)</h3>
+    <p>La implementación inicial (Etapa 1) se concentró en junio. A partir de julio el trabajo es de <strong>mantención + crecimiento orgánico</strong>:</p>
+
+    <table>
+        <thead>
+            <tr><th>Mes</th><th>Calendario</th><th>Foco principal</th><th>Entregables al cliente</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Mes 1</strong></td>
+                <td>Junio 2026</td>
+                <td>Implementación inicial (Etapa 1)</td>
+                <td>Sitio completo, 5 servicios, SEO técnico, 3 noticias</td>
+            </tr>
+            <tr style="background:#ebf8ff;">
+                <td><strong>Mes 2</strong></td>
+                <td>Julio 2026</td>
+                <td><strong>Google Search</strong> — indexación, medición, keywords Chile</td>
+                <td>2 noticias + 1er reporte mensual (finales jul / inicios ago)</td>
+            </tr>
+            <tr style="background:#ebf8ff;">
+                <td><strong>Mes 3</strong></td>
+                <td>Agosto 2026</td>
+                <td><strong>Google Search</strong> — optimizar según datos GSC, palabras genéricas</td>
+                <td>2 noticias + reporte mensual</td>
+            </tr>
+            <tr style="background:#fffaf0;">
+                <td><strong>Mes 4</strong></td>
+                <td>Septiembre 2026</td>
+                <td><strong>China / Baidu</strong> — inicio: vocabulario chino, WeChat, preparación página /zh/</td>
+                <td>2 noticias + reporte mensual</td>
+            </tr>
+            <tr style="background:#fffaf0;">
+                <td><strong>Mes 5</strong></td>
+                <td>Octubre 2026</td>
+                <td><strong>China / Baidu</strong> — página en chino, registro Baidu Webmaster, perfiles B2B</td>
+                <td>2 noticias + reporte mensual</td>
+            </tr>
+            <tr>
+                <td><strong>Mes 6</strong></td>
+                <td>Noviembre 2026</td>
+                <td>Consolidación Google + China, informe final del plan</td>
+                <td>2 noticias + informe ejecutivo 6 meses</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="note-box">
+        <strong>¿Por qué Google primero (meses 2–3) y China después (meses 4–5)?</strong><br>
+        Los meses 2 y 3 permiten confirmar que Google indexa bien las 13 páginas, acumular datos reales de
+        búsqueda (impresiones, clics, palabras clave) y fortalecer el posicionamiento en Chile antes de abrir
+        el frente chino. Google y Baidu son motores independientes, pero conviene tener la base en español/inglés
+        estable y contenido mensual publicado antes de lanzar la versión en chino y el registro en Baidu —
+        prioridad que Felipe destacó en el acuerdo inicial.
+    </div>
+
+    <div class="highlight-box green">
+        <h3>Medición y reportes</h3>
+        <p style="margin:0;">
+            <strong>Inicio medición formal:</strong> segunda semana de julio de 2026 (desde el 14 de julio).<br><br>
+            <strong>Reporte al cliente:</strong> 1 correo al <strong>cierre de cada mes</strong> con el análisis de
+            búsqueda orgánica, publicaciones realizadas y plan del mes siguiente.
+            Primer envío: <strong>finales de julio o primeros días de agosto de 2026</strong>.
+        </p>
+    </div>
+
+    <h3 class="section-subtitle">Metas orientativas</h3>
+    <table>
+        <thead>
+            <tr><th>Indicador</th><th>Hoy (mes 2, jul)</th><th>Meta mes 3 (ago)</th><th>Meta mes 6 (nov)</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Páginas indexadas en Google</td><td>7–13</td><td>13+</td><td>20+</td></tr>
+            <tr><td>Palabras clave en top 50</td><td>En medición</td><td>10</td><td>30</td></tr>
+            <tr><td>Palabras clave en top 10</td><td>Marca ✓</td><td>2 genéricas</td><td>8</td></tr>
+            <tr><td>Clics orgánicos / mes</td><td>En medición</td><td>50+</td><td>400</td></tr>
+            <tr><td>Página chino + Baidu</td><td>Preparación</td><td>Preparación</td><td>Activa</td></tr>
+        </tbody>
+    </table>
+
+    <div class="payment-box">
+        <h3 class="section-subtitle" style="margin-top:0;">Solicitud de cierre Etapa 1</h3>
+        <p>Conforme al acuerdo del 1 de junio de 2026, solicito la transferencia del <strong>saldo pendiente de $210.000 CLP</strong>,
+        correspondiente al 50% restante de la implementación SEO y mantenimiento de junio.</p>
+        <p style="margin-top:10px;"><strong>Datos para transferencia:</strong><br>
+        Yoryet Danoun · RUT 16.647.601-1<br>
+        Banco de Chile · Cuenta Corriente 00-356-10613-06<br>
+        yoryet.danoun@gmail.com</p>
+        <p style="margin-top:10px;"><strong>Concepto:</strong> Saldo SEO Etapa 1 — Prunavita.cl (50% pendiente) — Julio 2026</p>
+    </div>
+
+    <div class="footer-note">
+        <p>Este informe documenta los trabajos ejecutados entre el 8 de junio y el 6 de julio de 2026.
+        El sitio está operativo en <strong>https://prunavita.cl</strong>. Cualquier página o publicación mencionada
+        puede verificarse directamente en el sitio web o en Google Search Console.</p>
+        <p style="margin-top:8px;">Yoryet Danoun N. · Pulsando Tech · Santiago, Chile · Julio 2026</p>
+    </div>
+</div>
+
+<p class="no-print" style="text-align:center;padding:20px;font-size:10pt;color:#718096;">
+    Para exportar a PDF: Ctrl+P → Guardar como PDF · Márgenes: Predeterminado · Activar gráficos de fondo
+</p>
+
+</body>
+</html>

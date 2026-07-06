@@ -4,11 +4,19 @@
 **Fin:** Noviembre 2026
 **Cadencia:** revisión y registro semanal en `memoria/`
 
-## Ritmo editorial fijo (todos los meses)
+## Ritmo editorial (mantención mensual — $150.000/mes)
 
-- **2 noticias propias/mes** → material entregado por el cliente, transformado en contenido SEO.
-- **1 noticia investigada cada 15 días** (2/mes) → búsqueda real en internet + lectura + redacción IA original.
-- **Total: ~4 publicaciones/mes** en `/noticias/`.
+- **2 publicaciones al mes** en `/noticias/` (propias del cliente o investigadas del sector).
+- **1 informe mensual** al cliente con análisis Google Search Console + optimizaciones.
+
+## Calendario estratégico
+
+| Meses | Calendario | Foco |
+|---|---|---|
+| 1 | Jun 2026 | Implementación inicial (Etapa 1) ✅ |
+| **2–3** | **Jul–Ago 2026** | **Google Search** — indexación, medición, keywords Chile |
+| **4–5** | **Sep–Oct 2026** | **China / Baidu** — página chino, Baidu Webmaster, B2B |
+| 6 | Nov 2026 | Consolidación e informe final |
 
 ---
 
@@ -24,38 +32,34 @@
       enviar sitemap.xml, dar de alta Google Analytics 4 y Bing Webmaster Tools.
 - [ ] Solicitar indexación manual de las 7 URLs en GSC.
 
-## Mes 2 (Julio 2026) — Implementación
+## Mes 2 (Julio 2026) — Google Search (medición y contenido)
 
-- [ ] Confirmar indexación de las 7 URLs (GSC > Cobertura).
-- [ ] Primeras 2 noticias propias (pedir material al cliente la semana 1 del mes).
-- [ ] Primeras 2 noticias investigadas (quincenas 1 y 2).
-- [ ] Perfil Google Business Profile (si aplica dirección física).
-- [ ] Optimizar imágenes (WebP, alt) y revisar Core Web Vitals (PageSpeed Insights).
+- [ ] Confirmar indexación de las 13 URLs (GSC > Páginas).
+- [ ] Baseline de medición (2ª semana de julio).
+- [ ] 2 publicaciones del mes + 1er reporte mensual al cliente (finales jul / inicios ago).
+- [ ] Optimizar imágenes (WebP, alt) y revisar Core Web Vitals.
 
-## Mes 3 (Agosto 2026) — Optimización inicial
+## Mes 3 (Agosto 2026) — Google Search (optimización)
 
-- [ ] Primer análisis GSC: impresiones, clics, CTR y posición por página.
-- [ ] Ajustar titles/descriptions con CTR < 1.5% y contenido de páginas en posición 8–20.
+- [ ] Análisis GSC: impresiones, clics, CTR y posición por página.
+- [ ] Ajustar titles/descriptions con CTR bajo y páginas en posición 8–20.
 - [ ] Reforzar enlaces internos desde noticias hacia páginas de servicio.
-- [ ] Identificar nuevas keywords que aparezcan en GSC y mapearlas en `KEYWORDS.md`.
-- [ ] Continuar ritmo editorial (2 propias + 2 investigadas).
+- [ ] 2 publicaciones + reporte mensual.
 
-## Mes 4 (Septiembre 2026) — Escalamiento
+## Mes 4 (Septiembre 2026) — Inicio canal China / Baidu
 
-- [ ] 1 contenido de profundidad por servicio prioritario (guías: "Guía para importar ciruelas
-      deshidratadas chilenas", "Cómo certificar HACCP una planta", etc.).
-- [ ] Primeros backlinks: directorios B2B (ProChile, Chilealimentos, Frutas de Chile),
-      notas de prensa sectoriales, perfiles de empresa.
-- [ ] Continuar ritmo editorial.
+- [ ] Preparación Baidu: vocabulario chino, WeChat del cliente, términos en página ciruelas.
+- [ ] 1 contenido de profundidad (guía exportación o ciruelas).
+- [ ] Primeros backlinks B2B (ProChile, Chilealimentos).
+- [ ] 2 publicaciones + reporte mensual.
 
-## Mes 5 (Octubre 2026) — Expansión internacional
+## Mes 5 (Octubre 2026) — Activación China / Baidu
 
-- [ ] Versión EN de las 2 páginas con más tracción (subcarpeta `/en/` + hreflang).
-- [ ] Revisión de intención de búsqueda internacional ("chilean prunes supplier",
-      "dried fruit exporter Chile").
-- [ ] Activar fase 1 de `ESTRATEGIA_BAIDU.md`: página en chino simplificado de ciruelas
-      deshidratadas + presencia en plataformas B2B usadas en China (Alibaba/Made-in-China/WeChat).
-- [ ] Continuar ritmo editorial.
+- [ ] Página en chino simplificado (ciruelas deshidratadas) + hreflang.
+- [ ] Registro Baidu Webmaster Tools y envío sitemap /zh/.
+- [ ] Presencia B2B China (Alibaba / Made-in-China) con enlace a prunavita.cl.
+- [ ] Versión EN de páginas con más tracción (si aplica).
+- [ ] 2 publicaciones + reporte mensual.
 
 ## Mes 6 (Noviembre 2026) — Consolidación y evaluación
 
@@ -66,7 +70,17 @@
 
 ---
 
-## Entregable semanal (cada viernes, registrado en `memoria/`)
+## Entregable al cliente (mensual)
+
+Al **cierre de cada mes**, enviar por correo un **Reporte Mensual SEO** usando `PLANTILLA_REPORTE_MENSUAL.md`:
+impresiones, clics, keywords, publicaciones y recomendaciones.
+
+**Inicio medición formal:** segunda semana de julio 2026.  
+**Primer reporte al cliente:** finales de julio / primeros días de agosto 2026.
+
+## Entregable interno (semanal)
+
+Cada viernes, registro operativo en `memoria/` (no se envía al cliente salvo que lo pidan):
 
 1. Estado del SEO (indexación, posiciones, novedades GSC).
 2. Tareas completadas y pendientes.
