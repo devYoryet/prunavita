@@ -1,0 +1,340 @@
+/* Fichas Técnicas — catálogo interactivo */
+.fichas-hero {
+    padding-top: calc(var(--nav-height) + 3rem);
+    padding-bottom: var(--spacing-3xl);
+    background: linear-gradient(135deg, #f8faf6 0%, #eef4ea 100%);
+}
+
+.fichas-hero .hero-lead {
+    max-width: 720px;
+}
+
+.fichas-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    align-items: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.fichas-search-wrap {
+    flex: 1 1 280px;
+    position: relative;
+}
+
+.fichas-search-wrap svg {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.1rem;
+    height: 1.1rem;
+    color: var(--text-muted, #737373);
+    pointer-events: none;
+}
+
+.fichas-search {
+    width: 100%;
+    padding: 0.85rem 1rem 0.85rem 2.75rem;
+    border: 1px solid var(--border, #E8E8E8);
+    border-radius: 999px;
+    font: inherit;
+    background: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.fichas-search:focus {
+    outline: none;
+    border-color: var(--primary, #2C5F2D);
+    box-shadow: 0 0 0 3px rgba(44, 95, 45, 0.12);
+}
+
+.fichas-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.ficha-filter-btn {
+    border: 1px solid var(--border, #E8E8E8);
+    background: #fff;
+    color: var(--text, #262626);
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    font: inherit;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.ficha-filter-btn:hover,
+.ficha-filter-btn.active {
+    background: var(--primary, #2C5F2D);
+    border-color: var(--primary, #2C5F2D);
+    color: #fff;
+}
+
+.fichas-layout {
+    display: grid;
+    grid-template-columns: minmax(280px, 360px) 1fr;
+    gap: var(--spacing-xl);
+    min-height: 620px;
+}
+
+.fichas-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-height: 720px;
+    overflow-y: auto;
+    padding-right: 0.25rem;
+}
+
+.ficha-card {
+    display: flex;
+    gap: 0.85rem;
+    padding: 1rem;
+    border: 1px solid var(--border, #E8E8E8);
+    border-radius: 12px;
+    background: #fff;
+    cursor: pointer;
+    text-align: left;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+
+.ficha-card:hover {
+    border-color: rgba(44, 95, 45, 0.35);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.ficha-card.active {
+    border-color: var(--primary, #2C5F2D);
+    box-shadow: 0 0 0 2px rgba(44, 95, 45, 0.15);
+}
+
+.ficha-card-icon {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    background: #f0f5ee;
+}
+
+.ficha-card-body h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.35;
+}
+
+.ficha-card-body p {
+    font-size: 0.8rem;
+    color: var(--text-muted, #737373);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.ficha-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: 0.5rem;
+}
+
+.ficha-tag {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    background: #eef4ea;
+    color: var(--primary, #2C5F2D);
+}
+
+.ficha-viewer-panel {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border, #E8E8E8);
+    border-radius: 16px;
+    background: #fff;
+    overflow: hidden;
+    min-height: 620px;
+}
+
+.ficha-viewer-empty {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-3xl);
+    text-align: center;
+    color: var(--text-muted, #737373);
+}
+
+.ficha-viewer-empty svg {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+    opacity: 0.35;
+}
+
+.ficha-viewer-header {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--border, #E8E8E8);
+    background: #fafcfa;
+}
+
+.ficha-viewer-header h2 {
+    font-size: 1.15rem;
+    margin-bottom: 0.35rem;
+}
+
+.ficha-viewer-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.85rem;
+}
+
+.ficha-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.55rem 0.95rem;
+    border-radius: 8px;
+    border: 1px solid var(--border, #E8E8E8);
+    background: #fff;
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.ficha-action-btn:hover {
+    border-color: var(--primary, #2C5F2D);
+    color: var(--primary, #2C5F2D);
+}
+
+.ficha-action-btn.primary {
+    background: var(--primary, #2C5F2D);
+    border-color: var(--primary, #2C5F2D);
+    color: #fff;
+}
+
+.ficha-action-btn.primary:hover {
+    background: #234d24;
+}
+
+.ficha-action-btn.speaking {
+    background: #fff3e0;
+    border-color: #e65100;
+    color: #e65100;
+}
+
+.ficha-summary-box {
+    padding: 1rem 1.5rem;
+    background: #f8faf6;
+    border-bottom: 1px solid var(--border, #E8E8E8);
+}
+
+.ficha-summary-box h3 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--primary, #2C5F2D);
+    margin-bottom: 0.5rem;
+}
+
+.ficha-summary-box p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.ficha-pdf-frame-wrap {
+    flex: 1;
+    min-height: 420px;
+    background: #525659;
+}
+
+.ficha-pdf-frame {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    border: 0;
+}
+
+.fichas-count {
+    font-size: 0.875rem;
+    color: var(--text-muted, #737373);
+    margin-bottom: var(--spacing-md);
+}
+
+.fichas-mobile-viewer {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: #fff;
+    flex-direction: column;
+}
+
+.fichas-mobile-viewer.open {
+    display: flex;
+}
+
+.fichas-mobile-viewer .ficha-viewer-header {
+    flex-shrink: 0;
+}
+
+.fichas-mobile-viewer .ficha-pdf-frame-wrap {
+    flex: 1;
+}
+
+.fichas-mobile-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+@media (max-width: 960px) {
+    .fichas-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .fichas-list {
+        max-height: none;
+    }
+
+    .ficha-viewer-panel {
+        display: none;
+    }
+
+    .ficha-card .ficha-open-hint {
+        display: inline;
+        font-size: 0.75rem;
+        color: var(--primary, #2C5F2D);
+        margin-top: 0.35rem;
+    }
+}
+
+@media (min-width: 961px) {
+    .ficha-card .ficha-open-hint {
+        display: none;
+    }
+}

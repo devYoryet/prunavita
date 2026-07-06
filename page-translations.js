@@ -515,7 +515,21 @@
         "ase.x1.p": "Preparamos y acompañamos a su planta en los principales estándares exigidos por el comercio internacional:",
         "ase.x1.list": "<li>HACCP y Buenas Prácticas de Manufactura (BPM)</li><li>BRCGS e IFS Food (esquemas GFSI)</li><li>FSSC 22000</li><li>Registro GACC para exportar a China</li><li>Requisitos FDA / FSMA (Estados Unidos) y de la Unión Europea</li>",
         "ase.x2.title": "Beneficios de certificar su planta",
-        "ase.x2.p": "Certificar no es solo cumplir: es abrir puertas. Una planta certificada accede a mercados de mayor valor, reduce rechazos y reclamos, negocia mejores precios y construye una reputación sólida ante compradores internacionales que exigen garantías de inocuidad."
+        "ase.x2.p": "Certificar no es solo cumplir: es abrir puertas. Una planta certificada accede a mercados de mayor valor, reduce rechazos y reclamos, negocia mejores precios y construye una reputación sólida ante compradores internacionales que exigen garantías de inocuidad.",
+
+        // --- Página: Fichas Técnicas ---
+        "fichas.breadcrumb": "Fichas Técnicas",
+        "fichas.h1": "Catálogo de Fichas Técnicas",
+        "fichas.lead": "Consulte, descargue y escuche resúmenes de las especificaciones técnicas de nuestros productos agroindustriales. Visor PDF integrado para compradores internacionales.",
+        "fichas.search": "Buscar por producto, categoría o etiqueta…",
+        "fichas.filter.all": "Todos",
+        "fichas.filter.cherries": "Cerezas",
+        "fichas.filter.prunes": "Ciruelas",
+        "fichas.filter.strawberries": "Frutillas",
+        "fichas.filter.pulp": "Pulpas",
+        "fichas.empty": "Seleccione una ficha de la lista para ver el PDF, descargarlo o escuchar su resumen.",
+        "fichas.cta.title": "¿Necesita una cotización con estas especificaciones?",
+        "fichas.cta.text": "Contáctenos con el producto y volumen requerido. Le respondemos con una propuesta personalizada."
     });
 
     // ==========================================
@@ -555,6 +569,20 @@
         "ase.x1.p": "We prepare and support your plant in the main standards required by international trade:",
         "ase.x1.list": "<li>HACCP and Good Manufacturing Practices (GMP)</li><li>BRCGS and IFS Food (GFSI schemes)</li><li>FSSC 22000</li><li>GACC registration to export to China</li><li>FDA / FSMA (United States) and European Union requirements</li>",
         "ase.x2.title": "Benefits of certifying your plant",
-        "ase.x2.p": "Certifying is not just compliance: it opens doors. A certified plant accesses higher-value markets, reduces rejections and claims, negotiates better prices and builds a solid reputation with international buyers that demand food safety guarantees."
+        "ase.x2.p": "Certifying is not just compliance: it opens doors. A certified plant accesses higher-value markets, reduces rejections and claims, negotiates better prices and builds a solid reputation with international buyers that demand food safety guarantees.",
+
+        // --- Page: Technical Sheets ---
+        "fichas.breadcrumb": "Technical Sheets",
+        "fichas.h1": "Technical Data Sheets Catalog",
+        "fichas.lead": "Browse, download and listen to summaries of our agro-industrial product specifications. Integrated PDF viewer for international buyers.",
+        "fichas.search": "Search by product, category or tag…",
+        "fichas.filter.all": "All",
+        "fichas.filter.cherries": "Cherries",
+        "fichas.filter.prunes": "Prunes",
+        "fichas.filter.strawberries": "Strawberries",
+        "fichas.filter.pulp": "Pulp",
+        "fichas.empty": "Select a sheet from the list to view the PDF, download it or listen to its summary.",
+        "fichas.cta.title": "Need a quote with these specifications?",
+        "fichas.cta.text": "Contact us with the product and volume required. We will respond with a tailored proposal."
     });
 })();

@@ -12,6 +12,7 @@ const translations = {
         "nav.services": "Servicios",
         "nav.allServices": "Ver todos los servicios",
         "nav.news": "Noticias",
+        "nav.fichas": "Fichas Técnicas",
         "nav.contact": "Contacto",
 
         // Hero
@@ -167,7 +168,13 @@ const translations = {
         "footer.company": "Empresa",
         "footer.copyright": "© 2026 Prunavita. Todos los derechos reservados.",
         "footer.privacy": "Política de Privacidad",
-        "footer.terms": "Términos de Servicio"
+        "footer.terms": "Términos de Servicio",
+
+        // Home — acceso a fichas técnicas
+        "fichas.home.tag": "Documentación Técnica",
+        "fichas.home.title": "Fichas Técnicas de Productos",
+        "fichas.home.desc": "15 fichas técnicas disponibles con visor PDF integrado, descarga directa y resúmenes por voz para compradores internacionales.",
+        "fichas.home.btn": "Ver Catálogo de Fichas"
     },
 
     en: {
@@ -178,6 +185,7 @@ const translations = {
         "nav.services": "Services",
         "nav.allServices": "View all services",
         "nav.news": "News",
+        "nav.fichas": "Technical Sheets",
         "nav.contact": "Contact",
 
         // Hero
@@ -333,7 +341,13 @@ const translations = {
         "footer.company": "Company",
         "footer.copyright": "© 2026 Prunavita. All rights reserved.",
         "footer.privacy": "Privacy Policy",
-        "footer.terms": "Terms of Service"
+        "footer.terms": "Terms of Service",
+
+        // Home — technical sheets CTA
+        "fichas.home.tag": "Technical Documentation",
+        "fichas.home.title": "Product Technical Data Sheets",
+        "fichas.home.desc": "15 technical sheets available with integrated PDF viewer, direct download and voice summaries for international buyers.",
+        "fichas.home.btn": "Browse Technical Sheets"
     }
 };
 
@@ -403,6 +417,15 @@ class LanguageManager {
         if (window.pageTitles && window.pageTitles[lang]) {
             document.title = window.pageTitles[lang];
         }
+
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            const key = el.getAttribute('data-i18n-placeholder');
+            if (translations[lang][key]) {
+                el.placeholder = translations[lang][key];
+            }
+        });
+
+        document.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
     }
 
     getCurrentLang() {
