@@ -173,7 +173,12 @@ const translations = {
         // Home — acceso a fichas técnicas
         "fichas.home.tag": "Documentación Técnica",
         "fichas.home.title": "Fichas Técnicas de Productos",
-        "fichas.home.desc": "15 fichas técnicas disponibles con visor PDF integrado, descarga directa y resúmenes por voz para compradores internacionales.",
+        "fichas.home.desc": "Especificaciones oficiales de cerezas, ciruelas, frutillas y pulpas con visor PDF integrado, descarga directa y resúmenes por voz para compradores internacionales.",
+        "fichas.home.badge": "Fichas PDF",
+        "fichas.home.f1": "Visor PDF en el sitio — sin salir de prunavita.cl",
+        "fichas.home.f2": "Descarga inmediata para cotizaciones y auditorías",
+        "fichas.home.f3": "Fotos reales de producto y resumen por voz",
+        "fichas.home.btn2": "Ejemplo: Ciruela Natural CN",
         "fichas.home.btn": "Ver Catálogo de Fichas"
     },
 
@@ -346,7 +351,12 @@ const translations = {
         // Home — technical sheets CTA
         "fichas.home.tag": "Technical Documentation",
         "fichas.home.title": "Product Technical Data Sheets",
-        "fichas.home.desc": "15 technical sheets available with integrated PDF viewer, direct download and voice summaries for international buyers.",
+        "fichas.home.desc": "Official specs for cherries, prunes, strawberries and pulp with integrated PDF viewer, direct download and voice summaries for international buyers.",
+        "fichas.home.badge": "PDF Sheets",
+        "fichas.home.f1": "In-site PDF viewer — no need to leave prunavita.cl",
+        "fichas.home.f2": "Instant download for quotes and audits",
+        "fichas.home.f3": "Real product photos and voice summaries",
+        "fichas.home.btn2": "Example: Natural Prune CN",
         "fichas.home.btn": "Browse Technical Sheets"
     }
 };

@@ -330,6 +330,130 @@
     color: var(--gray-600, #525252);
 }
 
+.fichas-home-showcase {
+    margin-top: var(--spacing-3xl);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-3xl);
+    align-items: center;
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-200);
+    background: var(--white);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+}
+
+.fichas-home-showcase-visual {
+    position: relative;
+    min-height: 320px;
+}
+
+.fichas-home-showcase-main {
+    width: 78%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 12px 40px rgba(44, 95, 45, 0.15);
+}
+
+.fichas-home-showcase-accent {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 52%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    border: 4px solid var(--white);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.fichas-home-showcase-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(44, 95, 45, 0.3);
+}
+
+.fichas-home-showcase-badge-num {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.fichas-home-showcase-badge-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.fichas-home-showcase-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    margin: 0.5rem 0 0.75rem;
+    line-height: 1.2;
+}
+
+.fichas-home-features {
+    list-style: none;
+    margin: var(--spacing-lg) 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.fichas-home-features li {
+    position: relative;
+    padding-left: 1.5rem;
+    color: var(--gray-700, #404040);
+    font-size: 0.95rem;
+}
+
+.fichas-home-features li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary);
+}
+
+.fichas-home-showcase-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+@media (max-width: 900px) {
+    .fichas-home-showcase {
+        grid-template-columns: 1fr;
+        padding: var(--spacing-xl);
+    }
+
+    .fichas-home-showcase-visual {
+        min-height: 260px;
+    }
+
+    .fichas-home-showcase-main {
+        width: 100%;
+        height: 220px;
+    }
+
+    .fichas-home-showcase-accent {
+        width: 45%;
+        height: 140px;
+    }
+}
+
 /* ===================================
    ABOUT - collage de fotografía real
    =================================== */

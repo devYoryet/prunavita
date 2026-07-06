@@ -189,6 +189,12 @@
     ];
 
     var PDF_BASE = 'assets/fichas-tecnicas/';
+    var CATEGORY_IMAGES = {
+        cerezas: 'assets/images/quality-control.jpg',
+        ciruelas: 'assets/images/hero-prunes.jpg',
+        frutillas: 'assets/images/prunes-close.jpg',
+        pulpas: 'assets/images/maquinaria.jpg'
+    };
     var currentId = null;
     var speechUtterance = null;
 
@@ -214,6 +220,10 @@
         return FICHAS.find(function (f) { return f.id === id; });
     }
 
+    function getFichaImage(ficha) {
+        return ficha.image || CATEGORY_IMAGES[ficha.category] || 'assets/images/hero-prunes.jpg';
+    }
+
     function renderList(filter) {
         var list = document.getElementById('fichasList');
         var count = document.getElementById('fichasCount');
@@ -236,8 +246,9 @@
 
         list.innerHTML = filtered.map(function (f) {
             var active = f.id === currentId ? ' active' : '';
+            var img = getFichaImage(f);
             return '<button type="button" class="ficha-card' + active + '" data-id="' + f.id + '" aria-pressed="' + (f.id === currentId) + '">' +
-                '<div class="ficha-card-icon" aria-hidden="true">' + f.icon + '</div>' +
+                '<div class="ficha-card-thumb" aria-hidden="true"><img src="' + img + '" alt="" loading="lazy"></div>' +
                 '<div class="ficha-card-body">' +
                 '<h3>' + t(f.title) + '</h3>' +
                 '<p>' + t(f.summary).substring(0, 90) + '…</p>' +
@@ -285,10 +296,13 @@
 
     function buildViewerHTML(ficha, isMobile) {
         var pdfUrl = PDF_BASE + ficha.file;
+        var img = getFichaImage(ficha);
         var prefix = isMobile ? 'mobile-' : '';
         return '<div class="ficha-viewer-header">' +
             (isMobile ? '<button type="button" class="fichas-mobile-close" id="mobileClose" aria-label="Cerrar">✕</button>' : '') +
-            '<h2>' + t(ficha.title) + '</h2>' +
+            '<div class="ficha-viewer-title-row">' +
+            '<img class="ficha-viewer-thumb" src="' + img + '" alt="' + t(ficha.title) + '">' +
+            '<h2>' + t(ficha.title) + '</h2></div>' +
             '<div class="ficha-viewer-actions">' +
             '<a href="' + pdfUrl + '" download class="ficha-action-btn primary" id="' + prefix + 'btnDownload">' +
             '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>' +

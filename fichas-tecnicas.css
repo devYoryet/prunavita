@@ -113,6 +113,41 @@
     box-shadow: 0 0 0 2px rgba(44, 95, 45, 0.15);
 }
 
+.ficha-card-thumb {
+    flex-shrink: 0;
+    width: 72px;
+    height: 72px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f0f5ee;
+}
+
+.ficha-card-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ficha-viewer-title-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.ficha-viewer-title-row h2 {
+    margin: 0;
+}
+
+.ficha-viewer-thumb {
+    width: 56px;
+    height: 56px;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid var(--border, #E8E8E8);
+}
+
 .ficha-card-icon {
     flex-shrink: 0;
     width: 44px;
