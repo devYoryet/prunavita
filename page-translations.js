@@ -47,6 +47,8 @@
         "svcgrid.subtitle": "Conozca en detalle cada una de nuestras líneas de servicio",
         "svcgrid.news.title": "Noticias y Actualidad",
         "svcgrid.news.desc": "Novedades de Prunavita y análisis del sector agroindustrial.",
+        "svcgrid.fichas.title": "Fichas Técnicas",
+        "svcgrid.fichas.desc": "15 especificaciones PDF con visor integrado, descarga y resúmenes por voz.",
 
         // --- Página: Ciruelas Deshidratadas ---
         "cir.h1": "Ciruelas Deshidratadas Premium de Chile para Exportación",
@@ -280,6 +282,8 @@
         "svcgrid.subtitle": "Explore each of our service lines in detail",
         "svcgrid.news.title": "News & Insights",
         "svcgrid.news.desc": "Prunavita updates and agro-industry market analysis.",
+        "svcgrid.fichas.title": "Technical Data Sheets",
+        "svcgrid.fichas.desc": "15 PDF specifications with integrated viewer, download and voice summaries.",
 
         // --- Page: Dried Plums ---
         "cir.h1": "Premium Chilean Dried Plums (Prunes) for Export",
