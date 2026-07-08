@@ -1,32 +1,21 @@
 /**
- * Loading Screen Handler
- * Removes loading screen when page is fully loaded
+ * Optional loading screen cleanup (legacy).
+ * Content is visible immediately; this only removes a spinner if present.
  */
-
-(function() {
+(function () {
     'use strict';
-    
-    function hideLoading() {
-        const loadingScreen = document.getElementById('loadingScreen');
-        const body = document.body;
-        
+
+    function cleanup() {
+        document.body.classList.add('loaded');
+        var loadingScreen = document.getElementById('loadingScreen');
         if (loadingScreen) {
-            loadingScreen.classList.add('hidden');
-            setTimeout(function() {
-                loadingScreen.remove();
-                body.classList.add('loaded');
-            }, 300);
-        } else {
-            body.classList.add('loaded');
+            loadingScreen.remove();
         }
     }
-    
-    // Hide loading when DOM and resources are ready
-    if (document.readyState === 'complete') {
-        hideLoading();
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', cleanup);
     } else {
-        window.addEventListener('load', hideLoading);
-        // Fallback timeout to ensure loading screen disappears
-        setTimeout(hideLoading, 2000);
+        cleanup();
     }
 })();
