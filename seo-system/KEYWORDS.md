@@ -66,8 +66,27 @@ Cada noticia debe enlazar a su página pilar para transferir autoridad.
 
 ---
 
+## 8. Consultas reales observadas en Search Console (jul 2026)
+
+Primeras búsquedas con impresiones reales (datos GSC 90 días). Oportunidades a trabajar:
+
+| Consulta real | Posición | Impr. | Página objetivo | Acción tomada |
+|---|---|---|---|---|
+| certificación brc chile | 59,5 | 4 | asesorias-tecnicas-inocuidad | title/desc optimizados (BRC/IFS) |
+| venta maquinaria manufactura | 82,5 | 4 | maquinaria-agroindustrial | desc "usada y reacondicionada" |
+| compra maquinaria usada | 29,0 | 1 | maquinaria-agroindustrial | desc actualizada |
+| consultoría agroindustria | 55,0 | 1 | asesorias-tecnicas-inocuidad | title "consultoría HACCP" |
+| asesoría en certificaciones | 43,0 | 1 | asesorias-tecnicas-inocuidad | cubierto |
+| responsabilidad transporte fruta exportación | 71,0 | 1 | exportacion-agroindustrial | tema para noticia futura |
+
+**Páginas que ya rankean (GSC):** home pos 1,4 · ciruelas 10,8 · representación 3,2 (0 clics → CTR) ·
+maquinaria 16,5 · exportación 14,0 · asesorías 29,4.
+
+---
+
 ### Registro de cambios
 
 | Fecha | Cambio |
 |---|---|
 | 2026-06-10 | Mapa inicial creado con el lanzamiento de las 5 páginas pilar. |
+| 2026-07-22 | Agregadas consultas reales de GSC; optimizados titles/metas de asesorías, maquinaria y representación. |
