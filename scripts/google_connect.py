@@ -49,12 +49,20 @@ def get_credentials():
                 str(find_client_secret()), SCOPES
             )
             print("\nAbriendo navegador para autorizar acceso a Google...")
-            print("Si falla, agregue http://localhost:8090/ en Google Cloud Console > OAuth > URIs de redireccion.\n")
-            creds = flow.run_local_server(port=8090, open_browser=True)
+            print("Si falla, agregue http://localhost:8091/ en Google Cloud Console > OAuth > URIs de redireccion.\n")
+            creds = flow.run_local_server(port=8091, open_browser=False, prompt="consent")
         TOKEN_PATH.write_text(creds.to_json(), encoding="utf-8")
         print(f"Token guardado en {TOKEN_PATH.name}")
 
     return creds
+
+
+def _date_range(days: int = 28):
+    import datetime
+
+    end = datetime.date.today()
+    start = end - datetime.timedelta(days=days)
+    return start.isoformat(), end.isoformat()
 
 
 def check_search_console(creds) -> None:
@@ -66,11 +74,55 @@ def check_search_console(creds) -> None:
 
     print("\n=== Google Search Console ===")
     if not entries:
-        print("Sin propiedades. Verifique prunavita.cl en https://search.google.com/search-console")
+        print("Sin propiedades verificadas para este usuario.")
+        print("→ Verifique prunavita.cl en https://search.google.com/search-console")
+        print("  (Prefijo de URL 'https://prunavita.cl/' + Etiqueta HTML — el meta ya está desplegado).")
         return
 
     for site in entries:
         print(f"  • {site.get('siteUrl')} — permiso: {site.get('permissionLevel')}")
+
+    # Buscar la propiedad de prunavita y traer datos de rendimiento (últimos 28 días)
+    target = None
+    for site in entries:
+        url = site.get("siteUrl", "")
+        if "prunavita" in url:
+            target = url
+            break
+    if not target:
+        print("  (No se encontró una propiedad de prunavita.cl para consultar rendimiento.)")
+        return
+
+    start, end = _date_range(28)
+    print(f"\n  Rendimiento de {target} — {start} a {end}:")
+    for dim, titulo in (("query", "Top consultas (keywords)"), ("page", "Top páginas")):
+        try:
+            resp = (
+                service.searchanalytics()
+                .query(
+                    siteUrl=target,
+                    body={
+                        "startDate": start,
+                        "endDate": end,
+                        "dimensions": [dim],
+                        "rowLimit": 15,
+                    },
+                )
+                .execute()
+            )
+            rows = resp.get("rows", [])
+            print(f"\n  — {titulo} —")
+            if not rows:
+                print("    (Sin datos aún: la propiedad es nueva o Google todavía no indexa/registra búsquedas.)")
+                continue
+            for r in rows:
+                key = r["keys"][0]
+                print(
+                    f"    {key[:70]:70} clics={int(r.get('clicks',0))} "
+                    f"impr={int(r.get('impressions',0))} pos={r.get('position',0):.1f}"
+                )
+        except Exception as exc:  # noqa: BLE001
+            print(f"    No se pudo consultar '{dim}': {exc}")
 
 
 def check_analytics(creds) -> None:
@@ -98,6 +150,70 @@ def check_analytics(creds) -> None:
         for prop in props.get("properties", []):
             pid = prop.get("name", "").split("/")[-1]
             print(f"    • {prop.get('displayName')} (ID: {pid}) — {prop.get('propertyType', '')}")
+            _ga4_report(creds, pid)
+
+
+def _ga4_report(creds, property_id: str) -> None:
+    """Reporte rápido GA4 (últimos 28 días): usuarios, sesiones, top páginas y canales."""
+    from googleapiclient.discovery import build
+
+    data = build("analyticsdata", "v1beta", credentials=creds, cache_discovery=False)
+    start, end = _date_range(28)
+
+    # Totales: usuarios activos y sesiones
+    try:
+        totals = (
+            data.properties()
+            .runReport(
+                property=f"properties/{property_id}",
+                body={
+                    "dateRanges": [{"startDate": start, "endDate": end}],
+                    "metrics": [{"name": "activeUsers"}, {"name": "sessions"}],
+                },
+            )
+            .execute()
+        )
+        rows = totals.get("rows", [])
+        if rows:
+            vals = rows[0].get("metricValues", [])
+            usuarios = vals[0].get("value", "0") if len(vals) > 0 else "0"
+            sesiones = vals[1].get("value", "0") if len(vals) > 1 else "0"
+            print(f"        ¿Alguien entró? últimos 28 días → usuarios={usuarios}, sesiones={sesiones}")
+        else:
+            print("        Sin sesiones registradas en los últimos 28 días.")
+    except Exception as exc:  # noqa: BLE001
+        print(f"        No se pudo leer GA4 (¿API 'Google Analytics Data' habilitada?): {exc}")
+        return
+
+    # Top páginas y canales de adquisición
+    for dim, metric, titulo in (
+        ("pagePath", "screenPageViews", "Top páginas"),
+        ("sessionDefaultChannelGroup", "sessions", "Canales (de dónde llegan)"),
+    ):
+        try:
+            resp = (
+                data.properties()
+                .runReport(
+                    property=f"properties/{property_id}",
+                    body={
+                        "dateRanges": [{"startDate": start, "endDate": end}],
+                        "dimensions": [{"name": dim}],
+                        "metrics": [{"name": metric}],
+                        "limit": 8,
+                    },
+                )
+                .execute()
+            )
+            rows = resp.get("rows", [])
+            if not rows:
+                continue
+            print(f"        {titulo}:")
+            for r in rows:
+                k = r.get("dimensionValues", [{}])[0].get("value", "")
+                v = r.get("metricValues", [{}])[0].get("value", "0")
+                print(f"          {k[:60]:60} {v}")
+        except Exception:  # noqa: BLE001
+            pass
 
 
 def main() -> None:
