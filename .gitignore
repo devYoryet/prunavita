@@ -1,8 +1,12 @@
-# Google OAuth — nunca subir al repositorio
+# Google OAuth / cuentas de servicio — nunca subir al repositorio
 client_secret*.json
 .google-token.json
 credentials.json
 token.json
+android-*.json
+*-service-account*.json
+*.iam.gserviceaccount.com.json
+oauth_log.txt
 
 # Sistema / editor
 .DS_Store

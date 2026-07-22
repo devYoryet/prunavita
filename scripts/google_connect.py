@@ -18,11 +18,28 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 TOKEN_PATH = ROOT / ".google-token.json"
 CLIENT_GLOB = list(ROOT.glob("client_secret*.json"))
+# Clave de cuenta de servicio (preferida: no requiere navegador). Debe estar en .gitignore.
+SA_GLOB = [
+    p for p in ROOT.glob("*.json")
+    if p.name not in {"vercel.json", "site.webmanifest"}
+    and not p.name.startswith("client_secret")
+]
 
 SCOPES = [
     "https://www.googleapis.com/auth/webmasters.readonly",
     "https://www.googleapis.com/auth/analytics.readonly",
 ]
+
+
+def _service_account_key() -> Path | None:
+    """Devuelve la primera clave JSON de tipo 'service_account' en la raíz."""
+    for path in SA_GLOB:
+        try:
+            if json.loads(path.read_text(encoding="utf-8")).get("type") == "service_account":
+                return path
+        except (ValueError, OSError):
+            continue
+    return None
 
 
 def find_client_secret() -> Path:
@@ -33,6 +50,20 @@ def find_client_secret() -> Path:
 
 
 def get_credentials():
+    # 1) Preferir cuenta de servicio (sin navegador, reusable, ideal para reportes).
+    sa_key = _service_account_key()
+    if sa_key is not None:
+        from google.oauth2 import service_account
+
+        print(f"Autenticando con cuenta de servicio: {sa_key.name}")
+        creds = service_account.Credentials.from_service_account_file(
+            str(sa_key), scopes=SCOPES
+        )
+        print(f"  → {creds.service_account_email}")
+        print("  (Debe estar agregada como usuario en GSC y como Lector en GA4.)")
+        return creds
+
+    # 2) Si no hay cuenta de servicio, caer al flujo OAuth de usuario.
     from google.auth.transport.requests import Request
     from google.oauth2.credentials import Credentials
     from google_auth_oauthlib.flow import InstalledAppFlow
@@ -128,13 +159,26 @@ def check_search_console(creds) -> None:
 def check_analytics(creds) -> None:
     from googleapiclient.discovery import build
 
+    print("\n=== Google Analytics (GA4) ===")
     admin = build("analyticsadmin", "v1beta", credentials=creds, cache_discovery=False)
-    accounts = admin.accounts().list().execute()
+    try:
+        accounts = admin.accounts().list().execute()
+    except Exception as exc:  # noqa: BLE001
+        msg = str(exc)
+        if "has not been used" in msg or "is disabled" in msg or "403" in msg:
+            print("  No se pudo leer GA4. Falta un paso de configuración:")
+            print("  1) Habilitar 'Google Analytics Admin API' y 'Google Analytics Data API'")
+            print("     en https://console.cloud.google.com (proyecto android-1428a).")
+            print("  2) Agregar la cuenta de servicio como 'Lector' en GA4")
+            print("     (Administrar → Gestión de accesos a la cuenta/propiedad).")
+        else:
+            print(f"  Error GA4: {msg[:200]}")
+        return
     account_list = accounts.get("accounts", [])
 
-    print("\n=== Google Analytics (GA4) ===")
     if not account_list:
-        print("Sin cuentas de Analytics visibles para este usuario.")
+        print("Sin cuentas de Analytics visibles para esta cuenta de servicio.")
+        print("→ Agregue la cuenta de servicio como 'Lector' en GA4.")
         return
 
     for account in account_list:
@@ -217,6 +261,11 @@ def _ga4_report(creds, property_id: str) -> None:
 
 
 def main() -> None:
+    # La consola de Windows (cp1252) no encoda •, → ni acentos. Forzar UTF-8.
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except (AttributeError, ValueError):
+        pass
     creds = get_credentials()
     check_search_console(creds)
     check_analytics(creds)
