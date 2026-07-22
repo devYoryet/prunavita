@@ -201,7 +201,7 @@
                 la evaluación de compradores en cualquier mercado.
             </p>
 
-            <p style="margin-top:2rem;font-size:0.9rem;color:#5E5E5E;">
+            <p class="article-sources">
                 <em>Fuentes consultadas:
                 <a href="https://chilealimentos.com/ciruelas-deshidratadas-chile-polonia-se-posiciona-como-el-principal-comprador-y-se-desploman-envios-a-china-al-primer-trimestre-2026/" target="_blank" rel="noopener nofollow">Chilealimentos A.G.</a>,
                 <a href="https://chileprunes.cl/2026/03/31/inusitada-caida-de-exportaciones-a-china-y-las-oportunidades-que-da-ee-uu-y-europa/" target="_blank" rel="noopener nofollow">Chile Prunes Association</a> y
@@ -209,6 +209,32 @@
                 (datos de exportación enero–marzo 2026, con base en información del Servicio Nacional de Aduanas de Chile y reportes sectoriales). Análisis y redacción: equipo Prunavita.</em>
             </p>
 
+            <div class="article-share" aria-label="Compartir este artículo">
+                <span class="article-share-label">Compartir:</span>
+                <a class="share-btn share-wa" data-share="whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+                <a class="share-btn share-li" data-share="linkedin" target="_blank" rel="noopener">LinkedIn</a>
+                <a class="share-btn share-x" data-share="twitter" target="_blank" rel="noopener">X</a>
+                <a class="share-btn share-em" data-share="email">Email</a>
+                <button class="share-btn share-copy" type="button" data-share="copy">Copiar enlace</button>
+            </div>
+            <script>
+            (function(){
+                var c=document.querySelector('link[rel="canonical"]');
+                var link=(c&&c.href)?c.href:location.href.split('#')[0];
+                var u=encodeURIComponent(link),t=encodeURIComponent(document.title);
+                var map={whatsapp:'https://wa.me/?text='+t+'%20'+u,linkedin:'https://www.linkedin.com/sharing/share-offsite/?url='+u,twitter:'https://twitter.com/intent/tweet?text='+t+'&url='+u,email:'mailto:?subject='+t+'&body='+u};
+                document.querySelectorAll('.article-share [data-share]').forEach(function(el){
+                    var k=el.getAttribute('data-share');
+                    if(map[k])el.setAttribute('href',map[k]);
+                    if(k==='copy')el.addEventListener('click',function(){
+                        if(navigator.clipboard)navigator.clipboard.writeText(link).then(function(){
+                            el.textContent='¡Enlace copiado!';el.classList.add('copied');
+                            setTimeout(function(){el.textContent='Copiar enlace';el.classList.remove('copied');},1800);
+                        });
+                    });
+                });
+            })();
+            </script>
             <div class="article-tags">
                 <span>Ciruela deshidratada</span>
                 <span>Exportación 2026</span>

@@ -666,3 +666,60 @@
         position: static;
     }
 }
+
+/* ===================================
+   COMPARTIR ARTÍCULO (módulo social)
+   =================================== */
+.article-share {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 2.5rem 0 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--gray-200);
+}
+.article-share-label {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--gray-700, #404040);
+    margin-right: 0.25rem;
+}
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 0.55rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid var(--gray-200);
+    background: var(--white, #fff);
+    color: var(--gray-800, #262626);
+    cursor: pointer;
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease;
+}
+.share-btn svg { width: 16px; height: 16px; display: block; }
+.share-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.10);
+}
+.share-btn.share-wa:hover   { background: #25D366; color: #fff; border-color: #25D366; }
+.share-btn.share-li:hover   { background: #0A66C2; color: #fff; border-color: #0A66C2; }
+.share-btn.share-x:hover    { background: #111; color: #fff; border-color: #111; }
+.share-btn.share-em:hover   { background: var(--primary, #2C5F2D); color: #fff; border-color: var(--primary, #2C5F2D); }
+.share-btn.share-copy:hover { background: var(--gray-100, #f2f2f2); }
+.share-btn.copied { background: var(--primary, #2C5F2D); color: #fff; border-color: var(--primary, #2C5F2D); }
+
+/* Bloque de fuentes: aire de cita seria */
+.article-sources {
+    margin-top: 2rem;
+    padding: 1rem 1.2rem;
+    border-left: 3px solid var(--accent, #C9A227);
+    background: var(--gray-50, #faf8f5);
+    border-radius: 0 8px 8px 0;
+    font-size: 0.88rem;
+    color: var(--gray-600, #5E5E5E);
+}
+.article-sources a { color: var(--primary, #2C5F2D); font-weight: 600; }
