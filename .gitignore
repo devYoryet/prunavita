@@ -20,3 +20,6 @@ Thumbs.db
 __pycache__/
 *.pyc
 desktop.ini
+
+# Instaladores y binarios que no pertenecen al sitio
+*.exe
