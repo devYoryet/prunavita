@@ -3,32 +3,62 @@
 **Meta:** poder ejecutar `python scripts/google_connect.py` y ver, en la terminal,
 quién entró a Prunavita, desde dónde y con qué búsquedas. Es la base del reporte mensual.
 
-> El script ya está listo y trae automáticamente: top consultas y páginas de Search Console
-> y usuarios/sesiones/páginas/canales de GA4 (últimos 28 días). Solo falta la configuración
-> de acceso de una vez.
+## Estado en una línea (3 de agosto de 2026)
+
+**Search Console: ✅ operativo.** **GA4: ⏳ falta acceso.** Corre el script y lo ves.
 
 ---
 
-## Orden correcto (importante)
+## Cómo se autentica hoy
 
-La medición depende de 2 cosas que hoy faltan. Hacer en este orden:
+Se resolvió con **cuenta de servicio**, no con el flujo OAuth de navegador. Es mejor para
+reportes: no expira, no pide login y funciona desatendido.
 
-### Paso 1 — Verificar la propiedad en Search Console (sin esto, GSC no tiene datos)
-1. Entrar a https://search.google.com/search-console con la cuenta Google del proyecto.
-2. **Agregar propiedad → "Prefijo de URL"** → `https://prunavita.cl/`
-3. Método **"Etiqueta HTML"** → pulsar **Verificar**
-   (el meta `google-site-verification=Q3Zx-...` ya está desplegado en el sitio).
-4. Ir a **Sitemaps** → enviar `sitemap.xml`.
-5. **Inspección de URLs** → pegar la home y las 5 páginas de servicio → **Solicitar indexación**.
+- Clave: `android-1428a-*.json` en la raíz (**en `.gitignore`**, nunca al repositorio).
+- Identidad: `claude@android-1428a.iam.gserviceaccount.com`
+- Ya está agregada como usuario en la propiedad de GSC → por eso funciona.
 
-> Sin este paso, `google_connect.py` mostrará "Sin propiedades verificadas". GA4 sí funciona igual.
+Los pasos 3 y 4 de más abajo (URIs de redirección, `.google-token.json`) son del método OAuth
+antiguo. **Se conservan solo como respaldo**; hoy no hacen falta.
 
-### Paso 2 — Habilitar las APIs en Google Cloud
-En https://console.cloud.google.com (proyecto `android-1428a`, el del `client_secret*.json`):
-- **APIs y servicios → Biblioteca** → habilitar:
-  - **Google Search Console API**
-  - **Google Analytics Admin API**
-  - **Google Analytics Data API**
+---
+
+## Paso 1 — Search Console ✅ HECHO
+
+Propiedad **`sc-domain:prunavita.cl`** verificada, con permiso `siteFullUser`.
+Se hizo por propiedad de **Dominio** (registro TXT en la zona DNS), no por etiqueta HTML.
+Detalle e historial en `VERIFICACION_GSC.md`.
+
+El sitio está indexado y con tráfico orgánico: 12 URLs con impresiones en los últimos 28 días.
+
+## Paso 2 — APIs en Google Cloud ⏳ PARCIAL
+
+En https://console.cloud.google.com (proyecto `android-1428a`) →
+**APIs y servicios → Biblioteca**:
+
+- ✅ **Google Search Console API** — habilitada (por eso GSC responde).
+- ⏳ **Google Analytics Admin API** — falta.
+- ⏳ **Google Analytics Data API** — falta.
+
+## Paso 2b — Dar acceso a GA4 ⏳ PENDIENTE (único bloqueo real hoy)
+
+En GA4 (propiedad `G-0G9GQYN4RE`) → **Administrar → Gestión de accesos a la propiedad** →
+agregar `claude@android-1428a.iam.gserviceaccount.com` con rol **Lector**.
+
+Sin esto el script imprime:
+
+```
+=== Google Analytics (GA4) ===
+  No se pudo leer GA4. Falta un paso de configuración:
+```
+
+GA4 recopila datos desde junio 2026 — están ahí, solo no se pueden leer desde el script.
+Es lo que falta para sumar comportamiento (rebote, páginas por sesión, conversiones) a los
+datos de búsqueda que ya entrega Search Console.
+
+---
+
+## Método OAuth antiguo (respaldo — hoy no hace falta)
 
 ### Paso 3 — Registrar la URI de redirección OAuth
 Por esto falló la conexión en junio: el cliente OAuth no tiene URIs de redirección.
@@ -80,10 +110,15 @@ python scripts/google_connect.py
 - Los permisos son **solo lectura** (`webmasters.readonly`, `analytics.readonly`).
 - Si alguna vez se filtra el token, revocar en https://myaccount.google.com/permissions.
 
-## Estado actual (2026-07-21)
+## Estado actual (2026-08-03, verificado ejecutando el script)
 
-- [ ] Paso 1 — Propiedad verificada en GSC
-- [ ] Paso 1 — Sitemap enviado + indexación solicitada
-- [ ] Paso 2 — APIs habilitadas
-- [ ] Paso 3 — URIs de redirección agregadas
-- [ ] Paso 4 — `.google-token.json` generado y primer resumen obtenido
+- [x] **Paso 1 — Propiedad verificada en GSC** (`sc-domain:prunavita.cl`, `siteFullUser`)
+- [x] **Sitio indexado** — 12 URLs con impresiones, home en posición media 1,7
+- [x] **Search Console API habilitada** y consultable sin navegador
+- [x] **Cuenta de servicio con acceso a GSC** (`claude@android-1428a.iam.gserviceaccount.com`)
+- [ ] **Analytics Admin API + Analytics Data API habilitadas** ← falta
+- [ ] **Cuenta de servicio como Lector en GA4** ← falta (bloqueo único)
+
+> Este bloque se desactualiza rápido. **La fuente de verdad es el script**, no esta lista:
+> `python scripts/google_connect.py`. Actualiza este bloque cada vez que cambie algo,
+> y ponle la fecha en que lo verificaste.
