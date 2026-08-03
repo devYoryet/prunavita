@@ -8,7 +8,15 @@ android-*.json
 *.iam.gserviceaccount.com.json
 oauth_log.txt
 
+# Claves de API — nunca subir al repositorio
+.env
+.env.*
+!.env.example
+
 # Sistema / editor
 .DS_Store
 Thumbs.db
 *.log
+__pycache__/
+*.pyc
+desktop.ini

@@ -16,10 +16,18 @@
          1. Duplicar este archivo con el slug de la noticia:
             ej. 2026-07-chile-lidera-exportacion-ciruelas.html
          2. Reemplazar todos los textos entre [CORCHETES]
-         3. Quitar la meta robots "noindex" de abajo
-         4. Agregar la tarjeta en /noticias/index.html
-         5. Agregar la URL a /sitemap.xml
-         6. Registrar en seo-system/memoria/ de la semana
+         3. PORTADA ÚNICA (obligatorio) — ver seo-system/noticias/PORTADAS.md
+            Ninguna imagen puede repetirse entre noticias. Consíguela con:
+              python scripts/portada_noticia.py buscar "<tema en ingles>"
+              python scripts/portada_noticia.py usar --id <ID> --slug <SLUG> --nombre <archivo>
+            Reemplazar [IMAGEN] en los 3 puntos de este archivo (og:image, JSON-LD
+            "image" y .page-hero-bg) y [IMAGEN-INTERIOR] en el <img> del cuerpo.
+            El alt debe describir lo que la foto muestra DE VERDAD.
+         4. Quitar la meta robots "noindex" de abajo
+         5. Agregar la tarjeta en /noticias/index.html (misma imagen que la portada)
+         6. Agregar la URL a /sitemap.xml
+         7. Verificar:  python scripts/portada_noticia.py auditar   (debe salir en verde)
+         8. Registrar en seo-system/memoria/ de la semana
          ============================================================ -->
 
     <meta name="robots" content="noindex, nofollow"> <!-- ELIMINAR ESTA LÍNEA AL PUBLICAR -->
@@ -133,8 +141,9 @@
 
     <!-- Hero -->
     <header class="page-hero article-header">
-        <!-- Opcional: foto de portada como fondo tenue. Cambiar [IMAGEN] por la imagen del artículo. -->
-        <div class="page-hero-bg" style="background-image:url('../assets/images/global-export.jpg')" aria-hidden="true"></div>
+        <!-- Foto de portada como fondo tenue. OBLIGATORIO cambiar [IMAGEN] por la portada
+             única de este artículo — si se deja fija, todas las noticias comparten foto. -->
+        <div class="page-hero-bg" style="background-image:url('../assets/images/[IMAGEN].jpg')" aria-hidden="true"></div>
         <div class="container">
             <nav class="breadcrumbs" aria-label="breadcrumb">
                 <a href="../index.html">Inicio</a> / <a href="./">Noticias</a> / [Título corto]
@@ -154,6 +163,12 @@
                 [PÁRRAFO 1 — Lead periodístico: qué, quién, cuándo, dónde, por qué. Incluir keyword principal
                 en las primeras 100 palabras.]
             </p>
+
+            <!-- Foto interior: DISTINTA de la portada y de toda otra noticia (ver PORTADAS.md) -->
+            <figure>
+                <img src="../assets/images/[IMAGEN-INTERIOR].jpg" alt="[ALT que describa lo que la foto muestra de verdad]" loading="lazy" style="border-radius:12px;">
+                <figcaption style="font-size:0.85rem;color:#5E5E5E;margin-top:0.5rem;">[Pie de foto: una idea que aporte, no una repetición del alt.]</figcaption>
+            </figure>
 
             <h2>[SUBTÍTULO H2 — primer eje del contenido]</h2>
             <p>[Desarrollo con datos concretos, cifras y contexto. Citar la fuente si es noticia investigada.]</p>

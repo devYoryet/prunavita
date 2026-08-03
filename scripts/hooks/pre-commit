@@ -1,0 +1,32 @@
+#!/bin/sh
+# Hook pre-commit — Prunavita.cl
+#
+# Bloquea el commit si dos noticias comparten la misma imagen.
+# Solo se activa cuando hay cambios en /noticias/.
+#
+# Instalar una vez por maquina (desde la raiz del repo):
+#     git config core.hooksPath scripts/hooks
+#
+# Saltarlo en un caso puntual:
+#     git commit --no-verify
+
+if ! git diff --cached --name-only | grep -q '^noticias/'; then
+    exit 0
+fi
+
+if ! command -v python >/dev/null 2>&1; then
+    echo "[pre-commit] Aviso: python no disponible, se omite la auditoria de portadas."
+    exit 0
+fi
+
+echo "[pre-commit] Verificando que ninguna noticia repita portada..."
+if ! python scripts/portada_noticia.py auditar; then
+    echo ""
+    echo "[pre-commit] COMMIT BLOQUEADO: hay imagenes repetidas entre noticias."
+    echo "             Consigue una portada nueva con:"
+    echo "               python scripts/portada_noticia.py buscar \"<tema en ingles>\""
+    echo "             Guia completa: seo-system/noticias/PORTADAS.md"
+    exit 1
+fi
+
+exit 0
