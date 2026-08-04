@@ -59,9 +59,19 @@ Tres puntos que dependen de Prunavita y hoy frenan parte del plan:
 2. **Confirmar si son socios** de Chileprunes y Chilealimentos.
 3. **Acceso a Google Analytics** para sumar datos de comportamiento a los de búsqueda.
 
-**Cobro del período**
+**Cobro pendiente**
 
-Mantención SEO mensual de julio 2026: **$170.000 neto**, pendiente de pago.
+| Concepto | Valor |
+|---|---|
+| Saldo Etapa 1 (solicitado el 6 de julio) | $210.000 |
+| Mantención mensual julio 2026 — mes 2 del plan | $150.000 |
+| **Total a transferir** | **$360.000** |
+
+Datos para transferencia: Yoryet Danoun N. — RUT 16.647.601-1 · Banco de Chile · Cuenta
+Corriente 00-356-10613-06 · yoryet.danoun@gmail.com
+
+La mantención de agosto (mes 3) se factura por separado y, conforme a lo acordado el 1 de
+junio, se paga por adelantado.
 
 Quedamos atentos a cualquier consulta sobre el informe.
 
@@ -72,8 +82,12 @@ Saludos cordiales,
 
 ## Notas internas (no enviar al cliente)
 
-- **Verificar el monto antes de enviar.** Toda la documentación del proyecto registra
-  $150.000/mes; el valor de $170.000 fue indicado directamente. Si es neto, con IVA son
-  $202.300.
+- **Confirmar qué se pagó efectivamente** antes de enviar. La cifra de $170.000 mencionada
+  en su momento no aparece en ningún documento del acuerdo. Reconstrucción desde el hilo de
+  correos: Etapa 1 = $570.000 ($420.000 + $150.000 de mantención adelantada), abono de
+  $360.000 el 8 de junio, saldo de $210.000 solicitado el 6 de julio, más $150.000 de la
+  mantención de julio ya entregada.
+- Se emite **boleta de honorarios**: considerar la retención al calcular el líquido a recibir.
+- Numeración de informes: este corresponde a **INF-PRU-SEO-2026-02**.
 - El informe en PDF (8 páginas) se genera desde `informe-cliente.html` con Chrome headless.
 - Pendiente de traducir al inglés las secciones nuevas de ambas páginas de servicio.
