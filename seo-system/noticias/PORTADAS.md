@@ -82,3 +82,5 @@ es exactamente lo que pidió no hacer.
 - **Relacionada con el ángulo de la nota**, no solo con el rubro.
 - **`alt` que describa lo que la foto muestra de verdad**, con la keyword si calza natural.
   Si la foto es un puerto, el alt habla de un puerto — no de ciruelas.
+| `2026-08-reglamento-sanitario-alimentos-chile-exportadores` | `laboratorio-analisis-alimentos.jpg` | Pexels #3735781 | Analisis de laboratorio en control de inocuidad alimentaria |
+| `2026-08-reglamento-sanitario-alimentos-chile-exportadores` | `planta-procesamiento-alimentos.jpg` | Pexels #2889193 | Procesamiento de alimentos en planta industrial (foto interior) |
