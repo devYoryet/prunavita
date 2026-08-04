@@ -72,8 +72,10 @@ Datos para transferencia: Yoryet Danoun N. — RUT 16.647.601-1 · Banco de Chil
 Corriente 00-356-10613-06 · yoryet.danoun@gmail.com
 Concepto: *Mantención SEO julio 2026 — Prunavita*
 
-La mantención de agosto (mes 3) se factura por separado y, conforme a lo acordado el 1 de
-junio, se paga por adelantado.
+**Un ajuste en la forma de cobro.** El acuerdo del 1 de junio establecía que la mantención se
+pagaba por adelantado. A partir de agosto pasamos a facturarla **al cierre de cada mes**, junto
+con el reporte que documenta el trabajo del período. Pagan una vez entregado y verificado el
+trabajo, no antes. La mantención de agosto se cobrará a fines de mes con su reporte.
 
 Quedamos atentos a cualquier consulta sobre el informe.
 
@@ -86,9 +88,11 @@ Saludos cordiales,
 
 - **Estado confirmado (4 ago 2026):** el saldo de $210.000 fue pagado. Etapa 1 cerrada en
   $570.000. Pendiente: solo la mantención de julio, $150.000.
-- **Agosto se factura aparte y por adelantado** según el acuerdo del 1 de junio. A la fecha
-  ya hay trabajo de agosto ejecutado (dos páginas de servicio ampliadas, limpieza técnica,
-  seguimiento diario), así que es defendible cobrarla junto con la de julio.
+- **Cambio de condición (4 ago 2026):** se abandona el cobro por adelantado que fijaba el
+  acuerdo del 1 de junio. Desde agosto la mantención se factura al cierre de cada mes, junto
+  al reporte del período. Queda consignado en el informe INF-PRU-SEO-2026-02 y en el correo.
+- Consecuencia práctica: el cobro de agosto ($150.000) se emite a fines de agosto con su
+  reporte, no ahora. El calendario de cobros queda desplazado un mes respecto del original.
 - Se emite **boleta de honorarios**: considerar la retención al calcular el líquido a recibir.
 - Numeración de informes: este corresponde a **INF-PRU-SEO-2026-02**.
 - El informe en PDF (8 páginas) se genera desde `informe-cliente.html` con Chrome headless.
