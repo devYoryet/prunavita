@@ -37,53 +37,122 @@
 
     <!-- Structured Data -->
     <script type="application/ld+json">
-    {
+{
         "@context": "https://schema.org",
         "@graph": [
-            {
-                "@type": "Service",
-                "name": "Provisión y exportación de ciruelas deshidratadas chilenas",
-                "serviceType": "Exportación de ciruela deshidratada",
-                "description": "Provisión de ciruelas deshidratadas variedad D'Agen producidas en Chile —calibre seleccionado, humedad controlada, sin aditivos y embalaje certificado— para exportación a Asia, Europa y América.",
-                "provider": {"@type": "Organization", "name": "Prunavita", "url": "https://prunavita.cl"},
-                "areaServed": ["Chile", "China", "Asia", "Europa", "América"],
-                "url": "https://prunavita.cl/servicios/ciruelas-deshidratadas.html"
-            },
-            {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://prunavita.cl/"},
-                    {"@type": "ListItem", "position": 2, "name": "Servicios", "item": "https://prunavita.cl/#servicios"},
-                    {"@type": "ListItem", "position": 3, "name": "Ciruelas Deshidratadas", "item": "https://prunavita.cl/servicios/ciruelas-deshidratadas.html"}
-                ]
-            },
-            {
-                "@type": "FAQPage",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "¿Qué calibres de ciruelas deshidratadas ofrece Prunavita?",
-                        "acceptedAnswer": {"@type": "Answer", "text": "Trabajamos calibres desde 20/30 hasta 110/120 unidades por libra, con y sin carozo, según el requerimiento del mercado de destino. Cada lote se selecciona y clasifica bajo protocolos de control de calidad."}
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "¿Exportan ciruelas deshidratadas a China y otros mercados asiáticos?",
-                        "acceptedAnswer": {"@type": "Answer", "text": "Sí. Los mercados asiáticos, y en especial China, son un destino prioritario para la ciruela deshidratada chilena. Gestionamos la documentación, certificados fitosanitarios y logística para exportar a China, Asia, Europa y América."}
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "¿Qué certificaciones respaldan el producto?",
-                        "acceptedAnswer": {"@type": "Answer", "text": "Trabajamos con plantas procesadoras que operan bajo estándares de inocuidad alimentaria como HACCP y normativas exigidas por los mercados de destino, además de los certificados fitosanitarios del SAG para cada embarque."}
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "¿Cuál es el volumen mínimo de compra?",
-                        "acceptedAnswer": {"@type": "Answer", "text": "El volumen se adapta a cada cliente, desde pallets consolidados hasta contenedores completos FCL de 20 o 40 pies. Contáctenos para evaluar la mejor alternativa logística para su pedido."}
-                    }
-                ]
-            }
+                {
+                        "@type": "Service",
+                        "name": "Provisión y exportación de ciruelas deshidratadas chilenas",
+                        "serviceType": "Exportación de ciruela deshidratada",
+                        "description": "Provisión de ciruelas deshidratadas variedad D'Agen producidas en Chile —calibre seleccionado, humedad controlada, sin aditivos y embalaje certificado— para exportación a Asia, Europa y América.",
+                        "provider": {
+                                "@type": "Organization",
+                                "name": "Prunavita",
+                                "url": "https://prunavita.cl"
+                        },
+                        "areaServed": [
+                                "Chile",
+                                "China",
+                                "Asia",
+                                "Europa",
+                                "América"
+                        ],
+                        "url": "https://prunavita.cl/servicios/ciruelas-deshidratadas.html"
+                },
+                {
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                                {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "Inicio",
+                                        "item": "https://prunavita.cl/"
+                                },
+                                {
+                                        "@type": "ListItem",
+                                        "position": 2,
+                                        "name": "Servicios",
+                                        "item": "https://prunavita.cl/#servicios"
+                                },
+                                {
+                                        "@type": "ListItem",
+                                        "position": 3,
+                                        "name": "Ciruelas Deshidratadas",
+                                        "item": "https://prunavita.cl/servicios/ciruelas-deshidratadas.html"
+                                }
+                        ]
+                },
+                {
+                        "@type": "FAQPage",
+                        "mainEntity": [
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Qué calibres de ciruelas deshidratadas ofrece Prunavita?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Trabajamos calibres desde 20/30 hasta 110/120 unidades por libra, con y sin carozo, según el requerimiento del mercado de destino. Cada lote se selecciona y clasifica bajo protocolos de control de calidad."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Exportan ciruelas deshidratadas a China y otros mercados asiáticos?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Sí. Los mercados asiáticos, y en especial China, son un destino prioritario para la ciruela deshidratada chilena. Gestionamos la documentación, certificados fitosanitarios y logística para exportar a China, Asia, Europa y América."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Qué certificaciones respaldan el producto?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Trabajamos con plantas procesadoras que operan bajo estándares de inocuidad alimentaria como HACCP y normativas exigidas por los mercados de destino, además de los certificados fitosanitarios del SAG para cada embarque."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Cuál es el volumen mínimo de compra?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "El volumen se adapta a cada cliente, desde pallets consolidados hasta contenedores completos FCL de 20 o 40 pies. Contáctenos para evaluar la mejor alternativa logística para su pedido."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Qué significa el calibre 40/50 en ciruela deshidratada?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Que en una libra (454 g) caben entre 40 y 50 unidades. La relación es inversa: mientras más bajo el número, más grande es la fruta. Un calibre 20/30 es premium para retail; un 110/120 es fruta pequeña para uso industrial."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Cuándo es la temporada de ciruela deshidratada en Chile?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "La cosecha de ciruela D'Agen va de febrero a abril, y los embarques se distribuyen durante el resto del año. Para el comprador del hemisferio norte esto significa abastecimiento en contraestación. Los calibres grandes son los primeros en agotarse."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Con qué incoterms exportan ciruela deshidratada desde Chile?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "FOB desde Valparaíso o San Antonio, CFR con flete marítimo incluido y CIF con flete y seguro. Para una primera operación con Chile recomendamos CIF, porque simplifica la gestión aunque el costo unitario parezca mayor."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Cuántas toneladas de ciruela deshidratada entran en un contenedor?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Del orden de 18 a 20 toneladas en un contenedor de 20 pies, según el formato de embalaje y el esquema de paletizado."
+                                        }
+                                }
+                        ]
+                }
         ]
-    }
+}
     </script>
 
     <style>
@@ -255,6 +324,105 @@
             <h2 data-i18n="cir.x2.title">Por qué la ciruela deshidratada chilena lidera el mundo</h2>
             <p data-i18n="cir.x2.p">Chile es el principal exportador mundial de ciruela deshidratada, con cerca del 38% del comercio global. Las condiciones de los valles de la zona central, una industria procesadora madura y una demanda creciente en Asia —especialmente China— sostienen ese liderazgo. Conozca el panorama actual en nuestro <a href="../noticias/2026-06-exportacion-ciruela-deshidratada-chile-2025.html">análisis del mercado de exportación 2025</a>.</p>
 
+            <!-- ================= Contenido ampliado (ago 2026) =================
+                 Secciones sin data-i18n: translations.js conserva el español
+                 cuando falta la clave. Pendiente: traducir al inglés.
+            ================================================================== -->
+
+            <h2>Cómo leer un calibre: la primera pregunta de todo comprador</h2>
+            <p>
+                El calibre de la ciruela deshidratada se expresa en <strong>unidades por libra</strong> (454 g)
+                y se escribe como un rango: 20/30, 40/50, 90/100. La lógica es inversa a lo que parece —
+                <strong>mientras más bajo el número, más grande es la fruta</strong>, porque caben menos
+                unidades en la misma libra. Un calibre 20/30 es fruta grande y premium; un 110/120 es fruta
+                pequeña, habitualmente destinada a industria.
+            </p>
+            <p>
+                Esa diferencia define el precio y el uso. Los calibres grandes van a retail y regalo, donde
+                la apariencia manda. Los pequeños van a industria: relleno de pastelería, barras de cereal,
+                pasta de ciruela. Elegir un calibre más grande del que su aplicación necesita es pagar de más
+                por un atributo que su cliente final no verá.
+            </p>
+
+            <h2>Humedad, tiernizado y vida útil</h2>
+            <p>
+                Después del secado, la ciruela queda demasiado dura para consumo directo. El
+                <strong>tiernizado</strong> —rehidratación controlada— la lleva al punto de textura que espera
+                el consumidor. Ese porcentaje de humedad final es el parámetro comercial más delicado del
+                producto: si es bajo, la fruta se percibe seca y correosa; si es alto, se acorta la vida útil
+                y aumenta el riesgo microbiológico.
+            </p>
+            <p>
+                Por eso la humedad se acuerda por contrato junto con el calibre, y se verifica lote a lote.
+                Un producto que llega fuera de especificación es la causa más frecuente de reclamo en este
+                rubro, por delante de los defectos visuales.
+            </p>
+            <p>
+                El uso o no de <strong>sorbato de potasio</strong> como conservante depende del destino:
+                algunos mercados lo aceptan y otros exigen producto sin aditivos. Es una decisión normativa,
+                no de preferencia, y conviene definirla antes de producir.
+            </p>
+
+            <h2>Parámetros de calidad que se verifican en cada lote</h2>
+            <ul>
+                <li><strong>Calibre:</strong> unidades por libra, dentro del rango contratado.</li>
+                <li><strong>Humedad:</strong> porcentaje según especificación acordada.</li>
+                <li><strong>Grados Brix:</strong> concentración de azúcares. La D'Agen chilena se mueve típicamente en el rango de 18 a 25 °Brix.</li>
+                <li><strong>Defectos:</strong> fruta partida, cicatrices, fermentada o con daño de insecto, bajo porcentajes máximos definidos.</li>
+                <li><strong>Carozo residual:</strong> en producto sin carozo (<em>pitted</em>), tolerancia de fragmentos.</li>
+                <li><strong>Parámetros microbiológicos y de residuos:</strong> según exigencia del mercado de destino.</li>
+            </ul>
+
+            <h2>Temporada chilena y ventana de embarque</h2>
+            <p>
+                La cosecha de ciruela D'Agen en Chile ocurre entre <strong>febrero y abril</strong>. El
+                procesamiento y acondicionamiento se extienden en los meses siguientes, de modo que la fruta
+                de la temporada empieza a embarcarse desde el otoño austral y se distribuye durante el resto
+                del año.
+            </p>
+            <p>
+                Esto tiene una consecuencia práctica para el comprador del hemisferio norte: la contraestación
+                permite abastecerse cuando el producto europeo o estadounidense escasea. Planificar la compra
+                con anticipación a la temporada asegura mejor disponibilidad de los calibres grandes, que son
+                los primeros en agotarse.
+            </p>
+
+            <h2>Formatos de embalaje e incoterms</h2>
+            <p>
+                Los formatos habituales son <strong>cajas de 10 kg</strong> con bolsa interior de polietileno
+                para industria, <strong>bolsas al vacío</strong> cuando se busca máxima protección de humedad,
+                y <strong>formatos retail</strong> con rotulación conforme al mercado de destino. Un contenedor
+                de 20 pies transporta del orden de 18 a 20 toneladas según formato y esquema de paletizado.
+            </p>
+            <p>
+                Operamos en los incoterms habituales del comercio agroindustrial:
+            </p>
+            <ul>
+                <li><strong>FOB</strong> — entrega a bordo en puerto chileno (Valparaíso o San Antonio). El comprador contrata el flete.</li>
+                <li><strong>CFR</strong> — incluye el flete marítimo hasta el puerto de destino.</li>
+                <li><strong>CIF</strong> — incluye flete y seguro de la mercancía.</li>
+            </ul>
+            <p>
+                La elección no es solo de precio: define quién asume el riesgo y en qué punto. Para un
+                comprador que aún no opera con Chile, un CIF simplifica la primera operación aunque el costo
+                unitario parezca mayor.
+            </p>
+
+            <h2>Documentación que acompaña cada embarque</h2>
+            <p>
+                Todo contenedor sale con su expediente completo: <strong>certificado fitosanitario del
+                <abbr title="Servicio Agrícola y Ganadero">SAG</abbr></strong>, certificado de origen,
+                factura comercial, lista de empaque y conocimiento de embarque. Los destinos con protocolo
+                propio agregan requisitos: China exige registro <strong>GACC</strong> del establecimiento y
+                codificación en cada envase — lo detallamos en nuestro
+                <a href="../noticias/2026-07-requisitos-exportar-ciruela-deshidratada-china-gacc.html">análisis del protocolo GACC</a>.
+            </p>
+            <p>
+                Si su planta necesita preparar esa documentación o certificarse para acceder a estos mercados,
+                trabajamos ese frente desde nuestras
+                <a href="asesorias-tecnicas-inocuidad.html">asesorías técnicas en calidad e inocuidad</a>.
+            </p>
+
             <h2 data-i18n="sub.faq.title">Preguntas frecuentes</h2>
             <div class="faq-item">
                 <h3 data-i18n="cir.faq.q1">¿Qué calibres de ciruelas deshidratadas ofrecen?</h3>
@@ -271,6 +439,22 @@
             <div class="faq-item">
                 <h3 data-i18n="cir.faq.q4">¿Cuál es el volumen mínimo de compra?</h3>
                 <p data-i18n="cir.faq.a4">Desde pallets consolidados hasta contenedores completos de 20 o 40 pies. Evaluamos la mejor alternativa logística para su pedido.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Qué significa el calibre 40/50 en ciruela deshidratada?</h3>
+                <p>Que en una libra (454 g) caben entre 40 y 50 unidades. La relación es inversa: <strong>mientras más bajo el número, más grande es la fruta</strong>. Un 20/30 es calibre premium para retail; un 110/120 es fruta pequeña para uso industrial.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Cuándo es la temporada de ciruela deshidratada en Chile?</h3>
+                <p>La cosecha va de <strong>febrero a abril</strong>, y los embarques se distribuyen durante el resto del año. Para el comprador del hemisferio norte esto significa abastecimiento en contraestación. Los calibres grandes son los primeros en agotarse, así que conviene reservar con anticipación.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Con qué incoterms trabajan?</h3>
+                <p>FOB desde Valparaíso o San Antonio, CFR con flete incluido y CIF con flete y seguro. Para una primera operación con Chile solemos recomendar CIF: simplifica la gestión aunque el costo unitario parezca mayor.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Cuántas toneladas entran en un contenedor?</h3>
+                <p>Del orden de 18 a 20 toneladas en un contenedor de 20 pies, según el formato de embalaje y el esquema de paletizado.</p>
             </div>
         </div>
     </main>
