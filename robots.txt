@@ -3,6 +3,8 @@ Allow: /
 Disallow: /send-email.php
 Disallow: /noticias/plantilla-noticia.html
 Disallow: /COTIZACION_PRUNAVITA_2026.html
+Disallow: /INFORME_ENTREGA_SEO_PRUNAVITA_ETAPA1.html
+Disallow: /INFORME_MENSUAL_SEO_PRUNAVITA_JULIO2026.html
 Disallow: /seo-system/
 
 # Baidu spider (mercado chino)
