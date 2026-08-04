@@ -59,16 +59,18 @@ Tres puntos que dependen de Prunavita y hoy frenan parte del plan:
 2. **Confirmar si son socios** de Chileprunes y Chilealimentos.
 3. **Acceso a Google Analytics** para sumar datos de comportamiento a los de búsqueda.
 
-**Cobro pendiente**
+**Cobro del período**
 
-| Concepto | Valor |
-|---|---|
-| Saldo Etapa 1 (solicitado el 6 de julio) | $210.000 |
-| Mantención mensual julio 2026 — mes 2 del plan | $150.000 |
-| **Total a transferir** | **$360.000** |
+Agradecemos la regularización del saldo de la Etapa 1, que queda cerrada en su totalidad
+($570.000: abono del 8 de junio más saldo del 6 de julio).
+
+Corresponde ahora la **mantención SEO mensual de julio 2026** (mes 2 del plan):
+**$150.000**, que cubre las 3 noticias investigadas entregadas, este reporte mensual y la
+optimización continua del período.
 
 Datos para transferencia: Yoryet Danoun N. — RUT 16.647.601-1 · Banco de Chile · Cuenta
 Corriente 00-356-10613-06 · yoryet.danoun@gmail.com
+Concepto: *Mantención SEO julio 2026 — Prunavita*
 
 La mantención de agosto (mes 3) se factura por separado y, conforme a lo acordado el 1 de
 junio, se paga por adelantado.
@@ -82,11 +84,11 @@ Saludos cordiales,
 
 ## Notas internas (no enviar al cliente)
 
-- **Confirmar qué se pagó efectivamente** antes de enviar. La cifra de $170.000 mencionada
-  en su momento no aparece en ningún documento del acuerdo. Reconstrucción desde el hilo de
-  correos: Etapa 1 = $570.000 ($420.000 + $150.000 de mantención adelantada), abono de
-  $360.000 el 8 de junio, saldo de $210.000 solicitado el 6 de julio, más $150.000 de la
-  mantención de julio ya entregada.
+- **Estado confirmado (4 ago 2026):** el saldo de $210.000 fue pagado. Etapa 1 cerrada en
+  $570.000. Pendiente: solo la mantención de julio, $150.000.
+- **Agosto se factura aparte y por adelantado** según el acuerdo del 1 de junio. A la fecha
+  ya hay trabajo de agosto ejecutado (dos páginas de servicio ampliadas, limpieza técnica,
+  seguimiento diario), así que es defendible cobrarla junto con la de julio.
 - Se emite **boleta de honorarios**: considerar la retención al calcular el líquido a recibir.
 - Numeración de informes: este corresponde a **INF-PRU-SEO-2026-02**.
 - El informe en PDF (8 páginas) se genera desde `informe-cliente.html` con Chrome headless.
