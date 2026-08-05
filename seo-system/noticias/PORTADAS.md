@@ -84,3 +84,4 @@ es exactamente lo que pidió no hacer.
   Si la foto es un puerto, el alt habla de un puerto — no de ciruelas.
 | `2026-08-reglamento-sanitario-alimentos-chile-exportadores` | `laboratorio-analisis-alimentos.jpg` | Pexels #3735781 | Analisis de laboratorio en control de inocuidad alimentaria |
 | `2026-08-reglamento-sanitario-alimentos-chile-exportadores` | `planta-procesamiento-alimentos.jpg` | Pexels #2889193 | Procesamiento de alimentos en planta industrial (foto interior) |
+| `2026-08-maquinaria-agroindustrial-usada-que-revisar` | `tecnico-tablero-maquinaria.jpg` | Pexels #35072831 | Tecnico interviniendo tablero de control de maquina industrial |
