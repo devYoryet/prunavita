@@ -34,48 +34,111 @@
 
     <!-- Structured Data -->
     <script type="application/ld+json">
-    {
+{
         "@context": "https://schema.org",
         "@graph": [
-            {
-                "@type": "Service",
-                "name": "Compra y Venta de Maquinaria Agroindustrial",
-                "serviceType": "Comercialización de maquinaria agroindustrial",
-                "description": "Compra, venta e importación de maquinaria agroindustrial en Chile: líneas de proceso, túneles de deshidratado, calibradoras, seleccionadoras ópticas y equipos de embalaje.",
-                "provider": {"@type": "Organization", "name": "Prunavita", "url": "https://prunavita.cl"},
-                "areaServed": ["Chile", "Latinoamérica"],
-                "url": "https://prunavita.cl/servicios/maquinaria-agroindustrial.html"
-            },
-            {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://prunavita.cl/"},
-                    {"@type": "ListItem", "position": 2, "name": "Servicios", "item": "https://prunavita.cl/#servicios"},
-                    {"@type": "ListItem", "position": 3, "name": "Maquinaria Agroindustrial", "item": "https://prunavita.cl/servicios/maquinaria-agroindustrial.html"}
-                ]
-            },
-            {
-                "@type": "FAQPage",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "¿Qué tipo de maquinaria agroindustrial comercializa Prunavita?",
-                        "acceptedAnswer": {"@type": "Answer", "text": "Equipos para procesamiento de fruta fresca y deshidratada: túneles de deshidratado, calibradoras, seleccionadoras ópticas, despezonadoras, líneas de lavado, equipos de tiernizado y maquinaria de embalaje, tanto nueva como usada en buen estado."}
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "¿Pueden importar maquinaria específica para mi planta?",
-                        "acceptedAnswer": {"@type": "Answer", "text": "Sí. Realizamos sourcing internacional del equipo que su planta necesita, evaluamos alternativas técnicas y gestionamos la importación, internación y coordinación de la puesta en marcha en Chile."}
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "¿Compran maquinaria usada?",
-                        "acceptedAnswer": {"@type": "Answer", "text": "Evaluamos la compra y comercialización de equipos usados en buen estado, conectando plantas que renuevan tecnología con productores que buscan equipamiento a menor inversión."}
-                    }
-                ]
-            }
+                {
+                        "@type": "Service",
+                        "name": "Compra y Venta de Maquinaria Agroindustrial",
+                        "serviceType": "Comercialización de maquinaria agroindustrial",
+                        "description": "Compra, venta e importación de maquinaria agroindustrial en Chile: líneas de proceso, túneles de deshidratado, calibradoras, seleccionadoras ópticas y equipos de embalaje.",
+                        "provider": {
+                                "@type": "Organization",
+                                "name": "Prunavita",
+                                "url": "https://prunavita.cl"
+                        },
+                        "areaServed": [
+                                "Chile",
+                                "Latinoamérica"
+                        ],
+                        "url": "https://prunavita.cl/servicios/maquinaria-agroindustrial.html"
+                },
+                {
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                                {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "Inicio",
+                                        "item": "https://prunavita.cl/"
+                                },
+                                {
+                                        "@type": "ListItem",
+                                        "position": 2,
+                                        "name": "Servicios",
+                                        "item": "https://prunavita.cl/#servicios"
+                                },
+                                {
+                                        "@type": "ListItem",
+                                        "position": 3,
+                                        "name": "Maquinaria Agroindustrial",
+                                        "item": "https://prunavita.cl/servicios/maquinaria-agroindustrial.html"
+                                }
+                        ]
+                },
+                {
+                        "@type": "FAQPage",
+                        "mainEntity": [
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Qué tipo de maquinaria agroindustrial comercializa Prunavita?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Equipos para procesamiento de fruta fresca y deshidratada: túneles de deshidratado, calibradoras, seleccionadoras ópticas, despezonadoras, líneas de lavado, equipos de tiernizado y maquinaria de embalaje, tanto nueva como usada en buen estado."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Pueden importar maquinaria específica para mi planta?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Sí. Realizamos sourcing internacional del equipo que su planta necesita, evaluamos alternativas técnicas y gestionamos la importación, internación y coordinación de la puesta en marcha en Chile."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Compran maquinaria usada?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Evaluamos la compra y comercialización de equipos usados en buen estado, conectando plantas que renuevan tecnología con productores que buscan equipamiento a menor inversión."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Conviene comprar maquinaria agroindustrial usada?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Sí, cuando el equipo se elige con criterio. El reacondicionado permite sumar capacidad a una fracción del costo y con plazos de entrega mucho menores que un equipo nuevo. La clave está en revisar historial de mantenimiento, disponibilidad de repuestos y compatibilidad sanitaria antes de comprar."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Qué debo revisar antes de comprar maquinaria usada?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Seis puntos: historial de mantenimiento documentado, disponibilidad de repuestos, diseño higiénico que resista una auditoría de inocuidad, estado del tablero de control, capacidad real frente a la nominal, y costo total incluyendo traslado, montaje, adecuación eléctrica y puesta en marcha."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Ayudan a vender maquinaria agroindustrial que ya no se utiliza?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Sí. Preparamos la ficha técnica con fotografías y datos verificables, difundimos entre compradores del rubro, conducimos la negociación y coordinamos el desmontaje y la logística de entrega."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Importan maquinaria agroindustrial desde el extranjero?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Sí. Buscamos alternativas nuevas y usadas en Chile y en el extranjero, y gestionamos la internación, el transporte y la documentación aduanera."
+                                        }
+                                }
+                        ]
+                }
         ]
-    }
+}
     </script>
 
     <style>
@@ -241,6 +304,122 @@
             <h2 data-i18n="maq.x2.title">Maquinaria usada y reacondicionada</h2>
             <p data-i18n="maq.x2.p">No siempre se necesita equipo nuevo. Evaluamos, verificamos y comercializamos maquinaria usada en buen estado: una alternativa de menor inversión para plantas que inician o amplían su capacidad. También le ayudamos a vender los equipos que su planta ya no utiliza.</p>
 
+            <!-- ============ Contenido ampliado (ago 2026) ============
+                 Secciones sin data-i18n: translations.js conserva el espanol
+                 cuando falta la clave. Pendiente: traducir al ingles.
+            ======================================================== -->
+
+            <h2>Nuevo, usado o reacondicionado: c&oacute;mo decidir</h2>
+            <p>
+                El mercado mundial de maquinaria para procesamiento de alimentos se estima en
+                <strong>USD 88.210 millones en 2026</strong> y proyecta llegar a USD 116.180 millones hacia 2031.
+                Detr&aacute;s de ese crecimiento hay un cambio relevante para una planta mediana: el equipo
+                reacondicionado <strong>dej&oacute; de ser un recurso de emergencia</strong> para convertirse en una
+                decisi&oacute;n de inversi&oacute;n con criterio propio.
+            </p>
+
+            <div class="table-responsive" style="overflow-x:auto;">
+            <table class="data-table">
+                <thead>
+                    <tr><th>Opci&oacute;n</th><th>Cu&aacute;ndo conviene</th><th>Qu&eacute; vigilar</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Equipo nuevo</strong></td>
+                        <td>Cuando el proceso es cr&iacute;tico, se necesita garant&iacute;a de f&aacute;brica o el equipo define la calidad final del producto</td>
+                        <td>Plazos de entrega e inmovilizaci&oacute;n de capital</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Usado en buen estado</strong></td>
+                        <td>Para sumar capacidad r&aacute;pido en etapas de crecimiento, o para procesos secundarios</td>
+                        <td>Historial de mantenimiento y disponibilidad de repuestos</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Reacondicionado</strong></td>
+                        <td>Cuando se busca desempe&ntilde;o cercano al nuevo con una inversi&oacute;n menor y entrega m&aacute;s r&aacute;pida</td>
+                        <td>Qui&eacute;n hizo la intervenci&oacute;n y si entreg&oacute; documentaci&oacute;n</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+
+            <p>
+                Tres fuerzas empujan la demanda en 2026: la presi&oacute;n sobre los m&aacute;rgenes, que obliga a
+                automatizar; regulaciones europeas que exigen actualizar equipos antes de 2027; y el crecimiento de la
+                econom&iacute;a circular, un mercado de unos USD 584 mil millones que avanza a un 22,5% anual. Comprar
+                usado ya no se lee como se&ntilde;al de debilidad financiera, sino de eficiencia.
+            </p>
+
+            <h2>Seis puntos que revisamos antes de recomendar una compra usada</h2>
+            <p>
+                Un equipo usado bien elegido rinde durante a&ntilde;os; uno mal elegido se transforma en una planta
+                detenida. Este es el chequeo que aplicamos:
+            </p>
+            <ol>
+                <li><strong>Historial de mantenimiento documentado.</strong> Es el dato m&aacute;s revelador y el que
+                    m&aacute;s se omite. Una m&aacute;quina de quince a&ntilde;os con bit&aacute;cora completa vale
+                    m&aacute;s que una de cinco sin registro alguno.</li>
+                <li><strong>Disponibilidad de repuestos.</strong> Antes del precio, confirmar que el fabricante sigue
+                    operando y que las piezas cr&iacute;ticas se consiguen. Un equipo hu&eacute;rfano es chatarra cara.</li>
+                <li><strong>Compatibilidad sanitaria.</strong> Superficies en contacto con alimento, materiales,
+                    soldaduras y dise&ntilde;o higi&eacute;nico deben resistir una auditor&iacute;a. Un equipo que no
+                    cumple obliga a rehacer la inversi&oacute;n completa.</li>
+                <li><strong>Tablero y sistema de control.</strong> Es donde m&aacute;s se nota un reacondicionamiento
+                    serio. Un tablero intervenido sin planos ni documentaci&oacute;n es un riesgo operacional permanente.</li>
+                <li><strong>Capacidad real, no nominal.</strong> La ficha declara el m&aacute;ximo te&oacute;rico; el
+                    rendimiento efectivo con su producto y su nivel de humedad puede ser bastante menor.</li>
+                <li><strong>Costo total, no precio de compra.</strong> Sumar traslado, montaje, adecuaci&oacute;n
+                    el&eacute;ctrica, puesta en marcha y capacitaci&oacute;n. Suele representar una porci&oacute;n
+                    relevante del desembolso final.</li>
+            </ol>
+
+            <h2>D&oacute;nde suele estar el cuello de botella en una l&iacute;nea de fruta deshidratada</h2>
+            <p>
+                Una l&iacute;nea completa encadena recepci&oacute;n, lavado, deshidratado, tiernizado, deshuesado,
+                calibrado, selecci&oacute;n, detecci&oacute;n de metales y envasado. El error m&aacute;s frecuente que
+                vemos <strong>no es pagar de m&aacute;s: es comprar capacidad que la planta no puede alimentar</strong>.
+                Una envasadora de alto rendimiento instalada donde el cuello de botella est&aacute; en el calibrado no
+                mejora nada &mdash;solo traslada la cola de un punto a otro.
+            </p>
+            <p>
+                Por eso partimos midiendo d&oacute;nde se detiene realmente el proceso. En plantas de ciruela
+                deshidratada, cuando sube el volumen exportado el cuello suele aparecer primero en
+                <strong>selecci&oacute;n y calibrado</strong>, no en envasado. El patr&oacute;n dominante en 2026 es el
+                modelo de <strong>base m&aacute;s escala</strong>: resolver el cuello actual con una l&iacute;nea
+                semiautom&aacute;tica y sumar automatizaci&oacute;n despu&eacute;s, cuando el volumen la justifique.
+            </p>
+
+            <h2>Si su planta vende equipamiento</h2>
+            <p>
+                Tambi&eacute;n operamos el otro lado. Cuando una planta renueva tecnolog&iacute;a, sus equipos
+                desplazados conservan valor real para productores que est&aacute;n creciendo. Preparamos la ficha
+                t&eacute;cnica con fotograf&iacute;as y datos verificables, difundimos entre compradores del rubro,
+                conducimos la negociaci&oacute;n y coordinamos el desmontaje y la log&iacute;stica de entrega.
+            </p>
+            <p>
+                La diferencia entre vender un equipo bien y malvenderlo suele estar en la documentaci&oacute;n:
+                <strong>una m&aacute;quina con historial, manuales y planos de tablero se vende antes y mejor</strong>
+                que la misma m&aacute;quina sin papeles.
+            </p>
+
+            <h2>Por qu&eacute; comprar a trav&eacute;s de quien tambi&eacute;n opera</h2>
+            <p>
+                No somos un intermediario que solo conecta puntas. Operamos exportaci&oacute;n real de
+                <a href="ciruelas-deshidratadas.html">ciruela deshidratada</a>, conocemos el proceso desde adentro y
+                sabemos qu&eacute; exige una auditor&iacute;a de inocuidad. Esa combinaci&oacute;n importa cuando hay
+                que decidir si un equipo sirve o no: la evaluaci&oacute;n mec&aacute;nica es solo la mitad del
+                an&aacute;lisis, y la otra mitad la cubrimos desde nuestras
+                <a href="asesorias-tecnicas-inocuidad.html">asesor&iacute;as t&eacute;cnicas en calidad e inocuidad</a>.
+            </p>
+            <p>
+                Si el equipo viene del extranjero, gestionamos la internaci&oacute;n con la misma operativa de nuestra
+                <a href="exportacion-agroindustrial.html">gesti&oacute;n de comercio exterior</a>. Analizamos el
+                contexto del mercado en nuestra nota sobre
+                <a href="../noticias/2026-08-maquinaria-agroindustrial-usada-que-revisar.html">qu&eacute; revisar antes
+                de comprar maquinaria usada</a>.
+            </p>
+
+
             <h2 data-i18n="sub.faq.title">Preguntas frecuentes</h2>
             <div class="faq-item">
                 <h3 data-i18n="maq.faq.q1">¿Qué tipo de maquinaria comercializan?</h3>
@@ -253,6 +432,22 @@
             <div class="faq-item">
                 <h3 data-i18n="maq.faq.q3">¿Compran maquinaria usada?</h3>
                 <p data-i18n="maq.faq.a3">Evaluamos y comercializamos equipos usados en buen estado, conectando a quienes renuevan tecnología con quienes buscan invertir menos.</p>
+            </div>
+            <div class="faq-item">
+                <h3>&iquest;Conviene comprar maquinaria agroindustrial usada?</h3>
+                <p>S&iacute;, cuando el equipo se elige con criterio. El reacondicionado permite sumar capacidad a una fracci&oacute;n del costo y con plazos de entrega mucho menores que un equipo nuevo. La clave est&aacute; en revisar historial de mantenimiento, disponibilidad de repuestos y compatibilidad sanitaria <strong>antes</strong> de comprar, no despu&eacute;s.</p>
+            </div>
+            <div class="faq-item">
+                <h3>&iquest;Qu&eacute; reviso antes de comprar un equipo usado?</h3>
+                <p>Seis puntos: historial de mantenimiento documentado, disponibilidad de repuestos, dise&ntilde;o higi&eacute;nico que resista una auditor&iacute;a, estado del tablero de control, capacidad real (no la nominal de la ficha) y costo total incluyendo traslado, montaje y puesta en marcha.</p>
+            </div>
+            <div class="faq-item">
+                <h3>&iquest;Ayudan a vender maquinaria que ya no usamos?</h3>
+                <p>S&iacute;. Preparamos la ficha t&eacute;cnica con fotograf&iacute;as y datos verificables, difundimos entre compradores del rubro, conducimos la negociaci&oacute;n y coordinamos desmontaje y log&iacute;stica. Un equipo con historial, manuales y planos se vende antes y a mejor precio.</p>
+            </div>
+            <div class="faq-item">
+                <h3>&iquest;Importan maquinaria desde el extranjero?</h3>
+                <p>S&iacute;. Buscamos alternativas en Chile y fuera del pa&iacute;s, y gestionamos internaci&oacute;n, transporte y documentaci&oacute;n con la misma operativa de nuestro servicio de comercio exterior.</p>
             </div>
         </div>
     </main>
