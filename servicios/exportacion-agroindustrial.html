@@ -34,48 +34,106 @@
 
     <!-- Structured Data -->
     <script type="application/ld+json">
-    {
+{
         "@context": "https://schema.org",
         "@graph": [
-            {
-                "@type": "Service",
-                "name": "Gestión Integral de Exportaciones Agroindustriales",
-                "serviceType": "Gestión de exportaciones",
-                "description": "Servicio integral de exportación agroindustrial desde Chile: documentación aduanera, certificados fitosanitarios SAG, logística internacional y cumplimiento normativo de los mercados de destino.",
-                "provider": {"@type": "Organization", "name": "Prunavita", "url": "https://prunavita.cl"},
-                "areaServed": ["Chile", "China", "Asia", "Europa", "América"],
-                "url": "https://prunavita.cl/servicios/exportacion-agroindustrial.html"
-            },
-            {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://prunavita.cl/"},
-                    {"@type": "ListItem", "position": 2, "name": "Servicios", "item": "https://prunavita.cl/#servicios"},
-                    {"@type": "ListItem", "position": 3, "name": "Gestión de Exportaciones", "item": "https://prunavita.cl/servicios/exportacion-agroindustrial.html"}
-                ]
-            },
-            {
-                "@type": "FAQPage",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "¿Qué incluye el servicio de gestión de exportaciones de Prunavita?",
-                        "acceptedAnswer": {"@type": "Answer", "text": "Incluye la planificación comercial del embarque, documentación aduanera, certificados fitosanitarios y de origen, coordinación logística terrestre y marítima, seguros y seguimiento hasta la entrega en destino."}
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "¿Qué productos agroindustriales exportan desde Chile?",
-                        "acceptedAnswer": {"@type": "Answer", "text": "Nos especializamos en fruta deshidratada —especialmente ciruelas deshidratadas— y frutos secos, y gestionamos exportaciones de otros productos agroindustriales chilenos según el requerimiento del cliente."}
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "¿Pueden gestionar exportaciones hacia China?",
-                        "acceptedAnswer": {"@type": "Answer", "text": "Sí. Gestionamos el cumplimiento de los requisitos del mercado chino, incluyendo registro GACC, etiquetado en chino y documentación bilateral del acuerdo Chile-China."}
-                    }
-                ]
-            }
+                {
+                        "@type": "Service",
+                        "name": "Gestión Integral de Exportaciones Agroindustriales",
+                        "serviceType": "Gestión de exportaciones",
+                        "description": "Servicio integral de exportación agroindustrial desde Chile: documentación aduanera, certificados fitosanitarios SAG, logística internacional y cumplimiento normativo de los mercados de destino.",
+                        "provider": {
+                                "@type": "Organization",
+                                "name": "Prunavita",
+                                "url": "https://prunavita.cl"
+                        },
+                        "areaServed": [
+                                "Chile",
+                                "China",
+                                "Asia",
+                                "Europa",
+                                "América"
+                        ],
+                        "url": "https://prunavita.cl/servicios/exportacion-agroindustrial.html"
+                },
+                {
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                                {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "Inicio",
+                                        "item": "https://prunavita.cl/"
+                                },
+                                {
+                                        "@type": "ListItem",
+                                        "position": 2,
+                                        "name": "Servicios",
+                                        "item": "https://prunavita.cl/#servicios"
+                                },
+                                {
+                                        "@type": "ListItem",
+                                        "position": 3,
+                                        "name": "Gestión de Exportaciones",
+                                        "item": "https://prunavita.cl/servicios/exportacion-agroindustrial.html"
+                                }
+                        ]
+                },
+                {
+                        "@type": "FAQPage",
+                        "mainEntity": [
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Qué incluye el servicio de gestión de exportaciones de Prunavita?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Incluye la planificación comercial del embarque, documentación aduanera, certificados fitosanitarios y de origen, coordinación logística terrestre y marítima, seguros y seguimiento hasta la entrega en destino."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Qué productos agroindustriales exportan desde Chile?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Nos especializamos en fruta deshidratada —especialmente ciruelas deshidratadas— y frutos secos, y gestionamos exportaciones de otros productos agroindustriales chilenos según el requerimiento del cliente."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Pueden gestionar exportaciones hacia China?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Sí. Gestionamos el cumplimiento de los requisitos del mercado chino, incluyendo registro GACC, etiquetado en chino y documentación bilateral del acuerdo Chile-China."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Qué documentos necesito para exportar alimentos desde Chile?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "El expediente base es: certificado fitosanitario del SAG, certificado de origen, factura comercial, lista de empaque y conocimiento de embarque (BL), más la Declaración Única de Salida ante la aduana chilena. Cada destino agrega requisitos propios: China exige registro GACC del establecimiento y codificación en envase."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Cuánto demora una exportación agroindustrial a Asia?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Habitualmente entre seis y diez semanas desde la confirmación del pedido hasta la entrega, sumando consolidación del producto, trámite documental, reserva de espacio en nave y tránsito marítimo. Lo que más dilata una operación no es el transporte sino la documentación incompleta y la espera de cupo en temporada alta."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Qué Incoterm conviene para una primera operación con Chile?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Solemos recomendar CIF: incluye flete y seguro, de modo que el comprador recibe un precio cerrado en su puerto. El costo unitario parece mayor que un FOB, pero evita las sorpresas de flete y seguro que suelen aparecer después."
+                                        }
+                                }
+                        ]
+                }
         ]
-    }
+}
     </script>
 
     <style>
@@ -248,6 +306,88 @@
             <h2 data-i18n="exp.x2.title">Incoterms y modalidades de embarque</h2>
             <p data-i18n="exp.x2.p">Operamos bajo los principales Incoterms —FOB, CFR, CIF y DAP— y coordinamos embarques en contenedor completo (FCL) o consolidado (LCL) según el volumen. Definimos con usted la modalidad que optimiza costos y tiempos para su mercado de destino.</p>
 
+            <!-- ===== Contenido ampliado (ago 2026). Sin data-i18n: translations.js
+                 conserva el espanol cuando falta la clave. Pendiente traducir. ===== -->
+
+            <h2>Los cinco documentos que no pueden faltar en un embarque</h2>
+            <p>
+                La mayor&iacute;a de los problemas de exportaci&oacute;n no ocurren en el mar: ocurren en el escritorio,
+                semanas antes. Un documento mal emitido detiene un contenedor en destino y genera costos de
+                almacenaje que superan con facilidad el margen de la operaci&oacute;n. Este es el expediente base
+                de cualquier embarque agroindustrial desde Chile:
+            </p>
+            <ol>
+                <li><strong>Certificado fitosanitario del SAG.</strong> Acredita que el producto cumple las exigencias
+                    sanitarias del pa&iacute;s de destino. Se tramita por embarque, no por a&ntilde;o.</li>
+                <li><strong>Certificado de origen.</strong> Es lo que permite aplicar las rebajas arancelarias de los
+                    acuerdos comerciales. Sin &eacute;l, el comprador paga arancel completo &mdash;y lo va a notar.</li>
+                <li><strong>Factura comercial.</strong> Debe coincidir exactamente con el resto del expediente en
+                    descripci&oacute;n, cantidades y valores. Las discrepancias son motivo frecuente de retenci&oacute;n.</li>
+                <li><strong>Lista de empaque (packing list).</strong> Detalle de bultos, pesos y distribuci&oacute;n en
+                    el contenedor. Es lo que la aduana contrasta en una inspecci&oacute;n f&iacute;sica.</li>
+                <li><strong>Conocimiento de embarque (BL).</strong> El t&iacute;tulo de la mercanc&iacute;a. Sin BL
+                    original o su equivalente electr&oacute;nico, el comprador no retira la carga.</li>
+            </ol>
+            <p>
+                A esto se suma la <strong>Declaraci&oacute;n &Uacute;nica de Salida (DUS)</strong> ante la aduana
+                chilena, y los requisitos propios de cada destino: China exige registro <strong>GACC</strong> del
+                establecimiento y codificaci&oacute;n en envase, mientras la Uni&oacute;n Europea y Estados Unidos
+                aplican sus propios l&iacute;mites de residuos y reglas de rotulaci&oacute;n.
+            </p>
+
+            <h2>Elegir el Incoterm correcto</h2>
+            <p>
+                El Incoterm no es un detalle de precio: define <strong>hasta d&oacute;nde llega su responsabilidad y en
+                qu&eacute; punto exacto se traspasa el riesgo</strong>. Los cuatro que m&aacute;s usamos en
+                agroindustria:
+            </p>
+            <div class="table-responsive" style="overflow-x:auto;">
+            <table class="data-table">
+                <thead><tr><th>Incoterm</th><th>Qu&eacute; cubre el vendedor</th><th>Cu&aacute;ndo conviene</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>FOB</strong></td><td>Hasta cargar a bordo en puerto chileno</td><td>Comprador con log&iacute;stica propia o tarifas de flete negociadas</td></tr>
+                    <tr><td><strong>CFR</strong></td><td>Suma el flete mar&iacute;timo hasta puerto de destino</td><td>Comprador que prefiere un precio puesto en su puerto</td></tr>
+                    <tr><td><strong>CIF</strong></td><td>Suma el seguro de la mercanc&iacute;a</td><td>Primeras operaciones: simplifica la gesti&oacute;n del comprador</td></tr>
+                    <tr><td><strong>DAP</strong></td><td>Entrega en el lugar convenido en destino</td><td>Cuando el comprador quiere el producto en su bodega</td></tr>
+                </tbody>
+            </table>
+            </div>
+            <p>
+                Para un comprador que reci&eacute;n empieza a operar con Chile solemos recomendar <strong>CIF</strong>:
+                el costo unitario parece mayor, pero elimina las sorpresas de flete y seguro que suelen aparecer
+                despu&eacute;s en un FOB mal calculado.
+            </p>
+
+            <h2>Plazos reales de una operaci&oacute;n</h2>
+            <p>
+                Una exportaci&oacute;n agroindustrial hacia Asia toma habitualmente entre <strong>seis y diez
+                semanas</strong> desde la confirmaci&oacute;n del pedido hasta la entrega, distribuidas entre
+                consolidaci&oacute;n del producto, tr&aacute;mite documental, reserva de espacio en nave y
+                tr&aacute;nsito mar&iacute;timo. Hacia Europa y Norteam&eacute;rica los plazos var&iacute;an seg&uacute;n
+                ruta y disponibilidad.
+            </p>
+            <p>
+                El factor que m&aacute;s dilata una operaci&oacute;n no es el barco: es la
+                <strong>documentaci&oacute;n incompleta</strong> y la espera de cupo en temporada alta. Por eso
+                trabajamos el expediente en paralelo a la producci&oacute;n, no despu&eacute;s.
+            </p>
+
+            <h2>Qu&eacute; puede salir mal, y c&oacute;mo lo evitamos</h2>
+            <ul>
+                <li><strong>Rechazo en destino por residuos.</strong> Se previene verificando l&iacute;mites del pa&iacute;s comprador <em>antes</em> de embarcar, no despu&eacute;s.</li>
+                <li><strong>Discrepancia documental.</strong> Un peso o una descripci&oacute;n que no calzan entre factura, packing list y BL. Revisi&oacute;n cruzada obligatoria antes del zarpe.</li>
+                <li><strong>Producto fuera de especificaci&oacute;n.</strong> Humedad o calibre distintos a lo pactado. Se controla con inspecci&oacute;n en planta previa a la carga.</li>
+                <li><strong>Registro sanitario faltante.</strong> Sin registro GACC vigente, un embarque a China no entra. Se verifica en la evaluaci&oacute;n inicial.</li>
+            </ul>
+            <p>
+                Si su planta necesita cerrar brechas normativas antes de exportar, lo trabajamos desde nuestras
+                <a href="asesorias-tecnicas-inocuidad.html">asesor&iacute;as t&eacute;cnicas en calidad e inocuidad</a>.
+                Y si busca el producto adem&aacute;s del servicio, exportamos
+                <a href="ciruelas-deshidratadas.html">ciruela deshidratada chilena</a> con calibre y humedad a
+                especificaci&oacute;n.
+            </p>
+
+
             <h2 data-i18n="sub.faq.title">Preguntas frecuentes</h2>
             <div class="faq-item">
                 <h3 data-i18n="exp.faq.q1">¿Qué incluye el servicio de gestión de exportaciones?</h3>
@@ -260,6 +400,18 @@
             <div class="faq-item">
                 <h3 data-i18n="exp.faq.q3">¿Gestionan exportaciones hacia China?</h3>
                 <p data-i18n="exp.faq.a3">Sí, incluyendo registro GACC, etiquetado en chino y la documentación del acuerdo comercial Chile-China.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Qué documentos necesito para exportar alimentos desde Chile?</h3>
+                <p>El expediente base es: certificado fitosanitario del SAG, certificado de origen, factura comercial, lista de empaque y conocimiento de embarque (BL), más la Declaración Única de Salida ante la aduana chilena. Cada destino agrega requisitos propios: China exige registro GACC del establecimiento y codificación en envase.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Cuánto demora una exportación agroindustrial a Asia?</h3>
+                <p>Habitualmente entre seis y diez semanas desde la confirmación del pedido hasta la entrega, sumando consolidación del producto, trámite documental, reserva de espacio en nave y tránsito marítimo. Lo que más dilata una operación no es el transporte sino la documentación incompleta y la espera de cupo en temporada alta.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Qué Incoterm conviene para una primera operación con Chile?</h3>
+                <p>Solemos recomendar CIF: incluye flete y seguro, de modo que el comprador recibe un precio cerrado en su puerto. El costo unitario parece mayor que un FOB, pero evita las sorpresas de flete y seguro que suelen aparecer después.</p>
             </div>
         </div>
     </main>

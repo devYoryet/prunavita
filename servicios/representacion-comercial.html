@@ -34,48 +34,106 @@
 
     <!-- Structured Data -->
     <script type="application/ld+json">
-    {
+{
         "@context": "https://schema.org",
         "@graph": [
-            {
-                "@type": "Service",
-                "name": "Representación Comercial en Chile para Empresas Extranjeras",
-                "serviceType": "Representación comercial y sourcing",
-                "description": "Representación comercial, sourcing de productos agroindustriales, gestión de compras y supervisión de embarques en Chile para clientes extranjeros.",
-                "provider": {"@type": "Organization", "name": "Prunavita", "url": "https://prunavita.cl"},
-                "areaServed": ["Chile", "China", "Asia", "Europa", "América"],
-                "url": "https://prunavita.cl/servicios/representacion-comercial.html"
-            },
-            {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://prunavita.cl/"},
-                    {"@type": "ListItem", "position": 2, "name": "Servicios", "item": "https://prunavita.cl/#servicios"},
-                    {"@type": "ListItem", "position": 3, "name": "Representación Comercial", "item": "https://prunavita.cl/servicios/representacion-comercial.html"}
-                ]
-            },
-            {
-                "@type": "FAQPage",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "¿Qué hace un representante comercial en Chile para una empresa extranjera?",
-                        "acceptedAnswer": {"@type": "Answer", "text": "Actúa como sus ojos y manos en origen: identifica proveedores confiables, negocia precios y condiciones, inspecciona la calidad antes del embarque, supervisa la carga del contenedor y resuelve cualquier imprevisto local en su nombre."}
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "¿Trabajan con compradores de China?",
-                        "acceptedAnswer": {"@type": "Answer", "text": "Sí. Atendemos compradores chinos y asiáticos que buscan productos agroindustriales chilenos como ciruelas deshidratadas y frutos secos, gestionando la comunicación, verificación de proveedores y supervisión de embarques en origen."}
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "¿Cómo se cobra el servicio de representación comercial?",
-                        "acceptedAnswer": {"@type": "Answer", "text": "El modelo se adapta a cada cliente: comisión por operación, fee mensual de representación o esquemas mixtos según volumen y frecuencia de compras."}
-                    }
-                ]
-            }
+                {
+                        "@type": "Service",
+                        "name": "Representación Comercial en Chile para Empresas Extranjeras",
+                        "serviceType": "Representación comercial y sourcing",
+                        "description": "Representación comercial, sourcing de productos agroindustriales, gestión de compras y supervisión de embarques en Chile para clientes extranjeros.",
+                        "provider": {
+                                "@type": "Organization",
+                                "name": "Prunavita",
+                                "url": "https://prunavita.cl"
+                        },
+                        "areaServed": [
+                                "Chile",
+                                "China",
+                                "Asia",
+                                "Europa",
+                                "América"
+                        ],
+                        "url": "https://prunavita.cl/servicios/representacion-comercial.html"
+                },
+                {
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                                {
+                                        "@type": "ListItem",
+                                        "position": 1,
+                                        "name": "Inicio",
+                                        "item": "https://prunavita.cl/"
+                                },
+                                {
+                                        "@type": "ListItem",
+                                        "position": 2,
+                                        "name": "Servicios",
+                                        "item": "https://prunavita.cl/#servicios"
+                                },
+                                {
+                                        "@type": "ListItem",
+                                        "position": 3,
+                                        "name": "Representación Comercial",
+                                        "item": "https://prunavita.cl/servicios/representacion-comercial.html"
+                                }
+                        ]
+                },
+                {
+                        "@type": "FAQPage",
+                        "mainEntity": [
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Qué hace un representante comercial en Chile para una empresa extranjera?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Actúa como sus ojos y manos en origen: identifica proveedores confiables, negocia precios y condiciones, inspecciona la calidad antes del embarque, supervisa la carga del contenedor y resuelve cualquier imprevisto local en su nombre."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Trabajan con compradores de China?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Sí. Atendemos compradores chinos y asiáticos que buscan productos agroindustriales chilenos como ciruelas deshidratadas y frutos secos, gestionando la comunicación, verificación de proveedores y supervisión de embarques en origen."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Cómo se cobra el servicio de representación comercial?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "El modelo se adapta a cada cliente: comisión por operación, fee mensual de representación o esquemas mixtos según volumen y frecuencia de compras."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Qué hace un representante comercial en Chile?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Actúa como su equipo local: identifica y verifica proveedores, negocia precios y condiciones en su nombre, inspecciona el producto antes y durante la carga, y supervisa el embarque hasta el zarpe. A diferencia de un agente que solo conecta partes, el representante defiende los intereses del comprador en origen."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Cómo verifican que un proveedor chileno es confiable?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Revisamos existencia y antecedentes comerciales, capacidad productiva real frente a la declarada, certificaciones vigentes (HACCP, BRCGS, IFS o FSSC 22000), historial de exportación al mercado del comprador, y visitamos la planta. El estado real de una planta se ve en el recorrido, no en una presentación."
+                                        }
+                                },
+                                {
+                                        "@type": "Question",
+                                        "name": "¿Inspeccionan la carga antes del embarque?",
+                                        "acceptedAnswer": {
+                                                "@type": "Answer",
+                                                "text": "Sí, en tres momentos: antes de producir se fija la especificación, durante la producción se muestrean lotes y se controlan defectos, y en la carga presenciamos la consolidación del contenedor con conteo de bultos, revisión de envases, sellos y registro fotográfico."
+                                        }
+                                }
+                        ]
+                }
         ]
-    }
+}
     </script>
 
     <style>
@@ -234,6 +292,83 @@
             <h2 data-i18n="rep.x2.title">Productos que gestionamos por usted</h2>
             <p data-i18n="rep.x2.p">Aunque nuestra especialidad son la ciruela deshidratada y los frutos secos, gestionamos el sourcing de un amplio rango de productos agroindustriales chilenos —fruta deshidratada y otros productos según su requerimiento—, siempre con verificación de calidad en origen.</p>
 
+            <!-- ===== Contenido ampliado (ago 2026). Sin data-i18n: translations.js
+                 conserva el espanol cuando falta la clave. Pendiente traducir. ===== -->
+
+            <h2>Qu&eacute; problema resuelve un representante en origen</h2>
+            <p>
+                Un comprador extranjero que opera a distancia enfrenta tres riesgos que ning&uacute;n contrato elimina
+                por s&iacute; solo: <strong>no conoce al proveedor, no puede verificar la calidad antes de pagar y no
+                presencia la carga</strong>. Cada uno se resuelve con presencia f&iacute;sica en Chile, no con
+                correos.
+            </p>
+            <p>
+                La diferencia entre un agente y un representante es esa: el agente conecta puntas y cobra
+                comisi&oacute;n; el representante <strong>defiende sus intereses en origen</strong> aunque eso implique
+                rechazar un lote o discutir con el proveedor.
+            </p>
+
+            <h2>Qu&eacute; verificamos de un proveedor antes de recomendarlo</h2>
+            <ol>
+                <li><strong>Existencia y antecedentes comerciales.</strong> Que la empresa opere realmente, con historial
+                    verificable y no solo un sitio web.</li>
+                <li><strong>Capacidad productiva real.</strong> Volumen que puede sostener en temporada, no el que declara
+                    en su presentaci&oacute;n comercial.</li>
+                <li><strong>Certificaciones vigentes.</strong> HACCP, BRCGS, IFS o FSSC 22000 seg&uacute;n corresponda, y
+                    registro sanitario para el mercado de destino.</li>
+                <li><strong>Historial de exportaci&oacute;n.</strong> Si ya embarc&oacute; al pa&iacute;s del comprador y
+                    con qu&eacute; resultado.</li>
+                <li><strong>Visita a planta.</strong> Nada reemplaza estar ah&iacute;: el estado real de una planta se ve
+                    en veinte minutos de recorrido.</li>
+            </ol>
+
+            <h2>C&oacute;mo se inspecciona un embarque</h2>
+            <p>
+                La inspecci&oacute;n no ocurre en un solo momento. Trabajamos en tres cortes:
+            </p>
+            <div class="table-responsive" style="overflow-x:auto;">
+            <table class="data-table">
+                <thead><tr><th>Momento</th><th>Qu&eacute; se revisa</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Antes de producir</strong></td><td>Especificaci&oacute;n acordada: calibre, humedad, formato de embalaje, rotulaci&oacute;n y requisitos del mercado de destino</td></tr>
+                    <tr><td><strong>Durante la producci&oacute;n</strong></td><td>Muestreo de lotes, verificaci&oacute;n de par&aacute;metros y control de defectos frente a la tolerancia pactada</td></tr>
+                    <tr><td><strong>En la carga</strong></td><td>Presencia en la consolidaci&oacute;n del contenedor, conteo de bultos, estado del envase, sellos y registro fotogr&aacute;fico</td></tr>
+                </tbody>
+            </table>
+            </div>
+            <p>
+                Ese registro fotogr&aacute;fico y documental es lo que le permite al comprador reclamar con respaldo si
+                algo llega distinto a lo embarcado. Sin &eacute;l, un reclamo es la palabra de uno contra la del otro.
+            </p>
+
+            <h2>El caso del comprador chino</h2>
+            <p>
+                Buena parte de nuestros clientes de representaci&oacute;n compra desde China y Asia. Ese mercado tiene
+                exigencias propias: <strong>registro GACC del establecimiento exportador</strong>, codificaci&oacute;n en
+                cada envase y etiquetado en chino simplificado. Un proveedor sin registro vigente simplemente no puede
+                embarcar, por buena que sea su fruta.
+            </p>
+            <p>
+                Verificamos ese registro antes de iniciar cualquier negociaci&oacute;n. El detalle del protocolo lo
+                explicamos en nuestro
+                <a href="../noticias/2026-07-requisitos-exportar-ciruela-deshidratada-china-gacc.html">an&aacute;lisis
+                de los requisitos GACC</a>.
+            </p>
+
+            <h2>C&oacute;mo se estructura el servicio</h2>
+            <p>
+                Trabajamos por operaci&oacute;n o por acuerdo de representaci&oacute;n continua, seg&uacute;n el volumen
+                y la frecuencia de compra. En ambos casos el alcance se define por escrito: qu&eacute; productos,
+                qu&eacute; mercados, qu&eacute; nivel de inspecci&oacute;n y qu&eacute; capacidad de decisi&oacute;n
+                delega en nosotros.
+            </p>
+            <p>
+                Si adem&aacute;s necesita que gestionemos el embarque completo, lo integramos con nuestra
+                <a href="exportacion-agroindustrial.html">gesti&oacute;n de exportaciones</a>; y si busca
+                <a href="ciruelas-deshidratadas.html">ciruela deshidratada</a> como producto, la proveemos directamente.
+            </p>
+
+
             <h2 data-i18n="sub.faq.title">Preguntas frecuentes</h2>
             <div class="faq-item">
                 <h3 data-i18n="rep.faq.q1">¿Qué hace un representante comercial en Chile para una empresa extranjera?</h3>
@@ -246,6 +381,18 @@
             <div class="faq-item">
                 <h3 data-i18n="rep.faq.q3">¿Cómo se cobra el servicio?</h3>
                 <p data-i18n="rep.faq.a3">Comisión por operación, fee mensual de representación o esquemas mixtos, según el volumen y la frecuencia de sus compras.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Qué hace un representante comercial en Chile?</h3>
+                <p>Actúa como su equipo local: identifica y verifica proveedores, negocia precios y condiciones en su nombre, inspecciona el producto antes y durante la carga, y supervisa el embarque hasta el zarpe. A diferencia de un agente que solo conecta partes, el representante defiende los intereses del comprador en origen.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Cómo verifican que un proveedor chileno es confiable?</h3>
+                <p>Revisamos existencia y antecedentes comerciales, capacidad productiva real frente a la declarada, certificaciones vigentes (HACCP, BRCGS, IFS o FSSC 22000), historial de exportación al mercado del comprador, y visitamos la planta. El estado real de una planta se ve en el recorrido, no en una presentación.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Inspeccionan la carga antes del embarque?</h3>
+                <p>Sí, en tres momentos: antes de producir se fija la especificación, durante la producción se muestrean lotes y se controlan defectos, y en la carga presenciamos la consolidación del contenedor con conteo de bultos, revisión de envases, sellos y registro fotográfico.</p>
             </div>
         </div>
     </main>
