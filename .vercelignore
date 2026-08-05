@@ -1,0 +1,37 @@
+# Archivos que viven en el repositorio pero NO deben publicarse en prunavita.cl
+#
+# Vercel despliega la raiz del repo como sitio estatico, asi que todo lo que
+# no se excluya aqui queda accesible por URL directa. El Disallow de robots.txt
+# NO protege: solo pide a los buscadores que no rastreen.
+
+# Sistema SEO interno: plan, keywords, reportes, seguimiento y memoria
+seo-system/
+
+# Scripts operativos (contienen rutas internas y logica de medicion)
+scripts/
+
+# Documentos comerciales y de entrega al cliente
+COTIZACION_PRUNAVITA_2026.html
+INFORME_ENTREGA_SEO_PRUNAVITA_ETAPA1.html
+INFORME_MENSUAL_SEO_PRUNAVITA_JULIO2026.html
+*.pdf
+
+# Documentacion interna del proyecto
+README.md
+EMAILJS_SETUP.md
+LINKEDIN_SETUP.md
+LINKEDIN_IMAGES_INSTRUCTIONS.md
+OPTIMIZATION_NOTES.md
+
+# Configuracion y credenciales
+.env
+.env.*
+.htaccess
+oauth_log.txt
+*.json.example
+
+# Control de versiones y entorno
+.git/
+.gitignore
+.claude/
+__pycache__/

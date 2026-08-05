@@ -2,10 +2,9 @@ User-agent: *
 Allow: /
 Disallow: /send-email.php
 Disallow: /noticias/plantilla-noticia.html
-Disallow: /COTIZACION_PRUNAVITA_2026.html
-Disallow: /INFORME_ENTREGA_SEO_PRUNAVITA_ETAPA1.html
-Disallow: /INFORME_MENSUAL_SEO_PRUNAVITA_JULIO2026.html
-Disallow: /seo-system/
+
+# Los documentos internos y el sistema SEO ya no se despliegan (ver .vercelignore),
+# por eso no figuran aqui: no existen en el sitio.
 
 # Baidu spider (mercado chino)
 User-agent: Baiduspider
