@@ -30,7 +30,7 @@ Ordenadas por impacto sobre la métrica norte, no por facilidad.
 
 | # | Palanca | Estado | Detalle |
 |---|---|---|---|
-| A1 | **Profundizar páginas de servicio** | Pendiente | 525–725 → ~1.800 palabras. Orden: Asesorías (4 de 7 consultas reveladas) → Ciruelas (más impresiones) → Maquinaria → Exportación → Representación |
+| A1 | **Profundizar páginas de servicio** | ✅ Completo (ago 2026) | Las cinco ampliadas: Asesorías 588→1.771, Ciruelas 725→1.457, Maquinaria 562→1.363, Exportación 470→1.213, Representación 418→1.016 |
 | A2 | **2 noticias/mes dirigidas** | En curso | Ya no noticias sueltas del sector: cada una ataca un término comercial detectado y enlaza a su página de servicio |
 | A3 | **Clusters de enlace interno** | Pendiente | Cada noticia enlaza a la página de servicio de su tema. Hoy los enlaces son genéricos |
 | A4 | **FAQ con datos estructurados** | Pendiente | `FAQPage` en cada página de servicio. Captura búsquedas en forma de pregunta y puede ganar espacio ampliado en resultados |
@@ -40,11 +40,11 @@ Ordenadas por impacto sobre la métrica norte, no por facilidad.
 
 | # | Palanca | Estado | Detalle |
 |---|---|---|---|
-| B1 | **Borrar imágenes huérfanas** | Pendiente | 17 MB en la raíz (`team-business.jpg` 13,2 MB, `global-export.jpg`, `quality-control.jpg`) que **ningún HTML referencia**. No afectan velocidad; sí ensucian el deploy |
-| B2 | **Logo de datos estructurados** | Pendiente | `logo_prunavita.png` pesa 2,3 MB y se declara como logo de la organización en el JSON-LD de 7 páginas. Debe bajar de 100 KB |
+| B1 | **Borrar imágenes huérfanas** | ✅ Hecho | 17 MB en la raíz (`team-business.jpg` 13,2 MB, `global-export.jpg`, `quality-control.jpg`) que **ningún HTML referencia**. No afectan velocidad; sí ensucian el deploy |
+| B2 | **Logo de datos estructurados** | ✅ Hecho (2.290→118 KB) | `logo_prunavita.png` pesa 2,3 MB y se declara como logo de la organización en el JSON-LD de 7 páginas. Debe bajar de 100 KB |
 | B3 | **Imágenes a WebP** | Pendiente | Las portadas nuevas ya vienen a 1600×900; falta convertir el banco antiguo |
 | B4 | **Schema `Service` y `BreadcrumbList`** | Pendiente | Las páginas de servicio no declaran su tipo. Ayuda a que Google entienda qué se ofrece |
-| B5 | **Noticia GACC sin impresiones** | Pendiente | Publicada hace 3 semanas, cero impresiones mientras las otras 4 sí aparecen. Requiere inspección de URL en GSC |
+| B5 | **Noticia GACC sin impresiones** | 🔎 Diagnosticado | **Google nunca la ha rastreado.** La causa está aguas arriba: el hub `/noticias` figura como "Descubierta: actualmente sin indexar" y nunca fue rastreado, así que Google no llegó a los artículos enlazados desde él. Lo técnico está correcto (308 → 200, canonical y sitemap en orden): es presupuesto de rastreo por falta de autoridad. **Acción: solicitar indexación manual en GSC** de `/noticias`, la nota GACC y la de agosto |
 | B6 | **Indexación tras publicar** | Continuo | Enviar cada URL nueva a inspección en GSC el mismo día |
 
 ### C · Autoridad — lento, y sin esto hay techo
@@ -70,6 +70,14 @@ Ordenadas por impacto sobre la métrica norte, no por facilidad.
 | D2 | **Separar marca / no-marca** | ✅ Operativo | Integrado en el script y en los reportes |
 | D3 | **Desbloquear GA4** | Pendiente | Habilitar Analytics Admin/Data API + rol Lector para la cuenta de servicio |
 | D4 | **Bing Webmaster Tools** | Pendiente | Tráfico menor, pero es gratis y alimenta a ChatGPT/Copilot |
+
+### F · Traducciones
+
+| # | Palanca | Estado | Detalle |
+|---|---|---|---|
+| F1 | **Paridad ES/EN en servicios** | ✅ Hecho (ago 2026) | Cobertura de 90–96%. Ver `TRADUCCIONES.md` |
+| F2 | **Cuerpo de las noticias en inglés** | ⬜ No abordado | Beneficio de experiencia, no de posicionamiento. Se agranda con cada noticia nueva |
+| F3 | **Páginas en inglés con URL propia** | ⬜ Evaluar sep-oct | Lo único que posiciona en inglés de verdad. Fuera del alcance de la mantención |
 
 ### E · Internacional — meses 4–5
 
