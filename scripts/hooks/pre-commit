@@ -1,8 +1,9 @@
 #!/bin/sh
 # Hook pre-commit — Prunavita.cl
 #
-# Bloquea el commit si dos noticias comparten la misma imagen.
-# Solo se activa cuando hay cambios en /noticias/.
+# Dos verificaciones automaticas antes de cada commit:
+#   1. Que ninguna noticia repita foto de portada.
+#   2. Que el sitemap declare la fecha real de cambio de cada pagina.
 #
 # Instalar una vez por maquina (desde la raiz del repo):
 #     git config core.hooksPath scripts/hooks
@@ -10,23 +11,38 @@
 # Saltarlo en un caso puntual:
 #     git commit --no-verify
 
-if ! git diff --cached --name-only | grep -q '^noticias/'; then
-    exit 0
-fi
-
 if ! command -v python >/dev/null 2>&1; then
-    echo "[pre-commit] Aviso: python no disponible, se omite la auditoria de portadas."
+    echo "[pre-commit] Aviso: python no disponible, se omiten las verificaciones."
     exit 0
 fi
 
-echo "[pre-commit] Verificando que ninguna noticia repita portada..."
-if ! python scripts/portada_noticia.py auditar; then
-    echo ""
-    echo "[pre-commit] COMMIT BLOQUEADO: hay imagenes repetidas entre noticias."
-    echo "             Consigue una portada nueva con:"
-    echo "               python scripts/portada_noticia.py buscar \"<tema en ingles>\""
-    echo "             Guia completa: seo-system/noticias/PORTADAS.md"
-    exit 1
+# ---------- 1. Portadas unicas (solo si cambian noticias) ----------
+if git diff --cached --name-only | grep -q '^noticias/'; then
+    echo "[pre-commit] Verificando que ninguna noticia repita portada..."
+    if ! python scripts/portada_noticia.py auditar; then
+        echo ""
+        echo "[pre-commit] COMMIT BLOQUEADO: hay imagenes repetidas entre noticias."
+        echo "             Consigue una portada nueva con:"
+        echo "               python scripts/portada_noticia.py buscar \"<tema en ingles>\""
+        echo "             Guia completa: seo-system/noticias/PORTADAS.md"
+        exit 1
+    fi
+fi
+
+# ---------- 2. lastmod del sitemap ----------
+# Se ejecuta cuando cambia cualquier HTML publicado. Corrige las fechas y suma
+# el sitemap al commit, para que nunca quede declarando una fecha vieja: Google
+# usa lastmod para decidir que vale la pena volver a rastrear.
+if git diff --cached --name-only | grep -qE '\.html$'; then
+    echo "[pre-commit] Sincronizando fechas del sitemap..."
+    if python scripts/sitemap_lastmod.py; then
+        if ! git diff --quiet -- sitemap.xml; then
+            git add sitemap.xml
+            echo "[pre-commit] sitemap.xml actualizado y agregado al commit."
+        fi
+    else
+        echo "[pre-commit] Aviso: no se pudo actualizar el sitemap; continuo igual."
+    fi
 fi
 
 exit 0
