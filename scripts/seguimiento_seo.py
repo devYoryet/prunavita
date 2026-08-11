@@ -6,8 +6,11 @@ Seguimiento SEO diario — Prunavita.cl
 Toma una foto diaria de Google Search Console y la acumula en un historico.
 Sin historico no hay forma de saber si una palanca funciono o no.
 
-La metrica norte del proyecto (ago 2026) es CLICS NO-MARCA: hoy en 0.
-Todo el trafico actual viene de gente que busca "prunavita" por su nombre.
+Metrica norte: CLICS A PAGINAS INTERIORES. Google oculta las consultas de
+bajo volumen y en este sitio eso es hoy el 100% de los clics, asi que
+"clics no-marca" medido por consulta da siempre 0 y no sirve de termometro.
+El proxy fiable es a que pagina llega el clic: quien busca "prunavita"
+aterriza en la home; quien entra a una pagina de servicio buscaba otra cosa.
 
 Uso
 ---
@@ -52,6 +55,7 @@ COLUMNAS = [
     "fecha_snapshot", "ventana_dias", "clics_total", "impresiones_total",
     "ctr_total", "posicion_media", "consultas_reveladas", "clics_marca",
     "clics_no_marca", "impresiones_no_marca", "paginas_con_impresiones",
+    "clics_paginas_interiores",
 ]
 
 
@@ -112,6 +116,14 @@ def cmd_foto(args):
     no_marca = [f for f in consultas if not es_marca(f["keys"][0])]
     marca = [f for f in consultas if es_marca(f["keys"][0])]
 
+    # Google oculta las consultas de bajo volumen, y en este sitio eso hoy es el
+    # 100% de los clics. Por eso "clics desde consultas no-marca reveladas" da
+    # siempre 0 y no sirve como termometro. El proxy util es a que PAGINA llega
+    # el clic: quien busca "prunavita" aterriza en la home; quien llega a una
+    # pagina de servicio o a una noticia buscaba otra cosa.
+    clics_interiores = sum(f["clicks"] for f in paginas
+                           if f["keys"][0].rstrip("/") != "https://prunavita.cl")
+
     fila = {
         "fecha_snapshot": datetime.date.today().isoformat(),
         "ventana_dias": dias,
@@ -124,6 +136,7 @@ def cmd_foto(args):
         "clics_no_marca": sum(f["clicks"] for f in no_marca),
         "impresiones_no_marca": sum(f["impressions"] for f in no_marca),
         "paginas_con_impresiones": len(paginas),
+        "clics_paginas_interiores": clics_interiores,
     }
 
     DIR_SEG.mkdir(parents=True, exist_ok=True)
@@ -142,9 +155,12 @@ def cmd_foto(args):
     print(f"  Consultas reveladas     {fila['consultas_reveladas']}")
     print(f"  Paginas con impresiones {fila['paginas_con_impresiones']}")
     print()
-    print(f"  >> CLICS NO-MARCA       {fila['clics_no_marca']}   <-- metrica norte")
-    print(f"     Clics de marca       {fila['clics_marca']}")
-    print(f"     (la diferencia con el total son consultas que Google oculta)")
+    print(f"  >> CLICS A PAGINAS INTERIORES  {fila['clics_paginas_interiores']}   <-- metrica norte")
+    print(f"     (clics que NO cayeron en la home; quien busca 'prunavita'")
+    print(f"      aterriza en la home, asi que estos venian buscando otra cosa)")
+    print()
+    print(f"     Clics desde consultas reveladas no-marca: {fila['clics_no_marca']}")
+    print(f"     Consultas ocultas por Google: {fila['clics_total'] - fila['clics_marca'] - fila['clics_no_marca']} clics")
     print(f"\n  -> {HISTORICO.relative_to(RAIZ)}")
 
 
@@ -159,12 +175,12 @@ def cmd_resumen(args):
     filas = leer_historico()
     print(f"Historico: {len(filas)} fotos, de {filas[0]['fecha_snapshot']} a {filas[-1]['fecha_snapshot']}\n")
 
-    cab = f"{'FECHA':<12}{'CLICS':>7}{'IMPR':>7}{'NO-MARCA':>10}{'CONSULTAS':>11}{'POS':>7}"
+    cab = f"{'FECHA':<12}{'CLICS':>7}{'IMPR':>7}{'INTERIOR':>10}{'CONSULTAS':>11}{'POS':>7}"
     print(cab)
     print("-" * len(cab))
     for f in filas:
         print(f"{f['fecha_snapshot']:<12}{f['clics_total']:>7}{f['impresiones_total']:>7}"
-              f"{f['clics_no_marca']:>10}{f['consultas_reveladas']:>11}{f['posicion_media']:>7}")
+              f"{f.get('clics_paginas_interiores','-'):>10}{f['consultas_reveladas']:>11}{f['posicion_media']:>7}")
 
     if len(filas) < 2:
         print("\n(Con una sola foto no hay tendencia todavia. Vuelve manana.)")
@@ -175,7 +191,7 @@ def cmd_resumen(args):
     for campo, etiqueta in (("impresiones_total", "Impresiones"),
                             ("clics_total", "Clics"),
                             ("consultas_reveladas", "Consultas distintas"),
-                            ("clics_no_marca", "Clics NO-MARCA")):
+                            ("clics_paginas_interiores", "Clics a interiores")):
         a, b = float(ini[campo]), float(fin[campo])
         delta = f"{100*(b-a)/a:+.0f}%" if a else ("nuevo" if b else "sin cambio")
         print(f"  {etiqueta:<22} {a:>6.0f} -> {b:>6.0f}   {delta}")
