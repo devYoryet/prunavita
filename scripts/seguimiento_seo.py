@@ -139,12 +139,21 @@ def cmd_foto(args):
         "clics_paginas_interiores": clics_interiores,
     }
 
+    # Se reescribe el historico completo en vez de anexar: asi la cabecera
+    # siempre cuadra con COLUMNAS aunque se agregue una columna nueva, y una
+    # segunda corrida del mismo dia reemplaza la foto en vez de duplicarla.
     DIR_SEG.mkdir(parents=True, exist_ok=True)
-    nuevo = not HISTORICO.exists()
-    with HISTORICO.open("a", newline="", encoding="utf-8") as fh:
-        w = csv.DictWriter(fh, fieldnames=COLUMNAS)
-        if nuevo:
-            w.writeheader()
+    previas = []
+    if HISTORICO.exists():
+        with HISTORICO.open(encoding="utf-8") as fh:
+            previas = [f for f in csv.DictReader(fh, restval="", restkey="_sobra")
+                       if f["fecha_snapshot"] != fila["fecha_snapshot"]]
+
+    with HISTORICO.open("w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=COLUMNAS, extrasaction="ignore")
+        w.writeheader()
+        for f in previas:
+            w.writerow({c: f.get(c, "") for c in COLUMNAS})
         w.writerow(fila)
 
     print(f"Foto guardada — {fila['fecha_snapshot']} (ventana {dias} dias)\n")
@@ -180,21 +189,27 @@ def cmd_resumen(args):
     print("-" * len(cab))
     for f in filas:
         print(f"{f['fecha_snapshot']:<12}{f['clics_total']:>7}{f['impresiones_total']:>7}"
-              f"{f.get('clics_paginas_interiores','-'):>10}{f['consultas_reveladas']:>11}{f['posicion_media']:>7}")
+              f"{(f.get('clics_paginas_interiores') or '-'):>10}{f['consultas_reveladas']:>11}{f['posicion_media']:>7}")
 
     if len(filas) < 2:
         print("\n(Con una sola foto no hay tendencia todavia. Vuelve manana.)")
         return
 
-    ini, fin = filas[0], filas[-1]
     print("\nVariacion desde la primera foto:")
     for campo, etiqueta in (("impresiones_total", "Impresiones"),
                             ("clics_total", "Clics"),
                             ("consultas_reveladas", "Consultas distintas"),
                             ("clics_paginas_interiores", "Clics a interiores")):
-        a, b = float(ini[campo]), float(fin[campo])
+        # Una columna puede faltar en las fotos viejas: se compara desde la
+        # primera que la tenga, no desde la primera foto del historico.
+        con_dato = [f for f in filas if (f.get(campo) or "").strip()]
+        if not con_dato:
+            print(f"  {etiqueta:<22}      sin datos en el historico")
+            continue
+        a, b = float(con_dato[0][campo]), float(con_dato[-1][campo])
         delta = f"{100*(b-a)/a:+.0f}%" if a else ("nuevo" if b else "sin cambio")
-        print(f"  {etiqueta:<22} {a:>6.0f} -> {b:>6.0f}   {delta}")
+        desde = f"  (desde {con_dato[0]['fecha_snapshot']})" if con_dato[0] is not filas[0] else ""
+        print(f"  {etiqueta:<22} {a:>6.0f} -> {b:>6.0f}   {delta}{desde}")
 
 
 def cmd_objetivos(args):
@@ -223,7 +238,7 @@ def cmd_objetivos(args):
         print(f"{kw:<34}{pos:>7.1f}{f['impressions']:>7}{f['clicks']:>7}   {estado}")
 
     print("\nMeta ago-sep 2026: mover estas consultas al rango 15-25 y")
-    print("conseguir los primeros clics no-marca (hoy 0).")
+    print("subir los clics a paginas interiores (metrica norte).")
 
 
 def main():

@@ -1,11 +1,19 @@
 # Plan de palancas — Prunavita.cl
 
 **Creado:** 3 de agosto de 2026 · **Vigencia:** agosto–noviembre 2026
-**Métrica norte:** clics desde búsquedas **no-marca**. Línea base: **0**.
+**Métrica norte:** **clics a páginas interiores** (los que no caen en la home).
+Línea base: **11** de 20 el 3 de agosto de 2026.
 
-> Todo el tráfico actual (20 clics/28 días) viene de gente que busca "prunavita" por su
-> nombre. El proyecto no habrá funcionado hasta que lleguen clics de gente que **no** conocía
-> a la empresa. Esa es la única métrica que decide si las palancas sirven.
+> El objetivo del proyecto es traer gente que **no** conocía a la empresa. Quien busca
+> "prunavita" por su nombre aterriza en la home; quien entra a una página de servicio o a
+> una noticia venía buscando otra cosa. Por eso el reparto de clics entre home e interiores
+> es el termómetro: cuando suben los interiores, están llegando búsquedas de necesidad.
+
+> **Por qué no se mide por consulta.** Hasta el 10 de agosto la métrica norte era "clics
+> desde consultas no-marca", y daba 0 semana tras semana. No era el sitio: Google oculta las
+> consultas de bajo volumen y en este sitio esas son hoy el **100%** de los clics, así que
+> la métrica daba 0 por construcción, sin importar cómo fuera el sitio realmente. La columna
+> `clics_no_marca` se conserva en el histórico por si el volumen crece y vuelve a distinguir.
 
 ## Línea base — 3 de agosto de 2026
 
@@ -14,11 +22,15 @@
 | Clics totales (28 d) | 20 |
 | Impresiones (28 d) | 113 |
 | Posición media | 11,9 |
-| Consultas reveladas (90 d) | 7 |
+| Consultas reveladas (28 d) | 7 |
 | Páginas con impresiones | 12 |
-| **Clics no-marca** | **0** |
+| **Clics a páginas interiores** | **11** |
 
 Registrado en `seguimiento/historico.csv`. Se actualiza con `scripts/seguimiento_seo.py foto`.
+
+> Los valores de la métrica norte anteriores al 10 de agosto se reconstruyeron con datos ya
+> consolidados; las fotos del día se toman con los últimos 2–3 días aún incompletos, así que
+> pueden quedar 1–2 clics por debajo. Sirve para la tendencia, no para el decimal.
 
 ---
 
@@ -32,7 +44,7 @@ Ordenadas por impacto sobre la métrica norte, no por facilidad.
 |---|---|---|---|
 | A1 | **Profundizar páginas de servicio** | ✅ Completo (ago 2026) | Las cinco ampliadas: Asesorías 588→1.771, Ciruelas 725→1.457, Maquinaria 562→1.363, Exportación 470→1.213, Representación 418→1.016 |
 | A2 | **2 noticias/mes dirigidas** | En curso | Ya no noticias sueltas del sector: cada una ataca un término comercial detectado y enlaza a su página de servicio |
-| A3 | **Clusters de enlace interno** | Pendiente | Cada noticia enlaza a la página de servicio de su tema. Hoy los enlaces son genéricos |
+| A3 | **Clusters de enlace interno** | 🔸 Media vuelta | Noticia → servicio: hecho, las 7 noticias enlazan desde el cuerpo a la página de su tema (además de los 5 del pie). Falta el sentido inverso: Asesorías y Exportación no enlazan a ninguna noticia, Maquinaria y Representación solo a una |
 | A4 | **FAQ con datos estructurados** | Pendiente | `FAQPage` en cada página de servicio. Captura búsquedas en forma de pregunta y puede ganar espacio ampliado en resultados |
 | A5 | **Página pilar de exportación** | Mes 4 | Guía extensa que concentre autoridad temática y reciba enlaces desde las noticias |
 
@@ -91,12 +103,12 @@ Ordenadas por impacto sobre la métrica norte, no por facilidad.
 ## Secuencia
 
 **Agosto — atacar lo que ya muestra intención comercial**
-1. Ampliar Asesorías en inocuidad (A1)
-2. Ampliar Ciruelas deshidratadas (A1)
-3. Limpieza técnica B1 + B2 (una tarde de trabajo)
-4. Iniciar altas de autoridad C1–C5
-5. 2 noticias dirigidas a BRC y maquinaria usada (A2 + A3)
-6. Desbloquear GA4 (D3)
+1. ✅ Ampliar Asesorías en inocuidad (A1)
+2. ✅ Ampliar Ciruelas deshidratadas (A1) — y de paso Maquinaria, Exportación y Representación
+3. ✅ Limpieza técnica B1 + B2 (una tarde de trabajo)
+4. ⬜ Iniciar altas de autoridad C1–C5 — **bloqueado: requiere datos y cuentas del cliente**
+5. ✅ 2 noticias de agosto, ambas enlazando a su página de servicio (A2 + A3) — la segunda programada para el 18
+6. ⬜ Desbloquear GA4 (D3) — **bloqueado: requiere habilitar las APIs en Google Cloud**
 
 **Septiembre — profundizar y medir el efecto**
 - Ampliar Maquinaria y Exportación (A1)
@@ -124,12 +136,18 @@ Ordenadas por impacto sobre la métrica norte, no por facilidad.
 
 ## Cómo se sabrá si funcionó
 
-| Hito | Plazo | Estado |
+| Hito | Plazo | Estado (11 ago 2026) |
 |---|---|---|
-| Primer clic **no-marca** | Sep 2026 | ⬜ 0 hoy |
-| 40–60 consultas reveladas | Sep 2026 | ⬜ 7 hoy |
+| Doblar los **clics a páginas interiores**: 11 → 22 en 28 días | Nov 2026 | ⬜ 12 hoy |
+| 40–60 consultas reveladas | Sep 2026 | ⬜ 9 hoy (eran 7) |
 | Keywords objetivo en rango 15–25 | Oct 2026 | ⬜ 29–80 hoy |
 | Primera keyword comercial en página 1 | Nov 2026 | ⬜ ninguna |
+
+> **Primera lectura de agosto (11 ago).** Las impresiones subieron de 113 a **148 (+31%)**,
+> la posición media de 11,9 a **9,9** y las consultas reveladas de 7 a **9** — es el efecto
+> esperado de las cinco páginas de servicio ampliadas la primera semana. Los clics todavía
+> no se mueven (20 → 21), que es lo normal: primero aparecen las impresiones, los clics
+> vienen cuando las posiciones entran a la primera página.
 
 **Lo que no se promete:** una posición concreta en una fecha concreta. Llevar una consulta de
 la posición 60 a la primera página toma de 3 a 6 meses con contenido y autoridad. Cualquier
