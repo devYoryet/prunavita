@@ -44,7 +44,7 @@ Ordenadas por impacto sobre la métrica norte, no por facilidad.
 |---|---|---|---|
 | A1 | **Profundizar páginas de servicio** | ✅ Completo (ago 2026) | Las cinco ampliadas: Asesorías 588→1.771, Ciruelas 725→1.457, Maquinaria 562→1.363, Exportación 470→1.213, Representación 418→1.016 |
 | A2 | **2 noticias/mes dirigidas** | En curso | Ya no noticias sueltas del sector: cada una ataca un término comercial detectado y enlaza a su página de servicio |
-| A3 | **Clusters de enlace interno** | 🔸 Media vuelta | Noticia → servicio: hecho, las 7 noticias enlazan desde el cuerpo a la página de su tema (además de los 5 del pie). Falta el sentido inverso: Asesorías y Exportación no enlazan a ninguna noticia, Maquinaria y Representación solo a una |
+| A3 | **Clusters de enlace interno** | ✅ Completo (12 ago 2026) | Cluster cerrado en los dos sentidos. Noticia → servicio: las 7 noticias enlazan desde el cuerpo a la página de su tema. Servicio → noticia: Asesorías 0→2, Exportación 0→2, Representación 1→3, Ciruelas 2→3, Maquinaria 1. Cada enlace va dentro del bloque `data-i18n`, con su par en inglés en `servicios-ampliado.i18n.js` |
 | A4 | **FAQ con datos estructurados** | Pendiente | `FAQPage` en cada página de servicio. Captura búsquedas en forma de pregunta y puede ganar espacio ampliado en resultados |
 | A5 | **Página pilar de exportación** | Mes 4 | Guía extensa que concentre autoridad temática y reciba enlaces desde las noticias |
 
