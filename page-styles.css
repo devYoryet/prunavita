@@ -307,6 +307,67 @@
     background: var(--gray-100);
 }
 
+/* Par de botones del CTA: WhatsApp directo + formulario */
+.cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-actions .btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: #25D366;
+    color: #0B2E13;
+    font-weight: 600;
+    padding: 0.9rem 1.75rem;
+    border-radius: 999px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cta-actions .btn-whatsapp:hover {
+    background: #1EBE5A;
+    transform: translateY(-2px);
+}
+
+.cta-actions .btn-whatsapp svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+/* El segundo botón se lee como alternativa, no compite con WhatsApp */
+.cta-actions .btn-outline-light {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.9rem 1.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 999px;
+    color: var(--white);
+    font-weight: 500;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.cta-actions .btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: var(--white);
+}
+
+.cta-note {
+    margin: var(--spacing-md) auto 0;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Fecha de actualización bajo el título del artículo */
+.article-updated {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
 /* Grilla de servicios en la landing */
 .services-links {
     padding: var(--spacing-4xl) 0;

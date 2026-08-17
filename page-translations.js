@@ -23,6 +23,9 @@
         "sub.faq.title": "Preguntas frecuentes",
         "sub.related.title": "Servicios relacionados",
         "sub.cta.contact": "Contactar a Prunavita",
+        "sub.cta.whatsapp": "Escribir por WhatsApp",
+        "sub.cta.email": "Escribir un correo",
+        "sub.cta.note": "Respondemos en horario hábil, de lunes a viernes.",
 
         "sub.rel.ciruelas.title": "Ciruelas Deshidratadas",
         "sub.rel.ciruelas.desc": "Producto premium chileno con calibre seleccionado y humedad controlada.",
@@ -261,6 +264,9 @@
         "sub.faq.title": "Frequently asked questions",
         "sub.related.title": "Related services",
         "sub.cta.contact": "Contact Prunavita",
+        "sub.cta.whatsapp": "Message us on WhatsApp",
+        "sub.cta.email": "Send us an email",
+        "sub.cta.note": "We reply during business hours, Monday to Friday.",
 
         "sub.rel.ciruelas.title": "Dried Plums (Prunes)",
         "sub.rel.ciruelas.desc": "Premium Chilean product with selected caliber and controlled moisture.",

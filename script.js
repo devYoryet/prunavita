@@ -582,11 +582,31 @@ document.addEventListener('DOMContentLoaded', () => {
     new StatsCounter();
     new ScrollProgress();
     new ServicesCarousel(); // Initialize carousel
+    trackContactClicks();
 
     // Log initialization
     console.log('%c🍇 Prunavita Website Loaded', 'color: #4A2545; font-size: 16px; font-weight: bold;');
     console.log('%cExportación de fruta deshidratada premium | Premium dried fruit exports', 'color: #5A7247; font-size: 12px;');
 });
+
+// ==========================================
+// SEGUIMIENTO DE CONTACTOS
+// ==========================================
+
+// Un clic a WhatsApp abre otra aplicacion y saca al visitante del sitio, asi que
+// sin un evento propio no quedaria registro de que pagina genero la consulta.
+// Marca cada punto de contacto con data-cta y lo reporta a GA4.
+function trackContactClicks() {
+    document.addEventListener('click', (event) => {
+        const punto = event.target.closest('[data-cta]');
+        if (!punto || typeof gtag !== 'function') return;
+
+        gtag('event', 'contacto_iniciado', {
+            canal: punto.dataset.cta,
+            pagina: window.location.pathname
+        });
+    });
+}
 
 // ==========================================
 // EXPORT FOR POTENTIAL MODULE USE

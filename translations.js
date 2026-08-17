@@ -132,6 +132,7 @@ const translations = {
         "contact.subtitle": "Estamos listos para ayudarle a expandir su negocio en mercados internacionales. Contáctenos para una cotización personalizada.",
         "contact.email.label": "Email",
         "contact.phone.label": "Teléfono / WhatsApp",
+        "contact.phone.wa": "Escribir por WhatsApp →",
         "contact.location.label": "Ubicación",
         "contact.location.value": "Chile",
 
@@ -310,6 +311,7 @@ const translations = {
         "contact.subtitle": "We are ready to help you expand your business in international markets. Contact us for a personalized quote.",
         "contact.email.label": "Email",
         "contact.phone.label": "Phone / WhatsApp",
+        "contact.phone.wa": "Message us on WhatsApp →",
         "contact.location.label": "Location",
         "contact.location.value": "Chile",
 

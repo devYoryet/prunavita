@@ -894,6 +894,14 @@ section {
     text-decoration: underline;
 }
 
+/* Segundo enlace del bloque de telefono: va a WhatsApp, no a marcar */
+.contact-wa-link {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+    color: #128C4A !important;
+}
+
 .contact-form-container {
     background: var(--gray-50);
     padding: var(--spacing-2xl);

@@ -43,6 +43,18 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://prunavita.cl/noticias/2026-08-maquinaria-agroindustrial-usada-que-revisar.html</loc>
+        <lastmod>2026-08-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://prunavita.cl/noticias/2026-08-reglamento-sanitario-alimentos-chile-exportadores.html</loc>
+        <lastmod>2026-08-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://prunavita.cl/noticias/2026-07-ciruela-deshidratada-chile-certificacion-sustentable-apl.html</loc>
         <lastmod>2026-07-22</lastmod>
         <changefreq>monthly</changefreq>
@@ -91,10 +103,4 @@
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
-  <url>
-    <loc>https://prunavita.cl/noticias/2026-08-reglamento-sanitario-alimentos-chile-exportadores.html</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
 </urlset>
