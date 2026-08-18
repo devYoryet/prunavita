@@ -42,6 +42,46 @@ Disponibles para la próxima nota, pero **cada una se puede usar una sola vez**:
 
 ---
 
+## Imágenes de producto — catálogo de fichas técnicas
+
+Distintas de las portadas de noticias: alimentan las tarjetas de
+`fichas-tecnicas.html` (asignadas en `fichas-tecnicas.js`). Aquí **sí** puede
+repetirse una imagen entre fichas del mismo producto; la auditoría de portadas
+no las revisa.
+
+> **Regla:** la imagen debe corresponder al producto. Hasta el 18 de agosto de 2026
+> eran fotos de stock genéricas y equivocadas —zanahorias en "Cereza IQF", un perchero
+> de ropa en "Cerezas frescas"—. La fuente preferente es la propia ficha técnica del
+> cliente, que suele traer foto del producto.
+
+| Archivo | Qué muestra | Fichas que la usan | Fuente |
+|---|---|---|---|
+| `cerezas-frescas.jpg` | Cerezas frescas con pedúnculo | Cerezas frescas CAMIGO | Extraída de `cerezas-frescas-camigo.pdf` |
+| `cerezas-congeladas.jpg` | Cerezas congeladas escarchadas | Cerezas congeladas CAMIGO | Extraída de `cerezas-congeladas-camigo.pdf` |
+| `cerezas-descarozadas-iqf.jpg` | Cereza descarozada a granel en caja | Cereza IQF PrunaVita · Cereza descarozada IQF | Extraída de `cereza-descarozada-iqf.pdf` |
+| `cerezas-deshidratadas.jpg` | Cereza deshidratada | Cerezas deshidratadas CAMIGO · Cerezas descarozadas (dried pitted) | Extraída de `cerezas-deshidratadas-camigo.pdf` |
+| `cerezas-amarillas-sulfitado.jpg` | Cerezas Rainier amarillas con rubor rojo | Cerezas sulfitadas SO₂ | Pexels #3123909 (Ylanite Koppens) |
+| `ciruelas-deshidratadas.jpg` | Primer plano de ciruela deshidratada | Las 4 fichas de ciruela | Recorte de `prunes-close.jpg` del banco |
+| `frutillas-iqf.jpg` | Frutilla IQF en bin | Las 2 fichas de frutilla | Extraída de `frutilla-iqf-grado-ab.pdf` |
+| `ficha-pulpa-cerezas.jpg` | Encabezado de la ficha | Pulpa de cerezas CAMIGO | Render de `pulpa-cerezas-camigo.pdf` |
+| `ficha-pulpa-ciruelas.jpg` | Encabezado de la ficha | Pulpa de ciruelas CAMIGO | Render de `pulpa-ciruelas-camigo.pdf` |
+
+### Pendiente de pedir al cliente
+
+Faltan tres fotos reales de producto. Mientras no lleguen:
+
+- **Cereza sulfitada** → foto de cereza Rainier de banco. Muestra el **tipo de fruta correcto**
+  (amarilla o blanca, como declara la ficha), pero es fruta fresca entera, no el producto
+  descarozado en salmuera. **Nunca usar una cereza roja aquí:** sería un error de producto.
+- **Pulpa de cerezas** y **pulpa de ciruelas** → encabezado de su propia ficha. Un puré en
+  tambor no existe en bancos de imágenes y cualquier fruta entera engañaría.
+
+> `prunes-close.jpg` sigue figurando como libre para noticias, pero un recorte suyo ya se
+> usa como imagen de producto de ciruela. Si se ocupa en una nota, quedará la misma foto
+> en dos lugares del sitio.
+
+---
+
 ## Cómo conseguir una portada nueva
 
 **1 — Stock real (opción por defecto).** Fotos reales, licencia comercial libre, sin costo.

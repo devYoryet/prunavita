@@ -49,7 +49,7 @@
             id: 'cerezas-sulfitadas-so2',
             file: 'cerezas-sulfitadas-so2.pdf',
             category: 'cerezas',
-            image: 'assets/images/productos/ficha-cerezas-sulfitadas.jpg',
+            image: 'assets/images/productos/cerezas-amarillas-sulfitado.jpg',
             icon: '🍒',
             title: { es: 'Cerezas Sulfitadas (SO₂)', en: 'Sulphited Cherries (SO₂)' },
             summary: {
