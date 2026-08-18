@@ -14,7 +14,12 @@ scripts/
 COTIZACION_PRUNAVITA_2026.html
 INFORME_ENTREGA_SEO_PRUNAVITA_ETAPA1.html
 INFORME_MENSUAL_SEO_PRUNAVITA_JULIO2026.html
-*.pdf
+#
+# Solo los PDF de la raiz, que son los informes internos. La barra inicial es
+# imprescindible: sin ella el patron tambien excluia assets/fichas-tecnicas/,
+# y las 15 fichas tecnicas de producto respondian 404 en el sitio publicado
+# aunque estuvieran en el repositorio.
+/*.pdf
 
 # Documentacion interna del proyecto
 README.md
