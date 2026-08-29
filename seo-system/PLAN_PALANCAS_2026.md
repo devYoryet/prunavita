@@ -74,7 +74,7 @@ Ordenadas por impacto sobre la métrica norte, no por facilidad.
 | G1 | **Coincidencia título ↔ consulta** | ✅ Hecho (17 ago) | El título decía "Reglamento Sanitario 2026" y la consulta que la encuentra es "reglamento sanitario de los alimentos 2026" (113 impr), más 6 variantes de "rsa 2026". Título, meta, H1 y schema pasan a nombrar la norma completa **y** la sigla RSA, que juntas cubren las 7 consultas |
 | G2 | **WhatsApp como vía de contacto** | ✅ Hecho (17 ago) | El sitio anunciaba "Teléfono / WhatsApp" y **no tenía un solo enlace `wa.me`**: la única salida era el formulario de la home, a dos clics de la noticia. Las 7 noticias, las 6 páginas de servicio y la home quedan con WhatsApp y **mensaje precargado propio de cada página**, así Prunavita sabe de qué contenido viene la consulta sin preguntarlo |
 | G3 | **CTA en el tema de cada página** | ✅ Hecho (17 ago) | Dos noticias arrastraban el CTA genérico de plantilla. Ahora la del RSA ofrece adecuación normativa y la de maquinaria, evaluación de equipo usado |
-| G4 | **Medir el contacto** | ✅ Instrumentado (17 ago) | Un clic a WhatsApp abre otra aplicación y saca al visitante del sitio: sin evento propio no quedaba registro. `trackContactClicks()` reporta a GA4 el evento `contacto_iniciado` con canal y página. **Los datos quedan guardándose desde hoy; leerlos requiere D3** |
+| G4 | **Medir el contacto** | ✅ Instrumentado (17 ago) | Un clic a WhatsApp abre otra aplicación y saca al visitante del sitio: sin evento propio no quedaba registro. `trackContactClicks()` reporta a GA4 el evento `contacto_iniciado` con canal y página. **Ya se leen (D3 resuelto el 29 ago): 2 contactos entre el 18 y el 19 de agosto** — uno desde `/noticias/…maquinaria-usada` (canal AI Assistant) y otro desde `/servicios/maquinaria-agroindustrial.html` (Organic Search) |
 | G5 | **Formulario de la home** | ⬜ Evaluar sep | Pide varios campos antes de dejar escribir. Medir con G4 cuánto convierte frente a WhatsApp antes de tocarlo |
 
 ### C · Autoridad — lento, y sin esto hay techo
@@ -98,7 +98,7 @@ Ordenadas por impacto sobre la métrica norte, no por facilidad.
 |---|---|---|---|
 | D1 | **Seguimiento diario** | ✅ Operativo | `scripts/seguimiento_seo.py` acumula el histórico |
 | D2 | **Separar marca / no-marca** | ✅ Operativo | Integrado en el script y en los reportes |
-| D3 | **Desbloquear GA4** | Pendiente | Habilitar Analytics Admin/Data API + rol Lector para la cuenta de servicio |
+| D3 | **Desbloquear GA4** | ✅ Resuelto (29 ago 2026) | El permiso en GA4 ya estaba dado por el cliente y la **Data API** ya estaba habilitada; lo único que faltaba era la **Analytics Admin API**, `DISABLED` en el proyecto `android-1428a` (601992161161). Se habilitó por Service Usage API con la propia cuenta de servicio. Propiedad: `prunavita` = **`properties/541942768`**, flujo `G-0G9GQYN4RE`. `scripts/google_connect.py` ya lee GA4. **Vínculo GA4 ↔ Search Console verificado el 29 ago**: la Admin API no lo expone (solo Google Ads y Search Ads 360), pero se comprueba pidiendo las métricas `organicGoogleSearch*` por `landingPagePlusQueryString` — responden y cuadran con GSC. Eso permite cruzar clic de búsqueda con interacción en la misma página |
 | D4 | **Bing Webmaster Tools** | Pendiente | Tráfico menor, pero es gratis y alimenta a ChatGPT/Copilot |
 
 ### F · Traducciones
@@ -126,7 +126,7 @@ Ordenadas por impacto sobre la métrica norte, no por facilidad.
 3. ✅ Limpieza técnica B1 + B2 (una tarde de trabajo)
 4. ⬜ Iniciar altas de autoridad C1–C5 — **bloqueado: requiere datos y cuentas del cliente**
 5. ✅ 2 noticias de agosto, ambas enlazando a su página de servicio (A2 + A3) — la segunda publicada el 17
-6. ⬜ Desbloquear GA4 (D3) — **bloqueado: requiere habilitar las APIs en Google Cloud**
+6. ✅ Desbloquear GA4 (D3) — resuelto el 29 ago: faltaba habilitar la Analytics Admin API en Google Cloud
 7. ✅ Abrir la vía de contacto y hacerla medible (G1–G4)
 8. ✅ Página de cerezas (A6), la línea de producto que no tenía ninguna
 

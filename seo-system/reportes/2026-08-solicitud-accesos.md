@@ -31,7 +31,14 @@ que importa: *¿cuántos clientes trajo el SEO?*
 
 ---
 
-## 1. Lo urgente — Google Analytics (15 minutos)
+## 1. ~~Lo urgente — Google Analytics~~ ✅ RESUELTO el 29 de agosto de 2026
+
+> Ya no hace falta pedir nada aquí. El acceso de lectura en GA4 estaba correctamente dado y la
+> Data API habilitada; lo único que faltaba era activar la **Analytics Admin API** en el proyecto
+> de Google Cloud, y se activó desde el mismo proyecto. Ya leemos la propiedad `prunavita`
+> (`properties/541942768`) y los eventos `contacto_iniciado`.
+
+<details><summary>Lo que se pedía originalmente</summary>
 
 Sin esto medimos visitas, pero no contactos.
 
@@ -42,6 +49,8 @@ Sin esto medimos visitas, pero no contactos.
 
 > Search Console ya está operativo y lo consultamos sin problema. Esto es solo el equivalente
 > para Analytics.
+
+</details>
 
 ---
 
