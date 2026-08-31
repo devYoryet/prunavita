@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Informe Mensual SEO — Agosto 2026 | Prunavita</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+    --primary: #1a365d;
+    --accent: #c9a227;
+    --text: #2d3748;
+    --text-light: #4a5568;
+    --bg-light: #f7fafc;
+    --border: #e2e8f0;
+    --success: #276749;
+    --white: #ffffff;
+}
+/* Sin margen de @page: cada .page mide 210x297mm y aporta su propio padding,
+   de modo que un bloque .page equivale exactamente a una hoja A4. */
+@page { size: A4; margin: 0; }
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    line-height: 1.55;
+    font-size: 10pt;
+    background: #edf2f7;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+.page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto 20px;
+    padding: 12mm 16mm;
+    background: var(--white);
+    page-break-after: always;
+}
+/* Evita la hoja en blanco final: el ultimo bloque no fuerza salto. */
+.page:last-of-type { page-break-after: avoid; break-after: avoid; }
+@media print {
+    body { background: white; }
+    .page { margin: 0; box-shadow: none; }
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+}
+.logo-section h1 { font-family: 'Playfair Display', serif; font-size: 22pt; color: var(--primary); }
+.logo-section p { color: var(--accent); font-size: 8pt; letter-spacing: 2px; text-transform: uppercase; }
+.doc-info { text-align: right; font-size: 9pt; color: var(--text-light); }
+.doc-info .doc-type { font-size: 13pt; font-weight: 700; color: var(--primary); }
+.page-header {
+    display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-bottom: 16px;
+    font-size: 8pt; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px;
+}
+.page-header strong { color: var(--primary); }
+.client-box {
+    background: var(--bg-light); border-left: 4px solid var(--accent);
+    padding: 12px 16px; margin-bottom: 14px; border-radius: 0 6px 6px 0;
+}
+.client-box h3 { font-size: 8pt; text-transform: uppercase; color: var(--primary); margin-bottom: 6px; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+.section-title {
+    font-family: 'Playfair Display', serif; font-size: 13pt; color: var(--primary);
+    margin: 16px 0 10px; padding-bottom: 4px; border-bottom: 1px solid var(--border);
+}
+.section-subtitle { font-size: 10pt; font-weight: 600; color: var(--primary); margin: 12px 0 8px; }
+p { margin-bottom: 8px; }
+table { width: 100%; border-collapse: collapse; margin: 10px 0 14px; font-size: 9pt; }
+th, td { border: 1px solid var(--border); padding: 7px 9px; text-align: left; vertical-align: top; }
+th { background: var(--primary); color: white; font-weight: 600; }
+tr:nth-child(even) td { background: #fafafa; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ok { color: var(--success); font-weight: 700; }
+.badge {
+    display: inline-block; background: #c6f6d5; color: var(--success);
+    font-size: 7.5pt; font-weight: 700; padding: 2px 8px;
+    border-radius: 999px; text-transform: uppercase;
+}
+.badge-pending { background: #feebc8; color: #c05621; }
+.badge-info { background: #bee3f8; color: #2c5282; }
+.highlight-box {
+    background: linear-gradient(135deg, var(--primary) 0%, #2c5282 100%);
+    color: white; padding: 14px 18px; border-radius: 8px; margin: 14px 0;
+}
+.highlight-box h3 { font-size: 11pt; margin-bottom: 8px; }
+.highlight-box p { margin-bottom: 6px; }
+.highlight-box p:last-child { margin-bottom: 0; }
+.highlight-box.green { background: linear-gradient(135deg, #276749 0%, #2f855a 100%); }
+.highlight-box.amber { background: linear-gradient(135deg, #744210 0%, #975a16 100%); }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 14px 0; }
+.stat-card {
+    background: var(--bg-light); border: 1px solid var(--border);
+    border-radius: 6px; padding: 12px; text-align: center;
+}
+.stat-card .num { font-size: 18pt; font-weight: 700; color: var(--primary); }
+.stat-card .num.up { color: var(--success); }
+.stat-card .num.zero { color: #c05621; }
+.stat-card .label { font-size: 7.5pt; color: var(--text-light); text-transform: uppercase; }
+.stat-card .sub { font-size: 7.5pt; color: var(--text-light); margin-top: 3px; }
+ul, ol { margin: 6px 0 10px 18px; }
+li { margin-bottom: 4px; }
+.footer-note {
+    margin-top: 20px; padding-top: 12px; border-top: 1px solid var(--border);
+    font-size: 8pt; color: var(--text-light);
+}
+.payment-box { border: 2px solid var(--accent); border-radius: 8px; padding: 14px 18px; margin-top: 14px; }
+.payment-box strong { color: var(--primary); }
+.pay-row { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; padding: 6px 0; }
+.pay-row + .pay-row { border-top: 1px solid var(--border); }
+.pay-total { font-family: 'Playfair Display', serif; font-size: 17pt; font-weight: 700; color: var(--primary); }
+.url { font-size: 8.5pt; color: #2b6cb0; }
+.note-box {
+    background: #fffaf0; border: 1px solid #fbd38d; border-radius: 6px;
+    padding: 12px 14px; margin: 12px 0; font-size: 9pt;
+}
+.tabla-compacta td, .tabla-compacta th { padding: 5px 8px; }
+.tabla-compacta { font-size: 8.6pt; }
+.note-box h4 { font-size: 9pt; color: #975a16; margin-bottom: 5px; text-transform: uppercase; letter-spacing: .5px; }
+.glosario { background: var(--bg-light); border: 1px solid var(--border); border-radius: 6px; padding: 12px 16px; margin: 12px 0; }
+.glosario dt { font-weight: 700; color: var(--primary); font-size: 9pt; margin-top: 7px; }
+.glosario dt:first-child { margin-top: 0; }
+.glosario dd { font-size: 9pt; color: var(--text-light); margin-left: 0; }
+
+/* Graficos de barras */
+.chart { border: 1px solid var(--border); border-radius: 6px; padding: 12px 14px; margin: 12px 0; }
+.chart-title { font-size: 9.5pt; font-weight: 600; color: var(--primary); }
+.chart-sub { font-size: 8pt; color: var(--text-light); margin-bottom: 10px; }
+.bar-row { display: grid; grid-template-columns: 130px 1fr 34px; align-items: center; gap: 8px; margin-bottom: 6px; }
+.bar-lab { font-size: 8.5pt; color: var(--text-light); }
+.bar-track { position: relative; height: 14px; background: #e8edf3; border-radius: 3px; overflow: hidden; }
+.bar-fill { height: 100%; background: var(--primary); border-radius: 0 3px 3px 0; }
+.bar-fill.gold { background: var(--accent); }
+.bar-val { font-size: 8.5pt; font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }
+.chart-ref { position: relative; }
+.ref-line { position: absolute; top: 0; bottom: 13px; width: 0; border-left: 1.5px dashed #c05621; }
+.ref-lab { position: absolute; bottom: 0; font-size: 7.5pt; color: #c05621; font-weight: 700; white-space: nowrap; }
+.ref-lab.der { transform: translateX(-100%); }
+.ref-pad { height: 12px; }
+.cmp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.cmp-row { display: grid; grid-template-columns: 56px 1fr 30px; align-items: center; gap: 7px; margin-bottom: 6px; }
+.cmp-head { font-size: 8.5pt; font-weight: 600; color: var(--primary); margin-bottom: 7px; }
+.cmp-lab { font-size: 8pt; color: var(--text-light); }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════ PÁGINA 1 ══════════════════ -->
+<div class="page">
+    <div class="header">
+        <div class="logo-section">
+            <h1>Pulsando Tech</h1>
+            <p>Desarrollo web &amp; marketing digital</p>
+        </div>
+        <div class="doc-info">
+            <div class="doc-type">INFORME MENSUAL</div>
+            <div>SEO Mes 3 — Agosto 2026</div>
+            <div>Fecha: 31 de agosto de 2026</div>
+            <div>Documento: INF-PRU-SEO-2026-03</div>
+        </div>
+    </div>
+
+    <div class="two-col">
+        <div class="client-box">
+            <h3>Cliente</h3>
+            <strong>COMERCIALIZADORA CAMIGO SPA</strong> (Prunavita)<br>
+            RUT: 78.238.063-K · www.prunavita.cl<br>
+            Contacto: Felipe Catalán · fcatalan@prunavita.cl
+        </div>
+        <div class="client-box">
+            <h3>Prestador del servicio</h3>
+            <strong>Yoryet Danoun N.</strong> · RUT: 16.647.601-1<br>
+            contacto@pulsandotech.cl · +56 9 5798 2154<br>
+            pulsandotech.cl
+        </div>
+    </div>
+
+    <p>
+        Estimados señores de Prunavita: presento el informe del <strong>mes 3 (agosto 2026)</strong>.
+        Es el primero que se apoya en <strong>dos fuentes de datos y no en una</strong>: a Google Search
+        Console —que muestra cómo llega la gente— se suma desde este mes <strong>Google Analytics</strong>,
+        que muestra qué hace una vez dentro del sitio. Es la diferencia entre contar visitas y entender
+        visitas.
+    </p>
+
+    <div class="section-title">1. Resumen ejecutivo</div>
+    <p>
+        Agosto fue un <strong>mes bueno en tracción</strong>. El sitio apareció en Google
+        <strong>quince veces más</strong> que en julio y duplicó las visitas. La posición media mejoró de
+        12,3 a 8,2: por primera vez el promedio del sitio está dentro de la primera página.
+    </p>
+    <p>
+        Y se cumplió, <strong>tres meses antes de plazo</strong>, el hito que el plan fijaba para
+        noviembre: duplicar las visitas que caen en páginas <em>interiores</em> —servicios, noticias,
+        fichas— y no en la portada. Pasaron de 10 a <strong>32</strong>.
+    </p>
+    <p>
+        Al mismo tiempo hay dos cosas que este informe no va a maquillar. La primera: casi todo el
+        crecimiento viene de <strong>una sola noticia</strong>, y es tráfico informativo, no comprador.
+        La segunda: las cinco búsquedas comerciales del plan <strong>siguen sin moverse</strong>, y no se
+        moverán solo con contenido — dependen de gestiones que pedimos el 17 de agosto y siguen
+        pendientes.
+    </p>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="num up">×15</div>
+            <div class="label">Apariciones en Google</div>
+            <div class="sub">de 105 a 1.531</div>
+        </div>
+        <div class="stat-card">
+            <div class="num up">+105%</div>
+            <div class="label">Visitas desde Google</div>
+            <div class="sub">de 21 a 43</div>
+        </div>
+        <div class="stat-card">
+            <div class="num up">32</div>
+            <div class="label">Visitas a páginas interiores</div>
+            <div class="sub">meta de noviembre: 22</div>
+        </div>
+        <div class="stat-card">
+            <div class="num">2</div>
+            <div class="label">Contactos iniciados</div>
+            <div class="sub">los primeros medidos</div>
+        </div>
+    </div>
+
+    <div class="note-box">
+        <h4>Sobre el período medido</h4>
+        <p style="margin-bottom:0">
+            Todas las cifras comparan <strong>1 al 28 de agosto</strong> contra
+            <strong>1 al 28 de julio</strong>: la misma cantidad de días, para que la comparación sea
+            honesta. Google consolida sus datos con dos o tres días de retraso, por eso el corte es el 28
+            y no el 31.
+        </p>
+    </div>
+
+    <div class="footer-note">
+        Pulsando Tech · Informe mensual SEO — Prunavita · Agosto 2026
+    </div>
+</div>
+
+<!-- ══════════════════ PÁGINA 2 ══════════════════ -->
+<div class="page">
+    <div class="page-header">
+        <span><strong>Los números del mes</strong></span>
+        <span>Prunavita · Informe mensual agosto 2026</span>
+    </div>
+
+    <div class="section-title">2. Agosto contra julio, número por número</div>
+
+    <table>
+        <thead><tr><th>Indicador</th><th class="num">Julio</th><th class="num">Agosto</th><th class="num">Variación</th></tr></thead>
+        <tbody>
+            <tr><td>Apariciones en Google (impresiones)</td><td class="num">105</td><td class="num"><strong>1.531</strong></td><td class="num ok">+1.358%</td></tr>
+            <tr><td>Visitas desde Google (clics)</td><td class="num">21</td><td class="num"><strong>43</strong></td><td class="num ok">+105%</td></tr>
+            <tr><td>Visitas a páginas interiores</td><td class="num">10</td><td class="num"><strong>32</strong></td><td class="num ok">+220%</td></tr>
+            <tr><td>Posición media</td><td class="num">12,3</td><td class="num"><strong>8,2</strong></td><td class="num ok">mejora 4,1</td></tr>
+            <tr><td>Porcentaje de clics (CTR)</td><td class="num">20,00%</td><td class="num">2,81%</td><td class="num">ver sección 8</td></tr>
+            <tr><td>Páginas que aparecen en Google</td><td class="num">12</td><td class="num"><strong>16</strong></td><td class="num ok">+4</td></tr>
+            <tr><td>Búsquedas distintas que muestran el sitio</td><td class="num">6</td><td class="num"><strong>30</strong></td><td class="num ok">×5</td></tr>
+        </tbody>
+    </table>
+
+    <div class="chart">
+        <div class="chart-title">Crecimiento del mes — 1 al 28 de agosto contra 1 al 28 de julio</div>
+        <div class="chart-sub">Fuente: Google Search Console, propiedad prunavita.cl. Ustedes tienen acceso y pueden verificarlo.</div>
+        <div class="cmp-grid">
+            <div>
+                <div class="cmp-head">Apariciones en Google</div>
+                <div class="cmp-row"><div class="cmp-lab">Julio</div><div class="bar-track"><div class="bar-fill" style="width:6.9%"></div></div><div class="bar-val">105</div></div>
+                <div class="cmp-row"><div class="cmp-lab">Agosto</div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><div class="bar-val">1531</div></div>
+            </div>
+            <div>
+                <div class="cmp-head">Visitas al sitio</div>
+                <div class="cmp-row"><div class="cmp-lab">Julio</div><div class="bar-track"><div class="bar-fill gold" style="width:48.8%"></div></div><div class="bar-val">21</div></div>
+                <div class="cmp-row"><div class="cmp-lab">Agosto</div><div class="bar-track"><div class="bar-fill gold" style="width:100%"></div></div><div class="bar-val">43</div></div>
+            </div>
+        </div>
+        <div class="cmp-grid" style="margin-top:12px">
+            <div>
+                <div class="cmp-head">Visitas a páginas interiores</div>
+                <div class="cmp-row"><div class="cmp-lab">Julio</div><div class="bar-track"><div class="bar-fill" style="width:31.3%"></div></div><div class="bar-val">10</div></div>
+                <div class="cmp-row"><div class="cmp-lab">Agosto</div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><div class="bar-val">32</div></div>
+            </div>
+            <div>
+                <div class="cmp-head">Personas distintas en el sitio</div>
+                <div class="cmp-row"><div class="cmp-lab">Julio</div><div class="bar-track"><div class="bar-fill gold" style="width:74.8%"></div></div><div class="bar-val">89</div></div>
+                <div class="cmp-row"><div class="cmp-lab">Agosto</div><div class="bar-track"><div class="bar-fill gold" style="width:100%"></div></div><div class="bar-val">119</div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-subtitle">Por qué "visitas a páginas interiores" es el número que miramos</div>
+    <p>
+        Cuando alguien escribe "Prunavita" en Google y entra a la portada, eso no prueba nada: ya los
+        conocía. Cuando alguien llega a la página de <em>ciruelas deshidratadas</em> o a una noticia
+        técnica, llegó buscando <strong>el tema, no la marca</strong>. Por eso el plan tomó ese número
+        como indicador principal. En agosto fueron 32 de 43 visitas: tres de cada cuatro.
+    </p>
+
+    <div class="footer-note">
+        Pulsando Tech · Informe mensual SEO — Prunavita · Agosto 2026
+    </div>
+</div>
+
+<!-- ══════════════════ PÁGINA 3 ══════════════════ -->
+<div class="page">
+    <div class="page-header">
+        <span><strong>Analytics operativo</strong></span>
+        <span>Prunavita · Informe mensual agosto 2026</span>
+    </div>
+
+    <div class="section-title">3. La novedad del mes: ya vemos lo que pasa dentro del sitio</div>
+    <p>
+        Hasta ahora sabíamos <em>cómo llegaba</em> la gente, pero no qué hacía después. Google Analytics
+        estaba instalado en el sitio desde junio y recogiendo datos, pero nosotros no podíamos leerlos.
+        El <strong>29 de agosto quedó resuelto</strong>: la causa era un permiso técnico apagado en la
+        cuenta de Google, no algo pendiente de ustedes. Ya está corregido y no vuelve a ocurrir.
+    </p>
+    <p>
+        La consecuencia práctica: <strong>este informe puede cruzar las dos fuentes</strong> y responder
+        preguntas que antes solo podíamos suponer. Cuáles páginas retienen a la gente, cuáles la pierden,
+        desde dónde se generan los contactos.
+    </p>
+
+    <div class="glosario">
+        <dl>
+            <dt>Sesión</dt>
+            <dd>Una visita completa. Si alguien entra, recorre cuatro páginas y se va, eso es
+                <em>una</em> sesión.</dd>
+
+            <dt>Usuario</dt>
+            <dd>Una persona distinta. Si vuelve tres veces en el mes, son 3 sesiones pero 1 usuario.</dd>
+
+            <dt>Tasa de interacción</dt>
+            <dd>De cada 100 visitas, cuántas hicieron algo real —quedarse más de diez segundos, bajar por
+                la página, entrar a una segunda. El resto entró y salió de inmediato.</dd>
+
+            <dt>Evento</dt>
+            <dd>Una acción concreta que el sitio registra: abrir una ficha técnica, descargarla, pulsar el
+                botón de WhatsApp. Son las señales de interés comercial.</dd>
+        </dl>
+    </div>
+
+    <div class="section-title">4. De dónde viene la gente</div>
+    <table>
+        <thead><tr><th>Canal</th><th class="num">Sesiones</th><th class="num">Personas</th><th>Qué significa</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Búsqueda en Google</strong></td><td class="num">81</td><td class="num">53</td><td>Llegaron buscando. Es el canal que este servicio trabaja.</td></tr>
+            <tr><td><strong>Directo</strong></td><td class="num">59</td><td class="num">54</td><td>Escribieron la dirección o la tenían guardada. Incluye nuestras propias revisiones.</td></tr>
+            <tr><td><strong>Redes sociales</strong></td><td class="num">15</td><td class="num">11</td><td>Llegaron desde un enlace compartido.</td></tr>
+            <tr><td><strong>Asistentes de IA</strong></td><td class="num">4</td><td class="num">4</td><td>ChatGPT, Perplexity y similares recomendaron el sitio. Canal nuevo y creciente.</td></tr>
+        </tbody>
+    </table>
+    <p>
+        Total del mes: <strong>159 sesiones de 119 personas distintas</strong>, contra 130 sesiones de 89
+        personas en julio. El canal de búsqueda es hoy el mayor, y eso es exactamente lo que se busca:
+        que el sitio traiga gente por sí solo y no dependa de que ustedes lo difundan.
+    </p>
+
+    <div class="note-box">
+        <h4>Un dato que conviene mirar</h4>
+        <p style="margin-bottom:0">
+            Cuatro sesiones llegaron desde <strong>asistentes de inteligencia artificial</strong>. Es un
+            volumen pequeño, pero es un canal que hace un año no existía y que crece rápido. Que el sitio
+            ya aparezca ahí es consecuencia directa del contenido técnico y bien estructurado que
+            publicamos: es el tipo de material que estos sistemas citan.
+        </p>
+    </div>
+
+    <div class="footer-note">
+        Pulsando Tech · Informe mensual SEO — Prunavita · Agosto 2026
+    </div>
+</div>
+
+<!-- ══════════════════ PÁGINA 4 ══════════════════ -->
+<div class="page">
+    <div class="page-header">
+        <span><strong>Qué hace la gente dentro</strong></span>
+        <span>Prunavita · Informe mensual agosto 2026</span>
+    </div>
+
+    <div class="section-title">5. Qué hace la gente una vez dentro del sitio</div>
+    <table>
+        <thead><tr><th>Acción registrada</th><th class="num">Veces</th><th>Lectura</th></tr></thead>
+        <tbody>
+            <tr><td>Páginas vistas</td><td class="num">242</td><td>1,5 páginas por visita.</td></tr>
+            <tr><td>Visitas iniciadas</td><td class="num">159</td><td>De ellas, 110 fueron de personas que entraban por primera vez.</td></tr>
+            <tr><td>Lectura con desplazamiento</td><td class="num">55</td><td>Bajaron por la página en vez de rebotar.</td></tr>
+            <tr><td><strong>Fichas técnicas abiertas</strong></td><td class="num">31</td><td>Alguien miró el detalle de un producto. Señal de interés real.</td></tr>
+            <tr><td><strong>Fichas técnicas descargadas</strong></td><td class="num">4</td><td>Se llevaron el PDF. Es el paso previo a cotizar.</td></tr>
+            <tr><td>Otras descargas</td><td class="num">6</td><td>Documentos del sitio.</td></tr>
+            <tr><td><strong>Contactos iniciados</strong></td><td class="num">2</td><td>Pulsaron WhatsApp o el correo. Sección 6.</td></tr>
+        </tbody>
+    </table>
+
+    <div class="highlight-box">
+        <h3>Las fichas técnicas están funcionando</h3>
+        <p>
+            <strong>31 aperturas y 4 descargas</strong> en el mes. Las fichas se habían caído del sitio
+            —15 archivos daban error— y se repusieron el 18 de agosto. Diez días después ya son la
+            acción comercial más frecuente del sitio después de leer.
+        </p>
+        <p style="margin-bottom:0">
+            Quien descarga una ficha técnica de calibre y parámetros no está paseando: está evaluando un
+            proveedor.
+        </p>
+    </div>
+
+    <div class="section-title">6. Los dos primeros contactos medidos</div>
+    <p>
+        Por primera vez podemos afirmar —no suponer— que el sitio generó contactos. Fueron dos, y los dos
+        tienen la misma señal:
+    </p>
+
+    <table>
+        <thead><tr><th style="width:14%">Fecha</th><th>Página desde la que contactaron</th><th style="width:24%">Cómo habían llegado</th></tr></thead>
+        <tbody>
+            <tr><td>18 ago</td><td>Noticia <em>Maquinaria agroindustrial usada: qué revisar antes de comprar</em></td><td>Búsqueda en Google</td></tr>
+            <tr><td>19 ago</td><td>Servicio <em>Maquinaria agroindustrial</em></td><td>Asistente de IA</td></tr>
+        </tbody>
+    </table>
+
+    <div class="note-box">
+        <h4>Lo relevante no es el número, es de dónde salieron</h4>
+        <p>
+            Los dos contactos vinieron de <strong>maquinaria</strong>. Ninguno de ciruelas, ninguno de
+            cerezas, ninguno de la noticia que trajo el 70% del tráfico del mes.
+        </p>
+        <p style="margin-bottom:0">
+            La noticia de maquinaria usada se publicó el 17 de agosto, tuvo apenas 8 apariciones en
+            Google — y de ellas <strong>2 se convirtieron en visita (25%)</strong>, con
+            <strong>90 segundos de permanencia</strong>, el mejor registro del sitio. Poco volumen, pero
+            la gente correcta. Es el patrón que hay que repetir.
+        </p>
+    </div>
+
+    <div class="footer-note">
+        Pulsando Tech · Informe mensual SEO — Prunavita · Agosto 2026
+    </div>
+</div>
+
+<!-- ══════════════════ PÁGINA 5 ══════════════════ -->
+<div class="page">
+    <div class="page-header">
+        <span><strong>El cruce página por página</strong></span>
+        <span>Prunavita · Informe mensual agosto 2026</span>
+    </div>
+
+    <div class="section-title">7. Qué página trae gente y qué página la retiene</div>
+    <p>
+        Esta tabla es la razón por la que valía la pena destrabar Analytics. Las cuatro primeras columnas
+        de cifras vienen de Google Search Console —cuánta gente trae cada página—. Las dos últimas vienen
+        de Analytics —qué hace esa gente al llegar—. Cruzarlas cambia la lectura por completo.
+    </p>
+
+    <table class="tabla-compacta">
+        <thead><tr>
+            <th style="width:31%">Página de entrada</th>
+            <th class="num">Visitas</th><th class="num">Aparic.</th><th class="num">% clics</th>
+            <th class="num">Posición</th><th class="num">Interac.</th><th class="num">Seg./visita</th>
+        </tr></thead>
+        <tbody>
+            <tr><td>Portada</td><td class="num">11</td><td class="num">29</td><td class="num">37,9%</td><td class="num">2,7</td><td class="num">58%</td><td class="num">40</td></tr>
+            <tr><td><strong>Noticia — Reglamento Sanitario 2026</strong></td><td class="num">9</td><td class="num"><strong>1.081</strong></td><td class="num">0,8%</td><td class="num">8,3</td><td class="num">33%</td><td class="num">19</td></tr>
+            <tr><td>Servicio — Ciruelas deshidratadas</td><td class="num">5</td><td class="num">134</td><td class="num">3,7%</td><td class="num">7,0</td><td class="num">50%</td><td class="num"><strong>66</strong></td></tr>
+            <tr><td>Servicio — Cerezas chilenas</td><td class="num">4</td><td class="num">59</td><td class="num">6,8%</td><td class="num">6,4</td><td class="num">45%</td><td class="num">7</td></tr>
+            <tr><td>Servicio — Maquinaria agroindustrial</td><td class="num">3</td><td class="num">88</td><td class="num">3,4%</td><td class="num">7,5</td><td class="num"><strong>100%</strong></td><td class="num">29</td></tr>
+            <tr><td>Servicio — Representación comercial</td><td class="num">3</td><td class="num">36</td><td class="num">8,3%</td><td class="num"><strong>3,9</strong></td><td class="num">33%</td><td class="num">6</td></tr>
+            <tr><td><strong>Noticia — Maquinaria usada</strong></td><td class="num">2</td><td class="num">8</td><td class="num"><strong>25,0%</strong></td><td class="num"><strong>1,8</strong></td><td class="num">40%</td><td class="num"><strong>90</strong></td></tr>
+            <tr><td>Servicio — Asesorías en inocuidad</td><td class="num">2</td><td class="num">60</td><td class="num">3,3%</td><td class="num">11,8</td><td class="num">67%</td><td class="num">86</td></tr>
+            <tr><td>Fichas técnicas</td><td class="num">1</td><td class="num">9</td><td class="num">11,1%</td><td class="num">4,1</td><td class="num"><strong>100%</strong></td><td class="num">18</td></tr>
+            <tr><td>Noticia — Exportación ciruela (junio)</td><td class="num">1</td><td class="num">2</td><td class="num">50,0%</td><td class="num">8,0</td><td class="num"><strong>100%</strong></td><td class="num">65</td></tr>
+            <tr><td>Noticia — Protocolo GACC China (julio)</td><td class="num">1</td><td class="num">19</td><td class="num">5,3%</td><td class="num">5,0</td><td class="num">50%</td><td class="num">15</td></tr>
+            <tr><td>Servicio — Exportación agroindustrial</td><td class="num">1</td><td class="num">58</td><td class="num">1,7%</td><td class="num">11,6</td><td class="num">100%</td><td class="num">22</td></tr>
+        </tbody>
+    </table>
+
+    <div class="section-subtitle">Tres conclusiones que solo se ven cruzando</div>
+    <ul>
+        <li><strong>Ciruelas deshidratadas es la mejor página comercial del sitio.</strong> No es la que
+            más visitas trae, pero quien entra se queda <strong>66 segundos</strong>. Está leyendo.</li>
+        <li><strong>Cerezas trae gente pero no la retiene:</strong> 4 visitas y 7 segundos de permanencia.
+            La página es nueva —se creó el 17 de agosto— y le falta el contenido profundo que ya tienen
+            ciruelas y asesorías. Es trabajo de septiembre.</li>
+        <li><strong>Representación comercial está en posición 3,9</strong>, la mejor del sitio después de
+            la portada, pero quien entra se va en 6 segundos. Aparece arriba para búsquedas que no
+            corresponden a lo que la página ofrece.</li>
+    </ul>
+
+    <div class="footer-note">
+        Pulsando Tech · Informe mensual SEO — Prunavita · Agosto 2026
+    </div>
+</div>
+
+<!-- ══════════════════ PÁGINA 6 ══════════════════ -->
+<div class="page">
+    <div class="page-header">
+        <span><strong>La advertencia</strong></span>
+        <span>Prunavita · Informe mensual agosto 2026</span>
+    </div>
+
+    <div class="section-title">8. El crecimiento del mes tiene un solo motor, y es frágil</div>
+    <p>
+        De las 1.531 apariciones del mes, <strong>1.081 corresponden a una única noticia</strong>: la del
+        Reglamento Sanitario de los Alimentos 2026. Google la posicionó en la <strong>página 1</strong>
+        para búsquedas como "reglamento sanitario de los alimentos 2026" y "rsa 2026", que tienen mucho
+        volumen.
+    </p>
+    <p>Eso explica el salto de apariciones. También explica el otro número:</p>
+
+    <div class="highlight-box amber">
+        <h3>Por qué el porcentaje de clics cayó de 20% a 2,8%</h3>
+        <p>
+            No es un empeoramiento. Es aritmética: el sitio pasó de aparecer 105 veces a aparecer 1.531,
+            y esas 1.400 apariciones nuevas son de <strong>una búsqueda informativa</strong> —gente que
+            quiere leer el reglamento, no comprar ciruela—. Aparecer mucho ante público que no va a hacer
+            clic baja el promedio.
+        </p>
+        <p style="margin-bottom:0">
+            Lo que importa es que <strong>las visitas subieron igual</strong>, de 21 a 43. El porcentaje
+            bajó porque creció el denominador, no porque el sitio atraiga menos.
+        </p>
+    </div>
+
+    <p>
+        Dicho eso, hay que ser claros sobre la calidad de ese tráfico. Quien entra a esa noticia se queda
+        <strong>19 segundos</strong> y solo un tercio interactúa: es el peor registro de retención del
+        sitio. Trae volumen y le da autoridad temática al dominio —eso sí ayuda—, pero
+        <strong>no trae compradores</strong>, y no se debe leer como si lo hiciera.
+    </p>
+
+    <div class="note-box">
+        <h4>Qué hicimos al respecto durante el mes</h4>
+        <p style="margin-bottom:0">
+            El 17 de agosto reescribimos el título de esa noticia para que apuntara a exportadores y no al
+            público general. El efecto fue real pero modesto: el porcentaje de clics subió de 0,40% a
+            0,68%. Confirma el diagnóstico — el problema no es el título, es que
+            <strong>quien busca "rsa 2026" no es cliente de Prunavita</strong>. Septiembre no insiste por
+            ahí.
+        </p>
+    </div>
+
+    <div class="section-title">9. Las búsquedas comerciales siguen sin moverse</div>
+    <p>
+        Estas son las cinco búsquedas que traerían clientes nuevos. Su posición es prácticamente la misma
+        que en julio.
+    </p>
+
+    <div class="chart">
+        <div class="chart-title">Distancia a la primera página de Google</div>
+        <div class="chart-sub">Barra más larga = posición más baja = más lejos de que alguien lo vea.</div>
+        <div class="chart-ref">
+            <div class="bar-row"><div class="bar-lab">compra maquinaria usada</div><div class="bar-track"><div class="bar-fill" style="width:36.3%"></div></div><div class="bar-val">29</div></div>
+            <div class="bar-row"><div class="bar-lab">asesoría en certificaciones</div><div class="bar-track"><div class="bar-fill" style="width:53.8%"></div></div><div class="bar-val">43</div></div>
+            <div class="bar-row"><div class="bar-lab">certificación BRC Chile</div><div class="bar-track"><div class="bar-fill" style="width:61.6%"></div></div><div class="bar-val">49</div></div>
+            <div class="bar-row"><div class="bar-lab">consultoría agroindustria</div><div class="bar-track"><div class="bar-fill" style="width:68.8%"></div></div><div class="bar-val">55</div></div>
+            <div class="bar-row"><div class="bar-lab">venta maquinaria manufactura</div><div class="bar-track"><div class="bar-fill" style="width:94.6%"></div></div><div class="bar-val">76</div></div>
+            <div class="ref-pad"></div>
+            <div class="ref-line" style="left:calc(138px + (100% - 172px) * 0.125)"></div>
+            <div class="ref-lab" style="left:calc(142px + (100% - 172px) * 0.125)">← primera página de Google</div>
+        </div>
+    </div>
+
+    <p>
+        Ampliamos las páginas de servicio en agosto y no bastó. <strong>La causa ya no es el
+        contenido</strong>: es que prunavita.cl casi no recibe enlaces desde otros sitios, y Google
+        interpreta esos enlaces como respaldo. Sin ellos hay un techo. Ese frente se detalla en la
+        sección 12 y depende de ustedes.
+    </p>
+
+    <div class="footer-note">
+        Pulsando Tech · Informe mensual SEO — Prunavita · Agosto 2026
+    </div>
+</div>
+
+<!-- ══════════════════ PÁGINA 7 ══════════════════ -->
+<div class="page">
+    <div class="page-header">
+        <span><strong>Hitos del plan</strong></span>
+        <span>Prunavita · Informe mensual agosto 2026</span>
+    </div>
+
+    <div class="section-title">10. Dónde estamos respecto de lo comprometido</div>
+    <p>
+        En julio fijamos cuatro hitos con plazo. Este es el estado real de cada uno al 28 de agosto, sin
+        redondeos a favor.
+    </p>
+
+    <table>
+        <thead><tr><th>Hito</th><th style="width:13%">Plazo</th><th style="width:14%">Hoy</th><th style="width:21%">Estado</th></tr></thead>
+        <tbody>
+            <tr>
+                <td><strong>Duplicar las visitas a páginas interiores</strong> (de 11 a 22)</td>
+                <td>Noviembre</td><td class="num"><strong>32</strong></td>
+                <td><span class="badge">Cumplido</span><br><span style="font-size:8pt;color:#4a5568">tres meses antes</span></td>
+            </tr>
+            <tr>
+                <td><strong>Llegar a 40–60 búsquedas distintas</strong> que muestren el sitio</td>
+                <td>Septiembre</td><td class="num">30</td>
+                <td><span class="badge badge-info">En camino</span><br><span style="font-size:8pt;color:#4a5568">eran 6 en julio</span></td>
+            </tr>
+            <tr>
+                <td><strong>Mover las 5 búsquedas comerciales</strong> al rango 15–25</td>
+                <td>Octubre</td><td class="num">29–76</td>
+                <td><span class="badge badge-pending">Frenado</span><br><span style="font-size:8pt;color:#4a5568">requiere sección 12</span></td>
+            </tr>
+            <tr>
+                <td><strong>Primera búsqueda comercial en página 1</strong></td>
+                <td>Noviembre</td><td class="num">—</td>
+                <td><span class="badge badge-pending">Pendiente</span><br><span style="font-size:8pt;color:#4a5568">hay 2 informativas en pág. 1</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>
+        El primer hito se cumplió con holgura. El segundo va a buen ritmo. El tercero y el cuarto están
+        detenidos por la misma razón, y no es contenido.
+    </p>
+
+    <div class="section-title">11. Trabajo ejecutado en agosto</div>
+    <table class="tabla-compacta">
+        <thead><tr><th style="width:30%">Qué se hizo</th><th>Detalle</th><th style="width:14%">Alcance</th></tr></thead>
+        <tbody>
+            <tr>
+                <td><strong>2 noticias investigadas</strong><br>lo comprometido</td>
+                <td>«Actualización 2026 del Reglamento Sanitario de los Alimentos» (4 ago) y «Maquinaria agroindustrial usada: qué revisar antes de comprar» (17 ago). La segunda generó uno de los dos contactos del mes.</td>
+                <td><span class="badge">Contratado</span></td>
+            </tr>
+            <tr>
+                <td><strong>Página de Cerezas creada</strong></td>
+                <td>Era la única línea de producto sin página propia, pese a tener fichas técnicas. Se construyó contra las fichas reales, no con texto genérico. Ya trae 4 visitas en diez días.</td>
+                <td><span class="badge badge-info">Sin costo</span></td>
+            </tr>
+            <tr>
+                <td><strong>15 fichas técnicas repuestas</strong></td>
+                <td>Los PDF daban error 404 en el sitio publicado: existían en el proyecto pero no se subían. Corregido el 18 de agosto. Desde entonces: 31 aperturas y 4 descargas.</td>
+                <td><span class="badge badge-info">Sin costo</span></td>
+            </tr>
+            <tr>
+                <td><strong>WhatsApp como vía de contacto</strong></td>
+                <td>Habilitado en noticias y páginas de servicio, con medición. Es el canal por el que llegaron los dos contactos registrados.</td>
+                <td><span class="badge badge-info">Sin costo</span></td>
+            </tr>
+            <tr>
+                <td><strong>3 páginas de servicio ampliadas</strong></td>
+                <td>Maquinaria (562 → 1.363 palabras), Exportación y Representación comercial, con paridad español/inglés recuperada.</td>
+                <td><span class="badge badge-info">Sin costo</span></td>
+            </tr>
+            <tr>
+                <td><strong>Fotografía real por producto</strong></td>
+                <td>Cada ficha muestra ahora la foto de su propio producto, no una imagen genérica compartida.</td>
+                <td><span class="badge badge-info">Sin costo</span></td>
+            </tr>
+            <tr>
+                <td><strong>Analytics destrabado</strong></td>
+                <td>Diagnóstico y corrección del permiso que impedía leer los datos, más un comando único que reproduce toda la medición del mes. Es lo que hace posible este informe.</td>
+                <td><span class="badge badge-info">Sin costo</span></td>
+            </tr>
+        </tbody>
+    </table>
+    <p style="font-size:9pt;color:#4a5568">
+        34 cambios registrados en el sitio durante agosto. El contrato compromete 2 publicaciones
+        mensuales; el resto se entrega sin cargo.
+    </p>
+
+    <div class="footer-note">
+        Pulsando Tech · Informe mensual SEO — Prunavita · Agosto 2026
+    </div>
+</div>
+
+<!-- ══════════════════ PÁGINA 8 ══════════════════ -->
+<div class="page">
+    <div class="page-header">
+        <span><strong>Lo que está frenado</strong></span>
+        <span>Prunavita · Informe mensual agosto 2026</span>
+    </div>
+
+    <div class="section-title">12. Lo que necesitamos de Prunavita para seguir avanzando</div>
+    <p>
+        El 17 de agosto enviamos una solicitud de accesos. A la fecha de este informe sigue sin respuesta.
+        No es un trámite administrativo: <strong>es lo que hoy pone techo al posicionamiento
+        comercial</strong>, y por eso el hito de octubre aparece como frenado.
+    </p>
+
+    <table>
+        <thead><tr><th style="width:26%">Qué falta</th><th>Por qué importa</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Ficha de Google Business</strong></td>
+                <td>Es lo que más rápido mejora la visibilidad de una empresa en Google y en Maps. Google envía un código de verificación al teléfono o dirección de la empresa: solo ustedes pueden recibirlo. Nosotros dejamos la ficha redactada.</td></tr>
+            <tr><td><strong>Registro en ProChile</strong></td>
+                <td>Directorio oficial de exportadores del Estado. Es el enlace de mayor confianza disponible para una empresa chilena del rubro. Exige RUT y credenciales de la empresa.</td></tr>
+            <tr><td><strong>Enlace del LinkedIn de empresa</strong></td>
+                <td>Si ya existe, basta con enviarlo. Permite difundir cada noticia y sumar un enlace estable al sitio.</td></tr>
+            <tr><td><strong>Teléfono, dirección y correo comercial</strong></td>
+                <td>Datos necesarios para completar las fichas de directorios. Sin ellos no podemos inscribir la empresa en ninguna plataforma.</td></tr>
+            <tr><td><strong>Gremios del sector</strong></td>
+                <td>Si Prunavita pertenece a Chilealimentos, Asoex o similar, el perfil de socio suele incluir enlace al sitio. Es el enlace más fácil de conseguir y hoy no lo estamos aprovechando.</td></tr>
+        </tbody>
+    </table>
+
+    <div class="highlight-box amber">
+        <h3>Dicho con transparencia</h3>
+        <p>
+            Podemos seguir publicando contenido todos los meses, y el sitio seguirá creciendo en tráfico
+            informativo. Pero <strong>las cinco búsquedas comerciales no van a llegar a la primera página
+            solo con contenido</strong>: les falta respaldo externo, y ese respaldo requiere gestiones que
+            necesitan las credenciales de la empresa.
+        </p>
+        <p style="margin-bottom:0">
+            Bastan unos <strong>30 minutos</strong> de alguien de Prunavita para desbloquear el frente
+            completo. Es, hoy, la acción de mayor impacto disponible.
+        </p>
+    </div>
+
+    <div class="section-title">13. Plan de septiembre</div>
+    <table>
+        <thead><tr><th style="width:30%">Frente</th><th>En qué consiste</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Duplicar la apuesta por maquinaria</strong></td>
+                <td>Es el único tema que ya generó contactos. Una de las dos noticias del mes será de maquinaria, enlazada a su página de servicio, siguiendo el patrón de la del 17 de agosto.</td></tr>
+            <tr><td><strong>Profundizar la página de Cerezas</strong></td>
+                <td>Trae visitas pero las pierde en 7 segundos. Necesita calibres, variedades, temporada y condiciones de venta, como se hizo con ciruelas.</td></tr>
+            <tr><td><strong>Revisar Representación comercial</strong></td>
+                <td>Está en posición 3,9 y retiene 6 segundos: aparece para búsquedas equivocadas. Hay que alinear la página con lo que realmente ofrece.</td></tr>
+            <tr><td><strong>Fichas técnicas al frente</strong></td>
+                <td>Son la acción comercial más frecuente del sitio. Se van a enlazar desde cada página de producto en lugar de dejarlas solo en una sección aparte.</td></tr>
+            <tr><td><strong>Directorios</strong></td>
+                <td>En cuanto lleguen los datos de la sección 12. Los textos ya están redactados desde julio.</td></tr>
+        </tbody>
+    </table>
+
+    <div class="footer-note">
+        Pulsando Tech · Informe mensual SEO — Prunavita · Agosto 2026
+    </div>
+</div>
+
+<!-- ══════════════════ PÁGINA 9 ══════════════════ -->
+<div class="page">
+    <div class="page-header">
+        <span><strong>Estado de cuenta</strong></span>
+        <span>Prunavita · Informe mensual agosto 2026</span>
+    </div>
+
+    <div class="section-title">14. Estado de pago</div>
+
+    <div class="section-subtitle">Períodos anteriores</div>
+    <table>
+        <thead><tr><th>Concepto</th><th>Período</th><th class="num">Valor</th><th>Estado</th></tr></thead>
+        <tbody>
+            <tr><td>Etapa 1 — implementación SEO Nacional + Internacional</td><td>Junio 2026</td><td class="num">$570.000</td><td><span class="badge">Pagado</span></td></tr>
+            <tr><td>Mantención SEO mensual — mes 2</td><td>Julio 2026</td><td class="num">$150.000</td><td><span class="badge">Pagado</span></td></tr>
+        </tbody>
+    </table>
+    <p>Sin saldos pendientes de períodos anteriores.</p>
+
+    <div class="section-subtitle">Cobro del período — mes 3 del plan</div>
+    <div class="payment-box">
+        <div class="pay-row">
+            <div>
+                <strong>Mantención SEO mensual — agosto 2026</strong><br>
+                <span style="font-size:8.5pt;color:#4a5568">2 noticias investigadas (lo comprometido), este informe mensual y optimización continua</span>
+            </div>
+            <div style="font-weight:700;white-space:nowrap">$150.000</div>
+        </div>
+        <div class="pay-row">
+            <div>
+                <strong>Mejoras adicionales</strong><br>
+                <span style="font-size:8.5pt;color:#4a5568">Página de cerezas, 15 fichas técnicas repuestas, WhatsApp, 3 páginas ampliadas y Analytics destrabado — sección 11</span>
+            </div>
+            <div style="font-weight:700;color:#276749;white-space:nowrap">Sin costo</div>
+        </div>
+        <div class="pay-row">
+            <div><strong style="font-size:11pt">Total a transferir</strong></div>
+            <div class="pay-total">$150.000</div>
+        </div>
+    </div>
+
+    <div class="section-subtitle">Datos para transferencia</div>
+    <p>
+        <strong>Yoryet Danoun N.</strong> — RUT 16.647.601-1<br>
+        Banco de Chile · Cuenta Corriente N° 00-356-10613-06<br>
+        Correo: yoryet.danoun@gmail.com<br>
+        Concepto: <em>Mantención SEO agosto 2026 — Prunavita</em>
+    </p>
+
+    <div class="highlight-box green">
+        <h3>Cobro al cierre del mes</h3>
+        <p style="margin-bottom:0">
+            Como se anunció en el informe de julio, la mantención se factura desde agosto
+            <strong>al cierre de cada mes</strong>, junto con el informe que documenta el trabajo del
+            período. Pagan una vez entregado y verificado el trabajo, no antes.
+        </p>
+    </div>
+
+    <div class="footer-note">
+        Pulsando Tech · Informe mensual SEO — Prunavita · Agosto 2026
+    </div>
+</div>
+
+<!-- ══════════════════ PÁGINA 10 ══════════════════ -->
+<div class="page">
+    <div class="page-header">
+        <span><strong>Conclusión y verificación</strong></span>
+        <span>Prunavita · Informe mensual agosto 2026</span>
+    </div>
+
+    <div class="section-title">15. Conclusión del mes</div>
+
+    <div class="highlight-box">
+        <h3>Bueno en tracción, todavía insuficiente en prueba comercial</h3>
+        <p>
+            El sitio creció de verdad: quince veces más apariciones, el doble de visitas, la posición
+            media dentro de la primera página y el hito de noviembre cumplido en agosto. Nada de eso es
+            maquillaje.
+        </p>
+        <p>
+            Pero el motor del crecimiento es una noticia informativa que no trae compradores, y los dos
+            únicos contactos del mes salieron de <strong>maquinaria</strong>, un tema que apenas
+            empezamos a trabajar.
+        </p>
+        <p style="margin-bottom:0">
+            Septiembre tiene que convertir volumen en consultas. Si repite el volumen de agosto sin
+            aumentar los contactos, el problema deja de ser de posicionamiento y pasa a ser de qué se
+            ofrece y a quién.
+        </p>
+    </div>
+
+    <div class="section-title">16. Cómo verificarlo ustedes mismos</div>
+    <p>
+        Las cifras de este informe provienen de dos herramientas oficiales de Google para la propiedad
+        <span class="url">prunavita.cl</span>: <strong>Search Console</strong> (cómo llega la gente) y
+        <strong>Analytics</strong> (qué hace dentro). No dependen de nuestra interpretación.
+    </p>
+
+    <div class="note-box">
+        <h4>Para darles acceso</h4>
+        <p style="margin-bottom:0">
+            Envíennos por correo las <strong>direcciones de Google</strong> (Gmail o correo corporativo
+            administrado por Google) de quienes quieran revisar los datos, y los agregamos como usuarios
+            de ambas propiedades. Podrán entrar cuando quieran, sin depender de nosotros.
+        </p>
+    </div>
+
+    <ol>
+        <li><strong>Search Console</strong> (search.google.com/search-console): apariciones, visitas y
+            posiciones por página y por búsqueda.</li>
+        <li><strong>Google Analytics</strong> (analytics.google.com): sesiones, canales, eventos y
+            contactos iniciados.</li>
+        <li><strong>Google en modo incógnito:</strong> buscar <span class="url">site:prunavita.cl</span>
+            lista todas las páginas indexadas. No requiere acceso alguno.</li>
+        <li><strong>El sitio mismo:</strong> cualquier página, noticia o ficha mencionada aquí puede
+            revisarse en prunavita.cl.</li>
+    </ol>
+
+    <div class="footer-note">
+        Este informe documenta los trabajos ejecutados entre el 4 y el 31 de agosto de 2026.<br>
+        Datos de Google medidos entre el 1 y el 28 de agosto de 2026.<br>
+        <strong>Yoryet Danoun N.</strong> · Pulsando Tech · Santiago, Chile · Agosto 2026
+    </div>
+</div>
+
+</body>
+</html>

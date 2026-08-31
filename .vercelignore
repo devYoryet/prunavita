@@ -14,6 +14,7 @@ scripts/
 COTIZACION_PRUNAVITA_2026.html
 INFORME_ENTREGA_SEO_PRUNAVITA_ETAPA1.html
 INFORME_MENSUAL_SEO_PRUNAVITA_JULIO2026.html
+INFORME_MENSUAL_SEO_PRUNAVITA_AGOSTO2026.html
 #
 # Solo los PDF de la raiz, que son los informes internos. La barra inicial es
 # imprescindible: sin ella el patron tambien excluia assets/fichas-tecnicas/,
