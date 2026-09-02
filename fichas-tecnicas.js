@@ -423,6 +423,23 @@
         });
 
         var params = new URLSearchParams(window.location.search);
+
+        // ?cat=cerezas deja el catalogo filtrado por linea de producto. Lo usan
+        // las paginas de servicio para mandar al comprador solo a sus fichas y
+        // no al listado de 15.
+        var catParam = params.get('cat');
+        if (catParam) {
+            var botonCat = null;
+            filters.forEach(function (b) {
+                if (b.getAttribute('data-category') === catParam) botonCat = b;
+            });
+            if (botonCat) {
+                filters.forEach(function (b) { b.classList.remove('active'); });
+                botonCat.classList.add('active');
+                renderList(getCurrentFilter());
+            }
+        }
+
         var fichaParam = params.get('ficha');
         if (fichaParam && getFicha(fichaParam)) {
             openFicha(fichaParam);

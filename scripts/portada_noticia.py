@@ -42,6 +42,10 @@ import re
 import sys
 from pathlib import Path
 
+# La consola de Windows usa cp1252: sin esto, un nombre de fotografo con
+# caracteres fuera de latin-1 hace fallar el listado de candidatos.
+sys.stdout.reconfigure(encoding="utf-8")
+
 import requests
 
 RAIZ = Path(__file__).resolve().parent.parent

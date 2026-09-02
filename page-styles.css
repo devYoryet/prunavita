@@ -210,6 +210,49 @@
     margin-bottom: 0;
 }
 
+/* Enlace a la ficha tecnica desde cada formato de producto.
+   Las fichas son la accion comercial mas usada del sitio (31 aperturas y 4
+   descargas en agosto 2026) y hasta septiembre solo se llegaba a ellas por el
+   catalogo. Estos enlaces las ponen a un clic desde la pagina de producto. */
+.ficha-inline {
+    display: inline-block;
+    margin-top: var(--spacing-sm);
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+.ficha-inline:hover,
+.ficha-inline:focus-visible {
+    color: var(--primary-dark);
+    border-bottom-color: currentColor;
+}
+
+.benefit-card p + .ficha-inline {
+    margin-top: var(--spacing-md);
+}
+
+.fichas-inline-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.fichas-inline-list li {
+    padding: var(--spacing-xs) 0;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.fichas-inline-list li:last-child {
+    border-bottom: 0;
+}
+
+.fichas-inline-list a {
+    font-weight: 600;
+    color: var(--primary);
+}
+
 /* FAQ */
 .faq-item {
     border-bottom: 1px solid var(--gray-200);
