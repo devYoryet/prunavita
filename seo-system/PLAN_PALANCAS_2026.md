@@ -130,11 +130,29 @@ Ordenadas por impacto sobre la métrica norte, no por facilidad.
 7. ✅ Abrir la vía de contacto y hacerla medible (G1–G4)
 8. ✅ Página de cerezas (A6), la línea de producto que no tenía ninguna
 
-**Septiembre — profundizar y medir el efecto**
-- Ampliar Maquinaria y Exportación (A1)
-- FAQ con schema en las páginas ya ampliadas (A4)
-- Primera lectura del efecto de agosto sobre posiciones
-- 2 noticias + reporte mensual
+**Septiembre — convertir volumen en consultas** · detalle en `reportes/2026-09-plan.md`
+> El plan de septiembre se reescribió el 2 de septiembre con los datos de cierre de agosto. Lo que
+> figuraba aquí (ampliar Maquinaria y Exportación, FAQ con schema) **ya se hizo en agosto**: A1 quedó
+> completo con las cinco páginas y A4 estaba hecho desde antes. El mes ya no es de profundizar
+> contenido, es de convertir el tráfico que ya llega.
+
+1. ⬜ **Enlazar las fichas técnicas desde las 5 páginas de servicio que no lo hacen** — mayor retorno
+   por hora pendiente: 31 aperturas y 4 descargas en agosto, y solo `cerezas-chilenas` las enlaza
+2. ⬜ **Reorientar Cerezas a intención de importador** (A6 bis) — no ampliarla: con 2.241 palabras es
+   la página más larga del sitio. La encuentran consultas genéricas de consumidor
+3. ⬜ **Noticia 1 (8 sep): maquinaria desde el lado del vendedor** — 3 de las 4 consultas visibles de
+   esa página son de venta, no de compra, y `donde vender maquinaria usada` ya está en posición 6,0
+4. ⬜ **Diagnosticar Representación comercial** — posición 3,9 y 6 s de permanencia: rankea para algo
+   que la página no responde. Analizar antes de reescribir
+5. ⬜ **Bing Webmaster Tools (D4)** — alimenta a ChatGPT/Copilot, y de ese canal salió 1 de los 2
+   contactos de agosto
+6. ⬜ **Noticia 2 (22 sep): temporada de cereza 2026/27** — ventana de compra de importadores
+7. ⬜ WebP del banco antiguo (B3) · evaluar el formulario de la home contra WhatsApp (G5)
+8. ⬜ Altas de autoridad C1–C6 — **sigue bloqueado. Corte el 15 de septiembre**
+
+**Métrica nueva del mes:** clics a interiores **sin contar la noticia del RSA**. En agosto la métrica
+norte dio 32, pero 9 son de esa noticia. Descontada quedan **23**. Sirve para saber si hay motor propio
+o un solo golpe de suerte.
 
 **Octubre–noviembre — consolidar y abrir China**
 - Página pilar (A5), Baidu (E1), evaluación de versión EN (E2)
@@ -156,11 +174,11 @@ Ordenadas por impacto sobre la métrica norte, no por facilidad.
 
 ## Cómo se sabrá si funcionó
 
-| Hito | Plazo | Estado (17 ago 2026) |
+| Hito | Plazo | Estado (28 ago 2026) |
 |---|---|---|
-| Doblar los **clics a páginas interiores**: 11 → 22 en 28 días | Nov 2026 | ⬜ **15** hoy (eran 11) |
-| 40–60 consultas reveladas | Sep 2026 | ⬜ **13** hoy (eran 7) |
-| Keywords objetivo en rango 15–25 | Oct 2026 | ⬜ 29–76 hoy |
+| Doblar los **clics a páginas interiores**: 11 → 22 en 28 días | Nov 2026 | ✅ **32** — cumplido tres meses antes. Sin la noticia del RSA serían 23 |
+| 40–60 consultas reveladas | Sep 2026 | 🟡 **30** hoy (eran 7 en la línea base, 13 el 17 ago) |
+| Keywords objetivo en rango 15–25 | Oct 2026 | ❌ 29–76 hoy. Sin movimiento pese a ampliar las cinco páginas: la causa es autoridad (C1–C6), y sigue bloqueada |
 | Primera keyword comercial en página 1 | Nov 2026 | 🟡 `rsa 2026` en **posición 10,1** y `reglamento sanitario de los alimentos 2026` en **8,5** — informacionales, no comerciales, pero es la primera vez que el sitio toca página 1 con consultas de volumen real |
 
 > **Segunda lectura de agosto (17 ago).** El salto es grande y tiene un motor identificable.

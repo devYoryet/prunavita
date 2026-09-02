@@ -89,7 +89,10 @@ Los dos de **maquinaria**. Ninguno de ciruelas, cerezas ni de la noticia del RSA
 
 **Lecturas:**
 - **Ciruelas** es la mejor página comercial: 66 s de permanencia. La gente la lee.
-- **Cerezas** trae y pierde: 4 clics, 7 s. Creada el 17 ago, le falta profundidad → septiembre.
+- **Cerezas** trae y pierde: 4 clics, 7 s. **No es falta de contenido**: con 2.241 palabras es la
+  página más larga del sitio, con hero de producto y fichas enlazadas. Las consultas visibles que la
+  encuentran son genéricas (`cerezas chile`, `cerezas`, `guindas chile`, `sweet aryana`): público que
+  no es importador. Es desajuste de intención, no de profundidad. Ojo con la muestra: 11 sesiones.
 - **Representación comercial** rankea 3,9 pero retiene 6 s: aparece para intención equivocada.
 - **Noticia maquinaria usada** es el patrón a repetir: 8 impresiones, 25% CTR, 90 s, 1 contacto.
 
@@ -171,7 +174,8 @@ Sin esto, los hitos de octubre y noviembre no son alcanzables por más contenido
 
 1. **Duplicar la apuesta por maquinaria** — 1 de las 2 noticias, enlazada al servicio. Es el único tema
    con contactos probados.
-2. **Profundizar Cerezas** — calibres, variedades, temporada, condiciones de venta (patrón ciruelas).
+2. **Reorientar Cerezas** — no ampliarla: reescribir title/H1/H2 hacia intención de importador
+   (calibre, formato IQF/sulfitada, temporada, condiciones de embarque).
 3. **Revisar Representación comercial** — alinear la página con la intención real de las consultas.
 4. **Fichas técnicas al frente** — enlazarlas desde cada página de producto, no solo desde su sección.
 5. **Directorios** — en cuanto lleguen los datos del §9. Textos redactados desde julio.
