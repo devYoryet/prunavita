@@ -1931,3 +1931,109 @@ section {
         height: 60px;
     }
 }
+
+/* ==========================================================================
+   Clientes — banda de confianza bajo el hero
+   El carrusel es una cinta continua: dos listas identicas desplazandose, la
+   segunda oculta a lectores de pantalla. Se detiene al pasar el cursor y se
+   convierte en una grilla estatica si el visitante pidio menos animacion.
+   ========================================================================== */
+.clientes {
+    padding: 3.5rem 0;
+    background: var(--gray-50, #F7F7F5);
+    border-top: 1px solid var(--gray-200, #E5E5E5);
+    border-bottom: 1px solid var(--gray-200, #E5E5E5);
+}
+
+.clientes .section-header {
+    margin-bottom: 2rem;
+}
+
+.clientes-marquee {
+    overflow: hidden;
+    /* Difumina los bordes para que los logos entren y salgan sin cortarse. */
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.clientes-track {
+    display: flex;
+    width: max-content;
+    animation: clientes-scroll 38s linear infinite;
+}
+
+.clientes-marquee:hover .clientes-track,
+.clientes-marquee:focus-within .clientes-track {
+    animation-play-state: paused;
+}
+
+.clientes-set {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+    margin: 0;
+    padding: 0 1.75rem;
+    list-style: none;
+}
+
+.cliente-item {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 72px;
+}
+
+.cliente-item img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    /* Los logos vienen en paletas muy distintas; el gris los unifica y el
+       color vuelve al pasar el cursor. */
+    filter: grayscale(1);
+    opacity: 0.62;
+    transition: filter 0.25s ease, opacity 0.25s ease;
+}
+
+.cliente-item:hover img {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+.cliente-wordmark {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: var(--gray-500, #7A7A7A);
+    white-space: nowrap;
+    transition: color 0.25s ease;
+}
+
+.cliente-item:hover .cliente-wordmark {
+    color: var(--primary, #2C5F2D);
+}
+
+@keyframes clientes-scroll {
+    from { transform: translateX(0); }
+    /* -50% es exactamente una de las dos listas: el salto es invisible. */
+    to   { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+    .clientes { padding: 2.5rem 0; }
+    .clientes-set { gap: 2.25rem; padding: 0 1.125rem; }
+    .cliente-item { width: 128px; height: 56px; }
+    .cliente-wordmark { font-size: 1.1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .clientes-marquee { -webkit-mask-image: none; mask-image: none; }
+    .clientes-track { animation: none; width: 100%; }
+    .clientes-set { flex-wrap: wrap; justify-content: center; row-gap: 1.5rem; }
+    /* La copia duplicada solo existe para la cinta; sin animacion, sobra. */
+    .clientes-set[aria-hidden="true"] { display: none; }
+}

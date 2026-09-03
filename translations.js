@@ -5,6 +5,9 @@
 
 const translations = {
     es: {
+        "clientes.tag": "Clientes",
+        "clientes.title": "Empresas que trabajan con nosotros",
+        "clientes.subtitle": "Productores, procesadores y exportadores de la agroindustria chilena",
         // Navigation
         "nav.home": "Inicio",
         "nav.about": "Nosotros",
@@ -184,6 +187,9 @@ const translations = {
     },
 
     en: {
+        "clientes.tag": "Clients",
+        "clientes.title": "Companies that work with us",
+        "clientes.subtitle": "Growers, processors and exporters from the Chilean agri-food industry",
         // Navigation
         "nav.home": "Home",
         "nav.about": "About Us",
