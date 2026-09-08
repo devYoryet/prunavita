@@ -20,6 +20,7 @@ Se ejecuta solo en cada commit a traves del hook pre-commit.
 """
 
 import argparse
+import datetime
 import re
 import subprocess
 import sys
@@ -53,13 +54,41 @@ def ruta_local(url):
 LINEAS_SIGNIFICATIVAS = 10
 
 
+def lineas_en_stage(archivo):
+    """Lineas cambiadas en el area de preparacion (el commit que se esta creando).
+
+    El hook corre ANTES de que el commit exista, asi que git log todavia no ve
+    el cambio de hoy y la pagina conserva la fecha de su commit anterior. Es
+    justo el caso que este script existe para evitar: la pagina que acabamos de
+    reescribir es la que mas nos interesa que Google relea.
+    """
+    rel = archivo.relative_to(RAIZ).as_posix()
+    r = subprocess.run(
+        ["git", "diff", "--cached", "--numstat", "--", rel],
+        capture_output=True, text=True, cwd=RAIZ)
+    for linea in r.stdout.splitlines():
+        partes = linea.split("\t")
+        if len(partes) >= 2:
+            try:
+                return int(partes[0]) + int(partes[1])
+            except ValueError:      # binario, git marca "-"
+                return 0
+    return 0
+
+
 def fecha_git(archivo):
-    """Fecha del ultimo commit con un cambio SUSTANCIAL en el archivo.
+    """Fecha del cambio SUSTANCIAL mas reciente en el archivo.
+
+    Primero mira lo que esta en el area de preparacion (aun sin commitear) y
+    despues el historial.
 
     Recorre el historial de mas reciente a mas antiguo y devuelve la fecha del
     primer commit cuyo diff supere el umbral. Si ninguno lo supera, devuelve la
     fecha del commit mas antiguo que toco el archivo (su creacion).
     """
+    if lineas_en_stage(archivo) >= LINEAS_SIGNIFICATIVAS:
+        return datetime.date.today().isoformat()
+
     rel = archivo.relative_to(RAIZ).as_posix()
     r = subprocess.run(
         ["git", "log", "--format=%H %ad", "--date=short", "--numstat", "--", rel],
