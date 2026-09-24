@@ -101,7 +101,10 @@ def imagenes_en_uso():
         if html.name in ("plantilla-noticia.html", "index.html"):
             continue
         texto = html.read_text(encoding="utf-8", errors="ignore")
-        for archivo in set(re.findall(r"assets/images/([A-Za-z0-9_-]+\.(?:jpg|jpeg|png|webp))", texto)):
+        # Se compara por nombre SIN extension: desde que el banco tiene .jpg y
+        # .webp de cada foto, contarlas por separado dejaria pasar la misma
+        # imagen en dos noticias con solo cambiar el formato.
+        for archivo in set(re.findall(r"assets/images/([A-Za-z0-9_-]+)\.(?:jpg|jpeg|png|webp)", texto)):
             if CHROME.search(archivo):
                 continue
             uso.setdefault(archivo, []).append(html.name)
