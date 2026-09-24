@@ -359,6 +359,13 @@
     align-items: center;
 }
 
+/* En el bloque de contacto de la portada los botones se alinean a la izquierda,
+   con el resto de los datos de contacto, y no centrados como en el banner. */
+.contact-cta-actions {
+    justify-content: flex-start;
+    margin-top: var(--spacing-lg);
+}
+
 .cta-actions .btn-whatsapp {
     display: inline-flex;
     align-items: center;

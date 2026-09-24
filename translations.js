@@ -136,6 +136,7 @@ const translations = {
         "contact.email.label": "Email",
         "contact.phone.label": "Teléfono / WhatsApp",
         "contact.phone.wa": "Escribir por WhatsApp →",
+        "contact.wa.button": "Escribir por WhatsApp",
         "contact.location.label": "Ubicación",
         "contact.location.value": "Chile",
 
@@ -318,6 +319,7 @@ const translations = {
         "contact.email.label": "Email",
         "contact.phone.label": "Phone / WhatsApp",
         "contact.phone.wa": "Message us on WhatsApp →",
+        "contact.wa.button": "Message us on WhatsApp",
         "contact.location.label": "Location",
         "contact.location.value": "Chile",
 
