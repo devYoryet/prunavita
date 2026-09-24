@@ -10,7 +10,7 @@
             id: 'cereza-iqf-prunavita',
             file: 'cereza-iqf-prunavita.pdf',
             category: 'cerezas',
-            image: 'assets/images/productos/cerezas-descarozadas-iqf.jpg',
+            image: 'assets/images/productos/cerezas-descarozadas-iqf.webp',
             icon: '🍒',
             title: { es: 'Cereza IQF PrunaVita', en: 'PrunaVita IQF Cherries' },
             summary: {
@@ -23,7 +23,7 @@
             id: 'cereza-descarozada-iqf',
             file: 'cereza-descarozada-iqf.pdf',
             category: 'cerezas',
-            image: 'assets/images/productos/cerezas-descarozadas-iqf.jpg',
+            image: 'assets/images/productos/cerezas-descarozadas-iqf.webp',
             icon: '🍒',
             title: { es: 'Cereza Descarozada IQF', en: 'Pitted IQF Cherries' },
             summary: {
@@ -36,7 +36,7 @@
             id: 'cerezas-descarozadas-pitted',
             file: 'cerezas-descarozadas-pitted.pdf',
             category: 'cerezas',
-            image: 'assets/images/productos/cerezas-deshidratadas.jpg',
+            image: 'assets/images/productos/cerezas-deshidratadas.webp',
             icon: '🍒',
             title: { es: 'Cerezas Descarozadas (Pitted)', en: 'Pitted Cherries' },
             summary: {
@@ -49,7 +49,7 @@
             id: 'cerezas-sulfitadas-so2',
             file: 'cerezas-sulfitadas-so2.pdf',
             category: 'cerezas',
-            image: 'assets/images/productos/cerezas-amarillas-sulfitado.jpg',
+            image: 'assets/images/productos/cerezas-amarillas-sulfitado.webp',
             icon: '🍒',
             title: { es: 'Cerezas Sulfitadas (SO₂)', en: 'Sulphited Cherries (SO₂)' },
             summary: {
@@ -62,7 +62,7 @@
             id: 'cerezas-frescas-camigo',
             file: 'cerezas-frescas-camigo.pdf',
             category: 'cerezas',
-            image: 'assets/images/productos/cerezas-frescas.jpg',
+            image: 'assets/images/productos/cerezas-frescas.webp',
             icon: '🍒',
             title: { es: 'Cerezas Frescas CAMIGO', en: 'CAMIGO Fresh Cherries' },
             summary: {
@@ -75,7 +75,7 @@
             id: 'cerezas-congeladas-camigo',
             file: 'cerezas-congeladas-camigo.pdf',
             category: 'cerezas',
-            image: 'assets/images/productos/cerezas-congeladas.jpg',
+            image: 'assets/images/productos/cerezas-congeladas.webp',
             icon: '🍒',
             title: { es: 'Cerezas Congeladas CAMIGO', en: 'CAMIGO Frozen Cherries' },
             summary: {
@@ -88,7 +88,7 @@
             id: 'cerezas-deshidratadas-camigo',
             file: 'cerezas-deshidratadas-camigo.pdf',
             category: 'cerezas',
-            image: 'assets/images/productos/cerezas-deshidratadas.jpg',
+            image: 'assets/images/productos/cerezas-deshidratadas.webp',
             icon: '🍒',
             title: { es: 'Cerezas Deshidratadas CAMIGO', en: 'CAMIGO Dried Cherries' },
             summary: {
@@ -101,7 +101,7 @@
             id: 'ciruela-natural-prunavita-cn',
             file: 'ciruela-natural-prunavita-cn.pdf',
             category: 'ciruelas',
-            image: 'assets/images/productos/ciruelas-deshidratadas.jpg',
+            image: 'assets/images/productos/ciruelas-deshidratadas.webp',
             icon: '🫐',
             title: { es: 'Ciruela Natural CN PrunaVita', en: 'PrunaVita Natural Prunes CN' },
             summary: {
@@ -114,7 +114,7 @@
             id: 'ciruela-pjc-prunavita',
             file: 'ciruela-pjc-prunavita.pdf',
             category: 'ciruelas',
-            image: 'assets/images/productos/ciruelas-deshidratadas.jpg',
+            image: 'assets/images/productos/ciruelas-deshidratadas.webp',
             icon: '🫐',
             title: { es: 'Ciruela PJC PrunaVita', en: 'PrunaVita PJC Prunes' },
             summary: {
@@ -127,7 +127,7 @@
             id: 'ciruela-tcc-prunavita',
             file: 'ciruela-tcc-prunavita.pdf',
             category: 'ciruelas',
-            image: 'assets/images/productos/ciruelas-deshidratadas.jpg',
+            image: 'assets/images/productos/ciruelas-deshidratadas.webp',
             icon: '🫐',
             title: { es: 'Ciruela TCC PrunaVita', en: 'PrunaVita TCC Prunes' },
             summary: {
@@ -140,7 +140,7 @@
             id: 'ciruela-tsc-prunavita',
             file: 'ciruela-tsc-prunavita.pdf',
             category: 'ciruelas',
-            image: 'assets/images/productos/ciruelas-deshidratadas.jpg',
+            image: 'assets/images/productos/ciruelas-deshidratadas.webp',
             icon: '🫐',
             title: { es: 'Ciruela TSC PrunaVita', en: 'PrunaVita TSC Prunes' },
             summary: {
@@ -153,7 +153,7 @@
             id: 'frutilla-iqf-prunavita',
             file: 'frutilla-iqf-prunavita.pdf',
             category: 'frutillas',
-            image: 'assets/images/productos/frutillas-iqf.jpg',
+            image: 'assets/images/productos/frutillas-iqf.webp',
             icon: '🍓',
             title: { es: 'Frutilla IQF PrunaVita', en: 'PrunaVita IQF Strawberries' },
             summary: {
@@ -166,7 +166,7 @@
             id: 'frutilla-iqf-grado-ab',
             file: 'frutilla-iqf-grado-ab.pdf',
             category: 'frutillas',
-            image: 'assets/images/productos/frutillas-iqf.jpg',
+            image: 'assets/images/productos/frutillas-iqf.webp',
             icon: '🍓',
             title: { es: 'Frutilla IQF Grado A+B', en: 'IQF Strawberries Grade A+B' },
             summary: {
@@ -179,7 +179,7 @@
             id: 'pulpa-cerezas-camigo',
             file: 'pulpa-cerezas-camigo.pdf',
             category: 'pulpas',
-            image: 'assets/images/productos/ficha-pulpa-cerezas.jpg',
+            image: 'assets/images/productos/ficha-pulpa-cerezas.webp',
             icon: '🧃',
             title: { es: 'Pulpa de Cerezas CAMIGO', en: 'CAMIGO Cherry Pulp' },
             summary: {
@@ -192,7 +192,7 @@
             id: 'pulpa-ciruelas-camigo',
             file: 'pulpa-ciruelas-camigo.pdf',
             category: 'pulpas',
-            image: 'assets/images/productos/ficha-pulpa-ciruelas.jpg',
+            image: 'assets/images/productos/ficha-pulpa-ciruelas.webp',
             icon: '🧃',
             title: { es: 'Pulpa de Ciruelas CAMIGO', en: 'CAMIGO Prune Pulp' },
             summary: {
@@ -205,10 +205,10 @@
 
     var PDF_BASE = 'assets/fichas-tecnicas/';
     var CATEGORY_IMAGES = {
-        cerezas: 'assets/images/productos/cerezas-frescas.jpg',
-        ciruelas: 'assets/images/productos/ciruelas-deshidratadas.jpg',
-        frutillas: 'assets/images/productos/frutillas-iqf.jpg',
-        pulpas: 'assets/images/productos/ficha-pulpa-cerezas.jpg'
+        cerezas: 'assets/images/productos/cerezas-frescas.webp',
+        ciruelas: 'assets/images/productos/ciruelas-deshidratadas.webp',
+        frutillas: 'assets/images/productos/frutillas-iqf.webp',
+        pulpas: 'assets/images/productos/ficha-pulpa-cerezas.webp'
     };
     var currentId = null;
     var speechUtterance = null;
@@ -236,7 +236,7 @@
     }
 
     function getFichaImage(ficha) {
-        return ficha.image || CATEGORY_IMAGES[ficha.category] || 'assets/images/hero-prunes.jpg';
+        return ficha.image || CATEGORY_IMAGES[ficha.category] || 'assets/images/hero-prunes.webp';
     }
 
     function renderList(filter) {

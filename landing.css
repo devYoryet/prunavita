@@ -64,7 +64,7 @@
     position: absolute;
     inset: 0;
     z-index: -2;
-    background-image: url("assets/images/hero-prunes.jpg");
+    background-image: url("assets/images/hero-prunes.webp");
     background-size: cover;
     background-position: center;
     opacity: 0.28;

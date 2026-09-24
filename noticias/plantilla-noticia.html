@@ -22,6 +22,9 @@
               python scripts/portada_noticia.py usar --id <ID> --slug <SLUG> --nombre <archivo>
             Reemplazar [IMAGEN] en los 3 puntos de este archivo (og:image, JSON-LD
             "image" y .page-hero-bg) y [IMAGEN-INTERIOR] en el <img> del cuerpo.
+            OJO con la extension: og:image y el JSON-LD van en .jpg (los rastreadores
+            sociales no siempre negocian WebP); el hero y el <img> van en .webp, que
+            es lo que descarga el navegador. portada_noticia.py genera las dos.
             El alt debe describir lo que la foto muestra DE VERDAD.
          4. Quitar la meta robots "noindex" de abajo
          5. Agregar la tarjeta en /noticias/index.html (misma imagen que la portada)
@@ -100,7 +103,7 @@
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <div class="logo">
-                <a href="../index.html"><img src="../assets/images/prunalogo.png" alt="Prunavita - Servicios Agroindustriales" class="logo-image"></a>
+                <a href="../index.html"><img src="../assets/images/prunalogo.webp" alt="Prunavita - Servicios Agroindustriales" class="logo-image"></a>
             </div>
             <button class="menu-toggle" id="menuToggle" aria-label="Menu">
                 <span></span><span></span><span></span>
@@ -144,7 +147,7 @@
     <header class="page-hero article-header">
         <!-- Foto de portada como fondo tenue. OBLIGATORIO cambiar [IMAGEN] por la portada
              única de este artículo — si se deja fija, todas las noticias comparten foto. -->
-        <div class="page-hero-bg" style="background-image:url('../assets/images/[IMAGEN].jpg')" aria-hidden="true"></div>
+        <div class="page-hero-bg" style="background-image:url('../assets/images/[IMAGEN].webp')" aria-hidden="true"></div>
         <div class="container">
             <nav class="breadcrumbs" aria-label="breadcrumb">
                 <a href="../index.html">Inicio</a> / <a href="../noticias">Noticias</a> / [Título corto]
@@ -167,7 +170,7 @@
 
             <!-- Foto interior: DISTINTA de la portada y de toda otra noticia (ver PORTADAS.md) -->
             <figure>
-                <img src="../assets/images/[IMAGEN-INTERIOR].jpg" alt="[ALT que describa lo que la foto muestra de verdad]" loading="lazy" style="border-radius:12px;">
+                <img src="../assets/images/[IMAGEN-INTERIOR].webp" alt="[ALT que describa lo que la foto muestra de verdad]" loading="lazy" style="border-radius:12px;">
                 <figcaption style="font-size:0.85rem;color:#5E5E5E;margin-top:0.5rem;">[Pie de foto: una idea que aporte, no una repetición del alt.]</figcaption>
             </figure>
 
@@ -239,7 +242,7 @@
             <div class="footer-main">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <img src="../assets/images/logoblanco.png" alt="Prunavita" class="footer-logo-img">
+                        <img src="../assets/images/logoblanco.webp" alt="Prunavita" class="footer-logo-img">
                     </div>
                     <p class="footer-tagline" data-i18n="footer.desc">Servicios integrales en exportación y gestión agroindustrial con los más altos estándares de calidad.</p>
                 </div>

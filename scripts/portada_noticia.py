@@ -37,6 +37,7 @@ Claves (en .env en la raiz del proyecto, NUNCA en el repositorio):
 import argparse
 import base64
 import hashlib
+import io
 import os
 import re
 import sys
@@ -47,6 +48,7 @@ from pathlib import Path
 sys.stdout.reconfigure(encoding="utf-8")
 
 import requests
+from PIL import Image
 
 RAIZ = Path(__file__).resolve().parent.parent
 DIR_IMAGENES = RAIZ / "assets" / "images"
@@ -111,6 +113,9 @@ def hash_archivo(ruta):
 
 
 def guardar(contenido, nombre):
+    # El --nombre se escribe sin extension; si viene con ella, no la duplicamos.
+    if nombre.lower().endswith((".jpg", ".jpeg", ".webp", ".png")):
+        nombre = nombre.rsplit(".", 1)[0]
     destino = DIR_IMAGENES / f"{nombre}.jpg"
     if destino.exists():
         sys.exit(f"[ERROR] Ya existe {destino.name}. Elige otro --nombre.")
@@ -125,6 +130,15 @@ def guardar(contenido, nombre):
 
     destino.write_bytes(contenido)
     print(f"[OK] Guardada: assets/images/{destino.name}  ({len(contenido) // 1024} KB)")
+
+    # El navegador descarga el WebP; el .jpg queda para og:image y el JSON-LD,
+    # que los rastreadores sociales no siempre negocian.
+    gemelo = destino.with_suffix(".webp")
+    Image.open(io.BytesIO(contenido)).convert("RGB").save(
+        gemelo, "WEBP", quality=80, method=6)
+    ahorro = 100 - (gemelo.stat().st_size * 100 // max(len(contenido), 1))
+    print(f"[OK] WebP:     assets/images/{gemelo.name}  "
+          f"({gemelo.stat().st_size // 1024} KB, -{ahorro}%)")
     return destino
 
 
