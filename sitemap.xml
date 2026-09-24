@@ -44,8 +44,14 @@
     </url>
     <url>
         <loc>https://prunavita.cl/noticias</loc>
-        <lastmod>2026-09-02</lastmod>
+        <lastmod>2026-09-24</lastmod>
         <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://prunavita.cl/noticias/2026-09-temporada-cereza-chilena-2026-27.html</loc>
+        <lastmod>2026-09-24</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>

@@ -126,3 +126,5 @@ es exactamente lo que pidió no hacer.
 | `2026-08-reglamento-sanitario-alimentos-chile-exportadores` | `planta-procesamiento-alimentos.jpg` | Pexels #2889193 | Procesamiento de alimentos en planta industrial (foto interior) |
 | `2026-08-maquinaria-agroindustrial-usada-que-revisar` | `tecnico-tablero-maquinaria.jpg` | Pexels #35072831 | Tecnico interviniendo tablero de control de maquina industrial |
 | `2026-09-vender-maquinaria-agroindustrial-usada-chile` | `planta-industrial-linea-completa.jpg` | Pexels #33369528 | (completar) |
+| `2026-09-temporada-cereza-chilena-2026-27` | `cerezas-cosecha-caja.jpg` | Pexels #16235936 | (completar) |
+| `2026-09-temporada-cereza-chilena-2026-27` | `linea-seleccion-fruta.jpg` | Pexels #32578355 | (completar) |
