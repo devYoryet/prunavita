@@ -10,11 +10,15 @@ seo-system/
 # Scripts operativos (contienen rutas internas y logica de medicion)
 scripts/
 
-# Documentos comerciales y de entrega al cliente
-COTIZACION_PRUNAVITA_2026.html
-INFORME_ENTREGA_SEO_PRUNAVITA_ETAPA1.html
-INFORME_MENSUAL_SEO_PRUNAVITA_JULIO2026.html
-INFORME_MENSUAL_SEO_PRUNAVITA_AGOSTO2026.html
+# Documentos comerciales y de entrega al cliente.
+#
+# Por PATRON y no uno por uno: estos informes llevan montos, RUT y estado de
+# pagos, y listarlos a mano significaba que cada mes alguien tenia que acordarse
+# de agregar el nuevo. Si se olvidaba, el informe quedaba accesible por URL
+# directa en prunavita.cl. La barra inicial acota el patron a la raiz, por la
+# misma razon que en /*.pdf mas abajo.
+/INFORME_*.html
+/COTIZACION_*.html
 #
 # Solo los PDF de la raiz, que son los informes internos. La barra inicial es
 # imprescindible: sin ella el patron tambien excluia assets/fichas-tecnicas/,
