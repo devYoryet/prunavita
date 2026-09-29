@@ -132,6 +132,11 @@ Ambas investigadas con fuentes citadas y enlazadas a su página de servicio.
 | 5 keywords comerciales al rango 15–25 | oct | 29–76 | **27–89** | ❌ **No alcanzable** — ver §7 |
 | Primera comercial en página 1 | nov | — | — | ❌ Pendiente |
 
+> **Ojo con las dos cifras de "consultas reveladas".** En §2 agosto son **26** (ventana 1–25, para
+> comparar contra el mismo tramo de septiembre) y aquí son **30** (mes completo, que es como se
+> comprometió el hito). Ambas correctas, ventanas distintas. El informe de cliente lo aclara al pie
+> de la tabla para que no se lea como un error.
+
 ---
 
 ## 7. El bloqueo, con fecha de vencimiento cumplida
