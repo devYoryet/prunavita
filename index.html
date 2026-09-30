@@ -577,118 +577,73 @@
     </section>
 
     <!-- LinkedIn Feed Section -->
+    <!-- Ultimas publicaciones del sitio.
+         El grid entre los marcadores ULTIMAS lo genera scripts/ultimas_publicaciones.py
+         desde /noticias/index.html en cada commit. NO editarlo a mano: se sobrescribe.
+         Antes aqui habia una copia a mano de un post de LinkedIn con la antiguedad
+         escrita dura ("1 dia"); llevaba meses diciendo que el post era de ayer, y la
+         portada no enlazaba ninguna noticia propia. -->
     <section class="linkedin-feed" id="linkedin">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag" data-i18n="linkedin.tag">Síguenos en LinkedIn</span>
-                <h2 class="section-title" data-i18n="linkedin.title">Últimas Publicaciones</h2>
-                <p class="section-subtitle" data-i18n="linkedin.subtitle">Mantente al día con nuestras noticias y actualizaciones</p>
+                <span class="section-tag" data-i18n="pubs.tag">Noticias</span>
+                <h2 class="section-title" data-i18n="linkedin.title">&Uacute;ltimas Publicaciones</h2>
+                <p class="section-subtitle" data-i18n="linkedin.subtitle">Mantente al d&iacute;a con nuestras noticias y actualizaciones</p>
             </div>
-            <div class="linkedin-widget-container" data-aos="fade-up">
-                <div class="linkedin-feed-wrapper">
-                    <!-- LinkedIn Company Page Embed -->
-                    <!-- INSTRUCCIONES: 
-                         1. Ve a tu página de empresa en LinkedIn
-                         2. Haz clic en "Más" > "Insertar página"
-                         3. Copia el código del iframe y reemplaza el iframe de abajo
-                         O simplemente reemplaza 'TU_COMPANY_PAGE_URL' con la URL de tu página de LinkedIn
-                    -->
-                    <!-- Simulación de Publicación de LinkedIn -->
-                    <div class="linkedin-post-simulation">
-                        <!-- Header de la publicación -->
-                        <div class="linkedin-post-header">
-                            <div class="linkedin-post-author">
-                                <div class="linkedin-post-avatar">
-                                    <img src="assets/images/Logo_prunavite.webp" alt="Pruna Vita" class="linkedin-avatar-img">
-                                </div>
-                                <div class="linkedin-post-author-info">
-                                    <div class="linkedin-post-company-name">Pruna Vita</div>
-                                    <div class="linkedin-post-meta">
-                                        <span class="linkedin-followers">49 seguidores</span>
-                                        <span class="linkedin-separator">•</span>
-                                        <span class="linkedin-time">1 día</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="linkedin-post-menu" aria-label="Opciones">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <circle cx="12" cy="5" r="2"/>
-                                    <circle cx="12" cy="12" r="2"/>
-                                    <circle cx="12" cy="19" r="2"/>
-                                </svg>
-                            </button>
-                        </div>
 
-                        <!-- Contenido de la publicación -->
-                        <div class="linkedin-post-content">
-                            <p class="linkedin-post-text">
-                                Como socios clave, creemos que también es fundamental acoger a nuestros clientes y brindarles una experiencia integral. En esta visita a Viña Santa Rita, tuvimos la oportunidad de compartir la riqueza y tradición del mundo del vino chileno, fortaleciendo así nuestros lazos más allá de lo comercial.
-                            </p>
-                            <p class="linkedin-post-link">
-                                <a href="https://www.zixinbio.com" target="_blank" rel="noopener">www.zixinbio.com</a>
-                            </p>
+            <!-- ULTIMAS:INICIO -->
+            <div class="news-grid">
+                <article class="news-card news-card--hub">
+                    <a class="news-card-thumb" href="/noticias/2026-09-temporada-cereza-chilena-2026-27.html">
+                        <img src="assets/images/cerezas-cosecha-caja.webp" alt="Caja de cart&oacute;n con cerezas reci&eacute;n cosechadas de distinto color y calibre, sostenida en el huerto" loading="lazy">
+                    </a>
+                    <div class="news-card-body">
+                        <div class="news-meta">
+                            <span class="news-category">Cerezas</span> &middot; <time datetime="2026-09-24">24 de septiembre, 2026</time>
                         </div>
-
-                        <!-- Imágenes de la publicación -->
-                        <div class="linkedin-post-images">
-                            <div class="linkedin-image-grid">
-                                <div class="linkedin-image-main">
-                                    <!-- Imagen principal: Grupo en bodega de vino -->
-                                    <img src="assets/images/linkedin-vina-1.webp" 
-                                         alt="Visita a Viña Santa Rita - Grupo en bodega" 
-                                         class="linkedin-post-img">
-                                </div>
-                                <div class="linkedin-image-side">
-                                    <!-- Imagen secundaria: Degustación de vino -->
-                                    <img src="assets/images/linkedin-vina-2.webp" 
-                                         alt="Visita a Viña Santa Rita - Degustación" 
-                                         class="linkedin-post-img">
-                                    <!-- Imagen terciaria: Botella de vino -->
-                                    <img src="assets/images/linkedin-vina-3.webp" 
-                                         alt="Visita a Viña Santa Rita - Botella Winemaker" 
-                                         class="linkedin-post-img">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Footer de la publicación -->
-                        <div class="linkedin-post-footer">
-                            <div class="linkedin-post-actions">
-                                <button class="linkedin-action-btn linkedin-like-btn">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-                                    </svg>
-                                    <span>5</span>
-                                </button>
-                                <button class="linkedin-action-btn linkedin-comment-btn">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                                    </svg>
-                                </button>
-                                <button class="linkedin-action-btn linkedin-share-btn">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
-                                        <polyline points="16 6 12 2 8 6"/>
-                                        <line x1="12" y1="2" x2="12" y2="15"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Botón "Ver más" que redirige a LinkedIn -->
-                        <div class="linkedin-view-more-container">
-                            <a href="https://www.linkedin.com/company/pruna-vita/posts/?feedView=all&viewAsMember=true" 
-                               target="_blank" 
-                               rel="noopener" 
-                               class="linkedin-view-more-btn">
-                                <span data-i18n="linkedin.viewMore">Ver más publicaciones</span>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
+                        <h3><a href="/noticias/2026-09-temporada-cereza-chilena-2026-27.html">Temporada de cereza chilena 2026/27: qu&eacute; pasa con la fruta que no sale en fresco</a></h3>
+                        <p>Chile proyecta 132 millones de cajas y 667.000 toneladas de exportaci&oacute;n. Pero cerca del 20% de la cosecha no alcanza est&aacute;ndar de fresco, y ah&iacute; est&aacute; la materia&hellip;</p>
+                        <a class="news-link" href="/noticias/2026-09-temporada-cereza-chilena-2026-27.html">Leer m&aacute;s &rarr;</a>
                     </div>
-                </div>
+                </article>
+                <article class="news-card news-card--hub">
+                    <a class="news-card-thumb" href="/noticias/2026-09-vender-maquinaria-agroindustrial-usada-chile.html">
+                        <img src="assets/images/planta-industrial-linea-completa.webp" alt="Interior de una planta industrial con una l&iacute;nea de producci&oacute;n completa instalada" loading="lazy">
+                    </a>
+                    <div class="news-card-body">
+                        <div class="news-meta">
+                            <span class="news-category">Maquinaria</span> &middot; <time datetime="2026-09-02">2 de septiembre, 2026</time>
+                        </div>
+                        <h3><a href="/noticias/2026-09-vender-maquinaria-agroindustrial-usada-chile.html">Vender maquinaria agroindustrial usada en Chile: d&oacute;nde, a qu&eacute; precio y con qu&eacute; papeles</a></h3>
+                        <p>Cuando una planta renueva su l&iacute;nea, el equipo que sale sigue valiendo dinero &mdash; y la mayor&iacute;a termina perdi&eacute;ndolo en un galp&oacute;n. Los cuatro canales de venta y&hellip;</p>
+                        <a class="news-link" href="/noticias/2026-09-vender-maquinaria-agroindustrial-usada-chile.html">Leer m&aacute;s &rarr;</a>
+                    </div>
+                </article>
+                <article class="news-card news-card--hub">
+                    <a class="news-card-thumb" href="/noticias/2026-08-maquinaria-agroindustrial-usada-que-revisar.html">
+                        <img src="assets/images/maquinaria.webp" alt="Maquinaria agroindustrial para procesamiento de alimentos en una planta" loading="lazy">
+                    </a>
+                    <div class="news-card-body">
+                        <div class="news-meta">
+                            <span class="news-category">Maquinaria</span> &middot; <time datetime="2026-08-17">17 de agosto, 2026</time>
+                        </div>
+                        <h3><a href="/noticias/2026-08-maquinaria-agroindustrial-usada-que-revisar.html">Comprar maquinaria agroindustrial usada: qu&eacute; revisar antes de firmar</a></h3>
+                        <p>El mercado de equipos para procesamiento de alimentos llega a USD 88.210 millones en 2026 y lo reacondicionado dej&oacute; de ser el plan B. Seis criterios concretos.</p>
+                        <a class="news-link" href="/noticias/2026-08-maquinaria-agroindustrial-usada-que-revisar.html">Leer m&aacute;s &rarr;</a>
+                    </div>
+                </article>
+            </div>
+            <!-- ULTIMAS:FIN -->
+
+            <div class="pubs-actions">
+                <a class="btn btn-outline" href="/noticias" data-i18n="pubs.all">Ver todas las noticias</a>
+                <a class="pubs-linkedin" href="https://www.linkedin.com/company/pruna-vita/"
+                   target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 18.34V9.96H5.56v8.38h2.78zM6.95 8.72a1.61 1.61 0 1 0 0-3.22 1.61 1.61 0 0 0 0 3.22zM18.44 18.34v-4.6c0-2.46-1.31-3.6-3.06-3.6-1.41 0-2.04.78-2.39 1.32V9.96h-2.78c.04.79 0 8.38 0 8.38h2.78v-4.68c0-.25.02-.5.09-.68.2-.5.65-1.01 1.42-1.01 1 0 1.4.76 1.4 1.88v4.49h2.78z"/>
+                    </svg>
+                    <span data-i18n="pubs.linkedin">S&iacute;guenos en LinkedIn</span>
+                </a>
             </div>
         </div>
     </section>

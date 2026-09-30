@@ -161,6 +161,9 @@ const translations = {
 
         // LinkedIn
         "linkedin.tag": "Síguenos en LinkedIn",
+        "pubs.tag": "Noticias",
+        "pubs.all": "Ver todas las noticias",
+        "pubs.linkedin": "Síguenos en LinkedIn",
         "linkedin.title": "Últimas Publicaciones",
         "linkedin.subtitle": "Mantente al día con nuestras noticias y actualizaciones",
         "linkedin.viewMore": "Ver más publicaciones",
@@ -344,6 +347,9 @@ const translations = {
 
         // LinkedIn
         "linkedin.tag": "Follow us on LinkedIn",
+        "pubs.tag": "News",
+        "pubs.all": "See all news",
+        "pubs.linkedin": "Follow us on LinkedIn",
         "linkedin.title": "Latest Posts",
         "linkedin.subtitle": "Stay up to date with our news and updates",
         "linkedin.viewMore": "View more posts",

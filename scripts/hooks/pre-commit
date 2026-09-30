@@ -45,4 +45,21 @@ if git diff --cached --name-only | grep -qE '\.html$'; then
     fi
 fi
 
+# ---------- 3. Ultimas publicaciones de la portada ----------
+# Se ejecuta cuando cambia el hub de noticias o se agrega una noticia. La portada
+# decia "Ultimas Publicaciones" y mostraba un post copiado a mano de junio con la
+# antiguedad escrita dura; ademas no enlazaba ninguna noticia propia. Generarlo
+# evita que vuelva a envejecer solo.
+if git diff --cached --name-only | grep -qE '^noticias/'; then
+    echo "[pre-commit] Sincronizando las ultimas publicaciones de la portada..."
+    if python scripts/ultimas_publicaciones.py; then
+        if ! git diff --quiet -- index.html; then
+            git add index.html
+            echo "[pre-commit] index.html actualizado y agregado al commit."
+        fi
+    else
+        echo "[pre-commit] Aviso: no se pudo actualizar la portada; continuo igual."
+    fi
+fi
+
 exit 0
