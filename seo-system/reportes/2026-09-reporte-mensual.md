@@ -141,7 +141,7 @@ quedó **indexada en menos de una hora** y su primer día registró 9 impresione
 
 ---
 
-## 7. Las gestiones del cliente: 2 de 6 resueltas
+## 7. Las gestiones del cliente: 3 de 6 cerradas
 
 Solicitud del **17 de agosto**. Este mes hubo el primer movimiento desde entonces.
 
@@ -150,9 +150,13 @@ Solicitud del **17 de agosto**. Este mes hubo el primer movimiento desde entonce
 | C1 | Google Business Profile | ✅ **Resuelta** | Presencia de marca. Falta completar la ficha |
 | D4 | Bing Webmaster Tools | ✅ **Resuelta** | Canal hacia ChatGPT y Copilot |
 | C2 | ProChile — directorio de exportadores | ⬜ Pendiente | El enlace de mayor confianza disponible |
-| C3/C4 | Chileprunes / Chilealimentos | ⬜ Pendiente | Enlace de gremio, el más fácil de obtener |
-| C6 | LinkedIn de empresa | ⬜ Pendiente | Difusión de cada noticia + enlace estable |
+| C3/C4 | Chileprunes / Chilealimentos | ❌ **Descartada** | **No es socio de ninguno** (confirmado 30 sep). Vía cerrada |
+| C6 | LinkedIn de empresa | 🟡 Parcial | Página: `linkedin.com/company/pruna-vita`. El sitio ya la enlaza y la declara en `sameAs`. Falta **acceso de editor** para publicar |
 | C5 | Alibaba / Made-in-China | ⬜ Pendiente | Enlace + canal asiático |
+
+**Se cae la palanca más barata.** Los gremios eran el enlace de menor esfuerzo del lote y quedaron
+descartados: Prunavita no es socio. **ProChile pasa a ser la gestión número uno** — es el enlace de
+mayor confianza al que el sitio puede aspirar hoy y necesita RUT y credenciales de la empresa.
 
 **Por qué esto no salva todavía el hito de octubre.** GBP y Bing construyen *presencia de marca*:
 ayudan a que encuentren a Prunavita cuando la buscan por su nombre. Las cinco keywords comerciales
