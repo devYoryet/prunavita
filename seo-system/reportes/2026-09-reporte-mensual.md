@@ -27,7 +27,10 @@ había motor propio debajo. Lo detectó: todavía no lo hay.
 
 **Los dos avances del mes:**
 
-1. **Google Business Profile creado.** Era la gestión C1, detenida desde el 17 de agosto.
+1. **Google Business Profile activo.** Era la gestión C1. La ficha ya se muestra en Búsqueda y
+   Maps: en agosto registró **24 vistas de perfil** y 22 solicitudes de indicaciones — pero
+   **0 clics al sitio**, y 22 de las 24 interacciones fueron indicaciones para llegar a Buin.
+   Tránsito local, no comprador. Completarla es tarea de octubre.
 2. **Bing Webmaster Tools verificado.** Token publicado por dos métodos y comprobado en vivo.
 
 **Territorio nuevo:** la noticia del 2 de septiembre creó **siete consultas que no existían en
@@ -107,7 +110,7 @@ quedó **indexada en menos de una hora** y su primer día registró 9 impresione
 
 | Gestión | Estado | Para qué sirve |
 |---|---|---|
-| Google Business Profile | ✅ Creado | Marca en Google y Maps, con panel propio |
+| Google Business Profile | ✅ Activo | Ya se muestra. Ago: 24 vistas, 22 indicaciones, **0 clics al sitio** |
 | Bing Webmaster Tools | ✅ Verificado | Bing alimenta ChatGPT y Copilot |
 
 **Sin costo adicional:**
@@ -144,7 +147,7 @@ Solicitud del **17 de agosto**. Este mes hubo el primer movimiento desde entonce
 
 | # | Gestión | Estado | Qué destraba |
 |---|---|---|---|
-| C1 | Google Business Profile | ✅ **Resuelta** | Presencia de marca en Google y Maps |
+| C1 | Google Business Profile | ✅ **Resuelta** | Presencia de marca. Falta completar la ficha |
 | D4 | Bing Webmaster Tools | ✅ **Resuelta** | Canal hacia ChatGPT y Copilot |
 | C2 | ProChile — directorio de exportadores | ⬜ Pendiente | El enlace de mayor confianza disponible |
 | C3/C4 | Chileprunes / Chilealimentos | ⬜ Pendiente | Enlace de gremio, el más fácil de obtener |
@@ -176,8 +179,9 @@ rendirían en diciembre o enero.
    comercial donde ya aparecemos. Noticia de refuerzo + enlazado interno dirigido.
 2. **Cerrar la ventana de cereza.** Octubre es el último mes de programa de temporada. La noticia del
    24 ya rankea en 4,6.
-3. **Completar el Google Business Profile.** Creada la ficha, lo que rinde es llenarla: categoría,
-   descripción, productos, horario, fotos reales y primeras reseñas. Una ficha vacía no convierte.
+3. **Completar el Google Business Profile.** La ficha funciona pero no alimenta al sitio: 24 vistas
+   y **cero clics a prunavita.cl** en agosto. Falta enlace al sitio bien puesto, descripción,
+   categoría, productos, fotos reales y primeras reseñas. Google mismo la marca como incompleta.
 4. **Página pilar de exportación (A5)**, prevista para octubre en el plan de 6 meses.
 5. **Directorios**, en cuanto lleguen los datos del §7. Textos redactados desde julio.
 
@@ -192,12 +196,13 @@ frente nuevo es repartir el mismo esfuerzo en más lugares.
 |---|---|---:|---|
 | Etapa 1 — implementación | jun 2026 | $570.000 | Pagado |
 | Mantención mes 2 | jul 2026 | $150.000 | Pagado |
-| Mantención mes 3 | ago 2026 | $150.000 | **Por confirmar** |
+| Mantención mes 3 | ago 2026 | $150.000 | **Pagado** |
 | **Mantención mes 4** | **sep 2026** | **$150.000** | **A cobrar** |
 
-> **Nota interna (no va al cliente):** el estado de la mantención de agosto sigue sin confirmar. Si
-> está pagada, la línea se marca **Pagado** y el cobro del mes es de $150.000; si no, son $300.000.
-> Verificar antes de enviar. Ver [[prunavita-contrato-y-cobros]].
+**Agosto quedó pagado** y está verificado: transferencia de COMERCIALIZADORA CAMIGO SPA por
+**$150.007** el **4 de septiembre de 2026 a las 19:31**, glosa "Pago boleta 19 Mantenimiento SEO web
+PRUNAVITA" (operación `MVL_EMP2609041931125561208040`). Sin saldos anteriores. Lo único a cobrar es
+la mantención de septiembre. Ver [[prunavita-contrato-y-cobros]].
 
 ---
 
@@ -208,7 +213,8 @@ frente nuevo es repartir el mismo esfuerzo en más lugares.
 > en Google.
 >
 > El posicionamiento tiene margen claro: `vender maquinaria` en posición 16 es una oportunidad barata
-> de capturar. Y con GBP y Bing resueltos, el frente de presencia dejó de estar detenido.
+> de capturar. Y con GBP y Bing resueltos, el frente de presencia dejó de estar detenido —aunque la ficha todavía
+> no manda a nadie al sitio, que es lo que toca corregir en octubre—.
 >
 > Pero el salto de *aparecer* a *que le escriban* depende de dos cosas del lado de Prunavita: las
 > cuatro gestiones pendientes y **la oferta comercial** —qué se ofrece, a qué precio, con qué prueba—
