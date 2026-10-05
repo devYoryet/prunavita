@@ -128,3 +128,5 @@ es exactamente lo que pidió no hacer.
 | `2026-09-vender-maquinaria-agroindustrial-usada-chile` | `planta-industrial-linea-completa.jpg` | Pexels #33369528 | (completar) |
 | `2026-09-temporada-cereza-chilena-2026-27` | `cerezas-cosecha-caja.jpg` | Pexels #16235936 | (completar) |
 | `2026-09-temporada-cereza-chilena-2026-27` | `linea-seleccion-fruta.jpg` | Pexels #32578355 | (completar) |
+| `2026-10-maquinaria-que-se-vende-rapido` | `bodega-equipos-almacenados.jpg` | Pexels #36398150 | (completar) |
+| `2026-10-programa-compra-cereza-procesada` | `cierre-acuerdo-comercial.jpg` | Pexels #9870223 | (completar) |
