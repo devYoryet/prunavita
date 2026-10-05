@@ -1,196 +1,147 @@
 # Reporte Mensual SEO — Prunavita.cl
 
-**Período:** Septiembre 2026 (Mes 4 del plan)
+**Período:** Septiembre 2026 (Mes 4 del plan) · **mes completo, 1 al 30**
 **Elaborado por:** Yoryet Danoun · Pulsando Tech
 **Para:** Felipe Catalán / equipo Prunavita
-**Fecha del documento:** 30/09/2026 · **envío:** 01/10/2026
+**Fecha del documento:** 05/10/2026
 **Documento cliente:** `INF-PRU-SEO-2026-04` → `INFORME_MENSUAL_SEO_PRUNAVITA_SEPTIEMBRE2026.html`
 y su PDF `Informe Mensual SEO — Septiembre 2026 _ Prunavita.pdf` (11 páginas A4)
-**Fuentes:** Google Search Console (`sc-domain:prunavita.cl`) + Google Analytics 4 (`properties/541942768`)
-**Ventana:** 1–27 sep vs 1–27 ago (GSC consolida con 3 días de retraso)
+**Fuentes:** GSC (`sc-domain:prunavita.cl`) + GA4 (`properties/541942768`)
 **Reproducible con:** `python scripts/medicion_mensual.py --mes 2026-09`
 
 ---
 
 ## 1. Resumen ejecutivo
 
-Mes de dos caras. **Los tres objetivos numéricos no se alcanzaron**, por una causa única y anticipada.
-**Y se destrabaron dos frentes que llevaban meses detenidos.**
+El titular es malo y la letra chica es bastante mejor.
 
-**La caída:** la noticia del RSA pasó de ~1.181 impresiones a **70**. Como era cerca del 80% del
-volumen de agosto, al caer arrastró todo: las impresiones bajaron de 1.463 a **618** y las sesiones
-de 155 a **86**.
+**Lo malo:** las impresiones cayeron de 1.591 a **740** (−53%). Causa única y anunciada: la noticia del
+RSA pasó de **1.112 a 92** impresiones.
 
-No fue sorpresa. El informe de agosto advirtió que ese pico era público informativo, y el plan de
-septiembre creó un indicador específico —clics a interiores **sin contar el RSA**— para detectar si
-había motor propio debajo. Lo detectó: todavía no lo hay.
+**Lo que importa:** el indicador que el plan creó para este escenario —**clics a interiores sin contar
+el RSA**— fue **23 en agosto y 21 en septiembre**. El motor propio se mantuvo; lo que se desplomó fue
+el pico prestado.
 
-**Los dos avances del mes:**
+**Tres señales mejores que agosto:** CTR 2,70% → **5,14%** (+90%), posición media 8,3 → 8,5 (plana pese
+a perder dos tercios del volumen) y contactos **2 → 3**.
 
-1. **Google Business Profile activo.** Era la gestión C1. La ficha ya se muestra en Búsqueda y
-   Maps: en agosto registró **24 vistas de perfil** y 22 solicitudes de indicaciones — pero
-   **0 clics al sitio**, y 22 de las 24 interacciones fueron indicaciones para llegar a Buin.
-   Tránsito local, no comprador. Completarla es tarea de octubre.
-2. **Bing Webmaster Tools verificado.** Token publicado por dos métodos y comprobado en vivo.
-
-**Territorio nuevo:** la noticia del 2 de septiembre creó **siete consultas que no existían en
-agosto**, encabezadas por `vender maquinaria` (37 impresiones), hoy la consulta con más impresiones
-de todo el sitio. Están en posición 16 a 27 —página 2— así que aún no dan clics.
-
-**Señal de calidad:** el CTR subió de 2,80% a **5,02%**. Llega menos gente y más pertinente.
+**Territorio nuevo:** 7 consultas que no existían en agosto, encabezadas por `vender maquinaria`
+(39 impresiones, pos 17,5), hoy la consulta con más impresiones del sitio.
 
 ---
 
-## 2. Indicadores clave
+## 2. Indicadores (mes completo vs mes completo)
 
-| Indicador | Ago 1–27 | Sep 1–27 | Variación |
+| Indicador | Agosto | Septiembre | Var. |
 |---|---:|---:|---|
-| Clics | 41 | 31 | −24% |
-| Impresiones | 1.463 | 618 | **−58%** |
-| CTR | 2,80% | **5,02%** | **+79%** |
-| Posición media | 8,2 | 8,9 | −0,7 |
-| **Clics a páginas interiores** | 30 | **18** | −40% |
+| Clics | 43 | 38 | −12% |
+| Impresiones | 1.591 | 740 | −53% |
+| CTR | 2,70% | **5,14%** | **+90%** |
+| Posición media | 8,3 | 8,5 | −0,2 |
+| Clics a interiores | 32 | 22 | −31% |
+| **Interiores sin RSA** | 23 | **21** | **−9%** |
 | Páginas con impresiones | 16 | **20** | +4 |
-| Consultas distintas reveladas | 29 | 16 | −45% |
-| Sesiones (GA4) | 155 | 86 | −45% |
-| Usuarios (GA4) | 117 | 64 | −45% |
-| `contacto_iniciado` | 2 | 2 | = |
+| Consultas reveladas | 33 | 16 | −52% |
+| Sesiones (GA4) | 160 | 105 | −34% |
+| Usuarios (GA4) | 120 | 80 | −33% |
+| **`contacto_iniciado`** | 2 | **3** | **+1** |
 
-Suben dos: **CTR** y **páginas con impresiones** (16 → 20). Diversificación, que es lo contrario del
-problema de concentración de agosto.
+Canales GA4 septiembre: Organic Search 67 · Direct 30 · Organic Social 4 · **AI Assistant 3** · Referral 1.
 
 ---
 
 ## 3. Las tres metas del mes
 
-| # | Indicador | Meta | Resultado | |
-|---|---|---:|---:|---|
-| 1 | `contacto_iniciado` | ≥ 4 | **2** | ❌ |
-| 2 | Consultas distintas reveladas | 40–60 | **16** | ❌ |
-| 3 | Clics a interiores sin contar el RSA | ≥ 30 | **18** | ❌ |
+| # | Indicador | Meta | Ago | Sep | |
+|---|---|---:|---:|---:|---|
+| 1 | `contacto_iniciado` | ≥ 4 | 2 | **3** | ❌ |
+| 2 | Consultas reveladas | 40–60 | 33 | **16** | ❌ |
+| 3 | Interiores sin RSA | ≥ 30 | 23 | **21** | ❌ |
 
-Los dos contactos: **7 sep** (`/servicios/maquinaria-agroindustrial.html`, orgánico) y **10 sep**
-(portada). **Desde el 10 no ha entrado ninguno.**
+La 3 pedía subir de 23 a 30 y cerró en 21: no hubo avance, pero tampoco derrumbe.
 
-Precisión sobre la meta 2: las consultas reveladas dependen de que Google decida mostrarlas y oculta
-las de bajo volumen. Al apagarse el RSA se fueron sus consultas, que eran muchas y de alto volumen.
-No es que el sitio aparezca por menos términos: es que menos términos superan el umbral.
+**Los tres contactos:** 7 sep (maquinaria, orgánico) · 10 sep (portada, orgánico) · **30 sep (portada,
+directo)**. El tercero entró **seis días después** de poner el botón de WhatsApp al frente en la
+portada. Un dato no prueba causa — vigilar en octubre.
 
 ---
 
-## 4. Lo que sí construyó septiembre
+## 4. Territorio nuevo
 
-Siete consultas que **no existían en agosto**, todas nacidas de la noticia del 2 de septiembre:
+7 consultas que no existían en agosto:
 
-| Consulta | Posición | Impresiones |
+| Consulta | Pos | Impr |
 |---|---:|---:|
-| `vender maquinaria` | 16,6 | **37** |
-| `compra de maquina usada` | 26,9 | 11 |
+| `vender maquinaria` | 17,5 | **39** |
 | `vender maquinaria usada` | 22,0 | 1 |
 | `regulación exportaciones agrícolas` | 41,0 | 1 |
-| `ley 20606` | 3,0 | 1 |
-| `dónde encuentro` | 5,0 | 1 |
-| `prunita` (marca mal escrita) | 3,8 | 4 |
+| `prunita` | 3,8 | 4 |
+| `ley 20606` · `dónde encuentro` · logística | 3–5 | 1 c/u |
 
-Subir de 16 a 8 es mucho más corto que aparecer desde cero. Es el objetivo número uno de octubre.
-
-**Cerezas:** la página pasó de 109 a **143 impresiones**, 5 clics, posición 6,3. La noticia del 24
-quedó **indexada en menos de una hora** y su primer día registró 9 impresiones en posición 4,6.
+**Páginas que se movieron:** cerezas-chilenas 157 impr / pos 6,4 / 5 clics · maquinaria 70 impr / 7 clics ·
+noticia de cereza **64 impr / pos 5,5 / 2 clics en su primera semana**.
 
 ---
 
 ## 5. Entregables de septiembre
 
-**Contratado (2 noticias investigadas/mes):** ✅ cumplido.
-
-- **2 sep** — *Vender maquinaria agroindustrial usada en Chile: dónde, a qué precio y con qué papeles*
-- **24 sep** — *Temporada de cereza chilena 2026/27: qué pasa con la fruta que no sale en fresco*
+**Contratado (2 noticias/mes):** ✅ cumplido — 2 sep (maquinaria) y 24 sep (cereza).
 
 **Presencia en buscadores:**
 
-| Gestión | Estado | Para qué sirve |
-|---|---|---|
-| Google Business Profile | ✅ Activo | Ya se muestra. Ago: 24 vistas, 22 indicaciones, **0 clics al sitio** |
-| Bing Webmaster Tools | ✅ Verificado | Bing alimenta ChatGPT y Copilot |
-
-**Sin costo adicional:**
-
-| Qué | Resultado medible |
+| Gestión | Estado |
 |---|---|
-| Fichas técnicas enlazadas desde cada página de producto | 8 formatos de cereza y 5 de ciruela a un clic |
-| Diagnóstico de Representación comercial | Se descartó reescribirla con datos; se corrigió una pregunta duplicada |
-| Conversión del banco de imágenes a WebP | **−2,1 MB (−40%)** de peso de imagen |
-| WhatsApp como acción principal en la portada | El formulario llevaba 3 inicios y **0 envíos** en 8 semanas |
-| Corrección del sitemap automático | Declaraba fechas viejas en las páginas recién modificadas |
-| `.vercelignore` por patrón | Los informes de cobro estaban listados uno por uno: olvidar uno los publicaba |
+| Google Business Profile | ✅ Activo. Ago: 24 vistas, 22 indicaciones, **0 clics al sitio** |
+| Bing Webmaster Tools | ✅ Verificado por dos métodos. Sep: 3 sesiones desde asistentes de IA |
+
+**Ocho mejoras sin costo adicional:**
+
+1. Fichas técnicas a un clic desde cada página de producto
+2. **Últimas noticias en la portada** — antes no enlazaba ninguna noticia propia; ahora se genera sola
+3. WhatsApp como acción principal en la portada (el formulario: 3 inicios, 0 envíos en 8 semanas)
+4. WebP: −2,1 MB (−40%)
+5. Diagnóstico de Representación comercial + FAQ duplicada corregida
+6. Corrección del sitemap automático
+7. Banda de clientes en la portada
+8. `.vercelignore` por patrón: los informes de cobro podían quedar públicos
 
 ---
 
-## 6. Estado de los hitos del plan
+## 6. Hitos del plan
 
 | Hito | Plazo | Ago | Sep | Estado |
 |---|---|---:|---:|---|
-| Doblar clics a interiores (11 → 22) | nov | 32 | **18** | 🟡 Cumplido en agosto, perdido al apagarse el RSA |
-| 40–60 consultas reveladas | sep | 30 | **16** | ❌ No alcanzado |
-| 5 keywords comerciales al rango 15–25 | oct | 29–76 | **27–89** | ❌ **No alcanzable** — ver §7 |
-| Primera comercial en página 1 | nov | — | — | ❌ Pendiente |
-
-> **Ojo con las dos cifras de "consultas reveladas".** En §2 agosto son **29** (ventana 1–27, para
-> comparar contra el mismo tramo de septiembre) y aquí **30** (mes completo, que es como se comprometió
-> el hito). Ambas correctas, ventanas distintas. El informe de cliente lo aclara al pie de la tabla.
+| Doblar clics a interiores (11 → 22) | nov | 32 | **22** | ✅ **Cumplido**, 2 meses antes |
+| 40–60 consultas reveladas | sep | 33 | 16 | ❌ |
+| 5 keywords comerciales a 15–25 | oct | 29–76 | 27–89 | ❌ No alcanzable |
+| Primera comercial en página 1 | nov | — | — | ❌ |
 
 ---
 
-## 7. Las gestiones del cliente: 3 de 6 cerradas
+## 7. Gestiones del cliente: 3 de 6 cerradas
 
-Solicitud del **17 de agosto**. Este mes hubo el primer movimiento desde entonces.
+| # | Gestión | Estado |
+|---|---|---|
+| C1 | Google Business Profile | ✅ Resuelta |
+| D4 | Bing Webmaster Tools | ✅ Resuelta |
+| C3/C4 | Chileprunes / Chilealimentos | ❌ **Descartada — no es socio** (confirmado 30 sep) |
+| C2 | **ProChile** | ⬜ **Ahora la número uno** |
+| C6 | LinkedIn — acceso de editor | 🟡 Página `linkedin.com/company/pruna-vita` ya enlazada desde el sitio y en `sameAs`; falta publicar |
+| C5 | Alibaba / Made-in-China | ⬜ Pendiente |
 
-| # | Gestión | Estado | Qué destraba |
-|---|---|---|---|
-| C1 | Google Business Profile | ✅ **Resuelta** | Presencia de marca. Falta completar la ficha |
-| D4 | Bing Webmaster Tools | ✅ **Resuelta** | Canal hacia ChatGPT y Copilot |
-| C2 | ProChile — directorio de exportadores | ⬜ Pendiente | El enlace de mayor confianza disponible |
-| C3/C4 | Chileprunes / Chilealimentos | ❌ **Descartada** | **No es socio de ninguno** (confirmado 30 sep). Vía cerrada |
-| C6 | LinkedIn de empresa | 🟡 Parcial | Página: `linkedin.com/company/pruna-vita`. El sitio ya la enlaza y la declara en `sameAs`. Falta **acceso de editor** para publicar |
-| C5 | Alibaba / Made-in-China | ⬜ Pendiente | Enlace + canal asiático |
-
-**Se cae la palanca más barata.** Los gremios eran el enlace de menor esfuerzo del lote y quedaron
-descartados: Prunavita no es socio. **ProChile pasa a ser la gestión número uno** — es el enlace de
-mayor confianza al que el sitio puede aspirar hoy y necesita RUT y credenciales de la empresa.
-
-**Por qué esto no salva todavía el hito de octubre.** GBP y Bing construyen *presencia de marca*:
-ayudan a que encuentren a Prunavita cuando la buscan por su nombre. Las cinco keywords comerciales
-dependen de otra cosa —**enlaces desde sitios del rubro**— que es lo que aportarían ProChile, los
-gremios y LinkedIn. Son justamente las que siguen pendientes.
-
-| Consulta | Meta octubre | Agosto | Septiembre |
-|---|---:|---:|---:|
-| `compra maquinaria usada` | 15–25 | 29,0 | 29,0 |
-| `certificación brc chile` | 15–25 | 47,5 | 36,8 |
-| `asesoría en certificaciones` | 15–25 | 43,0 | 43,0 |
-| `consultoría agroindustria` | 15–25 | 55,0 | 55,0 |
-| `venta maquinaria manufactura` | 15–25 | 75,7 | 89,0 |
-
-**Se mantiene la declaración de no alcanzable** para el hito de octubre: un enlace tarda 2–4 meses en
-trasladarse a posiciones, así que las cuatro gestiones pendientes, aunque se resolvieran esta semana,
-rendirían en diciembre o enero.
+Al caerse los gremios se perdió la palanca más barata. **ProChile pasa a ser la prioridad.**
 
 ---
 
-## 8. Plan de octubre (mes 5)
+## 8. Plan de octubre
 
-1. **Empujar `vender maquinaria` de la página 2 a la página 1.** Activo nuevo y único territorio
-   comercial donde ya aparecemos. Noticia de refuerzo + enlazado interno dirigido.
-2. **Cerrar la ventana de cereza.** Octubre es el último mes de programa de temporada. La noticia del
-   24 ya rankea en 4,6.
-3. **Completar el Google Business Profile.** La ficha funciona pero no alimenta al sitio: 24 vistas
-   y **cero clics a prunavita.cl** en agosto. Falta enlace al sitio bien puesto, descripción,
-   categoría, productos, fotos reales y primeras reseñas. Google mismo la marca como incompleta.
-4. **Página pilar de exportación (A5)**, prevista para octubre en el plan de 6 meses.
-5. **Directorios**, en cuanto lleguen los datos del §7. Textos redactados desde julio.
+1. Empujar `vender maquinaria` de pos 17 a página 1
+2. Cerrar la ventana de cereza (último mes de programa de temporada)
+3. Completar el Google Business Profile — hoy da 0 clics al sitio
+4. Página pilar de exportación (A5)
+5. Fichas de directorios en cuanto llegue ProChile
 
-**Fuera de alcance:** China/Baidu. Sin autoridad local y con cuatro gestiones detenidas, abrir un
-frente nuevo es repartir el mismo esfuerzo en más lugares.
+**Fuera:** China/Baidu.
 
 ---
 
@@ -198,31 +149,21 @@ frente nuevo es repartir el mismo esfuerzo en más lugares.
 
 | Concepto | Período | Valor | Estado |
 |---|---|---:|---|
-| Etapa 1 — implementación | jun 2026 | $570.000 | Pagado |
+| Etapa 1 | jun 2026 | $570.000 | Pagado |
 | Mantención mes 2 | jul 2026 | $150.000 | Pagado |
 | Mantención mes 3 | ago 2026 | $150.000 | **Pagado** |
 | **Mantención mes 4** | **sep 2026** | **$150.000** | **A cobrar** |
 
-**Agosto quedó pagado** y está verificado: transferencia de COMERCIALIZADORA CAMIGO SPA por
-**$150.007** el **4 de septiembre de 2026 a las 19:31**, glosa "Pago boleta 19 Mantenimiento SEO web
-PRUNAVITA" (operación `MVL_EMP2609041931125561208040`). Sin saldos anteriores. Lo único a cobrar es
-la mantención de septiembre. Ver [[prunavita-contrato-y-cobros]].
+Agosto verificado: transferencia CAMIGO por **$150.007** el **4 sep 19:31**, glosa "Pago boleta 19
+Mantenimiento SEO web PRUNAVITA". Ver [[prunavita-contrato-y-cobros]].
 
 ---
 
 ## 10. Veredicto
 
-> Dos meses seguidos con dos contactos, y en septiembre con un CTR casi al doble —tráfico *más*
-> pertinente, no menos—. Cuando llega gente correcta y no escribe, el cuello de botella deja de estar
-> en Google.
+> Septiembre pagó el costo de haber crecido con una sola noticia, y mostró que debajo había algo
+> propio: sin el RSA, los interiores pasaron de 23 a 21, con el CTR casi doblado y la posición intacta.
+> El sitio no retrocedió, perdió un préstamo.
 >
-> El posicionamiento tiene margen claro: `vender maquinaria` en posición 16 es una oportunidad barata
-> de capturar. Y con GBP y Bing resueltos, el frente de presencia dejó de estar detenido —aunque la ficha todavía
-> no manda a nadie al sitio, que es lo que toca corregir en octubre—.
->
-> Pero el salto de *aparecer* a *que le escriban* depende de dos cosas del lado de Prunavita: las
-> cuatro gestiones pendientes y **la oferta comercial** —qué se ofrece, a qué precio, con qué prueba—
-> para el visitante que ya está en la página correcta.
->
-> Recomendación para octubre: además del SEO, **media hora de conversación sobre la oferta**. Con el
-> tráfico actual, mover la tasa de contacto de 2 a 4 rinde más que duplicar las visitas.
+> Margen claro y barato: `vender maquinaria` en pos 17. Lo que depende del cliente: **ProChile** y
+> **la oferta comercial**. Con el tráfico actual, pasar de 3 contactos a 6 rinde más que duplicar visitas.
