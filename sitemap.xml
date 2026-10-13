@@ -111,19 +111,19 @@
     <!-- Agregar aquí cada noticia nueva publicada en /noticias/ -->
     <url>
         <loc>https://prunavita.cl/fichas-tecnicas.html</loc>
-        <lastmod>2026-08-04</lastmod>
+        <lastmod>2026-07-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
         <loc>https://prunavita.cl/privacidad.html</loc>
-        <lastmod>2026-08-04</lastmod>
+        <lastmod>2026-06-16</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
         <loc>https://prunavita.cl/terminos.html</loc>
-        <lastmod>2026-08-04</lastmod>
+        <lastmod>2026-06-16</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
