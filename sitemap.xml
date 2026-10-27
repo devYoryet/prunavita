@@ -44,14 +44,20 @@
     </url>
     <url>
         <loc>https://prunavita.cl/zh</loc>
-        <lastmod>2026-07-21</lastmod>
+        <lastmod>2026-08-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://prunavita.cl/noticias</loc>
-        <lastmod>2026-10-13</lastmod>
+        <lastmod>2026-10-27</lastmod>
         <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://prunavita.cl/noticias/2026-10-programa-compra-cereza-procesada.html</loc>
+        <lastmod>2026-10-27</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
@@ -117,19 +123,19 @@
     <!-- Agregar aquí cada noticia nueva publicada en /noticias/ -->
     <url>
         <loc>https://prunavita.cl/fichas-tecnicas.html</loc>
-        <lastmod>2026-07-06</lastmod>
+        <lastmod>2026-08-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
         <loc>https://prunavita.cl/privacidad.html</loc>
-        <lastmod>2026-06-16</lastmod>
+        <lastmod>2026-08-05</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
         <loc>https://prunavita.cl/terminos.html</loc>
-        <lastmod>2026-06-16</lastmod>
+        <lastmod>2026-08-05</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>

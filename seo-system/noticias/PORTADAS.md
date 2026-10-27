@@ -34,8 +34,7 @@ Disponibles para la próxima nota, pero **cada una se puede usar una sola vez**:
 |---|---|
 | `prunes-close.jpg` | Primer plano de ciruelas deshidratadas a granel |
 | `linkedin-vina-3.jpg` | Visita a Viña Santa Rita, tercera toma |
-| `machinery.jpg` / `maquinaria.jpg` | Maquinaria agroindustrial |
-| `team-business.jpg` | Equipo comercial en reunión |
+| `machinery.jpg` | Maquinaria agroindustrial |
 
 > Ojo: `hero-prunes.jpg` está tomada por el hub. `prunes-close.jpg` y `hero-prunes.jpg`
 > se parecen mucho entre sí — no las uses en noticias contiguas.
@@ -129,4 +128,5 @@ es exactamente lo que pidió no hacer.
 | `2026-09-temporada-cereza-chilena-2026-27` | `cerezas-cosecha-caja.jpg` | Pexels #16235936 | (completar) |
 | `2026-09-temporada-cereza-chilena-2026-27` | `linea-seleccion-fruta.jpg` | Pexels #32578355 | (completar) |
 | `2026-10-maquinaria-que-se-vende-rapido` | `bodega-equipos-almacenados.jpg` | Pexels #36398150 | Bodega industrial con estanterías metálicas cargadas de equipos embalados y un montacargas circulando entre los pasillos |
-| `2026-10-programa-compra-cereza-procesada` | `cierre-acuerdo-comercial.jpg` | Pexels #9870223 | (completar) |
+| `2026-10-programa-compra-cereza-procesada` | `cierre-acuerdo-comercial.jpg` | Pexels #9870223 | Dos personas estrechándose la mano sobre una mesa de trabajo con documentos, sin rostros visibles |
+| `2026-10-programa-compra-cereza-procesada` | `team-business.jpg` (interior) | banco libre (ver sección "Imágenes libres") | Dos ejecutivos estrechándose la mano en una oficina, con notebooks mostrando gráficos sobre el escritorio |
