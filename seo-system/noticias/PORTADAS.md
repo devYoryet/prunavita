@@ -130,3 +130,6 @@ es exactamente lo que pidió no hacer.
 | `2026-10-maquinaria-que-se-vende-rapido` | `bodega-equipos-almacenados.jpg` | Pexels #36398150 | Bodega industrial con estanterías metálicas cargadas de equipos embalados y un montacargas circulando entre los pasillos |
 | `2026-10-programa-compra-cereza-procesada` | `cierre-acuerdo-comercial.jpg` | Pexels #9870223 | Dos personas estrechándose la mano sobre una mesa de trabajo con documentos, sin rostros visibles |
 | `2026-10-programa-compra-cereza-procesada` | `team-business.jpg` (interior) | banco libre (ver sección "Imágenes libres") | Dos ejecutivos estrechándose la mano en una oficina, con notebooks mostrando gráficos sobre el escritorio |
+| `2026-11-cereza-sulfitada-que-es-usos-especificacion` | `cerezas-rojas-a-granel.jpg` | Pexels #27644255 | Primer plano de cerezas rojas con pedúnculo, a granel |
+| `2026-11-cereza-sulfitada-que-es-usos-especificacion` | `dos-cerezas-fondo-blanco.jpg` | Pexels #109274 | Dos cerezas rojas con pedúnculo sobre fondo blanco |
+| `2026-11-calibre-ciruela-deshidratada-como-cotizar` | `ciruelas-partidas-bandeja.jpg` | Pexels #6844493 | Ciruelas frescas partidas por la mitad en una bandeja de cerámica |

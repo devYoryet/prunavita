@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://prunavita.cl/</loc>
-        <lastmod>2026-10-13</lastmod>
+        <lastmod>2026-10-27</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -44,7 +44,7 @@
     </url>
     <url>
         <loc>https://prunavita.cl/zh</loc>
-        <lastmod>2026-08-05</lastmod>
+        <lastmod>2026-07-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -123,19 +123,19 @@
     <!-- Agregar aquí cada noticia nueva publicada en /noticias/ -->
     <url>
         <loc>https://prunavita.cl/fichas-tecnicas.html</loc>
-        <lastmod>2026-08-05</lastmod>
+        <lastmod>2026-07-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
         <loc>https://prunavita.cl/privacidad.html</loc>
-        <lastmod>2026-08-05</lastmod>
+        <lastmod>2026-06-16</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
         <loc>https://prunavita.cl/terminos.html</loc>
-        <lastmod>2026-08-05</lastmod>
+        <lastmod>2026-06-16</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
